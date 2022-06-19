@@ -13,3 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('user.status')->name('home');
+
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->middleware('admin.status')->name('admin');
