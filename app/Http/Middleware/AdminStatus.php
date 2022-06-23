@@ -19,7 +19,7 @@ class AdminStatus
 
     {
 
-        if (Auth::user()->admin_status) {
+        if (Auth::user() and Auth::user()->admin_status) {
 
             return $next($request);
 

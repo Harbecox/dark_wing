@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('user.status')->name('home');
 
-Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->middleware('admin.status')->name('admin');
+Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('homeAdmin');
+
+    Route::resource('post', PostController::class);
+
+});
+

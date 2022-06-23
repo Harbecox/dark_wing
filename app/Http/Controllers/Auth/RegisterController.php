@@ -34,9 +34,9 @@ class RegisterController extends Controller
     protected function authenticated()
     {
 
-        if ( Auth::user()->admin_status) {
+        if (Auth::user() and Auth::user()->admin_status) {
 
-            return redirect()->route('admin');
+            return redirect()->route('homeAdmin');
 
         }
 

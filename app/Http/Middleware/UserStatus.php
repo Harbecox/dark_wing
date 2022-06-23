@@ -18,7 +18,7 @@ class UserStatus
     public function handle(Request $request, Closure $next)
     {
 
-        if (Auth::user()->admin_status) {
+        if (Auth::user() and Auth::user()->admin_status) {
 
             return abort(404);
 
