@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -15,6 +16,10 @@ class UserFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    protected $model = Post::class;
+
+
     public function definition()
     {
         return [
