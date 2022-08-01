@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AdminPostStoreRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -38,15 +39,8 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AdminPostStoreRequest $request)
     {
-
-        $request->validate([
-            'title' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            'description' => 'required',
-        ]);
-
         $post = new Post;
         $post->title = $request->title;
         $post->description = $request->description;
