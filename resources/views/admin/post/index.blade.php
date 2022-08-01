@@ -37,20 +37,26 @@
                         <th style="width: 3%">
                             ID
                         </th>
-                        <th style="width: 7%">
-                            Image
-                        </th>
-                        <th style="width: 20%">
+                        <th style="width: 13%">
                             Title
                         </th>
-                        <th style="width: 40%">
-                            Description
+                        <th style="width: 20%">
+                            Intro
                         </th>
                         <th style="width: 10%">
-                            Created at
+                            Meta title
                         </th>
                         <th style="width: 20%">
+                            Meta description
                         </th>
+                        <th style="width: 5%">
+                            Seo url
+                        </th>
+                        <th style="width: 15%">
+                            Created at
+                        </th>
+{{--                        <th style="width: 20%">--}}
+{{--                        </th>--}}
                     </tr>
                     </thead>
                     <tbody>
@@ -63,11 +69,11 @@
                                     {{$post->id}}
                                 </a>
                             </td>
-                            <td>
-                                <a>
-                            <img src="{{ Storage::url($post->image) }}" height="50" width="50" alt="" />
-                                </a>
-                            </td>
+{{--                            <td>--}}
+{{--                                <a>--}}
+{{--                            <img src="{{ Storage::url($post->image) }}" height="50" width="50" alt="" />--}}
+{{--                                </a>--}}
+{{--                            </td>--}}
                             <td>
                                 <a>
                                     {{$post->title}}
@@ -75,7 +81,22 @@
                             </td>
                             <td>
                                 <a>
-                                    {{$post->description}}
+                                    {{$post->intro}}
+                                </a>
+                            </td>
+                            <td>
+                                <a>
+                                    {{$post->meta_title}}
+                                </a>
+                            </td>
+                            <td>
+                                <a>
+                                    {{$post->meta_description}}
+                                </a>
+                            </td>
+                            <td>
+                                <a>
+                                    {{$post->seo_url}}
                                 </a>
                             </td>
                             <td>
@@ -85,12 +106,9 @@
                             </td>
                             <td class="project-actions text-right">
                                 <form action="{{ route('post.destroy',$post) }}" method="POST">
-
                                     <a class="btn btn-primary" href="{{ route('post.edit',$post) }}">Edit</a>
-
                                     @csrf
                                     @method('DELETE')
-
                                     <button type="submit" class="btn btn-danger">Delete</button>
                                 </form>
                             </td>
@@ -104,10 +122,6 @@
             </div>
             <!-- /.card-body -->
         </div>
-
-
-
-
 
             <div class="d-flex justify-content-center">
                 {{ $posts->links() }}

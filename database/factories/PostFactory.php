@@ -1,8 +1,7 @@
 <?php
-
 namespace Database\Factories;
-
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
@@ -16,11 +15,17 @@ class PostFactory extends Factory
      */
     public function definition()
     {
+        $title = $this->faker->name;
+        $slug = Str::slug($title, '-');
         return [
-            'title' => $this->faker->name,
-            'description' => $this->faker->text,
-            'image' => $this->faker->image('public/storage/images',640,480, null, false),
-
+            'title' => $title,
+            'context' => $this->faker->text,
+            'intro' => $this->faker->text,
+            'meta_title' => $this->faker->title,
+            'meta_description' => $this->faker->text,
+            'seo_url' => $slug,
+            'enabled' => $this->faker->boolean,
+            //'image' => $this->faker->image('public/storage/images',640,480, null, false),
         ];
     }
 }

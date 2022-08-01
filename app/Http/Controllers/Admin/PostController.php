@@ -16,11 +16,8 @@ class PostController extends Controller
      */
     public function index()
     {
-
         $posts = Post::orderBY('created_at','desc')->paginate(10);
-
         return view('admin.post.index', compact('posts'));
-
     }
 
     /**
@@ -43,13 +40,17 @@ class PostController extends Controller
     {
         $post = new Post;
         $post->title = $request->title;
-        $post->description = $request->description;
-        $post->image = $request->file('image')->store('public/images');
+        $post->context = $request->context;
+        $post->intro = $request->intro;
+        $post->meta_title = $request->meta_title;
+        $post->meta_description = $request->meta_description;
+        $post->seo_url = $request->seo_url;
+        $post->enabled = $request->enabled;
+        //$post->image = $request->file('image')->store('public/images');
         $post->save();
 
         return redirect()->route('post.create')
             ->with('success','Post has been created successfully.');
-
     }
 
     /**
@@ -82,9 +83,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Post $post)
-
     {
-
         $request->validate([
             'title' => 'required',
             'description' => 'required',
@@ -120,7 +119,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-
         $post->delete();
 
         return redirect()->route('post.index')

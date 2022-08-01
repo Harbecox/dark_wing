@@ -37,28 +37,58 @@
                         <input type="text" name="title" class="form-control" placeholder="Enter Title">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Description</label>
+                        <label for="exampleInputEmail1">Context</label>
                         @error('description')
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <input type="text" name="description" class="form-control" placeholder="Enter Description">
                     </div>
                     <div class="form-group">
-                        <!-- <label for="customFile">Custom File</label> -->
-
-                        <label for="exampleInputEmail1">Image</label>
-
-                        @error('image')
+                        <label for="exampleInputEmail1">Intro</label>
+                        @error('description')
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
-
-                        <div class="custom-file">
-
-                            <input type="file" name="image" class="form-control" id="customFile">
-
-                            <label class="custom-file-label" for="customFile">Choose file</label>
-                        </div>
+                        <input type="text" name="description" class="form-control" placeholder="Enter intro">
                     </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Meta title</label>
+                        @error('description')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                        <input type="text" name="description" class="form-control" placeholder="Enter meta title">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Meta description</label>
+                        @error('description')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                        <input type="text" name="description" class="form-control" placeholder="Enter meta description">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Seo url</label>
+                        @error('description')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                        <input type="text" name="description" class="form-control" placeholder="Enter url">
+                    </div>
+
+
+{{--                    <div class="form-group">--}}
+{{--                        <!-- <label for="customFile">Custom File</label> -->--}}
+
+{{--                        <label for="exampleInputEmail1">Image</label>--}}
+
+{{--                        @error('image')--}}
+{{--                        <div class="text-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+
+{{--                        <div class="custom-file">--}}
+
+{{--                            <input type="file" name="image" class="form-control" id="customFile">--}}
+
+{{--                            <label class="custom-file-label" for="customFile">Choose file</label>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
                 <!-- /.card-body -->
 

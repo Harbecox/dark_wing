@@ -25,8 +25,13 @@ class AdminPostStoreRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            'description' => 'required',
+            'context' => 'required',
+            'intro' => 'required',
+            'meta_title' => 'required',
+            'meta_description' => 'required',
+            'seo_url' => 'required',
+            'enabled' => 'required',
+            //'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ];
     }
 }
