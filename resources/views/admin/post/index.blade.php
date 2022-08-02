@@ -9,9 +9,9 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Posts</h1>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Main content -->
     <section class="content">
@@ -40,23 +40,21 @@
                         <th style="width: 13%">
                             Title
                         </th>
-                        <th style="width: 20%">
+                        <th style="width: 25%">
                             Intro
                         </th>
-                        <th style="width: 10%">
-                            Meta title
-                        </th>
-                        <th style="width: 20%">
-                            Meta description
-                        </th>
-                        <th style="width: 5%">
+                        <th style="width: 14%">
                             Seo url
                         </th>
                         <th style="width: 15%">
                             Created at
                         </th>
-{{--                        <th style="width: 20%">--}}
-{{--                        </th>--}}
+                        <th style="width: 15%">
+                            Image
+                        </th>
+                        <th style="width: 3%">
+                            Enabled
+                        </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -65,43 +63,26 @@
 
                         <tr>
                             <td>
-                                <a>
-                                    {{$post->id}}
-                                </a>
-                            </td>
-{{--                            <td>--}}
-{{--                                <a>--}}
-{{--                            <img src="{{ Storage::url($post->image) }}" height="50" width="50" alt="" />--}}
-{{--                                </a>--}}
-{{--                            </td>--}}
-                            <td>
-                                <a>
-                                    {{$post->title}}
-                                </a>
+                                <a>{{$post->id}}</a>
                             </td>
                             <td>
-                                <a>
-                                    {{$post->intro}}
-                                </a>
+                                <a>{{$post->title}}</a>
+                            </td>
+                            <td>
+                                <a>{{$post->intro}}</a>
+                            </td>
+                            <td>
+                                <a>{{$post->seo_url}}</a>
+                            </td>
+                            <td>
+                                <a>{{$post->created_at}}</a>
+                            </td>
+                            <td>
+                                <a><img src="{{ Storage::url($post->image) }}" height="50" width="50" alt="" /></a>
                             </td>
                             <td>
                                 <a>
-                                    {{$post->meta_title}}
-                                </a>
-                            </td>
-                            <td>
-                                <a>
-                                    {{$post->meta_description}}
-                                </a>
-                            </td>
-                            <td>
-                                <a>
-                                    {{$post->seo_url}}
-                                </a>
-                            </td>
-                            <td>
-                                <a>
-                                    {{$post->created_at}}
+                                    {{$post->enabled}}
                                 </a>
                             </td>
                             <td class="project-actions text-right">
@@ -109,11 +90,10 @@
                                     <a class="btn btn-primary" href="{{ route('post.edit',$post) }}">Edit</a>
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</button>
                                 </form>
                             </td>
                         </tr>
-
                     @endforeach
 
                     </tbody>

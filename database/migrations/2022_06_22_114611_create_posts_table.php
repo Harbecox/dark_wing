@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Str;
 
 return new class extends Migration
 {
@@ -19,7 +18,7 @@ return new class extends Migration
             $table->string('seo_url');
             $table->boolean('enabled')->default(true);
             $table->timestamps();
-            //$table->string('image')->nullable();
+            $table->string('image')->nullable();
         });
     }
     public function down()

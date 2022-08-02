@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
+use phpDocumentor\Reflection\Types\Null_;
 
 class AdminPostStoreRequest extends FormRequest
 {
@@ -29,9 +31,7 @@ class AdminPostStoreRequest extends FormRequest
             'intro' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'seo_url' => 'required',
-            'enabled' => 'required',
-            //'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ];
     }
 }

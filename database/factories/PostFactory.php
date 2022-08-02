@@ -25,7 +25,7 @@ class PostFactory extends Factory
             'meta_description' => $this->faker->text,
             'seo_url' => $slug,
             'enabled' => $this->faker->boolean,
-            //'image' => $this->faker->image('public/storage/images',640,480, null, false),
+            'image' => $this->faker->image('public/images',100,100, null, false),
         ];
     }
 }
