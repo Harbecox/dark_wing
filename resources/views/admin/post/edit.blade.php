@@ -3,7 +3,6 @@
 @section('title', 'Edit post')
 
 @section('content')
-
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -15,6 +14,15 @@
     </div>
 
     <section class="content">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
         @if(session('success'))
             <div class="alert alert-success mb-1 mt-1">
@@ -34,7 +42,17 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Context</label>
-                        <input type="text" value="{{ $post->context }}" name="context" class="form-control" placeholder="Enter Context">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-outline card-info">
+                                    <div class="card-body">
+                                        <textarea id="summernote" name="context">
+                                             {{$post->context}}
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -59,11 +77,10 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Enabled</label><br>
-                        <input type="checkbox" value="{{ $post->enabled }}" name="enabled">
+                        <input type="checkbox" value="{{ $post->enabled }}" name="enabled" {{  ($post->enabled == 1 ? ' checked' : '') }}>
                     </div>
 
                     <div class="form-group">
-                        <!-- <label for="customFile">Custom File</label> -->
                         <label for="exampleInputEmail1">Image</label>
                         <div class="form-group">
                             <img src="{{ Storage::url($post->image) }}" height="100" width="100" alt="" />
@@ -81,6 +98,17 @@
             </form>
         </div>
     </section>
-        </div>
-    </section>
+@endsection
+
+@section('footer')
+    <script>
+        $(function () {
+            $('#summernote').summernote()
+        })
+    </script>
+    {{--    <script src="../../plugins/jquery/jquery.min.js"></script>--}}
+    {{--    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>--}}
+    {{--    <script src="../../dist/js/adminlte.min.js"></script>--}}
+    {{--    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>--}}
+    {{--    <script src="../../dist/js/demo.js"></script>--}}
 @endsection

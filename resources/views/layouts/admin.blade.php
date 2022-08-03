@@ -249,3 +249,5 @@
 <script src="/admin/dist/js/pages/dashboard.js"></script>
 </body>
 </html>
+
+@yield('footer')

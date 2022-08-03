@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <!-- Main content -->
+
     <section class="content">
 
         @if(session('success'))
@@ -25,10 +25,8 @@
         <td>
             <a class="btn btn-primary" href="{{route('post.create')}}" role="button">+ Add new post</a>
         </td>
-        <br>
-        <br>
+        <br><br>
 
-        <!-- Default box -->
         <div class="card">
             <div class="card-body p-0">
                 <table class="table table-striped projects">
@@ -46,13 +44,13 @@
                         <th style="width: 14%">
                             Seo url
                         </th>
-                        <th style="width: 15%">
+                        <th style="width: 10%">
                             Created at
                         </th>
-                        <th style="width: 15%">
+                        <th style="width: 10%">
                             Image
                         </th>
-                        <th style="width: 3%">
+                        <th style="width: 2%">
                             Enabled
                         </th>
                     </tr>
@@ -60,7 +58,6 @@
                     <tbody>
 
                     @foreach($posts as $post)
-
                         <tr>
                             <td>
                                 <a>{{$post->id}}</a>
@@ -100,13 +97,11 @@
 
                 </table>
             </div>
-            <!-- /.card-body -->
         </div>
-
             <div class="d-flex justify-content-center">
                 {{ $posts->links() }}
             </div>
-
     </section>
-
 @endsection
+
+
