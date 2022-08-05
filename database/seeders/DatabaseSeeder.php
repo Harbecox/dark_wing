@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,18 +16,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(10)->create();
 
          \App\Models\User::factory()->create([
-             'name' => 'Admin',
+             'firstName' => 'admin',
              'email' => 'admin@gmail.com',
              'admin_status' => true
          ]);
-
         $this->call([
-
             PostSeeder::class
-
         ]);
     }
 }

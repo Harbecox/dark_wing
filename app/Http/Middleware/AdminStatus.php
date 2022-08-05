@@ -16,18 +16,11 @@ class AdminStatus
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
-
     {
-
         if (Auth::user() and Auth::user()->admin_status) {
-
             return $next($request);
-
         } else {
-
-            return abort(404);
-
+            return redirect('login');
         }
-
     }
 }
