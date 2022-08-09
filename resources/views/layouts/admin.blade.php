@@ -189,9 +189,14 @@
                 <a href="{{route('homeAdmin')}}" class="nav-link">
                     <p>Home</p>
                 </a>
-                    <a href="{{route('post.index')}}" class="nav-link">
+
+                <a href="{{route('post.index')}}" class="nav-link">
                         <p>Posts</p>
-                    </a>
+                </a>
+
+                <a href="{{route('user.index')}}" class="nav-link">
+                    <p>Users</p>
+                </a>
             </nav>
             <!-- /.sidebar-menu -->
         </div>

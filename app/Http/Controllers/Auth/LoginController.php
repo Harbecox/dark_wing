@@ -9,36 +9,15 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
     use AuthenticatesUsers;
-
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
 
     protected function authenticated()
     {
-        if (Auth::user() and Auth::user()->admin_status) {
-
+        if (Auth::user() and Auth::user()->admin_status and Auth::user() == '0') {
             return redirect()->route('homeAdmin');
-
         }
-
         return redirect('/home');
     }
-
 
     public function __construct()
     {

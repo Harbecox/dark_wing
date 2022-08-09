@@ -78,12 +78,10 @@
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
                   </div>
-
                     <div class="form-group">
                         <label for="exampleInputEmail1">Enabled</label><br>
                         <input type="checkbox" name="enabled">
                     </div>
-
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -93,16 +91,10 @@
     </section>
 @endsection
 
-
 @section('footer')
     <script>
         $(function () {
             $('#summernote').summernote()
         })
     </script>
-{{--    <script src="../../plugins/jquery/jquery.min.js"></script>--}}
-{{--    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>--}}
-{{--    <script src="../../dist/js/adminlte.min.js"></script>--}}
-{{--    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>--}}
-{{--    <script src="../../dist/js/demo.js"></script>--}}
 @endsection
