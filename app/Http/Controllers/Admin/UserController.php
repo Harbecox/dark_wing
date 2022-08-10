@@ -30,6 +30,12 @@ class UserController extends Controller
         ]);
 
         $user = User::find($user->id);
+        if($request->hasFile('avatar')){
+            $request->validate([
+                'avatar' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]);
+            $user->avatar = $request->file('avatar')->store('public/images');
+        }
 
         $user->firstName = $request->firstName;
         $user->lastName = $request->lastName;
@@ -37,7 +43,6 @@ class UserController extends Controller
         $user->phone = $request->phone;
         $user->company = $request->company;
         $user->isBlocked = $request->boolean('isBlocked');
-        $user->avatar = $request->file('avatar')->store('public/storage/images/avatar.jpg');
         $user->save();
         return redirect()->route('user.index',$user)
             ->with('success','User updated successfully');

@@ -64,7 +64,20 @@
                         <label for="exampleInputEmail1">IsBlocked</label><br>
                         <input type="checkbox" name="isBlocked" {{  ($user->isBlocked == 1 ? ' checked' : '') }}>
                     </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Avatar</label>
+                        <div class="form-group">
+                            <img src="{{ Storage::url($user->avatar) }}" height="100" width="100" alt=""/>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" name="avatar" class="form-control" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+
                 </div>
+
 
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Save changes</button>

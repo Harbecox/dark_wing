@@ -77,13 +77,13 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Enabled</label><br>
-                        <input type="checkbox" value="{{ $post->enabled }}" name="enabled" {{  ($post->enabled == 1 ? ' checked' : '') }}>
+                        <input type="checkbox" name="enabled" {{  ($post->enabled == 1 ? ' checked' : '') }}>
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Image</label>
                         <div class="form-group">
-                            <img src="{{ Storage::url($post->image) }}" height="100" width="100" alt="" />
+                            <img src="{{ Storage::url($post->image) }}" height="100" width="100" alt=""/>
                         </div>
                         <div class="custom-file">
                             <input type="file" name="image" class="form-control" id="customFile">
@@ -106,9 +106,4 @@
             $('#summernote').summernote()
         })
     </script>
-    {{--    <script src="../../plugins/jquery/jquery.min.js"></script>--}}
-    {{--    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>--}}
-    {{--    <script src="../../dist/js/adminlte.min.js"></script>--}}
-    {{--    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>--}}
-    {{--    <script src="../../dist/js/demo.js"></script>--}}
 @endsection

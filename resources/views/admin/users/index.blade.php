@@ -2,6 +2,7 @@
 @section('title', 'User')
 @section('content')
 
+
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -46,7 +47,7 @@
                                 isBlocked
                             </th>
                             <th style="width: 7%">
-                                Image
+                                Avatar
                             </th>
                          </tr>
                     </thead>
@@ -73,17 +74,22 @@
                                 <a>{{$user->company}}</a>
                             </td>
                             <td>
-                                <a>{{$user->isBlocked}}</a>
+                                <a class="text-red">{{$user->isBlocked == 1 ? "Blocked" : ""}}</a>
                             </td>
                             <td>
-                                <a><img src="{{ Storage::url($user->avatar) }}" height="50" width="50" alt="" /></a>
+                                <a><img src="{{ Storage::url($user->avatar) }}" height="50" width="50" alt=""/></a>
                             </td>
+
                             <td class="project-actions text-right">
-                                <form action="{{ route('user.block',$user) }}"method="POST">
+
+                                <form action="{{ route('user.block',$user) }}" method="POST">
                                     @csrf
                                     <a class="btn btn-primary" href="{{ route('user.edit',$user) }}">Edit</a>
-                                    <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger">Block</button>
+                                    @if($user->isBlocked == 0)
+                                        <button type="submit" onclick="blockUser()" class="btn btn-danger" id="button">Block</button>
+                                    @endif
                                 </form>
+
                             </td>
                         </tr>
                     @endforeach
