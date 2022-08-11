@@ -6,11 +6,14 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::orderBY('id')->paginate(10);
+        $order = $request->order;
+        $sort = $request->sort;
+        $users = User::orderBY($order,$sort)->paginate(10);
         return view('admin.users.index', compact('users'));
     }
 

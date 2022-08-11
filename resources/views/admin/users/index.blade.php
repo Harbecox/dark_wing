@@ -2,6 +2,9 @@
 @section('title', 'User')
 @section('content')
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <div class="content-header">
         <div class="container-fluid">
@@ -20,85 +23,138 @@
             </div>
         @endif
 
-        <div class="card">
-            <div class="card-body p-0">
-                <table class="table table-striped projects">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%">
-                                ID
-                            </th>
-                            <th style="width: 10%">
-                                First Name
-                            </th>
-                            <th style="width: 10%">
-                                Last Name
-                            </th>
-                            <th style="width: 13%">
-                                Email
-                            </th>
-                            <th style="width: 10%">
-                                Phone
-                            </th>
-                            <th style="width: 10%">
-                                Company
-                            </th>
-                            <th style="width: 5%">
-                                isBlocked
-                            </th>
-                            <th style="width: 7%">
-                                Avatar
-                            </th>
-                         </tr>
-                    </thead>
-                    <tbody>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 3%">
+                                            <div class="d-flex align-items-center">
+                                                <span>ID</span>
+                                                <div class="sort ml-2">
+                                                    <a href = {{route('user.index',['order'=>'ID','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
+                                                    <a href = {{route('user.index',['order'=>'ID','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </th>
 
-                    @foreach($users as $user)
-                        <tr>
-                            <td>
-                                <a>{{$user->id}}</a>
-                            </td>
-                            <td>
-                                <a>{{$user->firstName}}</a>
-                            </td>
-                            <td>
-                                <a>{{$user->lastName}}</a>
-                            </td>
-                            <td>
-                                <a>{{$user->email}}</a>
-                            </td>
-                            <td>
-                                <a>{{$user->phone}}</a>
-                            </td>
-                            <td>
-                                <a>{{$user->company}}</a>
-                            </td>
-                            <td>
-                                <a class="text-red">{{$user->isBlocked == 1 ? "Blocked" : ""}}</a>
-                            </td>
-                            <td>
-                                <a><img src="{{ Storage::url($user->avatar) }}" height="50" width="50" alt=""/></a>
-                            </td>
+                                        <th style="width: 12%">
+                                            <div class="d-flex align-items-center">
+                                                <span>First Name</span>
+                                                <div class="sort ml-2">
+                                                    <a href={{route('user.index',['order'=>'firstName','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'firstName','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </th>
 
-                            <td class="project-actions text-right">
+                                        <th style="width: 12%">
+                                            <div class="d-flex align-items-center">
+                                                <span>Last Name</span>
+                                                <div class="sort ml-2">
+                                                    <a href={{route('user.index',['order'=>'lastName','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'lastName','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </th>
 
-                                <form action="{{ route('user.block',$user) }}" method="POST">
-                                    @csrf
-                                    <a class="btn btn-primary" href="{{ route('user.edit',$user) }}">Edit</a>
-                                    @if($user->isBlocked == 0)
-                                        <button type="submit" onclick="blockUser()" class="btn btn-danger" id="button">Block</button>
-                                    @endif
-                                </form>
+                                        <th style="width: 13%">
+                                            <div class="d-flex align-items-center">
+                                                <span>Email</span>
+                                                <div class="sort ml-2">
+                                                    <a href={{route('user.index',['order'=>'email','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'email','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </th>
 
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                                        <th style="width: 10%">
+{{--                                            <div class="d-flex align-items-center">--}}
+                                                <span>Phone</span>
+{{--                                                <div class="sort ml-2">--}}
+{{--                                                    <a href={{route('user.index',['order'=>'phone','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>--}}
+{{--                                                    <a href={{route('user.index',['order'=>'phone','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+                                        </th>
+
+                                        <th style="width: 10%">
+                                            <div class="d-flex align-items-center">
+                                                <span>Company</span>
+                                                <div class="sort ml-2">
+                                                    <a href={{route('user.index',['order'=>'company','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'company','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </th>
+
+                                        <th style="width: 5%">
+                                            <div class="d-flex align-items-center">
+                                                <span>isBlocked</span>
+                                                <div class="sort ml-2">
+                                                    <a href={{route('user.index',['order'=>'isBlocked','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'isBlocked','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </th>
+
+                                        <th style="width: 7%">
+                                                <span>Avatar</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            <tbody>
+                            @foreach($users as $user)
+                                <tr>
+                                    <td>
+                                        <a>{{$user->id}}</a>
+                                    </td>
+                                    <td>
+                                        <a>{{$user->firstName}}</a>
+                                    </td>
+                                    <td>
+                                        <a>{{$user->lastName}}</a>
+                                    </td>
+                                    <td>
+                                        <a>{{$user->email}}</a>
+                                    </td>
+                                    <td>
+                                        <a>{{$user->phone}}</a>
+                                    </td>
+                                    <td>
+                                        <a>{{$user->company}}</a>
+                                    </td>
+                                    <td>
+                                        <a class="text-red">{{$user->isBlocked == 1 ? "Blocked" : ""}}</a>
+                                    </td>
+                                    <td>
+                                        <a><img src="{{ Storage::url($user->avatar) }}" height="50" width="50" alt=""/></a>
+                                    </td>
+
+                                    <td class="project-actions text-right">
+                                        <form action="{{ route('user.block',$user) }}" method="POST">
+                                            @csrf
+                                            <a class="btn btn-primary" href="{{ route('user.edit',$user) }}">Edit</a>
+                                            @if($user->isBlocked == 0)
+                                                <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger" id="button">Block</button>
+                                            @endif
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                    <div class="d-flex justify-content-center">
+                        {{ $users->links() }}
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="d-flex justify-content-center">
-            {{ $users->links() }}
         </div>
     </section>
 @endsection
+

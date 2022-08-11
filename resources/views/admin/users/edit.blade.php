@@ -75,9 +75,7 @@
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
                     </div>
-
                 </div>
-
 
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Save changes</button>
