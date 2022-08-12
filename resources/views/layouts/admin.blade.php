@@ -188,6 +188,10 @@
                 <a href="{{route('user.index')}}" class="nav-link">
                     <p>Users</p>
                 </a>
+
+                <a href="{{route('admin.airport.index')}}" class="nav-link">
+                    <p>Airports</p>
+                </a>
             </nav>
             <!-- /.sidebar-menu -->
         </div>

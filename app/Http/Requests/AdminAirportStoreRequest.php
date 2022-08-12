@@ -4,8 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-
-class AdminPostStoreRequest extends FormRequest
+class AdminAirportStoreRequest extends FormRequest
 {
     public function authorize()
     {
@@ -16,10 +15,9 @@ class AdminPostStoreRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'context' => 'required',
-            'intro' => 'required',
-            'meta_title' => 'required',
-            'meta_description' => 'required',
+            'country' => 'required',
+            'description' => 'required',
+            'flag' => 'required|image|mimes:png|max:64',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ];
     }

@@ -11,8 +11,8 @@ class UserController extends Controller
 {
     public function index(Request $request)
     {
-        $order = $request->order;
-        $sort = $request->sort;
+        $order = $request->get("order","id");
+        $sort = $request->get("sort","asc");
         $users = User::orderBY($order,$sort)->paginate(10);
         return view('admin.users.index', compact('users'));
     }

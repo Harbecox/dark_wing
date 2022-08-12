@@ -23,17 +23,6 @@ class User extends Authenticatable
         'avatar',
     ];
 
-//    public $sortable = [
-//        'id',
-//        'firstName',
-//        'lastName',
-//        'email',
-//        'phone',
-//        'password',
-//        'company',
-//        'isBlocked',
-//    ];
-
     protected $hidden = [
         'password',
         'remember_token',

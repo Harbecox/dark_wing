@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\AirportController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,10 +18,12 @@ Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
 
     Route::resource('user', UserController::class);
 
+    Route::resource('airport', AirportController::class,['as' => 'admin']);
+
     Route::post('user/block/{user}', [UserController::class,'block'])->name("user.block");
 
 });
 
-Route::group(['middleware' => ['auth','isUser']], function () {
-    Route::get('/home', 'HomeController@index')->name('home');
-});
+//Route::group(['middleware' => ['auth','isUser']], function () {
+//    Route::get('/home', 'HomeController@index')->name('home');
+//});

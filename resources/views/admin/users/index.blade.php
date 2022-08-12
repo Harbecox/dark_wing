@@ -2,10 +2,6 @@
 @section('title', 'User')
 @section('content')
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -31,78 +27,96 @@
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th style="width: 3%">
+                                        <th>
                                             <div class="d-flex align-items-center">
                                                 <span>ID</span>
                                                 <div class="sort ml-2">
-                                                    <a href = {{route('user.index',['order'=>'ID','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
-                                                    <a href = {{route('user.index',['order'=>'ID','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                    <a href = {{route('user.index',['order'=>'ID','sort'=>'asc'])}}>
+                                                        <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href = {{route('user.index',['order'=>'ID','sort'=>'desc'])}}>
+                                                        <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </th>
 
-                                        <th style="width: 12%">
+                                        <th>
                                             <div class="d-flex align-items-center">
                                                 <span>First Name</span>
                                                 <div class="sort ml-2">
-                                                    <a href={{route('user.index',['order'=>'firstName','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
-                                                    <a href={{route('user.index',['order'=>'firstName','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'firstName','sort'=>'asc'])}}>
+                                                        <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href={{route('user.index',['order'=>'firstName','sort'=>'desc'])}}>
+                                                        <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </th>
 
-                                        <th style="width: 12%">
+                                        <th>
                                             <div class="d-flex align-items-center">
                                                 <span>Last Name</span>
                                                 <div class="sort ml-2">
-                                                    <a href={{route('user.index',['order'=>'lastName','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
-                                                    <a href={{route('user.index',['order'=>'lastName','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'lastName','sort'=>'asc'])}}>
+                                                        <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href={{route('user.index',['order'=>'lastName','sort'=>'desc'])}}>
+                                                        <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </th>
 
-                                        <th style="width: 13%">
+                                        <th>
                                             <div class="d-flex align-items-center">
                                                 <span>Email</span>
                                                 <div class="sort ml-2">
-                                                    <a href={{route('user.index',['order'=>'email','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
-                                                    <a href={{route('user.index',['order'=>'email','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'email','sort'=>'asc'])}}>
+                                                        <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href={{route('user.index',['order'=>'email','sort'=>'desc'])}}>
+                                                        <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </th>
 
-                                        <th style="width: 10%">
-{{--                                            <div class="d-flex align-items-center">--}}
-                                                <span>Phone</span>
-{{--                                                <div class="sort ml-2">--}}
-{{--                                                    <a href={{route('user.index',['order'=>'phone','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>--}}
-{{--                                                    <a href={{route('user.index',['order'=>'phone','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
+                                        <th>
+                                            <span>Phone</span>
                                         </th>
 
-                                        <th style="width: 10%">
+                                        <th>
                                             <div class="d-flex align-items-center">
                                                 <span>Company</span>
                                                 <div class="sort ml-2">
-                                                    <a href={{route('user.index',['order'=>'company','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
-                                                    <a href={{route('user.index',['order'=>'company','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'company','sort'=>'asc'])}}>
+                                                        <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href={{route('user.index',['order'=>'company','sort'=>'desc'])}}>
+                                                        <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </th>
 
-                                        <th style="width: 5%">
+                                        <th>
                                             <div class="d-flex align-items-center">
                                                 <span>isBlocked</span>
                                                 <div class="sort ml-2">
-                                                    <a href={{route('user.index',['order'=>'isBlocked','sort'=>'asc'])}}><i class="fa fa-arrow-up fs-6" aria-hidden="true"></i></a>
-                                                    <a href={{route('user.index',['order'=>'isBlocked','sort'=>'desc'])}}><i class="fa fa-arrow-down fs-6" aria-hidden="true"></i></a>
+                                                    <a href={{route('user.index',['order'=>'isBlocked','sort'=>'asc'])}}>
+                                                        <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href={{route('user.index',['order'=>'isBlocked','sort'=>'desc'])}}>
+                                                        <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </th>
 
-                                        <th style="width: 7%">
-                                                <span>Avatar</span>
+                                        <th>
+                                            <span>Avatar</span>
                                         </th>
                                     </tr>
                                 </thead>
@@ -157,4 +171,3 @@
         </div>
     </section>
 @endsection
-

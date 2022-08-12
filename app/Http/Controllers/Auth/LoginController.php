@@ -13,7 +13,7 @@ class LoginController extends Controller
 
     protected function authenticated()
     {
-        if (Auth::user() and Auth::user()->admin_status and Auth::user() == '0') {
+        if (Auth::user() && Auth::user()->admin_status) {
             return redirect()->route('homeAdmin');
         }
         return redirect('/home');
