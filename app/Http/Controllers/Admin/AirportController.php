@@ -9,10 +9,22 @@ use Illuminate\Http\Request;
 
 class AirportController extends Controller
 {
-    public function index()
+//    public function index()
+//    {
+//        $data['airports'] = Airport::all();
+//        return view('admin.airports.index',$data);
+//    }
+    public function index(Request $request)
     {
-        $data['airports'] = Airport::all();
-        return view('admin.airports.index',$data);
+//      $airports = Airport::orderBY($order,$sort)->paginate(10);
+        $order = $request->get("order","id");
+        $sort = $request->get("sort","asc");
+
+        $airports = Airport::select('*')
+            ->join('countries', 'airports.country_id', '=', 'countries.id')
+            ->orderBy($order, $sort)
+            ->paginate(10);
+        return view('admin.airports.index', compact('airports'));
     }
 
     public function create()
@@ -30,7 +42,7 @@ class AirportController extends Controller
         $airport->image = $request->file('image')->store('public/airports');
         $airport->save();
 
-        return redirect()->route('admin.airport.create')
+        return redirect()->route('admin.airport.index')
             ->with('success','Airport has been created successfully.');
     }
 

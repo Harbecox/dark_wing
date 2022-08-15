@@ -42,8 +42,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Country</label>
-                        <input type="text" name="country" class="form-control" placeholder="Enter Country">
+                        <select class="form-select" name="country">
+                            <option value=""> -- Select --</option>
+                            @foreach ($countries as $country)
+                                <option value="{{ $country->id }}">{{ $country->name }}-{{$country->code}}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="form-group">

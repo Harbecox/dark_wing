@@ -4,6 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @property mixed title
+ * @property mixed country
+ * @property mixed description
+ */
 class AdminAirportStoreRequest extends FormRequest
 {
     public function authorize()

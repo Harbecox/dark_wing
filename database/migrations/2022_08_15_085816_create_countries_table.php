@@ -8,18 +8,16 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('airports', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('country');
-            $table->string('description');
-            $table->string('flag')->nullable();
-            $table->string('image')->nullable();
+            $table->string('name');
+            $table->string('code');
             $table->timestamps();
         });
     }
+
     public function down()
     {
-        Schema::dropIfExists('airports');
+        Schema::dropIfExists('countries');
     }
 };

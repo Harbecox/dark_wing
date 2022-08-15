@@ -28,11 +28,55 @@
                 <table class="table table-striped projects">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Country</th>
-                            <th>Flag</th>
-                            <th>Image</th>
+                            <th>
+                                <div class="d-flex align-items-center">
+                                    <span>ID</span>
+                                    <div class="sort ml-2">
+                                        <a href = {{route('admin.airport.index',['order'=>'ID','sort'=>'asc'])}}>
+                                            <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                        </a>
+                                        <a href = {{route('admin.airport.index',['order'=>'ID','sort'=>'desc'])}}>
+                                            <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th>
+                                <div class="d-flex align-items-center">
+                                    <span>Title</span>
+                                    <div class="sort ml-2">
+                                        <a href = {{route('admin.airport.index',['order'=>'title','sort'=>'asc'])}}>
+                                            <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                        </a>
+                                        <a href = {{route('admin.airport.index',['order'=>'title','sort'=>'desc'])}}>
+                                            <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th>
+                                <div class="d-flex align-items-center">
+                                    <span>Country</span>
+                                    <div class="sort ml-2">
+                                        <a href = {{route('admin.airport.index',['order'=>'country','sort'=>'asc'])}}>
+                                            <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                        </a>
+                                        <a href = {{route('admin.airport.index',['order'=>'country','sort'=>'desc'])}}>
+                                            <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th>
+                                Flag
+                            </th>
+
+                            <th>
+                                Image
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
