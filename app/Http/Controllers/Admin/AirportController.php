@@ -5,26 +5,25 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminAirportStoreRequest;
 use App\Models\Airport;
+use App\Models\Country;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AirportController extends Controller
 {
-//    public function index()
-//    {
-//        $data['airports'] = Airport::all();
-//        return view('admin.airports.index',$data);
-//    }
     public function index(Request $request)
     {
-//      $airports = Airport::orderBY($order,$sort)->paginate(10);
         $order = $request->get("order","id");
         $sort = $request->get("sort","asc");
 
-        $airports = Airport::select('*')
+        $data['countries'] = Country::get('id','name','code');
+        $airports = DB::table('airports')
             ->join('countries', 'airports.country_id', '=', 'countries.id')
+            ->select('airports.*', 'countries.name','countries.code')
             ->orderBy($order, $sort)
             ->paginate(10);
-        return view('admin.airports.index', compact('airports'));
+//        return view('admin.airports.index', compact('airports'));
+        return view('admin.airports.index', compact('airports','data'));
     }
 
     public function create()
