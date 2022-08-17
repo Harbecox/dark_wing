@@ -60,10 +60,10 @@
                                 <div class="d-flex align-items-center">
                                     <span>Country</span>
                                     <div class="sort ml-2">
-                                        <a href = {{route('admin.airport.index',['order'=>'country','sort'=>'asc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'country_id','sort'=>'asc'])}}>
                                             <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
                                         </a>
-                                        <a href = {{route('admin.airport.index',['order'=>'country','sort'=>'desc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'country_id','sort'=>'desc'])}}>
                                             <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -79,38 +79,41 @@
                             </th>
                         </tr>
                     </thead>
+
                     <tbody>
+                        @foreach($airports as $airport)
+                            <tr>
+                                <td>
+                                    <a>{{$airport->id}}</a>
+                                </td>
+                                <td>
+                                    <a>{{$airport->title}}</a>
+                                </td>
+                                <td>
+                                    <a>{{$airport->country->name}}</a>
+                                </td>
+                                <td>
+                                    <a><img src="{{ Storage::url($airport->flag) }}" height="50" width="50" alt="" /></a>
+                                </td>
+                                <td>
+                                    <a><img src="{{ Storage::url($airport->image) }}" height="120" width="100" alt="" /></a>
+                                </td>
 
-                    @foreach($airports as $airport)
-                        <tr>
-                            <td>
-                                <a>{{$airport->id}}</a>
-                            </td>
-                            <td>
-                                <a>{{$airport->title}}</a>
-                            </td>
-                            <td>
-                                <a>{{$airport->country}}</a>
-                            </td>
-                            <td>
-                                <a><img src="{{ Storage::url($airport->flag) }}" height="50" width="50" alt="" /></a>
-                            </td>
-                            <td>
-                                <a><img src="{{ Storage::url($airport->image) }}" height="120" width="100" alt="" /></a>
-                            </td>
-
-                            <td class="project-actions text-right">
-                                <form action="{{ route('admin.airport.destroy',$airport) }}" method="POST">
-                                    <a class="btn btn-primary" href="{{ route('admin.airport.edit',$airport) }}">Edit</a>
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
+                                <td class="project-actions text-right">
+                                    <form action="{{ route('admin.airport.destroy',$airport) }}" method="POST">
+                                        <a class="btn btn-primary" href="{{ route('admin.airport.edit',$airport) }}">Edit</a>
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                <div class="d-flex justify-content-center">
+                    {{ $airports->links() }}
+                </div>
             </div>
         </div>
     </section>

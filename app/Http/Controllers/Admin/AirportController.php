@@ -7,7 +7,6 @@ use App\Http\Requests\AdminAirportStoreRequest;
 use App\Models\Airport;
 use App\Models\Country;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class AirportController extends Controller
 {
@@ -16,26 +15,24 @@ class AirportController extends Controller
         $order = $request->get("order","id");
         $sort = $request->get("sort","asc");
 
-        $data['countries'] = Country::get('id','name','code');
-        $airports = DB::table('airports')
-            ->join('countries', 'airports.country_id', '=', 'countries.id')
-            ->select('airports.*', 'countries.name','countries.code')
+        $airports = Airport::query()->with("country")
             ->orderBy($order, $sort)
             ->paginate(10);
-//        return view('admin.airports.index', compact('airports'));
-        return view('admin.airports.index', compact('airports','data'));
+
+        return view('admin.airports.index', compact('airports'));
     }
 
     public function create()
     {
-        return view('admin.airports.create');
+        $data['countries'] = Country::all();
+        return view('admin.airports.create',$data);
     }
 
     public function store(AdminAirportStoreRequest $request)
     {
         $airport = new Airport();
         $airport->title = $request->title;
-        $airport->country = $request->country;
+        $airport->country_id = $request->country_id;
         $airport->description = $request->description;
         $airport->flag = $request->file('flag')->store('public/airports');
         $airport->image = $request->file('image')->store('public/airports');
@@ -45,10 +42,10 @@ class AirportController extends Controller
             ->with('success','Airport has been created successfully.');
     }
 
-
     public function edit(Airport $airport)
     {
-        return view('admin.airports.edit',compact('airport'));
+        $data['countries'] = Country::all();
+        return view('admin.airports.edit', compact('airport','data'));
     }
 
     public function update(Request $request, Airport $airport)

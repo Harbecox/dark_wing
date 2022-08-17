@@ -42,10 +42,9 @@
                     </div>
 
                     <div class="form-group">
-                        <select class="form-select" name="country">
-                            <option value=""> -- Select --</option>
-                            @foreach ($airports as $airport)
-                                <option value="{{ $airport->id }}">{{ $airport->name }}-{{$airport->code}}</option>
+                        <select class="form-select" name="country_id">
+                            @foreach ($countries as $country)
+                                <option value="{{ $country->id }}">{{ $country->name }}-{{$country->code}}</option>
                             @endforeach
                         </select>
                     </div>

@@ -42,7 +42,13 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Country</label>
-                        <input type="text" value="{{ $airport->country }}" name="country" class="form-control" placeholder="Enter Country">
+                        <select class="form-control" id="type" name="country_id">
+                            @foreach($countries as $country)
+                                <option value="{{ $country->id }}" {{ $country->id == $airport->country_id ? 'selected' : '' }}>
+                                    {{ $country->name }}-{{$country->code}}
+                                </option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="form-group">
@@ -66,8 +72,8 @@
                             <img src="{{ Storage::url($airport->flag) }}" height="50" width="50" alt=""/>
                         </div>
                         <div class="custom-file">
-                            <input type="file" name="flag" class="form-control" id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
+                            <input type="file" name="flag" class="form-control" id="customFile1">
+                            <label class="custom-file-label" for="customFile1">Choose file</label>
                         </div>
                     </div>
 
@@ -77,8 +83,8 @@
                             <img src="{{ Storage::url($airport->image) }}" height="200" width="200" alt=""/>
                         </div>
                         <div class="custom-file">
-                            <input type="file" name="image" class="form-control" id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
+                            <input type="file" name="image" class="form-control" id="customFile2">
+                            <label class="custom-file-label" for="customFile2">Choose file</label>
                         </div>
                     </div>
                 </div>
