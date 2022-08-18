@@ -44,15 +44,15 @@ class AirportController extends Controller
 
     public function edit(Airport $airport)
     {
-        $data['countries'] = Country::all();
-        return view('admin.airports.edit', compact('airport','data'));
+        $countries = Country::all();
+        return view('admin.airports.edit', compact('airport','countries'));
     }
 
     public function update(Request $request, Airport $airport)
     {
         $request->validate([
             'title' => 'required',
-            'country' => 'required',
+            'country_id' => 'required',
             'description' => 'required',
         ]);
 
@@ -72,10 +72,10 @@ class AirportController extends Controller
         }
 
         $airport->title = $request->title;
-        $airport->country = $request->country;
+        $airport->country_id = $request->country_id;
         $airport->description = $request->description;
         $airport->save();
-        return redirect()->route('admin.airport.edit',$airport)
+        return redirect()->route('admin.airport.index',$airport)
             ->with('success','Airport updated successfully');
     }
 

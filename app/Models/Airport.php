@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property false|mixed|string flag
  * @property false|mixed|string image
  * @property mixed country_id
+ * @property mixed id
  */
 class Airport extends Model
 {
