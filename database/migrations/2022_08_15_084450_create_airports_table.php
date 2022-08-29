@@ -13,7 +13,6 @@ return new class extends Migration
             $table->string('title');
             $table->unsignedBigInteger('country_id');
             $table->longText('description');
-            $table->string('flag')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

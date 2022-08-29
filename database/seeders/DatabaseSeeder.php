@@ -10,7 +10,7 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory(10)->create();
 
-        \App\Models\Airport::factory(30)->create();
+        //\App\Models\Airport::factory(11)->create();
 
          \App\Models\User::factory()->create([
              'firstName' => 'admin',

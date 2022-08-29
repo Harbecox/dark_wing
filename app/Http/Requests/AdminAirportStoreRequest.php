@@ -25,7 +25,6 @@ class AdminAirportStoreRequest extends FormRequest
             'title' => 'required',
             'country_id' => ['required',Rule::exists('countries','id')],
             'description' => 'required',
-            'flag' => 'required|image|mimes:png|max:64',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ];
     }

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -71,3 +71,12 @@
     </div>
 </div>
 @endsection
+
+
+<script>
+    let images = [];
+    document.getElementById("Circular Flags").querySelectorAll(".app-icon.grid-icon__icon.is-color").forEach(function (e){
+        images.push(e.querySelector("img"));
+    })
+    console.log(images)
+</script>

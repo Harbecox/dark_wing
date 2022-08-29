@@ -1,0 +1,71 @@
+@media only screen and (max-width: 1500px) {
+  .logo {
+    height: 80px !important;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .partners_logo {
+    flex-direction: column;
+  }
+  .partners_logo .partner_logo {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .header {
+    align-items: start !important;
+  }
+  .header .header_menu {
+    display: none;
+  }
+  .header .account {
+    display: none;
+  }
+  .header .mobile_menu {
+    display: flex;
+  }
+  .header .account {
+    flex-direction: column;
+    align-items: end;
+  }
+  .header .account button {
+    margin-bottom: 5px;
+  }
+  .contact_input {
+    padding: 0 100px;
+  }
+  .order_select {
+    flex-direction: column;
+  }
+  .footer .footer_text p {
+    font-size: 18px !important;
+  }
+  .luxury_title {
+    padding: 0 50px !important;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .about_main .about_image {
+    transform: scale(0.8);
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .new_order_btn {
+    flex-direction: column;
+    align-items: center;
+  }
+  .new_order_btn button {
+    margin-bottom: 15px;
+  }
+  .post_main .post_title {
+    font-size: 54px;
+  }
+}
+@media only screen and (max-width: 995px) {
+  .luxury_title {
+    padding: 0;
+    left: 7px;
+  }
+}

@@ -34,7 +34,6 @@ class AirportController extends Controller
         $airport->title = $request->title;
         $airport->country_id = $request->country_id;
         $airport->description = $request->description;
-        $airport->flag = $request->file('flag')->store('public/airports');
         $airport->image = $request->file('image')->store('public/airports');
         $airport->save();
 
@@ -63,12 +62,6 @@ class AirportController extends Controller
                 'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             ]);
             $airport->image = $request->file('image')->store('public/airports');
-        }
-        if($request->hasFile('flag')){
-            $request->validate([
-                'flag' => 'required|image|mimes:png,PNG|max:64',
-            ]);
-            $airport->flag = $request->file('flag')->store('public/airports');
         }
 
         $airport->title = $request->title;

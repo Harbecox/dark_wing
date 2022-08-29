@@ -30,10 +30,9 @@ class AirportFactory extends Factory
 
         return [
             'title' => $this->faker->country(),
-            'country_id' => $this->faker->numberBetween(0,249),
+            'country_id' => $this->faker->numberBetween(1,249),
             'description' => $this->faker->text(),
             'image' => 'public/airports/'.$name,
-            'flag' => 'public/airports/'.$name,
         ];
     }
 }

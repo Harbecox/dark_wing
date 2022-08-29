@@ -248,7 +248,7 @@ class CountrySeeder extends Seeder
             ['name' => 'Uruguay', 'code' => 'UY'],
             ['name' => 'Uzbekistan', 'code' => 'UZ'],
             ['name' => 'Vanuatu', 'code' => 'VU'],
-            ['name' => 'Venezuela, Bolivarian Republic of', 'code' => 'VE'],
+            ['name' => 'Venezuela', 'code' => 'VE'],
             ['name' => 'Viet Nam', 'code' => 'VN'],
             ['name' => 'Virgin Islands, British', 'code' => 'VG'],
             ['name' => 'Virgin Islands, U.S.', 'code' => 'VI'],
@@ -259,7 +259,14 @@ class CountrySeeder extends Seeder
             ['name' => 'Zimbabwe', 'code' => 'ZW'],
         ];
         foreach ($countries as $key => $value) {
+            $file_name = str_replace(" ","-",strtolower($value['name'])).".png";
+            if(file_exists("storage/app/public/flag/".$file_name)){
+                $value['flag'] = 'public/flag/'.$file_name;
+            }else{
+                $value['flag'] = null;
+            }
             Country::create($value);
         }
+        exit;
     }
 }

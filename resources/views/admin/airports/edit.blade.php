@@ -67,17 +67,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Flag</label>
-                        <div class="form-group">
-                            <img src="{{ Storage::url($airport->flag) }}" height="50" width="50" alt=""/>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" name="flag" class="form-control" id="customFile1">
-                            <label class="custom-file-label" for="customFile1">Choose file</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="exampleInputEmail1">Image</label>
                         <div class="form-group">
                             <img src="{{ Storage::url($airport->image) }}" height="200" width="200" alt=""/>

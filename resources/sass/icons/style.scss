@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?dsnacp');
+  src:  url('fonts/icomoon.eot?dsnacp#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?dsnacp') format('truetype'),
+  url('fonts/icomoon.woff?dsnacp') format('woff'),
+  url('fonts/icomoon.svg?dsnacp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-edit .path1:before {
+  content: "\e900";
+  color: rgb(13, 26, 39);
+}
+.icon-edit .path2:before {
+  content: "\e901";
+  margin-left: -0.888671875em;
+  color: rgb(255, 255, 255);
+}
+.icon-at-sign:before {
+  content: "\e902";
+}
+.icon-Send:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-down:before {
+  content: "\e904";
+}
+.icon-benefits:before {
+  content: "\e905";
+}
+.icon-big_left:before {
+  content: "\e906";
+}
+.icon-big_right:before {
+  content: "\e907";
+}
+.icon-delete:before {
+  content: "\e908";
+}
+.icon-download:before {
+  content: "\e909";
+}
+.icon-engagement:before {
+  content: "\e90a";
+}
+.icon-eye:before {
+  content: "\e90b";
+}
+.icon-fb:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-free_form:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-left:before {
+  content: "\e90e";
+}
+.icon-Line:before {
+  content: "\e90f";
+  color: #fff;
+}
+.icon-Line-right:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-Login:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-partner:before {
+  content: "\e912";
+}
+.icon-right:before {
+  content: "\e913";
+}
+.icon-search:before {
+  content: "\e914";
+  color: #838a91;
+}
+.icon-Send1:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-simvol:before {
+  content: "\e916";
+}
+.icon-small_simvol:before {
+  content: "\e917";
+  color: #fff;
+}
+.icon-telegram:before {
+  content: "\e918";
+  color: #fff;
+}
+.icon-twiter:before {
+  content: "\e919";
+  color: #fff;
+}
+.icon-upload:before {
+  content: "\e91a";
+  color: #fff;
+}
+.icon-User:before {
+  content: "\e91b";
+}
+.icon-whatsapp:before {
+  content: "\e91c";
+  color: #fff;
+}
+.icon-YouTube:before {
+  content: "\e91d";
+  color: #fff;
+}

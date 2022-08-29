@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\View;
 
 Auth::routes();
 
+Route::get('/', [\App\Http\Controllers\Front\IndexController::class,"index"])->name("index");
+
 Route::get('/news', function()
 {
     return View::make('admin.pages.news');
@@ -23,10 +25,7 @@ Route::get('/contact', function()
     return View::make('admin.pages.contact');
 });
 
-Route::get('/index', function()
-{
-    return View::make('admin.pages.index');
-});
+
 
 Route::get('/order', function()
 {

@@ -93,7 +93,7 @@
                                     <a>{{$airport->country->name}}</a>
                                 </td>
                                 <td>
-                                    <a><img src="{{ Storage::url($airport->flag) }}" height="50" width="50" alt="" /></a>
+                                    <a><img src="{{ Storage::url($airport->country->flag) }}" height="50" width="50" alt="" /></a>
                                 </td>
                                 <td>
                                     <a><img src="{{ Storage::url($airport->image) }}" height="120" width="100" alt="" /></a>

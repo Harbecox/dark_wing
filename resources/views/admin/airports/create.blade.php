@@ -50,14 +50,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="customFile">Flag</label>
-                        <div class="custom-file">
-                            <input type="file" name="flag" class="form-control" id="customFile1">
-                            <label class="custom-file-label" for="customFile1">Choose file</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="exampleInputEmail1">Description</label>
                         <div class="row">
                             <div class="col-md-12">
