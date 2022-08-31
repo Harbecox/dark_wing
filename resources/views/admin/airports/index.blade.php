@@ -69,11 +69,6 @@
                                     </div>
                                 </div>
                             </th>
-
-                            <th>
-                                Flag
-                            </th>
-
                             <th>
                                 Image
                             </th>
@@ -91,9 +86,6 @@
                                 </td>
                                 <td>
                                     <a>{{$airport->country->name}}</a>
-                                </td>
-                                <td>
-                                    <a><img src="{{ Storage::url($airport->country->flag) }}" height="50" width="50" alt="" /></a>
                                 </td>
                                 <td>
                                     <a><img src="{{ Storage::url($airport->image) }}" height="120" width="100" alt="" /></a>

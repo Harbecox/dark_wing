@@ -33,7 +33,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="index3.html" class="nav-link">Home</a>
+                <a href="" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
@@ -64,7 +64,7 @@
                 </div>
             </li>
 
-            <!-- Messages Dropdown Menu -->
+            <!-- Messages Dropdown Photo -->
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="far fa-comments"></i>
@@ -122,7 +122,7 @@
                     <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
                 </div>
             </li>
-            <!-- Notifications Dropdown Menu -->
+            <!-- Notifications Dropdown Photo -->
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="far fa-bell"></i>
@@ -166,7 +166,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="index3.html" class="brand-link">
+        <a href="" class="brand-link">
             <img src="/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">Admin panel</span>
         </a>
@@ -174,7 +174,7 @@
         <!-- Sidebar -->
         <div class="sidebar">
 
-            <!-- Sidebar Menu -->
+            <!-- Sidebar Photo -->
             <nav class="mt-2">
 
                 <a href="{{route('homeAdmin')}}" class="nav-link">
@@ -191,6 +191,10 @@
 
                 <a href="{{route('admin.airport.index')}}" class="nav-link">
                     <p>Airports</p>
+                </a>
+
+                <a href="{{route('menu.index')}}" class="nav-link">
+                    <p>Menu</p>
                 </a>
             </nav>
             <!-- /.sidebar-menu -->

@@ -280,6 +280,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="news">
             <div class="simvol_title d-flex flex-column align-items-center pb-5">
@@ -289,19 +290,19 @@
 
             <div class="owl-info-cards owl-carousel owl-theme">
                 @foreach($posts as $post)
-                <div class="item">
-                    <div class="card card_info">
-                        <img src={{Storage::url($post->image)}} class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <span class="span_sm fw-normal lh-sm text-gray-7">{{ $post->created_at->toFormattedDateString() }}</span>
-                            <p class="p_lg fw-normal lh-1 text-white py-2">{{ $post->title }}</p>
-                            <span class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</span>
-                            <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="#">Read more</a></p>
+                    <div class="item">
+                        <div class="card card_info">
+                            <img src={{Storage::url($post->image)}} class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <span class="span_sm fw-normal lh-sm text-gray-7">{{ $post->created_at->toFormattedDateString() }}</span>
+                                <p class="p_lg fw-normal lh-1 text-white py-2">{{ $post->title }}</p>
+                                <span class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</span>
+                                <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="#">Read more</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
-            @endforeach
             <p class="p_md fw-bold lh-sm text-gray-6 text-center text-uppercase "><a href="#">View all</a></p>
         </div>
     </div>

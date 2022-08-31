@@ -1,14 +1,18 @@
 <?php
 
+use App\Http\Controllers\Admin\AirportController;
+use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\AirportController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 
 Auth::routes();
 
 Route::get('/', [\App\Http\Controllers\Front\IndexController::class,"index"])->name("index");
+
+//Route::get('/upload', [\App\Http\Controllers\FileUploadController::class,"getFileUploadForm"])->name('admin.menu.create');
+//Route::post('upload', [\App\Http\Controllers\FileUploadController::class, 'store' ])->name('store.file');
 
 Route::get('/news', function()
 {
@@ -24,8 +28,6 @@ Route::get('/contact', function()
 {
     return View::make('admin.pages.contact');
 });
-
-
 
 Route::get('/order', function()
 {
@@ -60,7 +62,12 @@ Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
 
     Route::resource('post', PostController::class);
 
+    Route::resource('menu', MenuController::class);
+
     Route::resource('user', UserController::class);
+
+    Route::resource('menu', MenuController::class);
+    Route::post('pdf', [MenuController::class,"upload"])->name("admin.pdf");
 
     Route::resource('airport', AirportController::class,['as' => 'admin']);
 
