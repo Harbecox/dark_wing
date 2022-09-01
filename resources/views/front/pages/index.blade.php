@@ -227,7 +227,7 @@
                 </div>
             @endforeach
         </div>
-        <div class="d-flex justify-content-center" style="margin-top: ">
+        <div class="d-flex justify-content-center">
             <a href="{{ route("download_menu") }}" class="btn btn-outline-light text-white text-uppercase" style="width: 320px">
                 <span class="pnt">~</span>Download Menu<span class="pnt">~</span>
             </a>
@@ -277,7 +277,7 @@
                                 <span class="span_sm fw-normal lh-sm text-gray-7">{{ $post->created_at->toFormattedDateString() }}</span>
                                 <p class="p_lg fw-normal lh-1 text-white py-2">{{ $post->title }}</p>
                                 <span class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</span>
-                                <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="{{ route("show_news") }}">Read more</a></p>
+                                <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="{{ route("show_news",$post->id) }}">Read more</a></p>
                             </div>
                         </div>
                     </div>
