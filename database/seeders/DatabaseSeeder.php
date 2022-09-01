@@ -12,15 +12,16 @@ class DatabaseSeeder extends Seeder
 
         //\App\Models\Airport::factory(11)->create();
 
-         \App\Models\User::factory()->create([
-             'firstName' => 'admin',
-             'email' => 'admin@gmail.com',
-             'admin_status' => true
-         ]);
+        \App\Models\User::factory()->create([
+            'firstName' => 'admin',
+            'email' => 'admin@gmail.com',
+            'admin_status' => true
+        ]);
 
-         $this->call(CountrySeeder::class);
-//        $this->call([
-//            PostSeeder::class
-//        ]);
+        $this->call(CountrySeeder::class);
+
+        $this->call([
+            PostSeeder::class
+        ]);
     }
 }

@@ -7,6 +7,7 @@ use App\Http\Requests\AdminPhotosStoreRequest;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Spatie\FlareClient\Http\Response;
 
 class MenuController extends Controller
 {
@@ -52,7 +53,7 @@ class MenuController extends Controller
 
         if($request->hasFile('image')){
             $request->validate([
-                'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:10000',
             ]);
             $menu->image = $request->file('image')->store('public/uploads');
         }
@@ -82,4 +83,6 @@ class MenuController extends Controller
         return back()
             ->with('success','File has been successfully uploaded.');
     }
+
+
 }

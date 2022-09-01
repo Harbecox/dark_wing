@@ -214,7 +214,7 @@
     <div class="contact">
         <div class="container">
             <div class="simvol_title d-flex flex-column align-items-center">
-                <div class="simvol_image"><img src="image/simvol.png"></div>
+                <div class="simvol_image"><img src="/image/simvol.png"></div>
                 <h3 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.06em;">
                     CONTACT US</h3>
             </div>

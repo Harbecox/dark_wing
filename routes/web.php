@@ -11,50 +11,11 @@ Auth::routes();
 
 Route::get('/', [\App\Http\Controllers\Front\IndexController::class,"index"])->name("index");
 
-//Route::get('/upload', [\App\Http\Controllers\FileUploadController::class,"getFileUploadForm"])->name('admin.menu.create');
-//Route::post('upload', [\App\Http\Controllers\FileUploadController::class, 'store' ])->name('store.file');
+Route::get('/download_menu', [\App\Http\Controllers\Front\IndexController::class,"download"])->name("download_menu");
 
-Route::get('/news', function()
-{
-    return View::make('admin.pages.news');
-});
+Route::get('/news', [\App\Http\Controllers\Front\NewsController::class,"index"])->name("all_news");
 
-Route::get('/airports', function()
-{
-    return View::make('admin.pages.airports');
-});
-
-Route::get('/contact', function()
-{
-    return View::make('admin.pages.contact');
-});
-
-Route::get('/order', function()
-{
-    return View::make('admin.pages.order');
-});
-
-Route::get('/partnership', function()
-{
-    return View::make('admin.pages.partnership');
-});
-
-Route::get('/personal', function()
-{
-    return View::make('admin.pages.personal');
-});
-
-Route::get('/port', function()
-{
-    return View::make('admin.pages.port');
-});
-
-Route::get('/post', function()
-{
-    return View::make('admin.pages.post');
-});
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('user.status')->name('home');
+Route::get('/news/{id}', [\App\Http\Controllers\Front\NewsController::class,"show"])->name("show_news");
 
 Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
 
@@ -67,6 +28,7 @@ Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
     Route::resource('user', UserController::class);
 
     Route::resource('menu', MenuController::class);
+
     Route::post('pdf', [MenuController::class,"upload"])->name("admin.pdf");
 
     Route::resource('airport', AirportController::class,['as' => 'admin']);

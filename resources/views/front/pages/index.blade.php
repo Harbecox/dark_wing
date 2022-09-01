@@ -1,5 +1,7 @@
 @extends('layouts.front')
 
+@section('title')
+
 @section('content')
     <div class="airport">
         <div class="container">
@@ -107,11 +109,11 @@
             <p class="p_md fw-bold lh-sm text-gray-6 text-center text-uppercase pt-1"><a href="#">All airports</a></p>
         </div>
     </div>
-    <div class="about" style="background-image: url('image/bg_1.png')">
+    <div class="about" style="background-image: url('public/image/bg_1.png')">
         <div class="container">
             <div class="about_main">
                 <div class="simvol_title d-flex flex-column align-items-center">
-                    <div class="simvol_image"><img src="image/simvol.png"></div>
+                    <div class="simvol_image"><img src="/image/simvol.png"></div>
                     <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">About us</h2>
                 </div>
                 <p class="p_lg fw-normal text-gray-5 lh-sm text-center pt-3">We are VIP inflight catering specialists
@@ -213,51 +215,29 @@
     </div>
     <div class="menu">
         <div class="simvol_title d-flex flex-column align-items-center" style="margin-bottom: 41px">
-            <div class="simvol_image"><img src="image/simvol.png"></div>
+            <div class="simvol_image"><img src="/image/simvol.png"></div>
             <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">our Menu</h2>
         </div>
         <div class="owl-menu-cards owl-carousel owl-theme position-relative">
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
+            @foreach($menu_images as $image)
+                <div class="item">
+                    <div class="menu_card">
+                        <img src={{Storage::url($image->image)}}>
+                    </div>
+                </div>
+            @endforeach
         </div>
         <div class="d-flex justify-content-center" style="margin-top: ">
-            <button class="btn btn-outline-light text-white text-uppercase" style="width: 320px"><span class="pnt">~</span>Download
-                Menu<span
-                    class="pnt">~</span></button>
+            <a href="{{ route("download_menu") }}" class="btn btn-outline-light text-white text-uppercase" style="width: 320px">
+                <span class="pnt">~</span>Download Menu<span class="pnt">~</span>
+            </a>
         </div>
     </div>
+
     <div class="container">
         <div class="partners">
             <div class="simvol_title d-flex flex-column align-items-center">
-                <div class="simvol_image"><img src="image/simvol.png"></div>
+                <div class="simvol_image"><img src="/image/simvol.png"></div>
                 <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">Our partners</h2>
             </div>
             <p class="p_lg fw-normal text-gray-5 lh-sm text-center" style="padding: 25px 116px 35px 116px">We are VIP
@@ -284,7 +264,7 @@
     <div class="container">
         <div class="news">
             <div class="simvol_title d-flex flex-column align-items-center pb-5">
-                <div class="simvol_image"><img src="image/simvol.png"></div>
+                <div class="simvol_image"><img src="/image/simvol.png"></div>
                 <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">News</h2>
             </div>
 
@@ -297,19 +277,19 @@
                                 <span class="span_sm fw-normal lh-sm text-gray-7">{{ $post->created_at->toFormattedDateString() }}</span>
                                 <p class="p_lg fw-normal lh-1 text-white py-2">{{ $post->title }}</p>
                                 <span class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</span>
-                                <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="#">Read more</a></p>
+                                <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="{{ route("show_news") }}">Read more</a></p>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-            <p class="p_md fw-bold lh-sm text-gray-6 text-center text-uppercase "><a href="#">View all</a></p>
+            <p class="p_md fw-bold lh-sm text-gray-6 text-center text-uppercase "><a href="{{ route("all_news") }}">View all</a></p>
         </div>
     </div>
     <div class="contact">
         <div class="container">
             <div class="simvol_title d-flex flex-column align-items-center">
-                <div class="simvol_image"><img src="image/simvol.png"></div>
+                <div class="simvol_image"><img src="/image/simvol.png"></div>
                 <h3 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.06em;">
                     CONTACT US</h3>
             </div>

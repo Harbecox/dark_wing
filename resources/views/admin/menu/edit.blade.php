@@ -36,7 +36,7 @@
                 @method('PUT')
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Title</label>
+                        <label for="exampleInputEmail1">Position</label>
                         <input type="text" value="{{ $menu->position }}" name="position" class="form-control" placeholder="Enter Position">
                     </div>
 

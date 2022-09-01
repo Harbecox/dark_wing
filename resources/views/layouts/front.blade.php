@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>@yield("title","Luxury catering around the world")</title>
+    <meta name="description" content="@yield("title","We are here to provide you the best quality catering service during your stay and departure")">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Tenor+Sans&display=swap"
@@ -13,7 +14,7 @@
 </head>
 <body>
 @if(\Request::route()->getName() == "index")
-    <div class="bg_header" style="background-image: url('image/БГ-.png')">
+    <div class="bg_header" style="background-image: url('public/image/БГ-.png')">
         <div class="header d-flex justify-content-between align-items-center">
             <div class="header_menu ">
                 <ul class="navbar">
@@ -24,7 +25,7 @@
                 </ul>
             </div>
             <div class="mobile_menu">
-                <img src="image/menu.svg" style="margin-right: 5px">
+                <img src="/image/menu.svg" style="margin-right: 5px">
                 <p class="fw-normal p_md text-white text-uppercase">Menu</p>
             </div>
             <div class="mobile_menu_open" Luxury catering
@@ -478,7 +479,7 @@
             </ul>
         </div>
         <div class="mobile_menu">
-            <img src="image/menu.svg" style="margin-right: 5px">
+            <img src="/image/menu.svg" style="margin-right: 5px">
             <p class="fw-normal p_md text-white text-uppercase">Menu</p>
         </div>
         <div class="mobile_menu_open">
@@ -492,7 +493,7 @@
             <p class="text-gray-1 p_md d-flex align-items-center"><a href="#"><i class="icon-User account_icon"></i>New account</a></p>
         </div>
         <div class="white_logo">
-            <img src="image/logo-header.svg"></div>
+            <img src="/image/logo-header.svg"></div>
         <div class="account">
             <button class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Log in
             </button>
@@ -514,7 +515,7 @@
                 <p class="p_md fw-normal lh-sm text-white opacity-25"><a>Contacts</a></p>
             </div>
             <div>
-                <img src="image/logo-footer.svg">
+                <img src="/image/logo-footer.svg">
             </div>
             <p class="p_md fw-normal lh-sm text-white opacity-25 footer_text">order@darkwing-catering.com</p>
         </div>
