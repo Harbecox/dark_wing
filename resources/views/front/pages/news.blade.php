@@ -5,28 +5,9 @@
     <div class="container">
         <div class="d-flex flex-column align-items-center news_main">
             <h1 class="fw-normal lh-1 text-white text-uppercase tenor">News</h1>
-            <div class="py-5">
-                <div class="row">
-                    @foreach($news as $post)
-                        <div class="col-xl-4 col-lg-6 col-md-12">
-                            <div class="card card_info">
-                                <img src={{Storage::url($post->image)}} class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <span class="span_sm fw-normal lh-sm text-gray-7">{{$post->created_at}}</span>
-                                    <p class="p_lg fw-normal lh-1 text-white py-2">{{$post->title}}</p>
-                                    <span class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</span>
-                                    <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="{{ route("show_news",$post->id) }}">Read more</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-            <button class="btn btn-lg btn-outline-light text-white text-uppercase" style="width: 481px">See more</button>
+            <livewire:news-list />
         </div>
     </div>
-
-
 
     <div class="contact">
         <div class="container">

@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     public function index(){
-        $data['news'] = Post::query()->limit(9)->get();
-        return view('front.pages.news',$data);
+        return view('front.pages.news');
     }
 
     public function show($id){

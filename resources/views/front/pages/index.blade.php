@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title')
+{{--@section('title')--}}
 
 @section('content')
     <div class="airport">
@@ -88,6 +88,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="owl-city owl-carousel owl-theme">
                 @foreach($airports as $airport)
                     <div class="item">
@@ -100,15 +101,15 @@
                                 <h5 class="fw-normal lh-sm text-white">{{ $airport->title }}</h5>
                                 <p class="p_sm text-white lh-sm fw-normal opacity-75">{{ $airport->country->name }}</p>
                                 <p class="city_open fw-normal p_md lh-sm text-white text-uppercase">
-                                    <a class="d-flex align-items-center" href="#">Open<i class="icon-Line-right"></i></a></p>
+                                    <a class="d-flex align-items-center" href="{{ route("show_airport",$airport->id) }}">Open<i class="icon-Line-right"></i></a></p>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-            <p class="p_md fw-bold lh-sm text-gray-6 text-center text-uppercase pt-1"><a href="#">All airports</a></p>
+            <p class="p_md fw-bold lh-sm text-gray-6 text-center text-uppercase pt-1"><a href="{{ route("all_airports") }}">All airports</a></p>
         </div>
-    </div>
+
     <div class="about" style="background-image: url('public/image/bg_1.png')">
         <div class="container">
             <div class="about_main">

@@ -11,11 +11,19 @@ Auth::routes();
 
 Route::get('/', [\App\Http\Controllers\Front\IndexController::class,"index"])->name("index");
 
+Route::get('/partnership', [\App\Http\Controllers\Front\IndexController::class,"index"])->name("partnership");
+
+Route::get('/contact', [\App\Http\Controllers\Front\IndexController::class,"index"])->name("contact");
+
 Route::get('/download_menu', [\App\Http\Controllers\Front\IndexController::class,"download"])->name("download_menu");
 
 Route::get('/news', [\App\Http\Controllers\Front\NewsController::class,"index"])->name("all_news");
 
+Route::get('/airports', [\App\Http\Controllers\Front\AirportsController::class,"index"])->name("all_airports");
+
 Route::get('/news/{id}', [\App\Http\Controllers\Front\NewsController::class,"show"])->name("show_news");
+
+Route::get('/airports/{id}', [\App\Http\Controllers\Front\AirportsController::class,"show"])->name("show_airport");
 
 Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
 

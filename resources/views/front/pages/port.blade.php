@@ -4,23 +4,20 @@
     <div class="container">
         <div class="d-flex flex-column align-items-center port_main">
             <p class="p_md fw-bold lh-sm text-uppercase text-white text_back" style="opacity: 0.4">
-                <a href="#" class="d-flex align-items-center"><i class="icon-Line"></i>back</a></p>
+                <a href="{{route("all_airports")}}" class="d-flex align-items-center">
+                    <i class="icon-Line"></i>back
+                </a>
+            </p>
             <div class="d-flex align-items-center port_title">
                 <div class="circle">
-                    <img src="image/flag_1.png">
+                    <img src="{{ Storage::url($airport->country->flag) }}">
                 </div>
-                <h1 class="fw-normal lh-1 text-white text-uppercase tenor" style="letter-spacing: -0.08em;">Paris,
-                    CDG</h1>
+                <h1 class="fw-normal lh-1 text-white text-uppercase tenor" style="letter-spacing: -0.08em;">{{$airport->title}}</h1>
             </div>
-            <p class="p_lg fw-normal lh-sm text-white text-center pb-4"><i class="icon-at-sign"></i>Paris Charles de
-                Gaulle Airport or Roissy Airport, is the largest international airport in France. Opened in
-                1974, it is in Roissy-en-France, 23 km (14 mi) northeast of Paris, and is named after statesman Charles
-                de
-                Gaulle (1890–1970).
-                Charles de Gaulle Airport serves as the principal hub for Air France and a destination for other legacy
-                carriers (from Star Alliance, Oneworld and SkyTeam), as well as a focus city for low-cost carriers
-                EasyJet
-                and Vueling. It is operated by Groupe ADP under the brand Paris Aéroport.</p>
+            <div class="p_lg fw-normal lh-sm text-white text-center pb-4">
+                <i class="icon-at-sign"></i>
+                {!! $airport->description !!}
+            </div>
             <div class="d-flex justify-content-center pt-3">
                 <button class="btn text-white text-uppercase" style="width: 258px"><span class="pnt">~</span>Order<span
                         class="pnt">~</span>
@@ -31,51 +28,28 @@
             </div>
         </div>
     </div>
-    <div class="simvol_title d-flex flex-column align-items-center">
-        <div class="simvol_image"><img src="/image/simvol.png"></div>
-        <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.06em;">our
-            Menu</h2>
-    </div>
-    </div>
-    <div class="menu port_menu">
-        <div class="owl-menu-cards owl-carousel owl-theme">
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
-            <div class="item">
-                <div class="menu_card"></div>
-            </div>
+
+    <div class="menu">
+        <div class="simvol_title d-flex flex-column align-items-center" style="margin-bottom: 41px">
+            <div class="simvol_image"><img src="/image/simvol.png"></div>
+            <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">Our Menu</h2>
+        </div>
+        <div class="owl-menu-cards owl-carousel owl-theme position-relative">
+            @foreach($menu_images as $menu)
+                <div class="item">
+                    <div class="menu_card">
+                        <img src={{Storage::url($menu->image)}}>
+                    </div>
+                </div>
+            @endforeach
         </div>
         <div class="d-flex justify-content-center">
-            <button class="btn btn-outline-light text-white text-uppercase" style="width: 320px"><span class="pnt">~</span>Download
-                Menu<span
-                    class="pnt">~</span></button>
+            <a href="{{ route("download_menu") }}" class="btn btn-outline-light text-white text-uppercase" style="width: 320px">
+                <span class="pnt">~</span>Download Menu<span class="pnt">~</span>
+            </a>
         </div>
     </div>
+
     <div class="container">
         <div class="port_airports">
             <div class="simvol_title d-flex flex-column align-items-center">
@@ -83,72 +57,29 @@
                 <h3 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.06em;">
                     Other airports</h3>
             </div>
-            <div class="countries">
-                <div class="owl-city owl-carousel owl-theme">
+            <div class="owl-city owl-carousel owl-theme">
+                @foreach($airports as $airport)
                     <div class="item">
                         <div class="card_city">
-                            <img src='image/city_1.jpg'>
+                            <img src='{{ Storage::url($airport->image) }}'>
                             <div class="flag">
-                                <img src="image/flag_1.png">
+                                <img src="{{ Storage::url($airport->country->flag) }}">
                             </div>
                             <div class="city_name">
-                                <h5 class="fw-normal lh-sm text-white">Paris</h5>
-                                <p class="p_sm text-white lh-sm fw-normal opacity-75">France</p>
+                                <h5 class="fw-normal lh-sm text-white">{{ $airport->title }}</h5>
+                                <p class="p_sm text-white lh-sm fw-normal opacity-75">{{ $airport->country->name }}</p>
                                 <p class="city_open fw-normal p_md lh-sm text-white text-uppercase">
-                                    <a class="d-flex align-items-center" href="#">Open<i class="icon-Line-right"></i></a>
-                                </p>
+                                    <a class="d-flex align-items-center" href="{{ route("show_airport",$airport->id) }}">Open<i class="icon-Line-right"></i></a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="card_city">
-                            <img src="image/city_4.jpg">
-                            <div class="flag">
-                                <img src="image/flag_2.png">
-                            </div>
-                            <div class="city_name">
-                                <h5 class="fw-normal lh-sm text-white">London</h5>
-                                <p class="p_sm text-white lh-sm fw-normal opacity-75">Great Britain</p>
-                                <p class="city_open fw-normal p_md lh-sm text-white text-uppercase">
-                                    <a class="d-flex align-items-center" href="#">Open<i class="icon-Line-right"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card_city">
-                            <img src="image/city_2.jpg">
-                            <div class="flag">
-                                <img src="image/flag_3.png">
-                            </div>
-                            <div class="city_name">
-                                <h5 class="fw-normal lh-sm text-white">Moscow</h5>
-                                <p class="p_sm text-white lh-sm fw-normal opacity-75">Russia</p>
-                                <p class="city_open fw-normal p_md lh-sm text-white text-uppercase">
-                                    <a class="d-flex align-items-center" href="#">Open<i class="icon-Line-right"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card_city">
-                            <img src="image/city_3.jpg">
-                            <div class="flag">
-                                <img src="image/flag_4.png">
-                            </div>
-                            <div class="city_name">
-                                <h5 class="fw-normal lh-sm text-white">Rome</h5>
-                                <p class="p_sm text-white lh-sm fw-normal opacity-75">Italy</p>
-                                <p class="city_open fw-normal p_md lh-sm text-white text-uppercase">
-                                    <a class="d-flex align-items-center" href="#">Open<i class="icon-Line-right"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
+            <p class="p_md fw-bold lh-sm text-gray-6 text-center text-uppercase pt-1"><a href="{{ route("all_airports") }}">All airports</a></p>
         </div>
     </div>
+
+
     <div class="contact">
         <div class="container">
             <div class="simvol_title d-flex flex-column align-items-center">
@@ -209,3 +140,5 @@
         </div>
     </div>
 @endsection
+
+
