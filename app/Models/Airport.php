@@ -52,7 +52,7 @@ class Airport extends Model
         $x = intval(($img->width() - $ow) / 2);
         $y = intval(($img->height() - $oh) / 2);
         $img->crop($ow,$oh,$x,$y);
-        $img->save("public/".Storage::url($value));
+        $img->save("public".Storage::url($value));
         $this->attributes['image'] = $value;
     }
 }
