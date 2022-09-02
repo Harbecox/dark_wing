@@ -267,6 +267,5 @@ class CountrySeeder extends Seeder
             }
             Country::create($value);
         }
-        exit;
     }
 }

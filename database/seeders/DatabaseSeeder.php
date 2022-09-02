@@ -2,15 +2,18 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
     public function run()
     {
+        $this->call(CountrySeeder::class);
+
         \App\Models\User::factory(10)->create();
 
-        //\App\Models\Airport::factory(11)->create();
+        \App\Models\Airport::factory(11)->create();
 
         \App\Models\User::factory()->create([
             'firstName' => 'admin',
@@ -18,10 +21,7 @@ class DatabaseSeeder extends Seeder
             'admin_status' => true
         ]);
 
-        $this->call(CountrySeeder::class);
 
-        $this->call([
-            PostSeeder::class
-        ]);
+        Post::factory()->count(12)->create();
     }
 }
