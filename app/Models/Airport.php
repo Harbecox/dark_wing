@@ -16,6 +16,7 @@ use Intervention\Image\Facades\Image;
  * @property false|mixed|string image
  * @property mixed country_id
  * @property mixed id
+ * @property false|mixed|string bg_image
  */
 class Airport extends Model
 {
@@ -27,6 +28,7 @@ class Airport extends Model
         'description',
         'flag',
         'image',
+        'bg_image',
     ];
 
     function country(): \Illuminate\Database\Eloquent\Relations\HasOne
@@ -52,7 +54,7 @@ class Airport extends Model
         $x = intval(($img->width() - $ow) / 2);
         $y = intval(($img->height() - $oh) / 2);
         $img->crop($ow,$oh,$x,$y);
-        $img->save("public".Storage::url($value));
+        Storage::put($value, $img->encode());
         $this->attributes['image'] = $value;
     }
 }

@@ -1,4 +1,8 @@
 @extends('layouts.front')
+@section("header_content")
+
+@endsection
+
 @section('content')
     <div class="container">
         <div class="post_main d-flex flex-column align-items-center">

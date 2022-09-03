@@ -65,7 +65,15 @@
                     <div class="form-group">
                         <label for="customFile">Image</label>
                         <div class="custom-file">
-                            <input type="file" name="image" class="form-control" id="customFile2">
+                            <input type="file" name="image" class="form-control" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customFile">Background Image</label>
+                        <div class="custom-file">
+                            <input type="file" name="bg_image" class="form-control" id="customFile2">
                             <label class="custom-file-label" for="customFile2">Choose file</label>
                         </div>
                     </div>

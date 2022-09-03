@@ -39,6 +39,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="contact contact_partner">
         <div class="container">
             <p class="p_lg fw-normal lh-sm text-white text-center contact_text">To become our partner please reach out to us via<br>

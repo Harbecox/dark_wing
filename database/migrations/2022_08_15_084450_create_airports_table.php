@@ -14,6 +14,7 @@ return new class extends Migration
             $table->unsignedBigInteger('country_id');
             $table->longText('description');
             $table->string('image')->nullable();
+            $table->string('bg_image')->nullable();
             $table->timestamps();
         });
     }

@@ -42,6 +42,7 @@ class AirportFactory extends Factory
             'country_id' => $this->faker->numberBetween(1,249),
             'description' => $this->faker->text(),
             'image' => 'public/airports/'.$name,
+            'bg_image' => 'public/airports/'.$name,
         ];
     }
 }

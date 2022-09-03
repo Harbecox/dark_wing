@@ -72,7 +72,18 @@
                             <img src="{{ Storage::url($airport->image) }}" height="200" width="200" alt=""/>
                         </div>
                         <div class="custom-file">
-                            <input type="file" name="image" class="form-control" id="customFile2">
+                            <input type="file" name="image" class="form-control" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Background Image</label>
+                        <div class="form-group">
+                            <img src="{{ Storage::url($airport->bg_image) }}" height="200" width="200" alt=""/>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" name="bg_image" class="form-control" id="customFile2">
                             <label class="custom-file-label" for="customFile2">Choose file</label>
                         </div>
                     </div>

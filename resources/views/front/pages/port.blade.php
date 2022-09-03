@@ -1,22 +1,23 @@
 @extends('layouts.front')
 
-@section('content')
+@section('header_bg')
+    {{ Storage::url($airport->bg_image) }}
+@endsection
+
+@section("header_content")
     <div class="container">
         <div class="d-flex flex-column align-items-center port_main">
             <p class="p_md fw-bold lh-sm text-uppercase text-white text_back" style="opacity: 0.4">
-                <a href="{{route("all_airports")}}" class="d-flex align-items-center">
-                    <i class="icon-Line"></i>back
-                </a>
-            </p>
+                <a href="{{route('all_airports')}}" class="d-flex align-items-center"><i class="icon-Line"></i>back</a></p>
             <div class="d-flex align-items-center port_title">
                 <div class="circle">
                     <img src="{{ Storage::url($airport->country->flag) }}">
                 </div>
-                <h1 class="fw-normal lh-1 text-white text-uppercase tenor" style="letter-spacing: -0.08em;">{{$airport->title}}</h1>
+                <h1 class="fw-normal lh-1 text-white text-uppercase tenor" style="letter-spacing: -0.08em;">{{ $airport->title }}</h1>
             </div>
             <div class="p_lg fw-normal lh-sm text-white text-center pb-4">
                 <i class="icon-at-sign"></i>
-                {!! $airport->description !!}
+                {!!$airport->description !!}
             </div>
             <div class="d-flex justify-content-center pt-3">
                 <button class="btn text-white text-uppercase" style="width: 258px"><span class="pnt">~</span>Order<span
@@ -28,7 +29,9 @@
             </div>
         </div>
     </div>
+@endsection
 
+@section('content')
     <div class="menu">
         <div class="simvol_title d-flex flex-column align-items-center" style="margin-bottom: 41px">
             <div class="simvol_image"><img src="/image/simvol.png"></div>
