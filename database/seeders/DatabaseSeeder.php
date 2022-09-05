@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
             'admin_status' => true
         ]);
 
-
         Post::factory()->count(12)->create();
     }
 }

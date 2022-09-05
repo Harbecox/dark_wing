@@ -37,12 +37,21 @@ class Airport extends Model
     }
 
     function setImageAttribute($value){
-        $ow = 308;
-        $oh = 361;
+        $this->resizeImage($value,308,361);
+        $this->attributes['image'] = $value;
+    }
+
+    function setBgImageAttribute($value){
+        $this->resizeImage($value,1920,1080);
+        $this->attributes['bg_image'] = $value;
+    }
+
+    function resizeImage($value,$ow,$oh){
+        $k = round($ow / $oh,2);
         $img = Image::make(Storage::get($value));
         $w = $img->width();
         $h = $img->height();
-        if($w / $h > 0.85){
+        if($w / $h > $k){
             $nh = $oh;
             $nw = $w * $nh / $h;
             $img->resize($nw,$nh);
@@ -55,6 +64,5 @@ class Airport extends Model
         $y = intval(($img->height() - $oh) / 2);
         $img->crop($ow,$oh,$x,$y);
         Storage::put($value, $img->encode());
-        $this->attributes['image'] = $value;
     }
 }

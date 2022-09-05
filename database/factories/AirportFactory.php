@@ -14,35 +14,59 @@ class AirportFactory extends Factory
 
     public function definition()
     {
-        $airport = new Client();
+        $images = [
+            'image' => null,
+            'bg_image' => null,
+        ];
         $title = "";
-        $image = "";
-        $t = false;
-        while (!$t){
+        while(!$images['image'] || !$images['bg_image']){
             $title = Country::query()->get()->random(1)->first()->name;
-            $response = $airport->get('https://pixabay.com/api/?key=29073457-a05a39b854900b7729083083c&q='.$title.'&min_width=400&min_height=500&category=places');
-            if($response->getHeader("X-RateLimit-Remaining")[0] == 1){
-                echo "sleep 10 second\n";
-                sleep(10);
-            }
-
-            $newArray = json_decode($response->getBody()->getContents(),true);
-            if(isset($newArray['hits'][0])){
-                $image = $newArray['hits'][0]['largeImageURL'];
-                $t = true;
-            }
+            $images = $this->getImagees($title);
         }
-
-        $contents = file_get_contents($image);
-        $name = substr($image, strrpos($image, '/') + 1);
-        Storage::put("public/airports/".$name, $contents);
 
         return [
             'title' => $title,
             'country_id' => $this->faker->numberBetween(1,249),
-            'description' => $this->faker->text(),
-            'image' => 'public/airports/'.$name,
-            'bg_image' => 'public/airports/'.$name,
+            'description' => $this->faker->realText(500),
+            'image' => 'public/airports/'.$images['image'],
+            'bg_image' => 'public/airports/'.$images['bg_image'],
+        ];
+    }
+
+    private function getImagees($title){
+        $client = new Client();
+        $t = false;
+        while ($t === false){
+            try{
+                $response = $client->get('https://pixabay.com/api/?key=29073457-a05a39b854900b7729083083c&q='.$title.'&min_width=1920&min_height=1080&category=places');
+                $newArray = json_decode($response->getBody()->getContents(),true);
+                $image = isset($newArray['hits'][0]) ? $newArray['hits'][0]['largeImageURL'] : null;
+                $bg_image = isset($newArray['hits'][1]) ? $newArray['hits'][1]['largeImageURL'] : null;
+                $t = true;
+            }catch (\Exception $e){
+                echo $e->getMessage()."\n";
+                sleep(30);
+                continue;
+            }
+        }
+
+        if($image){
+            $contents = file_get_contents($image);
+            $name = substr($image, strrpos($image, '/') + 1);
+            Storage::put("public/airports/".$name, $contents);
+            $image = $name;
+        }
+
+        if($bg_image){
+            $contents = file_get_contents($bg_image);
+            $name = substr($bg_image, strrpos($bg_image, '/') + 1);
+            Storage::put("public/airports/".$name, $contents);
+            $bg_image = $name;
+        }
+
+        return [
+            'image' => $image,
+            'bg_image' => $bg_image,
         ];
     }
 }

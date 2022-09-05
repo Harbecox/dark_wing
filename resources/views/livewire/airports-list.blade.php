@@ -9,7 +9,6 @@
             <img src="/image/close.svg">
         </div>
     </div>
-    <div class="sssss">{{ $search }}</div>
     <div class="countries">
         <div class="row">
             @foreach($airports as $airport)
