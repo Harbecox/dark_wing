@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             'firstName' => 'admin',
             'email' => 'admin@gmail.com',
             'admin_status' => true
+
         ]);
 
         Post::factory()->count(12)->create();

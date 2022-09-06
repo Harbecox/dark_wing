@@ -32,6 +32,8 @@ class UserFactory extends Factory
             'firstName' => $this->faker->firstName(),
             'lastName' => $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail(),
+            'accounting_email' => $this->faker->unique()->companyEmail(),
+            'billing_address' => $this->faker->address(),
             'email_verified_at' => now(),
             'phone' => $this->faker->numerify('#########'),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 
 class UserController extends Controller
@@ -43,8 +44,10 @@ class UserController extends Controller
         $user->firstName = $request->firstName;
         $user->lastName = $request->lastName;
         $user->email = $request->email;
+        $user->accounting_email = $request->accounting_email;
         $user->phone = $request->phone;
         $user->company = $request->company;
+        $user->billing_address = $request->address;
         $user->isBlocked = $request->boolean('isBlocked');
         $user->save();
         return redirect()->route('user.index',$user)

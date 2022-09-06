@@ -46,10 +46,17 @@
             </div>
 
             <div class="account">
-                <button class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Log in
-                </button>
-                <button class="btn-sm text-gray-9 border-0 btn-white"><i class="icon-User account_icon"></i>New account
-                </button>
+                @if(\Illuminate\Support\Facades\Auth::check())
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Logout</button>
+                    </form>
+                @else
+                    <a class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Log in
+                    </a>
+                    <a class="btn-sm text-gray-9 border-0 btn-white"><i class="icon-User account_icon"></i>New account
+                    </a>
+                @endif
             </div>
         </div>
         @yield("header_content")
@@ -83,10 +90,17 @@
         </div>
 
         <div class="account">
-            <button class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Log in
-            </button>
-            <button class="btn-sm text-gray-9 border-0 btn-white"><i class="icon-User account_icon"></i>New account
-            </button>
+            <div class="account">
+                @if(\Illuminate\Support\Facades\Auth::check())
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Logout</button>
+                    </form>
+                @else
+                    <a class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Log in</a>
+                    <a class="btn-sm text-gray-9 border-0 btn-white"><i class="icon-User account_icon"></i>New account</a>
+                @endif
+            </div>
         </div>
     </div>
 @endif

@@ -170,6 +170,7 @@ select.form-select:focus-visible, select.form-select:focus {
 .header .account {
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 .header .account .account_icon {
   font-size: 18px;

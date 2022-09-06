@@ -16,12 +16,6 @@
                 </div>
                 <div class="fake_input d-flex position-relative">
                     <div class="part left"></div>
-                    <div class="part main"><span class="title">Name *</span></div>
-                    <div class="part right"></div>
-                    <input name="first_name">
-                </div>
-                <div class="fake_input d-flex position-relative">
-                    <div class="part left"></div>
                     <div class="part main"><span class="title">E-mail *</span></div>
                     <div class="part right"></div>
                     <input name="email">

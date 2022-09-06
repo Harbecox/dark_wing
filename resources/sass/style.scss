@@ -206,6 +206,7 @@ select.form-select {
   .account {
     display: flex;
     align-items: center;
+      z-index: 1;
 
     .account_icon {
       font-size: 18px;

@@ -13,11 +13,13 @@ return new class extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->string('email')->unique();
+            $table->string('accounting_email')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('phone');
             $table->string('password');
             $table->rememberToken();
             $table->string('company');
+            $table->string('billing_address')->nullable();
             $table->boolean('admin_status')->default(0);
             $table->timestamps();
             $table->boolean('isBlocked')->default(false);

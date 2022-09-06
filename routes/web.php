@@ -4,8 +4,9 @@ use App\Http\Controllers\Admin\AirportController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\View;
 
 Auth::routes();
 
@@ -24,6 +25,20 @@ Route::get('/airports', [\App\Http\Controllers\Front\AirportsController::class,"
 Route::get('/news/{id}', [\App\Http\Controllers\Front\NewsController::class,"show"])->name("show_news");
 
 Route::get('/airports/{id}', [\App\Http\Controllers\Front\AirportsController::class,"show"])->name("show_airport");
+
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+
+
+Route::prefix('personal')->middleware("auth")->group(function (){
+
+    Route::get('account', [App\Http\Controllers\Front\UserAccountController::class, 'index'])->name('account');
+
+    Route::get('order', [App\Http\Controllers\Front\UserAccountController::class, 'order'])->name('order');
+
+});
+
+
 
 Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
 
@@ -44,6 +59,3 @@ Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
     Route::post('user/block/{user}', [UserController::class,'block'])->name("user.block");
 });
 
-//Route::group(['middleware' => ['auth','isUser']], function () {
-//    Route::get('/home', 'HomeController@index')->name('home');
-//}); 2

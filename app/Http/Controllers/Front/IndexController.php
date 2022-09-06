@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Airport;
 use App\Models\Photo;
 use App\Models\Post;
-use Illuminate\Http\Request;
+use App\Models\User;
 
 class IndexController extends Controller
 {
