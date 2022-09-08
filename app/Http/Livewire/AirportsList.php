@@ -25,6 +25,6 @@ class AirportsList extends Component
         $data['airports'] = $query->limit($this->count)->get();
         $data['all_count'] = Airport::query()->count();
         $data['count'] = $this->count;
-        return view('livewire.airports-list',$data);
+        return view('liveware.airports-list',$data);
     }
 }

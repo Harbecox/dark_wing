@@ -118,11 +118,14 @@ let owl_text = $('.owl-text').owlCarousel({
   }
 })
 
-document.querySelector(".about_main .about_image").querySelectorAll("p").forEach(function (p,i){
-    p.addEventListener("click",function (){
-      owl_text.trigger('to.owl.carousel', i)
+if(document.querySelector(".about_main .about_image")){
+    document.querySelector(".about_main .about_image").querySelectorAll("p").forEach(function (p,i){
+        p.addEventListener("click",function (){
+            owl_text.trigger('to.owl.carousel', i)
+        })
     })
-})
+}
+
 
 let menu = document.querySelector(".mobile_menu_open");
 let open = document.querySelector(".mobile_menu");
@@ -137,3 +140,23 @@ close.addEventListener("click", function (){
   open.classList.remove("d-none");
 })
 
+let time = new Date().getTime();
+let timer = null;
+
+if(document.querySelector(".personal_main_right")){
+    let form = document.getElementById("personal_data_form");
+    document.querySelector(".personal_main_right").querySelectorAll("input").forEach(function (input){
+        input.addEventListener("input",function (){
+            time = new Date().getTime();
+            if(!timer){
+                timer = setInterval(function (){
+                    if(new Date().getTime() - time > 500){
+                        clearInterval(timer);
+                        timer = null;
+                        form.querySelector("button[type=submit]").click();
+                    }
+                },1);
+            }
+        })
+    })
+}

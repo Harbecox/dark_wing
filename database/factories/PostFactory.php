@@ -7,11 +7,11 @@ class PostFactory extends Factory
 {
     public function definition()
     {
-        $title = $this->faker->name;
+        $title = $this->faker->jobTitle;
         $slug = Str::slug($title, '-');
         return [
             'title' => $title,
-            'context' => $this->faker->text,
+            'context' => $this->faker->realText(3000),
             'intro' => $this->faker->text,
             'meta_title' => $this->faker->title,
             'meta_description' => $this->faker->text,

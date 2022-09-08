@@ -12,25 +12,25 @@
                     <div class="part left"></div>
                     <div class="part main"><span class="title">Name *</span></div>
                     <div class="part right"></div>
-                    <input name="first_name">
+                    <input name="firstName" value="{{$user->firstName ?? ""}}">
                 </div>
                 <div class="fake_input d-flex position-relative">
                     <div class="part left"></div>
                     <div class="part main"><span class="title">E-mail *</span></div>
                     <div class="part right"></div>
-                    <input name="email">
+                    <input name="email" value="{{$user->email ?? ""}}">
                 </div>
                 <div class="fake_input d-flex position-relative">
                     <div class="part left"></div>
                     <div class="part main"><span class="title">Phone number *</span></div>
                     <div class="part right"></div>
-                    <input name="phone">
+                    <input name="phone" value="{{$user->phone ?? ""}}">
                 </div>
                 <div class="fake_input d-flex position-relative">
                     <div class="part left"></div>
                     <div class="part main"><span class="title">Delivery Airport *</span></div>
                     <div class="part right"></div>
-                    <input name="name">
+                    <input name="airport">
                 </div>
                 <div class="order_select d-flex justify-content-between w-100">
                     <select class="form-select" style="margin-right: 12px" aria-label="Default select example">
@@ -50,7 +50,7 @@
                     <div class="part left"></div>
                     <div class="part main"><span class="title">Company name</span></div>
                     <div class="part right"></div>
-                    <input name="company_name">
+                    <input name="company" value="{{$user->company ?? ""}}">
                 </div>
                 <div class="fake_input d-flex position-relative">
                     <div class="part left"></div>
@@ -76,6 +76,5 @@
             </div>
 
         </div>
-    </div>
     </div>
 @endsection

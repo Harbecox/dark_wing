@@ -28,13 +28,11 @@ Route::get('/airports/{id}', [\App\Http\Controllers\Front\AirportsController::cl
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-
+Route::get('order', [App\Http\Controllers\Front\UserAccountController::class, 'order'])->name('order');
 
 Route::prefix('personal')->middleware("auth")->group(function (){
 
     Route::get('account', [App\Http\Controllers\Front\UserAccountController::class, 'index'])->name('account');
-
-    Route::get('order', [App\Http\Controllers\Front\UserAccountController::class, 'order'])->name('order');
 
 });
 

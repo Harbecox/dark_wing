@@ -28,8 +28,6 @@
                 </div>
             @endforeach
         </div>
-
-
         @if($count < $all_count)
             <div class="text-center">
                 <button wire:click="increment" class="btn btn-lg btn-outline-light text-white text-uppercase" style="width: 481px">See more</button>

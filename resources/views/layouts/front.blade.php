@@ -39,23 +39,20 @@
                     <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("partnership")}}">Partnership</a></li>
                     <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("contact")}}">Contacts</a></li>
                 </ul>
-                <p class="text-gray-1 p_md d-flex align-items-center"><a href="#"><i class="icon-Login account_icon"></i>Log
-                        in</a></p>
-                <p class="text-gray-1 p_md d-flex align-items-center"><a href="#"><i class="icon-User account_icon"></i>New
-                        account</a></p>
+                <p class="text-gray-1 p_md d-flex align-items-center"><a href="{{route('login')}}"><i class="icon-Login account_icon"></i>Log in</a></p>
+                <p class="text-gray-1 p_md d-flex align-items-center"><a href="{{route('register')}}"><i class="icon-User account_icon"></i>New account</a></p>
             </div>
 
             <div class="account">
                 @if(\Illuminate\Support\Facades\Auth::check())
+                    <a href="{{route('account')}}" class="btn btn-sm text-white btn-outline-light">Account</a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Logout</button>
                     </form>
                 @else
-                    <a class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Log in
-                    </a>
-                    <a class="btn-sm text-gray-9 border-0 btn-white"><i class="icon-User account_icon"></i>New account
-                    </a>
+                    <a href="{{route('login')}}" class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Log in</a>
+                    <a href="{{route('register')}}" class="btn-sm text-gray-9 border-0 btn-white"><i class="icon-User account_icon"></i>New account</a>
                 @endif
             </div>
         </div>
@@ -85,20 +82,21 @@
                 <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("partnership")}}">Partnership</a></li>
                 <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("contact")}}">Contacts</a></li>
             </ul>
-            <p class="text-gray-1 p_md d-flex align-items-center"><a href="#"><i class="icon-Login account_icon"></i>Log in</a></p>
-            <p class="text-gray-1 p_md d-flex align-items-center"><a href="#"><i class="icon-User account_icon"></i>New account</a></p>
+            <p class="text-gray-1 p_md d-flex align-items-center"><a href="{{route('login')}}"><i class="icon-Login account_icon"></i>Log in</a></p>
+            <p class="text-gray-1 p_md d-flex align-items-center"><a {{route('register')}}><i class="icon-User account_icon"></i>New account</a></p>
         </div>
 
         <div class="account">
             <div class="account">
                 @if(\Illuminate\Support\Facades\Auth::check())
+                    <a href="{{route('account')}}" class="btn btn-sm text-white btn-outline-light">Account</a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Logout</button>
                     </form>
                 @else
-                    <a class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Log in</a>
-                    <a class="btn-sm text-gray-9 border-0 btn-white"><i class="icon-User account_icon"></i>New account</a>
+                    <a href="{{route('login')}}" class="btn btn-sm text-white btn-outline-light"><i class="icon-Login account_icon"></i>Log in</a>
+                    <a href="{{route('register')}}" class="btn-sm text-gray-9 border-0 btn-white"><i class="icon-User account_icon"></i>New account</a>
                 @endif
             </div>
         </div>

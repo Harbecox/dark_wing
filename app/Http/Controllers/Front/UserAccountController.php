@@ -17,7 +17,8 @@ class UserAccountController extends Controller
 
     public function order(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('front.pages.order');
+        $data['user'] = Auth::user();
+        return view('front.pages.order',$data);
     }
 
 }

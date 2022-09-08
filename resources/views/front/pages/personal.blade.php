@@ -3,77 +3,26 @@
 @section('content')
 <h1 class="personal_title fw-normal lh-1 text-white text-center text-uppercase tenor"
     style="letter-spacing: -0.06em;">Personal account</h1>
-    <div class="personal_main d-flex justify-content-center">
-        <div class="personal_main_left">
-            <img src="{{ Storage::url($user->image) }}">
-            <div class="camera d-flex align-items-center justify-content-center">
-                <img src="/image/Camera.svg">
-            </div>
-        </div>
-        <div class="personal_main_right d-flex">
-            <div class="d-flex flex-column personal_info">
-                <div class="personal_info_line">
-                    <p class="fs-20 fw-normal lh-140 text-white">Your name</p>
-                    <div class="d-flex">
-                        <p class="p_lg fw-normal lh-140 text-white">{{$user->firstName}}</p>
-                        <div class="edit d-flex align-items-center"><img src="/image/Edit.png"></div>
-                    </div>
-                </div>
-                <div class="personal_info_line">
-                    <p class="fs-20 fw-normal lh-140 text-white">Company name</p>
-                    <div class="d-flex">
-                        <p class="p_lg fw-normal lh-140 text-white">{{$user->company}}</p>
-                        <div class="edit d-flex align-items-center"><img src="/image/Edit.png"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex flex-column personal_info">
-                <div class="personal_info_line">
-                    <p class="fs-20 fw-normal lh-140 text-white">E-mail</p>
-                    <div class="d-flex">
-                        <p class="p_lg fw-normal lh-140 text-white opacity-100">{{$user->email}}</p>
-                    </div>
-                </div>
-                <div class="personal_info_line">
-                    <p class="fs-20 fw-normal lh-140 text-white">Accounting
-                        email</p>
-                    <div class="d-flex">
-                        <p class="p_lg fw-normal lh-140 text-white">{{$user->accounting_email}}</p>
-                        <div class="edit d-flex align-items-center"><img src="/image/Edit.png"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex flex-column personal_info">
-                <div class="personal_info_line">
-                    <p class="fs-20 fw-normal lh-140 text-white">Phone number</p>
-                    <div class="d-flex">
-                        <p class="p_lg fw-normal lh-140 text-white opacity-100">{{$user->phone}}</p>
-                    </div>
-                </div>
-                <div class="personal_info_line">
-                    <p class="fs-20 fw-normal lh-140 text-white">Billing address</p>
-                    <div class="d-flex">
-                        <p class="p_lg fw-normal lh-140 text-white">{{$user->billing_address}}</p>
-                        <div class="edit d-flex align-items-center"><img src="/image/Edit.png"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+    <livewire:account />
+</div>
 <div class="d-flex justify-content-center">
-    <div class="line"></div>
+
+    <div class="line">
+
+    </div>
 </div>
 <div class="new_order">
     <h5 class="fs-34 fw-normal lh-110 text-center pb-3" style="color: #586E81">New order</h5>
     <div class="d-flex justify-content-center new_order_btn">
         <div class="d-flex">
-            <button class="personal_btn d-flex align-items-center"><img src="/image/btn1.svg">Feel the form</button>
+            <button class="personal_btn d-flex align-items-center"><img src="/image/btn1.svg" >Feel the form</button>
             <button class="personal_btn d-flex align-items-center"><img src="/image/btn2.svg">By email</button>
             <button class="personal_btn d-flex align-items-center"><img src="/image/btn3.svg">By WhatsApp</button>
         </div>
         <div class="d-flex">
             <button class="personal_btn d-flex align-items-center"><img src="/image/btn4.svg">Upload PDF</button>
-            <button class="personal_btn d-flex align-items-center"><img src="/image/btn5.svg">Free form</button>
+            <a href="{{route('order')}}" class="personal_btn d-flex align-items-center"><img src="/image/btn5.svg">Free form</a>
         </div>
     </div>
 </div>
@@ -337,8 +286,7 @@
                 </td>
             <tr>
         </table>
-        <button class="btn btn-lg btn-outline-light text-white text-uppercase mt-3" style="width:100%">See more
-        </button>
+        <button class="btn btn-lg btn-outline-light text-white text-uppercase mt-3" style="width:100%">See more</button>
     </div>
 </div>
 @endsection
