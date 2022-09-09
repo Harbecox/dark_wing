@@ -25,4 +25,12 @@ class IndexController extends Controller
         ];
         return response()->download($file, 'filename.pdf', $headers);
     }
+
+    public function partnership(){
+        return view('front.pages.partnership');
+    }
+
+    public function contact(){
+        return view('front.pages.contact');
+    }
 }

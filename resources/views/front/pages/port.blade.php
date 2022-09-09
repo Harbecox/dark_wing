@@ -20,12 +20,12 @@
                 {!!$airport->description !!}
             </div>
             <div class="d-flex justify-content-center pt-3">
-                <button class="btn text-white text-uppercase" style="width: 258px"><span class="pnt">~</span>Order<span
+                <a href="{{route('order')}}" class="btn text-white text-uppercase" style="width: 258px"><span class="pnt">~</span>Order<span
                         class="pnt">~</span>
-                </button>
-                <button class="btn btn-outline-light text-white text-uppercase" style="width: 258px"><span
+                </a>
+                <a class="btn btn-outline-light text-white text-uppercase" style="width: 258px"><span
                         class="pnt">~</span>Menu<span
-                        class="pnt">~</span></button>
+                        class="pnt">~</span></a>
             </div>
         </div>
     </div>

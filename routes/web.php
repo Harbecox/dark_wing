@@ -5,7 +5,6 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Front\UserAccountController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -13,9 +12,9 @@ Auth::routes();
 
 Route::get('/', [\App\Http\Controllers\Front\IndexController::class,"index"])->name("index");
 
-Route::get('/partnership', [\App\Http\Controllers\Front\IndexController::class,"index"])->name("partnership");
+Route::get('/partnership', [\App\Http\Controllers\Front\IndexController::class,"partnership"])->name("partnership");
 
-Route::get('/contact', [\App\Http\Controllers\Front\IndexController::class,"index"])->name("contact");
+Route::get('/contact', [\App\Http\Controllers\Front\IndexController::class,"contact"])->name("contact");
 
 Route::get('/download_menu', [\App\Http\Controllers\Front\IndexController::class,"download"])->name("download_menu");
 

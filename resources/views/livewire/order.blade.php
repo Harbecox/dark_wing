@@ -1,11 +1,11 @@
 <form class="order_input" wire:submit.prevent="submit" method="post">
-    <div class="text-white">
-        @if ($errors->any())
-            @foreach ($errors->all() as $error)
-                <div>{{$error}}</div>
-            @endforeach
-        @endif
-    </div>
+{{--    <div class="text-white">--}}
+{{--        @if ($errors->any())--}}
+{{--            @foreach ($errors->all() as $error)--}}
+{{--                <div>{{$error}}</div>--}}
+{{--            @endforeach--}}
+{{--        @endif--}}
+{{--    </div>--}}
     <div class="fake_input d-flex position-relative">
         <div class="part left"></div>
         <div class="part main"><span class="title">Name *</span></div>
@@ -52,7 +52,6 @@
         <div class="part left"></div>
         <div class="part main"><span class="title">Company name</span></div>
         <div class="part right"></div>
-{{--        <input name="company" class="title" placeholder="Company name" value="{{$user->company ?? ""}}">--}}
         <input wire:model="company" name="company" value="{{$user->company ?? ""}}">
     </div>
     <div class="fake_input d-flex position-relative">

@@ -1,6 +1,6 @@
 <div class="personal_main d-flex justify-content-center">
     <div class="personal_main_left">
-        <img src="{{ Storage::url($user->image) }}">
+        <img style="border-radius: 50%; width: 100px; height: 100px" src="{{ Storage::url($user->avatar) }}">
         <div class="camera d-flex align-items-center justify-content-center">
             <img src="/image/Camera.svg">
         </div>

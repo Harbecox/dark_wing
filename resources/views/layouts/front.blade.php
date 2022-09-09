@@ -60,8 +60,8 @@
     </div>
 @else
     <div class="header d-flex justify-content-between align-items-center">
-        <div class="white_logo">
-            <img src="/image/logo-header.svg">
+        <div class="logo">
+            <a href="{{route('index')}}"><img src="/image/logo.png"></a>
         </div>
         <div class="header_menu ">
             <ul class="navbar">
@@ -72,7 +72,7 @@
             </ul>
         </div>
         <div class="mobile_menu">
-            <img src="/image/menu.svg" style="margin-right: 5px">
+            <a href="{{route('index')}}"><img src="/image/menu.svg" style="margin-right: 5px"></a>
             <p class="fw-normal p_md text-white text-uppercase">Menu</p>
         </div>
         <div class="mobile_menu_open">
@@ -105,14 +105,13 @@
 
 
 @yield("content")
-
 <div class="footer">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center py-5">
             <div class="d-flex footer_text">
-                <p class="p_md fw-normal lh-sm text-white opacity-25"><a href = "{{route("all_airports")}}">Airports</a></p>
-                <p class="p_md fw-normal lh-sm text-white opacity-25 mx-4"><a href = "{{route("all_news")}}">News</a></p>
-                <p class="p_md fw-normal lh-sm text-white opacity-25"><a href = "{{route("contact")}}">Contacts</a></p>
+                <p class="p_md fw-normal lh-sm text-white opacity-25"><a href="{{route("all_airports")}}">Airports</a></p>
+                <p class="p_md fw-normal lh-sm text-white opacity-25 mx-4"><a href="{{route("all_news")}}">News</a></p>
+                <p class="p_md fw-normal lh-sm text-white opacity-25"><a href="{{route('contact')}}">Contacts</a></p>
             </div>
             <div>
                 <img src="/image/logo-footer.svg">
@@ -124,6 +123,7 @@
             All Rights Reserved</p>
     </div>
 </div>
+
 @livewireScripts
 <script src="/js/jquery-3.6.0.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
