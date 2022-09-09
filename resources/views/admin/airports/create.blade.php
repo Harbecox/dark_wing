@@ -33,7 +33,6 @@
 
         <div class="card card-primary">
             <form action="{{ route('admin.airport.store') }}" method="POST" enctype="multipart/form-data">
-
                 @csrf
                 <div class="card-body">
                     <div class="form-group">

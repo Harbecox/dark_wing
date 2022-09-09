@@ -14,10 +14,16 @@ class Order extends Model
         'firstName',
         'email',
         'phone',
-        'delivery_airport',
+        'deliveryAirport',
+        'deliveryDay',
+        'deliveryTime',
         'company',
         'handling',
         'packaging',
         'allergies'
     ];
+
+    function airport(){
+        return $this->hasOne(Airport::class,"id","deliveryAirport");
+    }
 }

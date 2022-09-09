@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Front\UserAccountController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,8 +36,6 @@ Route::prefix('personal')->middleware("auth")->group(function (){
     Route::get('account', [App\Http\Controllers\Front\UserAccountController::class, 'index'])->name('account');
 
 });
-
-
 
 Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
 

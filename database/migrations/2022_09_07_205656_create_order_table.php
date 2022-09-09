@@ -8,17 +8,19 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('order', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('userId');
+            $table->integer('userId')->nullable();
             $table->string('firstName');
             $table->string('email');
             $table->integer('phone');
-            $table->string('delivery_airport');
-            $table->string('company');
-            $table->string('handling');
-            $table->string('packaging');
-            $table->string('allergies');
+            $table->string('deliveryAirport');
+            $table->integer('deliveryDay');
+            $table->integer('deliveryTime');
+            $table->string('company')->nullable();
+            $table->string('handling')->nullable();
+            $table->string('packaging')->nullable();
+            $table->string('allergies')->nullable();
             $table->timestamps();
         });
     }
