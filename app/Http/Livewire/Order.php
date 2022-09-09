@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Airport;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -53,6 +54,7 @@ class Order extends Component
             $data['userId'] = $this->user->id;
         }
         \App\Models\Order::create($data);
+        //file_put_contents(str_replace(":","_",Carbon::now()->toDateTimeLocalString()).".json",json_encode($data,256));
     }
     public function render()
     {

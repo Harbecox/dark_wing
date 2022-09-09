@@ -14,55 +14,8 @@
                 <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>order@darkwing-catering.com</a></p>
             </div>
             <div class="contact_input">
-                <div class="row">
-                    <div class="col-xl-6 col-md-12">
-                        <div class="fake_input d-flex position-relative w-100">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">First name</span></div>
-                            <div class="part right"></div>
-                            <input name="first_name">
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-12">
-                        <div class="fake_input d-flex position-relative w-100">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">Last name</span></div>
-                            <div class="part right"></div>
-                            <input name="last_name">
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-12">
-                        <div class="fake_input d-flex position-relative w-100">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">E-mail</span></div>
-                            <div class="part right"></div>
-                            <input name="email">
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-12">
-                        <div class="fake_input d-flex position-relative w-100">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">Phone number</span></div>
-                            <div class="part right"></div>
-                            <input name="first_name">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="fake_input textarea d-flex position-relative w-100">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">My question is about...</span></div>
-                            <div class="part right"></div>
-                            <textarea name="message"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn  text-white text-uppercase contact_button" style="width: 386px"><span class="pnt">~</span>Send the mail<span
-                        class="pnt">~</span>
-                </button>
+                <livewire:contact />
             </div>
         </div>
-    </div>
     </div>
 @endsection

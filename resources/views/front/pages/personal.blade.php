@@ -7,10 +7,7 @@
     <livewire:account />
 </div>
 <div class="d-flex justify-content-center">
-
-    <div class="line">
-
-    </div>
+    <div class="line"></div>
 </div>
 <div class="new_order">
     <h5 class="fs-34 fw-normal lh-110 text-center pb-3" style="color: #586E81">New order</h5>
