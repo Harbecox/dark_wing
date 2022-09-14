@@ -1,7 +1,5 @@
 @extends('layouts.front')
 
-{{--@section('title')--}}
-
 @section('header_bg')
     'public/image/БГ-.png'
 @endsection
@@ -425,86 +423,10 @@
                 <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.06em;">
                     Airport Search</h2>
                 <div class="airport_input my-3">
-                    <input class="text-gray-6 fw-normal form-control-sm" type="text"
+                    <input wire:model="search" class="text-gray-6 fw-normal form-control-sm fs-20" type="text"
                            placeholder="&#xE914; Enter the name of the airport">
-                    <div class="airport_table d-none">
-                        <table>
-                            <tr>
-                                <td width="7%">
-                                    <div class="call_1"><img src="/image/flag_4.png"></div>
-                                </td>
-                                <td>
-                                    <div class="call_1">Italy</div>
-                                </td>
-                                <td width="40%">
-                                    <div class="call_1">Rome</div>
-                                </td>
-                                <td>
-                                    <div class="call_1">LIRF</div>
-                                </td>
-                                <td width="15%">
-                                    <div class="call_1">FCO</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="7%">
-                                    <div class="call_1"><img src="image/flag_4.png"></div>
-                                </td>
-                                <td>
-                                    <div class="call_1">Italy</div>
-                                </td>
-                                <td width="40%">
-                                    <div class="call_1">Rome</div>
-                                </td>
-                                <td>
-                                    <div class="call_1">LIRF</div>
-                                </td>
-                                <td width="15%">
-                                    <div class="call_1">FCO</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="7%">
-                                    <div class="call_1"><img src="image/flag_4.png"></div>
-                                </td>
-                                <td>
-                                    <div class="call_1">Italy</div>
-                                </td>
-                                <td width="40%">
-                                    <div class="call_1">Rome</div>
-                                </td>
-                                <td>
-                                    <div class="call_1">LIRF</div>
-                                </td>
-                                <td width="15%">
-                                    <div class="call_1">FCO</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="7%">
-                                    <div class="call_1"><img src="image/flag_4.png"></div>
-                                </td>
-                                <td>
-                                    <div class="call_1">Italy</div>
-                                </td>
-                                <td width="40%">
-                                    <div class="call_1">Rome</div>
-                                </td>
-                                <td>
-                                    <div class="call_1">LIRF</div>
-                                </td>
-                                <td width="15%">
-                                    <div class="call_1">FCO</div>
-                                </td>
-                            </tr>
-                        </table>
-                        <a href="#"
-                           class="show_all fw-normal p_md lh-sm text-uppercase text-white text-center d-flex justify-content-center"
-                           style="letter-spacing: -0.02em;">Show all results</a>
-                    </div>
                 </div>
             </div>
-
 
             <div class="owl-city owl-carousel owl-theme">
                 @foreach($airports as $airport)
@@ -531,7 +453,7 @@
         <div class="container">
             <div class="about_main">
                 <div class="simvol_title d-flex flex-column align-items-center">
-                    <div class="simvol_image"><img src="/image/logo.png"></div>
+                    <div class="simvol_image"><img src="/image/simvol.png"></div>
                     <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">About us</h2>
                 </div>
                 <p class="p_lg fw-normal text-gray-5 lh-sm text-center pt-3">
@@ -543,28 +465,19 @@
                         Quality</p>
                     <p class="p_sm fw-normal lh-sm text-white position-absolute" style="top: 180px; left: 300px">Cost</p>
                     <p class="p_sm fw-normal lh-sm text-white position-absolute" style="top: 210px; left: 455px">Network</p>
-                    <p class="p_sm fw-normal lh-sm text-white position-absolute" style="bottom: 235px; right: 425px">
-                        Analysis</p>
+                    <p class="p_sm fw-normal lh-sm text-white position-absolute" style="bottom: 235px; right: 425px">Analysis</p>
                     <p class="p_sm fw-normal lh-sm text-white position-absolute" style="top: 187px; right: 370px">Team</p>
-                    <p class="p_sm fw-normal lh-sm text-white position-absolute" style="top: 130px; right: 285px">
-                        Billing</p>
+                    <p class="p_sm fw-normal lh-sm text-white position-absolute" style="top: 130px; right: 285px">Billing</p>
                 </div>
                 <div class="owl-text owl-carousel owl-theme">
                     <div class="item">
                         <div>
                             <h4 class="fw-normal lh-sm text-white text-center">Quality</h4>
                             <p class="p_md fw-normal lh-sm text-center text-gray-3 pt-3">We are aware that it’s easy to make
-                                a
-                                mistake
-                                in the
-                                order because of the multicultural
-                                specificities in each country. As pancake in Russia and in England differ, we always take
-                                into
-                                consideration
-                                cultural background of each client in order to avoid misunderstanding and provide a “right
-                                pancake”.
-                                During
-                                the entire delivery process, we are meticulously checking your order and avoid any errors or
+                                a mistake in the order because of the multicultural specificities in each country.
+                                As pancake in Russia and in England differ, we always take into consideration
+                                cultural background of each client in order to avoid misunderstanding and provide a “right pancake”.
+                                During the entire delivery process, we are meticulously checking your order and avoid any errors or
                                 complications.</p>
                         </div>
                     </div>
@@ -572,25 +485,17 @@
                         <div>
                             <h4 class="fw-normal lh-sm text-white text-center">Cost</h4>
                             <p class="p_md fw-normal lh-sm text-center text-gray-3">We are aware that most of companies have
-                                limited
-                                budget for catering orders. Therefore, due to our long-lasting partnership with carefully
-                                selected
-                                worldwide partners we have negotiated prices for you. Our mission is to negotiate the best
-                                price
-                                on
-                                the
-                                market on your behalf.</p>
+                                limited budget for catering orders. Therefore, due to our long-lasting partnership with carefully
+                                selected worldwide partners we have negotiated prices for you. Our mission is to negotiate the best price
+                                on the market on your behalf.</p>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <h4 class="fw-normal lh-sm text-white text-center">Network</h4>
                             <p class="p_md fw-normal lh-sm text-center text-gray-3">Our goal is to provide high standard
-                                quality
-                                catering service, thanks to our strong network of trusted worldwide partners. Each partner
-                                is
-                                carefully
-                                selected as we meticulously adhere to our client requirements to create the ultimate VIP
+                                quality catering service, thanks to our strong network of trusted worldwide partners. Each partner
+                                is carefully selected as we meticulously adhere to our client requirements to create the ultimate VIP
                                 experience.</p>
                         </div>
                     </div>
@@ -598,10 +503,7 @@
                         <div>
                             <h4 class="fw-normal lh-sm text-white text-center">Analysis</h4>
                             <p class="p_md fw-normal lh-sm text-center text-gray-3">For our costumers we analyze all order
-                                details
-                                and
-                                help to reduce final fees and costs. This analysis helps us to optimize your savings for the
-                                most
+                                details and help to reduce final fees and costs. This analysis helps us to optimize your savings for the most
                                 ordered items and we guarantee your highest satisfaction.</p>
                         </div>
                     </div>
@@ -609,10 +511,7 @@
                         <div>
                             <h4 class="fw-normal lh-sm text-white text-center">Team</h4>
                             <p class="p_md fw-normal lh-sm text-center text-gray-3">Our team comes from catering units
-                                around
-                                the
-                                world,
-                                we are aware of all nuances in the ordering process and we take care of all details.</p>
+                                around the world, we are aware of all nuances in the ordering process and we take care of all details.</p>
                         </div>
                     </div>
                     <div class="item">
@@ -691,7 +590,7 @@
                             <div class="card-body">
                                 <span class="span_sm fw-normal lh-sm text-gray-7">{{ $post->created_at->toFormattedDateString() }}</span>
                                 <p class="p_lg fw-normal lh-1 text-white py-2">{{ $post->title }}</p>
-                                <span class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</span>
+                                <div style="height: 160px; overflow: hidden" class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</div>
                                 <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="{{ route("show_news",$post->id) }}">Read more</a></p>
                             </div>
                         </div>
@@ -703,25 +602,26 @@
         </div>
     </div>
 
-    <div class="contact">
-        <div class="container">
-            <div class="simvol_title d-flex flex-column align-items-center">
-                <div class="simvol_image"><img src="/image/simvol.png"></div>
-                <h3 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.06em;">
-                    CONTACT US</h3>
-            </div>
-            <p class="p_md fw-normal lh-sm text-white text-center pt-3 pb-1">Fill in the form below or reach out to us
-                using</p>
-            <div class="d-flex align-items-center justify-content-center pb-5">
-                <p class="p_md fw-bold lh-sm text-white mx-2 my-1"><a>8 800 775-07-75</a></p>
-                <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
-                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>WhatsApp</a></p>
-                <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
-                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>order@darkwing-catering.com</a></p>
-            </div>
-            <div class="contact_input">
-                <livewire:contact />
+        <div class="contact">
+            <div class="container">
+                <div class="simvol_title d-flex flex-column align-items-center">
+                    <div class="simvol_image"><img src="/image/simvol.png"></div>
+                    <h3 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.06em;">
+                        CONTACT US</h3>
+                </div>
+                <p class="p_md fw-normal lh-sm text-white text-center pt-3 pb-1">Fill in the form below or reach out to us
+                    using</p>
+                <div class="d-flex align-items-center justify-content-center pb-5">
+                    <p class="p_md fw-bold lh-sm text-white mx-2 my-1"><a>8 800 775-07-75</a></p>
+                    <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
+                    <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>WhatsApp</a></p>
+                    <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
+                    <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>order@darkwing-catering.com</a></p>
+                </div>
+                <div class="contact_input">
+                    <livewire:contact />
+                </div>
             </div>
         </div>
-    </div>
 @endsection
+

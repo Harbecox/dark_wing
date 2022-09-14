@@ -13,13 +13,13 @@
     <h5 class="fs-34 fw-normal lh-110 text-center pb-3" style="color: #586E81">New order</h5>
     <div class="d-flex justify-content-center new_order_btn">
         <div class="d-flex">
-            <button class="personal_btn d-flex align-items-center"><img src="/image/btn1.svg" >Feel the form</button>
+            <a href="{{route('order')}}" class="personal_btn d-flex align-items-center"><img src="/image/btn1.svg" >Feel the form</a>
             <button class="personal_btn d-flex align-items-center"><img src="/image/btn2.svg">By email</button>
             <button class="personal_btn d-flex align-items-center"><img src="/image/btn3.svg">By WhatsApp</button>
         </div>
         <div class="d-flex">
             <button class="personal_btn d-flex align-items-center"><img src="/image/btn4.svg">Upload PDF</button>
-            <a href="{{route('order')}}" class="personal_btn d-flex align-items-center"><img src="/image/btn5.svg">Free form</a>
+            <a href="{{route('contact')}}" class="personal_btn d-flex align-items-center"><img src="/image/btn5.svg">Free form</a>
         </div>
     </div>
 </div>

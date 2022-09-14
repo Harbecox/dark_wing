@@ -72,7 +72,6 @@
 </div>
 @endsection
 
-
 <script>
     let images = [];
     document.getElementById("Circular Flags").querySelectorAll(".app-icon.grid-icon__icon.is-color").forEach(function (e){

@@ -43,11 +43,10 @@
             </div>
         @endif
     </div>
-</div>
-<div class="d-flex justify-content-center">
-    <button class="btn  text-white text-uppercase contact_button" style="width: 386px"><span class="pnt">~</span>Send the mail<span
-            class="pnt">~</span>
-    </button>
-</div>
+    <div class="d-flex justify-content-center">
+        <button class="btn  text-white text-uppercase contact_button" style="width: 386px"><span class="pnt">~</span>Send the mail<span
+                class="pnt">~</span>
+        </button>
+    </div>
 </form>
 

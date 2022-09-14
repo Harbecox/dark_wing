@@ -481,6 +481,10 @@ select.form-select:focus-visible, select.form-select:focus {
   color: #FFFFFF !important;
 }
 
+span#context {
+  height: 200px;
+}
+
 .contact {
   background-color: #152432;
   padding: 50px 0 90px 0;
@@ -852,4 +856,8 @@ select.form-select:focus-visible, select.form-select:focus {
 }
 .mobile_menu_open i {
   margin-right: 10px;
+}
+
+#profile_avatar_button {
+  cursor: pointer;
 }

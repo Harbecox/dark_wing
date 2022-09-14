@@ -145,7 +145,8 @@ let timer = null;
 
 if(document.querySelector(".personal_main_right")){
     let form = document.getElementById("personal_data_form");
-    document.querySelector(".personal_main_right").querySelectorAll("input").forEach(function (input){
+    document.querySelector("#personal_data_form").querySelectorAll("input").forEach(function (input){
+        console.log(input.type);
         input.addEventListener("input",function (){
             time = new Date().getTime();
             if(!timer){
@@ -158,5 +159,13 @@ if(document.querySelector(".personal_main_right")){
                 },1);
             }
         })
+    })
+}
+
+let profile_avatar_button = document.getElementById("profile_avatar_button");
+let profile_avatar_input = document.getElementById("profile_avatar_input");
+if(profile_avatar_button && profile_avatar_input){
+    profile_avatar_button.addEventListener("click",function (){
+        profile_avatar_input.click();
     })
 }

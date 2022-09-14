@@ -585,6 +585,9 @@ select.form-select {
     }
   }
 }
+span#context{
+    height: 200px;
+}
 
 .contact {
   background-color: #152432;
@@ -1029,3 +1032,6 @@ select.form-select {
   }
 }
 
+#profile_avatar_button{
+    cursor: pointer;
+}

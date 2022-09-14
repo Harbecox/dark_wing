@@ -3,7 +3,7 @@
         <div class="personal_main_left">
             <img style="border-radius: 50%; width: 100px; height: 100px" src="{{ Storage::url($user->avatar) }}">
             <div class="camera d-flex align-items-center justify-content-center">
-                <img src="/image/Camera.svg"> <input type="file" name="avatar"  class="form-control">
+                <img id="profile_avatar_button" src="/image/Camera.svg"> <input id="profile_avatar_input" style="display: none" type="file" wire:model="avatar">
             </div>
         </div>
         <div class="personal_main_right d-flex">
