@@ -10,6 +10,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserAccountController extends Controller
 {
@@ -25,5 +26,20 @@ class UserAccountController extends Controller
         $data['user'] = Auth::user();
         $data['airports'] = Airport::all();
         return view('front.pages.order',$data);
+    }
+
+    public function download_order(Order $order){
+        return Storage::download($order->order_pdf);
+    }
+
+    public function upload_image(Request $request, User $user)
+    {
+        if ($request->hasFile('avatar')) {
+            $request->validate([
+                'avatar' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]);
+            $user->avatar = $request->file('avatar')->store('public/images');
+            $user->save();
+        }
     }
 }

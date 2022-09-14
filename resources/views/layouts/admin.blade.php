@@ -73,6 +73,10 @@
                 <a href="{{route('menu.index')}}" class="nav-link">
                     <p>Menu</p>
                 </a>
+
+                <a href="{{route('order.index')}}" class="nav-link">
+                    <p>Orders</p>
+                </a>
             </nav>
             <!-- /.sidebar-menu -->
         </div>

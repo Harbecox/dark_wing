@@ -28,6 +28,8 @@ class AirportFactory extends Factory
             'title' => $title,
             'country_id' => $this->faker->numberBetween(1,249),
             'description' => $this->faker->realText(500),
+            'IATA' => $this->faker->countryISOAlpha3,
+            'OACI' => $this->faker->countryCode,
             'image' => 'public/airports/'.$images['image'],
             'bg_image' => 'public/airports/'.$images['bg_image'],
         ];

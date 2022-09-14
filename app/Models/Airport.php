@@ -17,6 +17,8 @@ use Intervention\Image\Facades\Image;
  * @property mixed country_id
  * @property mixed id
  * @property false|mixed|string bg_image
+ * @property mixed iata
+ * @property mixed oaci
  */
 class Airport extends Model
 {
@@ -27,6 +29,8 @@ class Airport extends Model
         'country_id',
         'description',
         'flag',
+        'IATA',
+        'OACI',
         'image',
         'bg_image',
     ];

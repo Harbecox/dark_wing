@@ -29,6 +29,7 @@ class Account extends Component
     public function submit()
     {
         $this->validate();
+
         $this->user->save();
     }
 }

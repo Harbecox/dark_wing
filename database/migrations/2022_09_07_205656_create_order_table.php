@@ -15,18 +15,19 @@ return new class extends Migration
             $table->string('email');
             $table->integer('phone');
             $table->string('deliveryAirport');
-            $table->integer('deliveryDay');
-            $table->integer('deliveryTime');
+            $table->integer('deliveryDay')->default(1);
+            $table->integer('deliveryTime')->default(1);
             $table->string('company')->nullable();
             $table->string('handling')->nullable();
             $table->string('packaging')->nullable();
             $table->string('allergies')->nullable();
+            $table->string('order_pdf')->nullable();
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('order');
+        Schema::dropIfExists('orders');
     }
 };

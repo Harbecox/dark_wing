@@ -20,7 +20,8 @@ class Order extends Model
         'company',
         'handling',
         'packaging',
-        'allergies'
+        'allergies',
+        'order_pdf',
     ];
 
     function airport(){

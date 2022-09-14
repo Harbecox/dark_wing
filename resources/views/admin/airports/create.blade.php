@@ -24,7 +24,6 @@
     @endif
 
     <section class="content">
-
         @if(session('success'))
             <div class="alert alert-success mb-1 mt-1">
                 {{ session('success') }}

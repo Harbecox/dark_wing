@@ -13,6 +13,8 @@ return new class extends Migration
             $table->string('title');
             $table->unsignedBigInteger('country_id');
             $table->longText('description');
+            $table->string('IATA');
+            $table->string('OACI');
             $table->string('image')->nullable();
             $table->string('bg_image')->nullable();
             $table->timestamps();

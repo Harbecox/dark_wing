@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AirportController;
 use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
@@ -30,6 +31,10 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('order', [App\Http\Controllers\Front\UserAccountController::class, 'order'])->name('order');
 
+Route::get('download_order/{order}', [App\Http\Controllers\Front\UserAccountController::class, 'download_order'])->name('order.download');
+
+Route::get('upload_image', [App\Http\Controllers\Front\UserAccountController::class, 'upload_image'])->name('image.upload');
+
 Route::prefix('personal')->middleware("auth")->group(function (){
 
     Route::get('account', [App\Http\Controllers\Front\UserAccountController::class, 'index'])->name('account');
@@ -48,10 +53,14 @@ Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
 
     Route::resource('menu', MenuController::class);
 
+    Route::resource('order', OrderController::class);
+
     Route::post('pdf', [MenuController::class,"upload"])->name("admin.pdf");
 
     Route::resource('airport', AirportController::class,['as' => 'admin']);
 
     Route::post('user/block/{user}', [UserController::class,'block'])->name("user.block");
+
+    Route::post('order_pdf', [OrderController::class,"update"])->name("order_pdf");
 });
 

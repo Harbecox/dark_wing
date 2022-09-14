@@ -38,37 +38,29 @@
                         <span>{{ $order->created_at->toFormattedDateString() }}</span>
                     </div>
                 </td>
-                <td width="25%">
+                <td width="100%">
                     <div class="call">
                         <p>Аэропорт</p>
                         <span>{{ $order->airport->title }}</span>
                     </div>
                 </td>
-                <td width="10%">
-                    <div class="call">
-                        <p>Сумма</p>
-                        <span>250$</span>
-                    </div>
-                </td>
-                <td width="30%">
-                    <div class="call">
-                        <p>Позиций</p>
-                        <span>5</span>
-                    </div>
-                </td>
                 <td>
                     <div class="call">
                         <div style="padding: 13px 0">
-                            <img src="/image/eye.svg" class="image_grey">
-                            <img src="/image/eye1.svg" class="image_white">
+                            <a href="{{ route("order.download",$order) }}">
+                                <img src="/image/eye.svg" class="image_grey">
+                                <img src="/image/eye1.svg" class="image_white">
+                            </a>
                         </div>
                     </div>
                 </td>
                 <td>
                     <div class="call" style="padding-right: 40px">
                         <div style="padding: 13px 0">
-                            <img src="/image/download.svg" class="image_grey">
-                            <img src="/image/download1.svg" class="image_white">
+                            <a href="{{ route("order.download",$order) }}">
+                                <img src="/image/download.svg" class="image_grey">
+                                <img src="/image/download1.svg" class="image_white">
+                            </a>
                         </div>
                     </div>
                 </td>

@@ -67,6 +67,16 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="exampleInputEmail1">IATA</label>
+                        <input type="text" value="{{$airport->IATA}}" name="iata" class="form-control" placeholder="Enter Title">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">OACI</label>
+                        <input type="text" value="{{$airport->OACI}}" name="oaci" class="form-control" placeholder="Enter Title">
+                    </div>
+
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Image</label>
                         <div class="form-group">
                             <img src="{{ Storage::url($airport->image) }}" height="200" width="200" alt=""/>
