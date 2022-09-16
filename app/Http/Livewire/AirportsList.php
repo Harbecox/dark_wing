@@ -3,13 +3,21 @@
 namespace App\Http\Livewire;
 
 use App\Models\Airport;
+use Illuminate\Support\Facades\Request;
 use Livewire\Component;
 
 class AirportsList extends Component
 {
     public $count = 12;
 
-    public $search = "";
+    public $search;
+
+    function __construct($id = null)
+    {
+        parent::__construct($id);
+        $requests = Request::all();
+        $this->search = isset($requests['search']) ? $requests['search'] : "";
+    }
 
     public function increment()
     {

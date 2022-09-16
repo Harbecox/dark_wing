@@ -9,7 +9,7 @@
             <img src="/image/close.svg">
         </div>
     </div>
-    <div class="countries">
+    <div class="countries w-100">
         <div class="row">
             @foreach($airports as $airport)
                 <div class="col-md-6 col-xl-4 col-xxl-3">

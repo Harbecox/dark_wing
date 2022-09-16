@@ -422,12 +422,8 @@
             <div class="d-flex flex-column align-items-center justify-content-center">
                 <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.06em;">
                     Airport Search</h2>
-                <div class="airport_input my-3">
-                    <input wire:model="search" class="text-gray-6 fw-normal form-control-sm fs-20" type="text"
-                           placeholder="&#xE914; Enter the name of the airport">
-                </div>
+                <livewire:airports-search />
             </div>
-
             <div class="owl-city owl-carousel owl-theme">
                 @foreach($airports as $airport)
                     <div class="item">
@@ -624,4 +620,3 @@
             </div>
         </div>
 @endsection
-

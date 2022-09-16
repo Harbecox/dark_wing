@@ -3,30 +3,21 @@
 namespace App\Http\Livewire;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Route;
 use Livewire\Component;
 
-class Contact extends Component
+class Partnership extends Component
 {
-    public $name;
-    public $lname;
+    public $company;
     public $email;
     public $phone;
-    public $question;
+    public $location;
 
     protected $rules = [
-        'name' => 'required',
-        'lname' => 'required',
+        'company' => 'required',
         'email' => 'required|email',
         'phone' => 'required',
-        'question' => 'nullable',
+        'location' => 'nullable',
     ];
-
-    function __construct($id = null)
-    {
-        parent::__construct($id);
-        $this->isContactPage = Route::is('contact');
-    }
 
     public function submit()
     {
@@ -36,6 +27,6 @@ class Contact extends Component
 
     public function render()
     {
-        return view('livewire.contact');
+        return view('livewire.partnership');
     }
 }

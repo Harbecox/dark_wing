@@ -32,7 +32,7 @@
                 <input wire:model="phone" name="phone">
             </div>
         </div>
-        @if(url()->current()=="http://127.0.0.1:8000/contact")
+        @if($isContactPage)
             <div class="col-md-12">
                 <div class="fake_input textarea d-flex position-relative w-100">
                     <div class="part left"></div>
