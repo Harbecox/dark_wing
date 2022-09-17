@@ -297,21 +297,24 @@ select.form-select:focus-visible, select.form-select:focus {
 .owl-city {
   margin-top: 20px;
 }
-.owl-city .owl-nav.disabled {
+.owl-city .owl-dots {
+  display: none;
+}
+.owl-city .owl-nav {
   display: block;
 }
-.owl-city .owl-nav.disabled button {
+.owl-city .owl-nav button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-.owl-city .owl-nav.disabled button:hover {
-  background: none;
+.owl-city .owl-nav button:hover {
+  background: none !important;
 }
-.owl-city .owl-nav.disabled button.owl-prev {
+.owl-city .owl-nav button.owl-prev {
   left: -60px;
 }
-.owl-city .owl-nav.disabled button.owl-next {
+.owl-city .owl-nav button.owl-next {
   right: -60px;
 }
 
@@ -456,21 +459,24 @@ select.form-select:focus-visible, select.form-select:focus {
   padding-bottom: 130px;
 }
 
-.owl-info-cards .owl-nav.disabled {
+.owl-info-cards .owl-dots {
+  display: none;
+}
+.owl-info-cards .owl-nav {
   display: block;
 }
-.owl-info-cards .owl-nav.disabled button {
+.owl-info-cards .owl-nav button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-.owl-info-cards .owl-nav.disabled button:hover {
-  background: none;
+.owl-info-cards .owl-nav button:hover {
+  background: none !important;
 }
-.owl-info-cards .owl-nav.disabled button.owl-prev {
+.owl-info-cards .owl-nav button.owl-prev {
   left: -60px;
 }
-.owl-info-cards .owl-nav.disabled button.owl-next {
+.owl-info-cards .owl-nav button.owl-next {
   right: -60px;
 }
 

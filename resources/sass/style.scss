@@ -354,8 +354,10 @@ select.form-select {
 
 .owl-city {
     margin-top: 20px;
-
-    .owl-nav.disabled {
+    .owl-dots{
+        display: none;
+    }
+    .owl-nav {
         display: block;
 
         button {
@@ -364,7 +366,7 @@ select.form-select {
             transform: translateY(-50%);
 
             &:hover {
-                background: none;
+                background: none!important;
             }
 
             &.owl-prev {
@@ -553,7 +555,10 @@ select.form-select {
 }
 
 .owl-info-cards {
-    .owl-nav.disabled {
+    .owl-dots{
+        display: none;
+    }
+    .owl-nav {
         display: block;
 
         button {
@@ -562,7 +567,7 @@ select.form-select {
             transform: translateY(-50%);
 
             &:hover {
-                background: none;
+                background: none!important;
             }
 
             &.owl-prev {
