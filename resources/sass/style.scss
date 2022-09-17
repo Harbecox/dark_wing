@@ -276,7 +276,7 @@ select.form-select {
 
   .airport_table {
     width: 100%;
-    padding: 23px 11px 23px 26px;
+    padding: 23px 11px 23px 11px;
     margin-top: -5px;
     background: #03171F;
     border-radius: 6px;
@@ -288,6 +288,10 @@ select.form-select {
     letter-spacing: -0.02em;
 
     table {
+        img{
+            width: 24px;
+            height: 24px;
+        }
       width: 100%;
 
       td {

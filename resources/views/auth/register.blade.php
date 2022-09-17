@@ -4,11 +4,11 @@
 
     <div class="contact_main">
         <div class="container">
-            <h1 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.08em; margin-bottom: 20px">Register</h1>
+            <h1 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.08em; margin-bottom: 20px">New account</h1>
             <div class="contact_input">
-                <form method="post" action="{{ route('register') }}">
+                <form method="post" action="register">
                     @csrf
-                    <div class="row d-flex justify-content-center col-xl-6 col-md-12 offset-xl-3">
+                    <div class="w-100">
                         <div class="fake_input d-flex position-relative w-100">
                             <div class="part left"></div>
                             <div class="part main"><span class="title">Email</span></div>

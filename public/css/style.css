@@ -237,7 +237,7 @@ select.form-select:focus-visible, select.form-select:focus {
 }
 .airport_input .airport_table {
   width: 100%;
-  padding: 23px 11px 23px 26px;
+  padding: 23px 11px 23px 11px;
   margin-top: -5px;
   background: #03171F;
   border-radius: 6px;
@@ -250,6 +250,10 @@ select.form-select:focus-visible, select.form-select:focus {
 }
 .airport_input .airport_table table {
   width: 100%;
+}
+.airport_input .airport_table table img {
+  width: 24px;
+  height: 24px;
 }
 .airport_input .airport_table table td {
   padding: 0;
