@@ -9,27 +9,29 @@
                 <form method="post" action="{{ route('login') }}">
                     @csrf
                     <div class="row d-flex justify-content-center col-xl-6 col-md-12 offset-xl-3">
-                        <div class="fake_input d-flex position-relative w-100">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">Email</span></div>
-                            <div class="part right"></div>
-                            <input id="email" name="email" class="@error('email') is-invalid @enderror">
-                        </div>
-                        @error('email')
+                        <div class="col-12">
+                            <div class="fake_input d-flex position-relative w-100">
+                                <div class="part left"></div>
+                                <div class="part main"><span class="title">Email</span></div>
+                                <div class="part right"></div>
+                                <input id="email" name="email" class="@error('email') is-invalid @enderror">
+                            </div>
+                            @error('email')
                             <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                             </span>
-                        @enderror
-                        <div class="fake_input d-flex position-relative w-100 col-xl-6 col-md-12">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">Password</span></div>
-                            <div class="part right"></div>
+                            @enderror
+                            <div class="fake_input d-flex position-relative w-100 col-xl-6 col-md-12">
+                                <div class="part left"></div>
+                                <div class="part main"><span class="title">Password</span></div>
+                                <div class="part right"></div>
                                 <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password">
-                            @error('password')
+                                @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
+                                @enderror
+                            </div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">

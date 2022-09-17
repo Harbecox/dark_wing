@@ -342,7 +342,11 @@ select.form-select {
 }
 
 .owl-text {
+    .owl-nav{
+        display: none;
+    }
     .owl-dot {
+        margin-top: 20px;
         &.active {
             span {
                 background: #FFFFFF !important;

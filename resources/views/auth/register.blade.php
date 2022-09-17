@@ -8,44 +8,70 @@
             <div class="contact_input">
                 <form method="post" action="register">
                     @csrf
-                    <div class="w-100">
-                        <div class="fake_input d-flex position-relative w-100">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">Email</span></div>
-                            <div class="part right"></div>
-                            <input id="email" name="email" class="@error('email') is-invalid @enderror">
-                        </div>
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                        <div class="fake_input d-flex position-relative w-100 col-xl-6 col-md-12">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">Password</span></div>
-                            <div class="part right"></div>
-                            <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password">
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
+                    <div class="row">
+                        <div class="col-12 col-md-6 offset-3">
+                            <div class="w-100">
+                                <div class="fake_input d-flex position-relative w-100">
+                                    <div class="part left"></div>
+                                    <div class="part main"><span class="title">Name</span></div>
+                                    <div class="part right"></div>
+                                    <input id="firstName" name="firstName" class="@error('firstName') is-invalid @enderror">
+                                </div>
+                                @error('firstName')
+                                <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
-                        </div>
-                        <div class="fake_input d-flex position-relative w-100 col-xl-6 col-md-12">
-                            <div class="part left"></div>
-                            <div class="part main"><span class="title">Confirm Password</span></div>
-                            <div class="part right"></div>
-                            <input id="password-confirm" type="password" class="@error('password') is-invalid @enderror" name="password_confirmation">
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
+                                @enderror
+                                <div class="fake_input d-flex position-relative w-100">
+                                    <div class="part left"></div>
+                                    <div class="part main"><span class="title">Email</span></div>
+                                    <div class="part right"></div>
+                                    <input id="email" name="email" class="@error('email') is-invalid @enderror">
+                                </div>
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
+                                @enderror
+                                <div class="fake_input d-flex position-relative w-100">
+                                    <div class="part left"></div>
+                                    <div class="part main"><span class="title">Phone</span></div>
+                                    <div class="part right"></div>
+                                    <input id="phone" name="phone" class="@error('phone') is-invalid @enderror">
+                                </div>
+                                @error('firstName')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                                <div class="fake_input d-flex position-relative w-100 col-xl-6 col-md-12">
+                                    <div class="part left"></div>
+                                    <div class="part main"><span class="title">Password</span></div>
+                                    <div class="part right"></div>
+                                    <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="fake_input d-flex position-relative w-100 col-xl-6 col-md-12">
+                                    <div class="part left"></div>
+                                    <div class="part main"><span class="title">Confirm Password</span></div>
+                                    <div class="part right"></div>
+                                    <input id="password-confirm" type="password" class="@error('password') is-invalid @enderror" name="password_confirmation">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn text-white text-uppercase contact_button" style="width: 386px"><span class="pnt">~</span>REGISTER<span class="pnt">~</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <button class="btn text-white text-uppercase contact_button" style="width: 386px"><span class="pnt">~</span>REGISTER<span class="pnt">~</span>
-                        </button>
                     </div>
                 </form>
             </div>
