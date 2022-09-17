@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('header_bg')
-    'image/БГ-.png'
+    'image/БГ-.jpg'
 @endsection
 
 @section("header_content")

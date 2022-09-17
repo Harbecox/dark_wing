@@ -8,6 +8,9 @@ a {
 body {
   background: #0D1A27;
   font-family: "Arsenal", sans-serif;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
 }
 
 .tenor {
