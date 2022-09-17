@@ -11,12 +11,12 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->integer('userId')->nullable();
-            $table->string('firstName');
-            $table->string('email');
-            $table->integer('phone');
-            $table->string('deliveryAirport');
-            $table->integer('deliveryDay')->default(1);
-            $table->integer('deliveryTime')->default(1);
+            $table->string('firstName')->nullable();
+            $table->string('email')->nullable();
+            $table->integer('phone')->nullable();
+            $table->string('deliveryAirport')->nullable();
+            $table->integer('deliveryDay')->default(1)->nullable();
+            $table->integer('deliveryTime')->default(1)->nullable();
             $table->string('company')->nullable();
             $table->string('handling')->nullable();
             $table->string('packaging')->nullable();
