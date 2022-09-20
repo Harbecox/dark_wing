@@ -1,7 +1,7 @@
 <form class="order_input" wire:submit.prevent="submit" method="post">
     <div class="row">
         <div class="col-xl-6 col-md-12">
-            <div class="fake_input d-flex position-relative w-100">
+            <div class="fake_input d-flex position-relative w-100 @if(strlen($name) > 0) focus @endif">
                 <div class="part left"></div>
                 <div class="part main"><span class="title">First name</span></div>
                 <div class="part right"></div>
@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="col-xl-6 col-md-12">
-            <div class="fake_input d-flex position-relative w-100">
+            <div class="fake_input d-flex position-relative w-100 @if(strlen($lname) > 0) focus @endif">
                 <div class="part left"></div>
                 <div class="part main"><span class="title">Last name</span></div>
                 <div class="part right"></div>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="col-xl-6 col-md-12">
-            <div class="fake_input d-flex position-relative w-100">
+            <div class="fake_input d-flex position-relative w-100 @if(strlen($email) > 0) focus @endif">
                 <div class="part left"></div>
                 <div class="part main"><span class="title">E-mail</span></div>
                 <div class="part right"></div>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="col-xl-6 col-md-12">
-            <div class="fake_input d-flex position-relative w-100">
+            <div class="fake_input d-flex position-relative w-100 @if(strlen($phone) > 0) focus @endif">
                 <div class="part left"></div>
                 <div class="part main"><span class="title">Phone number</span></div>
                 <div class="part right"></div>
@@ -34,7 +34,7 @@
         </div>
         @if($isContactPage)
             <div class="col-md-12">
-                <div class="fake_input textarea d-flex position-relative w-100">
+                <div class="fake_input textarea d-flex position-relative w-100 @if(strlen($question) > 0) focus @endif">
                     <div class="part left"></div>
                     <div class="part main"><span class="title">My question is about...</span></div>
                     <div class="part right"></div>
@@ -43,6 +43,9 @@
             </div>
         @endif
     </div>
+    @if($success)
+        <h5 class="text-center text-secondary">Email sent successfully</h5>
+        @endif
     <div class="d-flex justify-content-center">
         <button class="btn  text-white text-uppercase contact_button" style="width: 386px"><span class="pnt">~</span>Send the mail<span
                 class="pnt">~</span>

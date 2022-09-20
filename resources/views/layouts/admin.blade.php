@@ -54,9 +54,6 @@
             <!-- Sidebar Photo -->
             <nav class="mt-2">
 
-                <a href="{{route('homeAdmin')}}" class="nav-link">
-                    <p>Home</p>
-                </a>
 
                 <a href="{{route('post.index')}}" class="nav-link">
                         <p>Posts</p>

@@ -49,7 +49,7 @@ ul {
 .bg_header {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     height: 100vh;
 }
 
@@ -230,7 +230,7 @@ select.form-select {
     }
 
     .luxury_title {
-        top: 70px;
+        top: 120px;
         padding: 0 180px;
     }
 
@@ -352,6 +352,13 @@ select.form-select {
                 background: #FFFFFF !important;
                 box-shadow: 0px 0px 8px #A4FAFF, 0px 0px 16px 3px #08F1FF;
             }
+        }
+    }
+    .item{
+        display: flex;
+        justify-content: center;
+        &>div{
+            max-width: 1000px;
         }
     }
 }
@@ -482,7 +489,6 @@ select.form-select {
 
     margin: 39px 0;
     width: 100%;
-    height: 738px;
 
     .owl-menu-cards {
         &:before {
@@ -508,7 +514,6 @@ select.form-select {
         }
 
         .menu_card {
-            height: 738px;
             background: #4D6175;
             border-radius: 6px;
             margin: 0 11px;
@@ -597,7 +602,10 @@ select.form-select {
         border: 1px solid rgba(255, 255, 255, 0.05);
         box-shadow: 0px 4px 12px -8px rgba(14, 75, 105, 0.55), 0px 12px 60px -8px rgba(14, 75, 105, 0.75);
     }
-
+    img{
+        height: 250px;
+        object-fit: cover;
+    }
     .card-body {
         &:hover {
             span, p {
@@ -812,7 +820,7 @@ span#context {
 }
 
 .contact_button {
-    margin: 18px 0 151px 0;
+    margin: 18px 0;
 }
 
 .footer {

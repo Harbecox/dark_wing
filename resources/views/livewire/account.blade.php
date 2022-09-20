@@ -1,9 +1,9 @@
 <form id="personal_data_form" wire:submit.prevent="submit" method="post">
     <div class="personal_main d-flex justify-content-center">
         <div class="personal_main_left">
-            <img style="border-radius: 50%; width: 100px; height: 100px" src="{{ Storage::url($user->avatar) }}">
+            <img style="border-radius: 50%; width: 100px; height: 100px" src="{{ Storage::url($user->avatar ?? 'images/blank-profile-picture-973460_150.png') }}">
             <div class="camera d-flex align-items-center justify-content-center">
-                <img id="profile_avatar_button" src="/image/Camera.svg"> <input id="profile_avatar_input" style="display: none" type="file" wire:model="avatar">
+                <img id="profile_avatar_button" src="/image/Camera.svg"> <input id="profile_avatar_input"  type="file" wire:model="avatar">
             </div>
         </div>
         <div class="personal_main_right d-flex">

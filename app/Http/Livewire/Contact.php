@@ -13,6 +13,7 @@ class Contact extends Component
     public $email;
     public $phone;
     public $question;
+    public $success = false;
 
     protected $rules = [
         'name' => 'required',
@@ -32,6 +33,12 @@ class Contact extends Component
     {
         $data = $this->validate();
         file_put_contents(str_replace(":","_",Carbon::now()->toDateTimeLocalString()).".json",json_encode($data,256));
+        $this->success = true;
+        $this->name = "";
+        $this->lname = "";
+        $this->email = "";
+        $this->phone = "";
+        $this->question = "";
     }
 
     public function render()

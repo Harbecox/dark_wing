@@ -21,9 +21,9 @@ class Account extends Component
 
     protected $rules = [
         "user.firstName" => 'required',
-        "user.company" => 'required',
-        "user.accounting_email" => 'required',
-        "user.billing_address" => 'required',
+        "user.company" => 'nullable',
+        "user.accounting_email" => 'nullable',
+        "user.billing_address" => 'nullable',
     ];
 
     public function render()
@@ -34,7 +34,7 @@ class Account extends Component
     public function submit()
     {
         $this->validate();
-        if(!is_string($this->avatar)){
+        if(!is_string($this->avatar) && $this->avatar){
             $avatar = $this->avatar->store('public/images');
             $this->user->avatar = $avatar;
         }

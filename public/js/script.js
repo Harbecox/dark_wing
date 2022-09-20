@@ -1,13 +1,20 @@
 document.querySelectorAll(".fake_input").forEach(function (fake_input) {
   let input = fake_input.querySelector("input") || fake_input.querySelector("textarea");
-  input.addEventListener("focusin", function () {
-    fake_input.classList.add("focus");
-  });
-  input.addEventListener("focusout", function () {
-    if (this.value.length == 0) {
-      fake_input.classList.remove("focus");
-    }
-  });
+  if(input){
+      input.setAttribute('autocomplete','off');
+      if(input.value.length > 0){
+          fake_input.classList.add("focus");
+      }
+      input.addEventListener("focusin", function () {
+          fake_input.classList.add("focus");
+      });
+      input.addEventListener("focusout", function () {
+          console.log(this.value.length);
+          if (this.value.length === 0) {
+              fake_input.classList.remove("focus");
+          }
+      });
+  }
 });
 
 let ai = document.querySelector(".airport_input");
