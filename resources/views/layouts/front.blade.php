@@ -13,9 +13,9 @@
     <link rel="stylesheet" type="text/css" href="/css/responsive.css">
     @livewireStyles
 </head>
-<body style="background-image: url('image/bggg.png')">
+<body style="background-image: url('/image/bggg.png')">
 @if(\Request::route()->getName() == "index" || \Illuminate\Support\Facades\Route::is("show_airport"))
-    <div class="bg_header" style="background-image: url(@yield('header_bg','image/bggg.png')">
+    <div class="bg_header" style="background-image: url(@yield('header_bg','/image/bggg.png')">
         <div class="header d-flex justify-content-between align-items-center">
             <div class="logo">
                 <a href="{{route('index')}}"><img src="/image/logo.png"></a>
