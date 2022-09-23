@@ -81,6 +81,6 @@ class RegisterController extends Controller
     }
 
     function redirectPath(){
-        return redirect("personal/account");
+        return "personal/account";
     }
 }
