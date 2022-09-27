@@ -34,7 +34,7 @@ class SendMail implements ShouldQueue
     public function handle()
     {
         Mail::send('mail.contact',$this->data,function ($message){
-            $message->to('harbecox@gmail.com')->subject
+            $message->to('Order@darkwinginflight.com')->subject
             ('Darkwings contact mail');
         });
     }

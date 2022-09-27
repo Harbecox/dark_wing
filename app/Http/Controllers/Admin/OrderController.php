@@ -83,7 +83,6 @@ class OrderController extends Controller
             ]);
             $order->order_pdf = $request->file('order_pdf')->store('public/orders');
         }
-        $order->order_pdf = $request->file('order_pdf')->store('public/orders');
 
         $order->save();
         return redirect()->route('order.index',$order)

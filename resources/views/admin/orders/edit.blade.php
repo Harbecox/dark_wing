@@ -68,6 +68,9 @@
 
                     <div class="form-group">
                         <label for="customFile">File</label>
+                        @if($order->order_pdf)
+                            <a href="{{ route("order.download",$order) }}">PDF</a>
+                        @endif
                         <div class="custom-file">
                             <input type="file" name="order_pdf" class="form-control" id="customFile">
                             <label class="custom-file-label" for="customFile">Choose file</label>

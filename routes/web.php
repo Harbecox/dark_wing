@@ -39,6 +39,7 @@ Route::prefix('personal')->middleware("auth")->group(function (){
 
     Route::get('account', [App\Http\Controllers\Front\UserAccountController::class, 'index'])->name('account');
 
+    Route::post('upload_pdf',[\App\Http\Controllers\Front\UserAccountController::class,'upload_pdf'])->name('upload_pdf');
 });
 
 Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
