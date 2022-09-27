@@ -15,7 +15,7 @@
 </head>
 <body style="background-image: url('/image/bggg.png')">
 @if(\Request::route()->getName() == "index" || \Illuminate\Support\Facades\Route::is("show_airport"))
-    <div class="bg_header" style="background-image: url(@yield('header_bg','/image/bggg.png')">
+    <div class="bg_header @if(\Illuminate\Support\Facades\Route::is("show_airport")) airport_show @endif" style="background-image: url(@yield('header_bg','/image/bggg.png')">
         <div class="header d-flex justify-content-between align-items-center">
             <div class="logo">
                 <a href="{{route('index')}}"><img src="/image/logo.png"></a>
@@ -103,7 +103,9 @@
     </div>
 @endif
 
+<div style="min-height: calc(100vh - 332px);">
 @yield("content")
+</div>
 <div class="footer">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center py-5">

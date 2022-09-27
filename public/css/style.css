@@ -29,7 +29,11 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-  height: 100vh;
+  height: 1300px;
+}
+.bg_header.airport_show {
+  height: 800px;
+  background: linear-gradient(180deg, rgba(13, 26, 39, 0) 0%, #0D1A27 100%);
 }
 
 .btn {
@@ -151,6 +155,7 @@ select.form-select:focus-visible, select.form-select:focus {
 .header {
   padding: 30px 60px;
   position: relative;
+  z-index: 9999;
 }
 .header .navbar {
   padding: 0;
@@ -457,17 +462,13 @@ select.form-select:focus-visible, select.form-select:focus {
 }
 
 .partners {
-  padding: 335px 0 90px 0;
+  padding: 90px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .partners .partner_logo img {
   margin-right: 15px;
-}
-
-.news {
-  padding-bottom: 130px;
 }
 
 .owl-info-cards .owl-dots {
@@ -643,6 +644,11 @@ span#context {
 
 .contact_input {
   padding: 0 220px;
+}
+.contact_input .error {
+  margin-top: -15px;
+  margin-left: 5px;
+  display: block;
 }
 
 .post_main {
@@ -889,4 +895,26 @@ span#context {
 
 #profile_avatar_button {
   cursor: pointer;
+}
+
+.header_menu .nav-link:hover {
+  color: #3284F2 !important;
+}
+
+.airport_show .bg_shadow {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 800px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(13, 26, 39, 0) 0%, #0D1A27 100%);
+}
+.airport_show .header_content {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 800px;
+  width: 100%;
 }

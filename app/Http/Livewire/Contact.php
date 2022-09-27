@@ -19,7 +19,7 @@ class Contact extends Component
         'name' => 'required',
         'lname' => 'required',
         'email' => 'required|email',
-        'phone' => 'required',
+        'phone' => 'required|regex:/^\+?([0-9]{8,12})$/',
         'question' => 'nullable',
     ];
 

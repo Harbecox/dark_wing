@@ -21,6 +21,7 @@ class Order extends Component
     public $handling;
     public $packaging;
     public $allergies;
+    public $success;
 
     function mount(){
         if(Auth::check()){
@@ -37,7 +38,7 @@ class Order extends Component
     protected $rules = [
         'firstName' => 'required',
         'email' => 'required|email',
-        'phone' => 'required',
+        'phone' => 'required|regex:/^\+?([0-9]{8,12})$/',
         'deliveryAirport' => 'required',
         'deliveryDay' => 'required',
         'deliveryTime' => 'required',
@@ -54,6 +55,17 @@ class Order extends Component
             $data['userId'] = $this->user->id;
         }
         \App\Models\Order::create($data);
+        $this->success = true;
+        $this->firstName = "";
+        $this->email = "";
+        $this->phone = "";
+        $this->deliveryAirport = "";
+        $this->deliveryDay = "";
+        $this->deliveryTime = "";
+        $this->company = "";
+        $this->handling = "";
+        $this->packaging = "";
+        $this->allergies = "";
         //file_put_contents(str_replace(":","_",Carbon::now()->toDateTimeLocalString()).".json",json_encode($data,256));
     }
     public function render()

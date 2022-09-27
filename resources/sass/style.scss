@@ -50,7 +50,12 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    height: 100vh;
+    height: 1300px;
+
+    &.airport_show {
+        height: 800px;
+        background: linear-gradient(180deg, rgba(13, 26, 39, 0) 0%, #0D1A27 100%)
+    }
 }
 
 .btn {
@@ -183,6 +188,7 @@ select.form-select {
 .header {
     padding: 30px 60px;
     position: relative;
+    z-index: 9999;
 
     .navbar {
         padding: 0;
@@ -342,11 +348,13 @@ select.form-select {
 }
 
 .owl-text {
-    .owl-nav{
+    .owl-nav {
         display: none;
     }
+
     .owl-dot {
         margin-top: 20px;
+
         &.active {
             span {
                 background: #FFFFFF !important;
@@ -354,10 +362,12 @@ select.form-select {
             }
         }
     }
-    .item{
+
+    .item {
         display: flex;
         justify-content: center;
-        &>div{
+
+        & > div {
             max-width: 1000px;
         }
     }
@@ -365,9 +375,11 @@ select.form-select {
 
 .owl-city {
     margin-top: 20px;
-    .owl-dots{
+
+    .owl-dots {
         display: none;
     }
+
     .owl-nav {
         display: block;
 
@@ -377,7 +389,7 @@ select.form-select {
             transform: translateY(-50%);
 
             &:hover {
-                background: none!important;
+                background: none !important;
             }
 
             &.owl-prev {
@@ -547,7 +559,7 @@ select.form-select {
 
 
 .partners {
-    padding: 335px 0 90px 0;
+    padding: 90px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -559,14 +571,11 @@ select.form-select {
     }
 }
 
-.news {
-    padding-bottom: 130px;
-}
-
 .owl-info-cards {
-    .owl-dots{
+    .owl-dots {
         display: none;
     }
+
     .owl-nav {
         display: block;
 
@@ -576,7 +585,7 @@ select.form-select {
             transform: translateY(-50%);
 
             &:hover {
-                background: none!important;
+                background: none !important;
             }
 
             &.owl-prev {
@@ -602,10 +611,12 @@ select.form-select {
         border: 1px solid rgba(255, 255, 255, 0.05);
         box-shadow: 0px 4px 12px -8px rgba(14, 75, 105, 0.55), 0px 12px 60px -8px rgba(14, 75, 105, 0.75);
     }
-    img{
+
+    img {
         height: 250px;
         object-fit: cover;
     }
+
     .card-body {
         &:hover {
             span, p {
@@ -772,6 +783,12 @@ span#context {
 
 .contact_input {
     padding: 0 220px;
+
+    .error {
+        margin-top: -15px;
+        margin-left: 5px;
+        display: block;
+    }
 }
 
 .post_main {
@@ -1065,4 +1082,33 @@ span#context {
 
 #profile_avatar_button {
     cursor: pointer;
+}
+
+.header_menu{
+    .nav-link{
+        &:hover{
+            color: $primary-500!important;
+        }
+    }
+}
+
+.airport_show {
+    .bg_shadow {
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 800px;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(13, 26, 39, 0) 0%, #0D1A27 100%);
+    }
+
+    .header_content {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 800px;
+        width: 100%
+    }
 }

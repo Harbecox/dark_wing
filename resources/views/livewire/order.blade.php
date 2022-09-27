@@ -1,23 +1,23 @@
 <form class="order_input" wire:submit.prevent="submit" method="post">
-    <div class="fake_input d-flex position-relative">
+    <div class="fake_input d-flex position-relative @if(strlen($firstName) > 0) focus @endif">
         <div class="part left"></div>
         <div class="part main"><span class="title">Name *</span></div>
         <div class="part right"></div>
         <input wire:model="firstName" name="firstName" value="{{$user->firstName ?? ""}}">
     </div>
-    <div class="fake_input d-flex position-relative">
+    <div class="fake_input d-flex position-relative @if(strlen($email) > 0) focus @endif">
         <div class="part left"></div>
         <div class="part main"><span class="title">E-mail *</span></div>
         <div class="part right"></div>
         <input wire:model="email" name="email" value="{{$user->email ?? ""}}">
     </div>
-    <div class="fake_input d-flex position-relative">
+    <div class="fake_input d-flex position-relative @if(strlen($phone) > 0) focus @endif">
         <div class="part left"></div>
         <div class="part main"><span class="title">Phone number *</span></div>
         <div class="part right"></div>
         <input wire:model="phone" name="phone" value="{{$user->phone ?? ""}}">
     </div>
-    <div class="fake_input d-flex position-relative">
+    <div class="fake_input d-flex position-relative" @if(strlen($deliveryAirport) > 0) focus @endif">
         <div class="part right">
             <select wire:model="deliveryAirport" class="form-select" style="margin-right: 12px" aria-label="Default select example" name="deliveryAirport">
                 <option selected class="title">Delivery Airport *</option>
@@ -30,41 +30,44 @@
     <div class="order_select d-flex justify-content-between w-100">
         <select wire:model="deliveryDay" class="form-select" style="margin-right: 12px" aria-label="Default select example" name="deliveryDay">
             <option selected>Delivery Day *</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            @foreach(range(1,31) as $day)
+                <option value="{{ $day }}">{{ $day }}</option>
+            @endforeach
         </select>
         <select wire:model="deliveryTime" class="form-select" aria-label="Default select example" name="deliveryTime">
             <option selected>Delivery time (LT) *</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            @foreach(range(0,24) as $time)
+                <option value="{{ $time }}">{{ $time }}</option>
+            @endforeach
         </select>
     </div>
-    <div class="fake_input d-flex position-relative">
+    <div class="fake_input d-flex position-relative @if(strlen($company) > 0) focus @endif" >
         <div class="part left"></div>
         <div class="part main"><span class="title">Company name</span></div>
         <div class="part right"></div>
         <input wire:model="company" name="company" value="{{$user->company ?? ""}}">
     </div>
-    <div class="fake_input d-flex position-relative">
+    <div class="fake_input d-flex position-relative @if(strlen($handling) > 0) focus @endif">
         <div class="part left"></div>
         <div class="part main"><span class="title">Handling</span></div>
         <div class="part right"></div>
         <input wire:model="handling" name="handling" value="">
     </div>
-    <div class="fake_input d-flex position-relative">
+    <div class="fake_input d-flex position-relative @if(strlen($packaging) > 0) focus @endif">
         <div class="part left"></div>
         <div class="part main"><span class="title">Packaging(foil or MW)</span></div>
         <div class="part right"></div>
         <input wire:model="packaging" name="packaging" value="">
     </div>
-    <div class="fake_input d-flex position-relative">
+    <div class="fake_input d-flex position-relative @if(strlen($allergies) > 0) focus @endif">
         <div class="part left"></div>
         <div class="part main"><span class="title">Allergies</span></div>
         <div class="part right"></div>
         <input wire:model="allergies" name="allergies" value="">
     </div>
+    @if($success)
+        <h5 class="text-center text-secondary">Order sent successfully</h5>
+    @endif
     <button type="submit" class="btn text-white text-uppercase" style="width: 100%"><span class="pnt">~</span>SEND order<span
             class="pnt">~</span>
     </button>

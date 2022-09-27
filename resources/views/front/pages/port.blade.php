@@ -5,27 +5,30 @@
 @endsection
 
 @section("header_content")
-    <div class="container">
-        <div class="d-flex flex-column align-items-center port_main">
-            <p class="p_md fw-bold lh-sm text-uppercase text-white text_back" style="opacity: 0.4">
-                <a href="{{route('all_airports')}}" class="d-flex align-items-center"><i class="icon-Line"></i>back</a></p>
-            <div class="d-flex align-items-center port_title">
-                <div class="circle">
-                    <img src="{{ Storage::url($airport->country->flag) }}">
+    <div class="bg_shadow"></div>
+    <div class="header_content">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center port_main">
+                <p class="p_md fw-bold lh-sm text-uppercase text-white text_back" style="opacity: 0.4">
+                    <a href="{{route('all_airports')}}" class="d-flex align-items-center"><i class="icon-Line"></i>back</a></p>
+                <div class="d-flex align-items-center port_title">
+                    <div class="circle">
+                        <img src="{{ Storage::url($airport->country->flag) }}">
+                    </div>
+                    <h1 class="fw-normal lh-1 text-white text-uppercase tenor" style="letter-spacing: -0.08em;">{{ $airport->title }}</h1>
                 </div>
-                <h1 class="fw-normal lh-1 text-white text-uppercase tenor" style="letter-spacing: -0.08em;">{{ $airport->title }}</h1>
-            </div>
-            <div class="p_lg fw-normal lh-sm text-white text-center pb-4">
-                <i class="icon-at-sign"></i>
-                {!!$airport->description !!}
-            </div>
-            <div class="d-flex justify-content-center pt-3">
-                <a href="{{route('order')}}" class="btn text-white text-uppercase" style="width: 258px"><span class="pnt">~</span>Order<span
-                        class="pnt">~</span>
-                </a>
-                <a class="btn btn-outline-light text-white text-uppercase" style="width: 258px"><span
-                        class="pnt">~</span>Menu<span
-                        class="pnt">~</span></a>
+                <div class="p_lg fw-normal lh-sm text-white text-center pb-4">
+                    <i class="icon-at-sign"></i>
+                    {!!$airport->description !!}
+                </div>
+                <div class="d-flex justify-content-center pt-3">
+                    <a href="{{route('order')}}" class="btn text-white text-uppercase mx-2" style="width: 258px"><span class="pnt">~</span>Order<span
+                            class="pnt">~</span>
+                    </a>
+                    <a class="btn btn-outline-light text-white text-uppercase  mx-2" style="width: 258px"><span
+                            class="pnt">~</span>Menu<span
+                            class="pnt">~</span></a>
+                </div>
             </div>
         </div>
     </div>
@@ -46,7 +49,7 @@
                 </div>
             @endforeach
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center mt-5">
             <a href="{{ route("download_menu") }}" class="btn btn-outline-light text-white text-uppercase" style="width: 320px">
                 <span class="pnt">~</span>Download Menu<span class="pnt">~</span>
             </a>
