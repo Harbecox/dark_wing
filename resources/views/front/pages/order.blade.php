@@ -1,5 +1,5 @@
 @extends('layouts.front')
-
+@section('title') Darkwings Order @endsection
 @section('content')
     <div class="container">
         <div class="order_main d-flex flex-column align-items-center">

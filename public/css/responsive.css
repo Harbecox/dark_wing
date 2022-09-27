@@ -68,4 +68,55 @@
     padding: 0;
     left: 7px;
   }
+  .luxury {
+    height: 600px;
+    overflow: hidden;
+  }
+  .post_main_text {
+    padding: 0 0 75px 0;
+  }
+  .airport_input {
+    width: 100%;
+  }
+  .contact_input {
+    padding: 0;
+  }
+  .our-partners-index {
+    padding: 25px 0 35px 0;
+  }
+  .about_image {
+    display: none;
+  }
+  .owl-menu-cards:before, .owl-menu-cards:after {
+    content: none !important;
+  }
+  .mobile_menu {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 99;
+  }
+  .mobile_menu_open {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  .airport .airport_text {
+    width: 100%;
+  }
+  .news_see_more {
+    width: 100%;
+  }
+  .personal_main_left {
+    width: 100px;
+  }
+  .personal_table {
+    width: 90%;
+  }
+  .order_main .order_input {
+    width: 100%;
+  }
+  .partnerships_main .partner_cards .partner_card {
+    width: 100%;
+  }
 }

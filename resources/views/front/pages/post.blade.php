@@ -1,4 +1,6 @@
 @extends('layouts.front')
+@section('title') Darkwings {{ $post->meta_title }} @endsection
+@section('description') Darkwings {{ $post->meta_description }} @endsection
 @section("header_content")
 
 @endsection

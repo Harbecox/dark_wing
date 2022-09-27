@@ -6,9 +6,8 @@
 
 @section("header_content")
     <div class="luxury position-relative">
-        <div class="container">
-            <div style="padding-top: 240px">
-                <img src="image/10.png" style="width: 100%;">
+        <div class="container position-relative" style="min-height: 760px">
+            <div class="header_map" style="background-image: url('image/10.png');">
             </div>
             <div class="position-absolute luxury_title">
                 <h1 class="fw-normal lh-1 text-white text-uppercase text-center tenor">Luxury catering<br>
@@ -16,11 +15,11 @@
                 <p class="luxury_text p_lg fw-normal lh-sm  text-white text-center">We are here to provide you the best
                     quality catering<br>service during your stay and departure</p>
             </div>
-            <div class="d-flex justify-content-center">
-                <a href="{{route('order')}}" class="btn text-white text-uppercase" style="width: 258px">
+            <div class="d-flex justify-content-center top_buttons">
+                <a href="{{route('order')}}" class="btn text-white text-uppercase">
                     <span class="pnt">~</span>Order<span class="pnt">~</span>
                 </a>
-                <a class="btn btn-outline-light text-white text-uppercase" style="width: 258px">
+                <a onclick="scrollToMenu()" class="btn btn-outline-light text-white text-uppercase">
                     <span class="pnt">~</span>Menu<span class="pnt">~</span></a>
             </div>
         </div>
@@ -40,6 +39,7 @@
                             <div class="item">
                                 <div class="card_city">
                                     <img src='{{ Storage::url($airport->image) }}'>
+                                    <div class="city_shadow"></div>
                                     <div class="flag">
                                         <img src="{{ Storage::url($airport->country->flag) }}">
                                     </div>
@@ -84,7 +84,7 @@
                                 <p class="p_sm fw-normal lh-sm text-white position-absolute"
                                    style="top: 130px; right: 285px">Billing</p>
                             </div>
-                            <div class="owl-text owl-carousel owl-theme">
+                            <div class="owl-text owl-carousel owl-theme mt-3 mt-lg-0">
                                 <div class="item">
                                     <div>
                                         <h4 class="fw-normal lh-sm text-white text-center">Quality</h4>
@@ -187,24 +187,20 @@
                             <div class="simvol_image"><img src="/image/simvol.png"></div>
                             <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">Our partners</h2>
                         </div>
-                        <p class="p_lg fw-normal text-gray-5 lh-sm text-center" style="padding: 25px 116px 35px 116px">
+                        <p class="p_lg fw-normal text-gray-5 lh-sm text-center our-partners-index">
                             We are VIP
                             inflight catering specialists working
                             worldwide, with
                             years of experience. We are here to provide you the best quality catering service during
                             your stay and
                             departure.</p>
-                        <div class="d-flex partners_logo justify-content-center">
-                            <div class="d-flex partner_logo align-items-center">
-                                <div><img class="opacity-75" src="image/hotel_1.png"></div>
-                                <div><img class="opacity-75" src="image/hotel_2.png"></div>
-                                <div><img class="opacity-75" src="image/hotel_3.png"></div>
-                            </div>
-                            <div class="d-flex partner_logo align-items-center">
-                                <div><img class="opacity-75" src="image/hotel_4.png"></div>
-                                <div><img class="opacity-75" src="image/hotel_5.png"></div>
-                                <div><img class="opacity-75" src="image/hotel_6.png"></div>
-                            </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_1.png"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_2.png"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_3.png"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_4.png"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_5.png"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_6.png"></div>
                         </div>
                     </div>
                 </div>
@@ -251,12 +247,12 @@
                     <p class="p_md fw-normal lh-sm text-white text-center pt-3 pb-1">Fill in the form below or reach out
                         to us
                         using</p>
-                    <div class="d-flex align-items-center justify-content-center pb-5">
-                        <p class="p_md fw-bold lh-sm text-white mx-2 my-1"><a>8 800 775-07-75</a></p>
-                        <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
-                        <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>WhatsApp</a></p>
-                        <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
-                        <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>order@darkwing-catering.com</a></p>
+                    <div class="d-flex align-items-center justify-content-center pb-5 flex-wrap">
+                        <p class="p_md fw-bold lh-sm text-white mx-2 my-1"><a href="tel:+33638888695">+33638888695</a></p>
+                        <span class="slash fw-bold lh-sm text-white opacity-25 d-none d-lg-inline">/</span>
+                        <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a href="https://api.whatsapp.com/send?phone=0033638888695">WhatsApp</a></p>
+                        <span class="slash fw-bold lh-sm text-white opacity-25 d-none d-lg-inline">/</span>
+                        <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a href="mailto:Order@darkwinginflight.com">Order@darkwinginflight.com</a></p>
                     </div>
                     <div class="contact_input">
                         <livewire:contact/>

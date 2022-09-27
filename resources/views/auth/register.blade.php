@@ -10,7 +10,7 @@
                 <form method="post" action="register">
                     @csrf
                     <div class="row">
-                        <div class="col-12 col-md-6 offset-3">
+                        <div class="col-12 col-md-6 offset-0 offset-md-3">
                             <div class="w-100">
                                 <div class="col-12">
                                     <div class="fake_input d-flex position-relative w-100">

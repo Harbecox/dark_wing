@@ -1,5 +1,5 @@
 @extends('layouts.front')
-
+@section('title') Darkwings Partnership @endsection
 @section('content')
     <div class="container">
         <div class="partnerships_main">
@@ -9,7 +9,7 @@
             <div class="partner_cards d-flex">
                 <div class="row">
                     <div class="col-xxl-4 col-xl-6">
-                        <div class="partner_card">
+                        <div class="partner_card text-center text-lg-left">
                             <div class="partner_card_image">
                                 <img src="image/partner1.png">
                             </div>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="col-xxl-4 col-xl-6">
-                        <div class="partner_card">
+                        <div class="partner_card text-center text-lg-left">
                             <div class="partner_card_image">
                                 <img src="image/partner2.png">
                             </div>
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="col-xxl-4 col-xl-6">
-                        <div class="partner_card">
+                        <div class="partner_card text-center text-lg-left">
                             <div class="partner_card_image">
                                 <img src="image/partner3.png">
                             </div>

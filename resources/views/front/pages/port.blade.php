@@ -1,5 +1,6 @@
 @extends('layouts.front')
-
+@section('title') Darkwings {{ $airport->title }} @endsection
+@section('description') Darkwings {{ $airport->description }} @endsection
 @section('header_bg')
     {{ Storage::url($airport->bg_image) }}
 @endsection
@@ -21,13 +22,14 @@
                     <i class="icon-at-sign"></i>
                     {!!$airport->description !!}
                 </div>
-                <div class="d-flex justify-content-center pt-3">
-                    <a href="{{route('order')}}" class="btn text-white text-uppercase mx-2" style="width: 258px"><span class="pnt">~</span>Order<span
-                            class="pnt">~</span>
-                    </a>
-                    <a class="btn btn-outline-light text-white text-uppercase  mx-2" style="width: 258px"><span
-                            class="pnt">~</span>Menu<span
-                            class="pnt">~</span></a>
+                <div class="w-100">
+                    <div class="d-flex justify-content-center top_buttons">
+                        <a href="{{route('order')}}" class="btn text-white text-uppercase">
+                            <span class="pnt">~</span>Order<span class="pnt">~</span>
+                        </a>
+                        <a onclick="scrollToMenu()" class="btn btn-outline-light text-white text-uppercase">
+                            <span class="pnt">~</span>Menu<span class="pnt">~</span></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -67,6 +69,7 @@
                 @foreach($airports as $airport)
                     <div class="item">
                         <div class="card_city">
+                            <div class="city_shadow"></div>
                             <img src='{{ Storage::url($airport->image) }}'>
                             <div class="flag">
                                 <img src="{{ Storage::url($airport->country->flag) }}">
@@ -90,17 +93,19 @@
         <div class="container">
             <div class="simvol_title d-flex flex-column align-items-center">
                 <div class="simvol_image"><img src="/image/simvol.png"></div>
-                <h3 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.06em;">
+                <h3 class="fw-normal lh-1 text-white text-uppercase  text-center tenor"
+                    style="letter-spacing: -0.06em;">
                     CONTACT US</h3>
             </div>
-            <p class="p_md fw-normal lh-sm text-white text-center pt-3 pb-1">Fill in the form below or reach out to us
+            <p class="p_md fw-normal lh-sm text-white text-center pt-3 pb-1">Fill in the form below or reach out
+                to us
                 using</p>
-            <div class="d-flex align-items-center justify-content-center pb-5">
-                <p class="p_md fw-bold lh-sm text-white mx-2 my-1"><a>8 800 775-07-75</a></p>
-                <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
-                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>WhatsApp</a></p>
-                <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
-                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>order@darkwing-catering.com</a></p>
+            <div class="d-flex align-items-center justify-content-center pb-5 flex-wrap">
+                <p class="p_md fw-bold lh-sm text-white mx-2 my-1"><a href="tel:+33638888695">+33638888695</a></p>
+                <span class="slash fw-bold lh-sm text-white opacity-25 d-none d-lg-inline">/</span>
+                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a href="https://api.whatsapp.com/send?phone=0033638888695">WhatsApp</a></p>
+                <span class="slash fw-bold lh-sm text-white opacity-25 d-none d-lg-inline">/</span>
+                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a href="mailto:Order@darkwinginflight.com">Order@darkwinginflight.com</a></p>
             </div>
             <div class="contact_input">
                 <livewire:contact />

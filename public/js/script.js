@@ -44,10 +44,14 @@ $('.owl-menu-cards').owlCarousel({
   navText: ["<img src='/image/chevron-l.svg'>","<img src='/image/chevron-r.svg'>"],
   responsive:{
     0:{
-      items:1
+      items:1,
+        margin:0,
+        stagePadding: 0,
     },
     600:{
-      items:1
+      items:1,
+        margin:0,
+        stagePadding: 0,
     },
     1000:{
       items:2
@@ -175,4 +179,8 @@ if(profile_avatar_button && profile_avatar_input){
     profile_avatar_button.addEventListener("click",function (){
         profile_avatar_input.click();
     })
+}
+
+function scrollToMenu(){
+    document.querySelector(".menu").scrollIntoView();
 }

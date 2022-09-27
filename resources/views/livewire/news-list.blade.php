@@ -17,7 +17,7 @@
 
     @if($count < $all_count)
         <div class="text-center">
-            <button wire:click="increment" class="btn btn-lg btn-outline-light text-white text-uppercase" style="width: 481px">See more</button>
+            <button wire:click="increment" class="btn btn-lg btn-outline-light text-white text-uppercase news_see_more">See more</button>
         </div>
     @endif
 </div>

@@ -15,6 +15,7 @@
                 <div class="col-md-6 col-xl-4 col-xxl-3">
                     <div class="card_city">
                         <img src={{ Storage::url($airport->image) }}>
+                        <div class="city_shadow"></div>
                         <div class="flag">
                             <img src={{ Storage::url($airport->country->flag) }}>
                         </div>

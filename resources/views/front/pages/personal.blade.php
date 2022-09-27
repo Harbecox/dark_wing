@@ -12,23 +12,21 @@
     <div class="new_order">
         <h5 class="fs-34 fw-normal lh-110 text-center pb-3" style="color: #586E81">New order</h5>
         <div class="d-flex justify-content-center new_order_btn">
-            <div class="d-flex">
-                <a href="{{route('order')}}" class="personal_btn d-flex align-items-center"><img src="/image/btn1.svg">Feel
+            <div class="d-flex flex-column flex-lg-row">
+                <a href="{{route('order')}}" class="personal_btn d-flex align-items-center my-2 my-lg-0"><img src="/image/btn1.svg">Feel
                     the form</a>
-                <a href="mailto:Order@darkwinginflight.com" class="personal_btn d-flex align-items-center"><img
+                <a href="mailto:Order@darkwinginflight.com" class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img
                         src="/image/btn2.svg">By email</a>
                 <a href="https://api.whatsapp.com/send?phone=0033638888695"
-                   class="personal_btn d-flex align-items-center"><img src="/image/btn3.svg">By WhatsApp</a>
-            </div>
-            <div class="d-flex">
+                   class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img src="/image/btn3.svg">By WhatsApp</a>
                 <form action="{{ route('upload_pdf') }}" method="post" enctype="multipart/form-data">
-                    <button onclick="this.parentNode.querySelector('input').click()" type="button"
-                            class="personal_btn d-flex align-items-center"><img src="/image/btn4.svg">Upload PDF
-                    </button>
+                    <a onclick="this.parentNode.querySelector('input').click()" type="button"
+                            class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img src="/image/btn4.svg">Upload PDF
+                    </a>
                     <input name="order_pdf" onchange="this.parentNode.submit()" type="file" style="display: none">
                     @csrf
                 </form>
-                <a href="{{route('contact')}}" class="personal_btn d-flex align-items-center"><img
+                <a href="{{route('contact')}}" class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img
                         src="/image/btn5.svg">Free form</a>
             </div>
         </div>
@@ -42,7 +40,7 @@
             <table>
                 @foreach($orders as $order)
                     <tr>
-                        <td width="22%">
+                        <td width="22%" class="d-none d-lg-table-cell">
                             <div class="call" style="padding-left: 30px">
                                 <p>Date</p>
                                 <span>{{ $order->created_at->toFormattedDateString() }}</span>
