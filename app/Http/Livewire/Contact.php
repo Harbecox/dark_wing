@@ -2,7 +2,10 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\SendMail;
+use App\Mail\ContactMail;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Livewire\Component;
 
@@ -32,7 +35,7 @@ class Contact extends Component
     public function submit()
     {
         $data = $this->validate();
-        file_put_contents(str_replace(":","_",Carbon::now()->toDateTimeLocalString()).".json",json_encode($data,256));
+        SendMail::dispatch($data);
         $this->success = true;
         $this->name = "";
         $this->lname = "";
