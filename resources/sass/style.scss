@@ -241,8 +241,6 @@ select.form-select {
 
 .luxury {
 
-    padding-top: 89px;
-
     .luxury_title {
         top: 120px;
         padding: 0 170px;
@@ -505,12 +503,25 @@ select.form-select {
     }
 }
 
-.top_buttons{
-    a{
-        padding: 24px;
-        margin: 0 12px;
+.bg_header{
+    .top_buttons{
+        a{
+            padding: 24px 48px;
+            margin: 0 12px;
+        }
+        bottom: 0;
     }
+    &:not(.airport_show){
+        .top_buttons{
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+            bottom: 100px;
+        }
+    }
+
 }
+
 
 .news_see_more{
     width: 481px
@@ -1162,64 +1173,57 @@ body.preloader_show{
     left: 0;
     top: 0;
     z-index: 99999999;
-}
-.circle-loader {
-    position: relative;
-    width: 200px;
-    height: 200px;
+    .circle-loader {
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle {
+        border-radius: 50% 50% 50% 50%;
+        position: absolute;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid transparent;
+        border-left:  2px solid #fff;
+        border-right: 2px solid transparent;
+        animation: animate 2s infinite;
+    }
+
+    .circle_one {
+        left: 75px;
+        top: 75px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle_two {
+        left: 65px;
+        top: 65px;
+        width: 70px;
+        height: 70px;
+        animation-delay: 0.2s;
+    }
+
+    .circle_three {
+        left: 55px;
+        top: 55px;
+        width: 90px;
+        height: 90px;
+        animation-delay: 0.4s;
+    }
+
+    .circle_four {
+        left: 45px;
+        top: 45px;
+        width: 110px;
+        height: 110px;
+        animation-delay: 0.6s;
+    }
+
+    @keyframes animate {
+        50% { transform: rotate(360deg) scale(0.8); }
+    }
+
 }
 
-/*
-=======================
-   Circle Preloader
-=======================
-*/
 
-.circle-loader {
-    position: relative;
-}
-
-.circle {
-    border-radius: 50% 50% 50% 50%;
-    position: absolute;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid transparent;
-    border-left:  2px solid #fff;
-    border-right: 2px solid transparent;
-    animation: animate 2s infinite;
-}
-
-.circle_one {
-    left: 75px;
-    top: 75px;
-    width: 50px;
-    height: 50px;
-}
-
-.circle_two {
-    left: 65px;
-    top: 65px;
-    width: 70px;
-    height: 70px;
-    animation-delay: 0.2s;
-}
-
-.circle_three {
-    left: 55px;
-    top: 55px;
-    width: 90px;
-    height: 90px;
-    animation-delay: 0.4s;
-}
-
-.circle_four {
-    left: 45px;
-    top: 45px;
-    width: 110px;
-    height: 110px;
-    animation-delay: 0.6s;
-}
-
-@keyframes animate {
-    50% { transform: rotate(360deg) scale(0.8); }
-}

@@ -64,12 +64,19 @@
   }
 }
 @media only screen and (max-width: 995px) {
+  .header {
+    justify-content: center !important;
+  }
+  .header .logo {
+    position: relative;
+    top: 0;
+  }
   .luxury_title {
     padding: 0;
     left: 7px;
   }
   .luxury {
-    height: 600px;
+    height: 800px;
     overflow: hidden;
   }
   .post_main_text {
@@ -118,5 +125,15 @@
   }
   .partnerships_main .partner_cards .partner_card {
     width: 100%;
+  }
+  .top_buttons {
+    bottom: 120px;
+  }
+  .top_buttons a {
+    padding: 24px !important;
+    margin: 0 12px !important;
+  }
+  .airport {
+    padding: 0;
   }
 }
