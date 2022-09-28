@@ -155,6 +155,7 @@
             margin: 0 12px!important;
         }
         bottom: 120px;
+        margin-bottom: 100px;
     }
     .airport{
         padding: 0;
@@ -162,7 +163,8 @@
     .bg_header{
         &:not(.airport_show){
             .top_buttons{
-                bottom: 0px;
+                bottom: 100px;
+                margin-bottom: 0;
             }
         }
 

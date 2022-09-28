@@ -430,7 +430,6 @@ select.form-select:focus-visible, select.form-select:focus {
   position: absolute;
   left: 50%;
   transform: translatex(-50%);
-  bottom: 100px;
 }
 
 .news_see_more {
