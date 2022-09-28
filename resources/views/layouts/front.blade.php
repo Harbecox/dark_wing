@@ -14,7 +14,15 @@
     <link rel="stylesheet" type="text/css" href="/css/responsive.css">
     @livewireStyles
 </head>
-<body style="background-image: url('/image/bggg.png')">
+<body style="background-image: url('/image/bggg.png')" class="preloader_show">
+<div class="preloader-wrapper">
+    <div class="circle-loader">
+        <div class="circle circle_four"></div>
+        <div class="circle circle_three"></div>
+        <div class="circle circle_two"></div>
+        <div class="circle circle_one"></div>
+    </div>
+</div>
 @if(\Request::route()->getName() == "index" || \Illuminate\Support\Facades\Route::is("show_airport"))
     <div class="bg_header @if(\Illuminate\Support\Facades\Route::is("show_airport")) airport_show @endif" style="background-image: url(@yield('header_bg','/image/bggg.png')">
         <div class="header d-flex justify-content-between align-items-center">
@@ -66,17 +74,17 @@
                     <a href="{{route('account')}}" class="btn btn-sm text-white btn-outline-light">Account</a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <p class="text-gray-1 p_md d-flex align-items-center">
+                        <button class="btn btn-sm text-white btn-outline-light">
                             <a onclick="this.parentNode.parentNode.submit()"><i class="icon-Login account_icon"></i>Logout</a>
-                        </p>
+                        </button>
                     </form>
                 @else
-                    <p class="text-gray-1 p_md d-flex align-items-center">
+                    <button class="btn btn-sm text-white btn-outline-light">
                         <a href="{{route('login')}}"><i class="icon-Login account_icon"></i>Log in</a>
-                    </p>
-                    <p class="text-gray-1 p_md d-flex align-items-center">
+                    </button>
+                    <button class="btn-sm text-gray-9 border-0 btn-white">
                         <a href="{{route('register')}}"><i class="icon-User account_icon"></i>New account</a>
-                    </p>
+                    </button>
                 @endif
             </div>
         </div>
@@ -162,6 +170,7 @@
             All Rights Reserved</p>
     </div>
 </div>
+
 @if($errors->any())
     @foreach($errors->all() as $error)
         <script>console.log($error)</script>

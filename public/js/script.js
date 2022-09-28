@@ -184,3 +184,7 @@ if(profile_avatar_button && profile_avatar_input){
 function scrollToMenu(){
     document.querySelector(".menu").scrollIntoView();
 }
+
+window.onload = function (){
+    document.querySelector("body").classList.remove("preloader_show");
+}
