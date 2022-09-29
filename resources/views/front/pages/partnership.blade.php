@@ -8,7 +8,7 @@
                 person who became a member of our close community.<br> We accept only Private Flight attendants.</p>
             <div class="partner_cards d-flex">
                 <div class="row">
-                    <div class="col-xxl-4 col-xl-6">
+                    <div class="col-lg-4 col-12">
                         <div class="partner_card text-center text-lg-left">
                             <div class="partner_card_image">
                                 <img src="image/partner1.png">
@@ -17,7 +17,7 @@
                             <span class="span_md fw-normal lh-140 text-white" style=" opacity: 0.8">You create your team and take benefits from them. You take benefits from your collaboration with us.We regularly propose online training sessions on different thematics</span>
                         </div>
                     </div>
-                    <div class="col-xxl-4 col-xl-6">
+                    <div class="col-lg-4 col-12">
                         <div class="partner_card text-center text-lg-left">
                             <div class="partner_card_image">
                                 <img src="image/partner2.png">
@@ -26,7 +26,7 @@
                             <span class="span_md fw-normal lh-140 text-white" style=" opacity: 0.8">You represent us and speak about us. Give your feedback about your destination. We give % for the orders.</span>
                         </div>
                     </div>
-                    <div class="col-xxl-4 col-xl-6">
+                    <div class="col-lg-4 col-12">
                         <div class="partner_card text-center text-lg-left">
                             <div class="partner_card_image">
                                 <img src="image/partner3.png">
@@ -44,7 +44,7 @@
     <div class="contact contact_partner">
         <div class="container">
             <p class="p_lg fw-normal lh-sm text-white text-center contact_text">To become our partner please reach out to us via<br>
-                <a class="fw-bold p_lg lh-sm text-white" href="#">order@darkwing-catering.com</a>
+                <a class="fw-bold p_lg lh-sm text-white" href="mailto:Order@darkwinginflight.com">Order@darkwinginflight.com</a>
                 or just fill in the form below.</p>
             <livewire:partnership />
         </div>

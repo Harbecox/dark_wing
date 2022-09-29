@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\SendMail;
+use App\Jobs\SendPartnerMail;
 use Carbon\Carbon;
 use Livewire\Component;
 
@@ -22,7 +24,13 @@ class Partnership extends Component
     public function submit()
     {
         $data = $this->validate();
-        file_put_contents(str_replace(":","_",Carbon::now()->toDateTimeLocalString()).".json",json_encode($data,256));
+        SendPartnerMail::dispatch($data);
+        $this->success = true;
+        $this->company = "";
+        $this->email = "";
+        $this->phone = "";
+        $this->location = "";
+
     }
 
     public function render()

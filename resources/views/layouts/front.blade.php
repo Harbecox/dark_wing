@@ -163,7 +163,9 @@
             <div class="my-3 mt-lg-0">
                 <img src="/image/logo-footer.svg">
             </div>
-            <p class="p_md fw-normal lh-sm text-white opacity-25 footer_text">order@darkwing-catering.com</p>
+            <p class="p_md fw-normal lh-sm text-white opacity-25 footer_text">
+                <a href="mailto:Order@darkwinginflight.com">Order@darkwinginflight.com</a>
+            </p>
         </div>
         <hr>
         <p class="p_small fw-normal lh-sm text-center text-gray-6 text-uppercase py-4">Copyright 2020 Darkwing Catering.

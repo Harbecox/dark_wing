@@ -10,7 +10,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Mail;
 
-class SendMail implements ShouldQueue
+class SendPartnerMail implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -33,9 +33,9 @@ class SendMail implements ShouldQueue
      */
     public function handle()
     {
-        Mail::send('mail.contact',$this->data,function ($message){
+        Mail::send('mail.partner',$this->data,function ($message){
             $message->to('Order@darkwinginflight.com')->subject
-            ('Darkwings contact');
+            ('Darkwings Partner');
         });
     }
 }

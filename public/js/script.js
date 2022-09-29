@@ -154,7 +154,7 @@ close.addEventListener("click", function (){
 let time = new Date().getTime();
 let timer = null;
 
-if(document.querySelector(".personal_main_right")){
+if(document.querySelector("#personal_data_form")){
     let form = document.getElementById("personal_data_form");
     document.querySelector("#personal_data_form").querySelectorAll("input").forEach(function (input){
         console.log(input.type);
@@ -165,6 +165,7 @@ if(document.querySelector(".personal_main_right")){
                     if(new Date().getTime() - time > 500){
                         clearInterval(timer);
                         timer = null;
+                        console.log(1);
                         form.querySelector("button[type=submit]").click();
                     }
                 },1);

@@ -220,7 +220,7 @@
                                         <div class="card-body">
                                             <span
                                                 class="span_sm fw-normal lh-sm text-gray-7">{{ $post->created_at->toFormattedDateString() }}</span>
-                                            <p class="p_lg fw-normal lh-1 text-white py-2">{{ $post->title }}</p>
+                                            <p class="p_lg fw-normal lh-1 text-white py-2" style="height: 72px;">{{ $post->title }}</p>
                                             <div style="height: 160px; overflow: hidden"
                                                  class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</div>
                                             <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a

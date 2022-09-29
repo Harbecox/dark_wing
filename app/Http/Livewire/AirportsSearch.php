@@ -14,7 +14,7 @@ class AirportsSearch extends Component
     public function render()
     {
 
-        $data['airports'] = "";
+        $data['airports'] = [];
         if (strlen($this->search) > 0) {
             $data['airports'] = Airport::query()->where("title", "like", $this->search . "%")->limit(4)->get();
             $this->count = count($data['airports']);

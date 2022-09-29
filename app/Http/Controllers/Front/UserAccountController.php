@@ -18,7 +18,6 @@ class UserAccountController extends Controller
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $data['user'] = Auth::user();
-        $data['orders'] = Auth::user()->orders;
         return view('front.pages.personal',$data);
     }
 

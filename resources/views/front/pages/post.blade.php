@@ -6,6 +6,7 @@
 @endsection
 
 @section('content')
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <div class="container">
         <div class="post_main d-flex flex-column align-items-center">
             <p class="p_md fw-bold lh-sm text-uppercase text-white text_back" style="opacity: 0.4">
@@ -23,21 +24,21 @@
             </div>
             <div class="post_main_data d-flex align-items-center justify-content-between">
                 <p class="p_md fw-normal lh-140 text-white">{{$post->created_at}}</p>
-                <div class="d-flex">
+                <div class="share-btn">
                     <div class="main_icon d-flex align-items-center justify-content-center">
-                        <i class="icon-fb"></i>
+                        <a class="btn-vk" data-id="vk"><i class="fa-brands fa-vk"></i></a>
                     </div>
                     <div class="main_icon d-flex align-items-center justify-content-center">
-                        <i class="icon-twiter"></i>
+                        <a class="btn-facebook" data-id="fb"><i class="fa-brands fa-square-facebook"></i></a>
                     </div>
                     <div class="main_icon d-flex align-items-center justify-content-center">
-                        <i class="icon-YouTube"></i>
+                        <a class="btn-twitter" data-id="tw"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                     <div class="main_icon d-flex align-items-center justify-content-center">
-                        <i class="icon-telegram"></i>
+                        <a class="btn-telegram" data-id="tg"><i class="fa-brands fa-telegram"></i></a>
                     </div>
                     <div class="main_icon d-flex align-items-center justify-content-center">
-                        <i class="icon-whatsapp"></i>
+                        <a class="btn-mail" data-id="mail"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -77,16 +78,17 @@
             </div>
             <p class="p_md fw-normal lh-sm text-white text-center pt-3 pb-1">Fill in the form below or reach out to us
                 using</p>
-            <div class="d-flex align-items-center justify-content-center pb-5">
-                <p class="p_md fw-bold lh-sm text-white mx-2 my-1"><a>8 800 775-07-75</a></p>
-                <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
-                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>WhatsApp</a></p>
-                <span class="slash fw-bold lh-sm text-white opacity-25">/</span>
-                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a>order@darkwing-catering.com</a></p>
+            <div class="d-flex align-items-center justify-content-center pb-5 flex-wrap">
+                <p class="p_md fw-bold lh-sm text-white mx-2 my-1"><a href="tel:+33638888695">+33638888695</a></p>
+                <span class="slash fw-bold lh-sm text-white opacity-25 d-none d-lg-inline">/</span>
+                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a href="https://api.whatsapp.com/send?phone=0033638888695">WhatsApp</a></p>
+                <span class="slash fw-bold lh-sm text-white opacity-25 d-none d-lg-inline">/</span>
+                <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a href="mailto:Order@darkwinginflight.com">Order@darkwinginflight.com</a></p>
             </div>
             <div class="contact_input">
                 <livewire:contact />
             </div>
         </div>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/share-buttons/dist/share-buttons.js"></script>
 @endsection

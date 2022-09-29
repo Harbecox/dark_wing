@@ -1,7 +1,6 @@
 @extends('layouts.front')
 
 @section('content')
-
     <div class="contact_main">
         <div class="container">
             <h1 class="fw-normal lh-1 text-white text-uppercase  text-center tenor"
@@ -17,7 +16,7 @@
                                         <div class="part left"></div>
                                         <div class="part main"><span class="title">Name</span></div>
                                         <div class="part right"></div>
-                                        <input id="firstName" name="firstName"
+                                        <input value="{{ old('firstName') ?? "" }}" id="firstName" name="firstName"
                                                class="@error('firstName') is-invalid @enderror">
                                     </div>
                                     @error('firstName')
@@ -31,7 +30,7 @@
                                         <div class="part left"></div>
                                         <div class="part main"><span class="title">Email</span></div>
                                         <div class="part right"></div>
-                                        <input id="email" name="email" class="@error('email') is-invalid @enderror">
+                                        <input value="{{ old('email') ?? "" }}" id="email" name="email" class="@error('email') is-invalid @enderror">
                                     </div>
                                     @error('email')
                                     <span class="invalid-feedback d-block" role="alert">
@@ -44,7 +43,7 @@
                                         <div class="part left"></div>
                                         <div class="part main"><span class="title">Phone</span></div>
                                         <div class="part right"></div>
-                                        <input id="phone" name="phone" class="@error('phone') is-invalid @enderror">
+                                        <input value="{{ old('phone') ?? "" }}" id="phone" name="phone" class="@error('phone') is-invalid @enderror">
                                     </div>
                                     @error('firstName')
                                     <span class="invalid-feedback d-block" role="alert">

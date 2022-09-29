@@ -691,7 +691,12 @@ span#context {
 .fake_input {
     height: 77px;
     margin-bottom: 16px;
-    box-shadow: 0px 11px 32px rgba(24, 64, 84, 0.3);
+    box-shadow: 0 11px 32px rgba(24, 64, 84, 0.3);
+
+    &~.invalid-feedback{
+        margin-top: -15px;
+        margin-bottom: 10px;
+    }
 
     &.textarea {
         height: 169px;
@@ -819,7 +824,7 @@ span#context {
 }
 
 .contact_input {
-    padding: 0 220px;
+    padding: 0 100px;
 
     .error {
         margin-top: -15px;
@@ -893,7 +898,7 @@ span#context {
         padding-top: 69px;
 
         .partner_card {
-            width: 410px;
+            width: 100%;
             margin-right: 55px;
             margin-bottom: 30px;
 
@@ -931,7 +936,11 @@ span#context {
     .order_input {
         width: 544px;
         padding-top: 33px;
-
+        .text-danger{
+            margin-top: -10px;
+            display: block;
+            margin-bottom: 10px;
+        }
         .fake_input, select {
             margin-bottom: 12px;
         }
@@ -946,31 +955,22 @@ span#context {
 .personal_main {
     padding-bottom: 58px;
 
-    .personal_main_right {
-        input {
-
+    .personal_info_line {
+        margin-bottom: 21px;
+        input{
+            width: 100%;
+        }
+        p {
+            opacity: 0.4;
         }
 
-        .personal_info {
-            margin-right: 35px;
-
-            .personal_info_line {
-                margin-bottom: 21px;
-
-                p {
-                    opacity: 0.4;
-                }
-
-                .edit {
-                    margin-left: 3px;
-                }
-            }
+        .edit {
+            margin-left: 3px;
         }
     }
 
     .personal_main_left {
         position: relative;
-        margin-right: 40px;
 
         .camera {
             position: absolute;
@@ -978,9 +978,9 @@ span#context {
             background: linear-gradient(0deg, #2F82D7, #2F82D7), #0D1A27;
             border: 4px solid #0D1A27;
             border-radius: 50%;
-            z-index: 99999;
-            top: 18px;
-            right: -23px;
+            z-index: 1;
+            top: 0;
+            left: 70px;
         }
     }
 }
@@ -1225,4 +1225,10 @@ body.preloader_show{
 
 }
 
-
+.share-btn{
+    display: flex;
+    a{
+        cursor: pointer;
+        color: #fff;
+    }
+}

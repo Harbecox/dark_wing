@@ -1,7 +1,6 @@
 @extends('layouts.front')
 
 @section('content')
-
     <div class="contact_main">
         <div class="container">
             <h1 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.08em; margin-bottom: 20px">Login</h1>
@@ -16,22 +15,18 @@
                                 <div class="part right"></div>
                                 <input id="email" name="email" class="@error('email') is-invalid @enderror">
                             </div>
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
                             <div class="fake_input d-flex position-relative w-100 col-xl-6 col-md-12">
                                 <div class="part left"></div>
                                 <div class="part main"><span class="title">Password</span></div>
                                 <div class="part right"></div>
                                 <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password">
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
+
                             </div>
+                        </div>
+                        <div class="col-12">
+                            @foreach ($errors->all() as $error)
+                                <div class="my-3"><span class="text-danger error">{{$error}}</span></div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
