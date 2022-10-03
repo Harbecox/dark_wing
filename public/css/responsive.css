@@ -68,6 +68,7 @@
     justify-content: center !important;
   }
   .header .logo {
+    display: none;
     position: relative;
     top: 0;
   }
