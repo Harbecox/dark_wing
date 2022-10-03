@@ -26,9 +26,10 @@
 @if(\Request::route()->getName() == "index" || \Illuminate\Support\Facades\Route::is("show_airport"))
     <div class="bg_header @if(\Illuminate\Support\Facades\Route::is("show_airport")) airport_show @endif" style="background-image: url(@yield('header_bg','/image/bggg.png')">
         <div class="header d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <a href="{{route('index')}}"><img src="/image/logo.png"></a>
-            </div>
+            AAAAA
+{{--            <div class="logo">--}}
+{{--                <a href="{{route('index')}}"><img src="/image/logo.png"></a>--}}
+{{--            </div>--}}
             <div class="header_menu">
                 <ul class="navbar">
                     <li class="nav-item"><a class="nav-link text-uppercase text-gray-1" href="{{route("all_airports")}}">Airports</a></li>
