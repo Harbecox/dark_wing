@@ -10,7 +10,7 @@
     <div class="header_content">
         <div class="container">
             <div class="d-flex flex-column align-items-center port_main">
-                <p class="p_md fw-bold lh-sm text-uppercase text-white text_back" style="opacity: 0.4">
+                <p class="p_md fw-bold lh-sm text-uppercase text-white text_back" style="opacity: 0.7">
                     <a href="{{route('all_airports')}}" class="d-flex align-items-center"><i class="icon-Line"></i>back</a></p>
                 <div class="d-flex align-items-center port_title">
                     <div class="circle">

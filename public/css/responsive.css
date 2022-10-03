@@ -2,6 +2,9 @@
   .logo {
     height: 80px !important;
   }
+  .port_main {
+    padding-top: 130px;
+  }
 }
 @media only screen and (max-width: 1400px) {
   .partners_logo {
@@ -68,7 +71,6 @@
     justify-content: center !important;
   }
   .header .logo {
-    display: none;
     position: relative;
     top: 0;
   }

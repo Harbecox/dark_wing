@@ -13,6 +13,7 @@ class Partnership extends Component
     public $email;
     public $phone;
     public $location;
+    public $success;
 
     protected $rules = [
         'company' => 'required',

@@ -149,7 +149,7 @@
     </div>
 @endif
 
-<div style="min-height: calc(100vh - 332px);">
+<div style="min-height: calc(100vh - 332px);margin-top: -95px">
 @yield("content")
 </div>
 <div class="footer">
