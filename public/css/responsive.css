@@ -69,8 +69,10 @@
 @media only screen and (max-width: 995px) {
   .header {
     display: block !important;
+    text-align: center;
   }
   .header .logo {
+    display: inline-block;
     width: auto;
     position: static;
     top: auto;
