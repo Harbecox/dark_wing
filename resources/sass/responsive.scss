@@ -90,6 +90,9 @@
 @media only screen and (max-width: 995px) {
     .header{
         justify-content: center!important;
+        -webkit-justify-content: center!important;
+        display: -webkit-flex;
+        display: flex;
         .logo{
             position: relative;
             top:0;
