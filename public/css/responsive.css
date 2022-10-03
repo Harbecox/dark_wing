@@ -71,9 +71,9 @@
     display: block !important;
   }
   .header .logo {
-    transform: translateX(50%);
-    position: relative;
-    top: 0;
+    width: auto;
+    position: static;
+    top: auto;
   }
   .luxury_title {
     padding: 0;

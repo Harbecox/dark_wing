@@ -91,9 +91,11 @@
     .header{
         display: block!important;
         .logo{
-            transform: translateX(50%);
-            position: relative;
-            top:0;
+            width: auto;
+            //transform: translateX(50%);
+            position: static;
+            top:auto;
+
         }
     }
     .luxury_title {
