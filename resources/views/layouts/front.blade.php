@@ -39,9 +39,8 @@
             </div>
             <div class="mobile_menu">
                 <img src="/image/menu.svg" style="margin-right: 5px">
-                <p class="fw-normal p_md text-white text-uppercase">Menu</p>
             </div>
-            <div class="mobile_menu_open" Luxury catering around the world>
+            <div class="mobile_menu_open text-start">
                 <ul>
                     <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("all_airports")}}">Airports</a></li>
                     <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("all_news")}}">News</a></li>
@@ -105,9 +104,8 @@
         </div>
         <div class="mobile_menu">
             <a href="{{route('index')}}"><img src="/image/menu.svg" style="margin-right: 5px"></a>
-            <p class="fw-normal p_md text-white text-uppercase">Menu</p>
         </div>
-        <div class="mobile_menu_open">
+        <div class="mobile_menu_open text-start">
             <ul>
                 <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("all_airports")}}">Airports</a></li>
                 <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("all_news")}}">News</a></li>
@@ -149,7 +147,7 @@
     </div>
 @endif
 
-<div style="min-height: calc(100vh - 332px);margin-top: -95px">
+<div class="main_wrapper">
 @yield("content")
 </div>
 <div class="footer">

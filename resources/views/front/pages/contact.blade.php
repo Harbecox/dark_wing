@@ -1,7 +1,7 @@
 @extends('layouts.front')
 @section('title') Darkwings Contacts @endsection
 @section('content')
-    <div class="contact_main">
+    <div class="contact_main" style="margin-bottom: 100px">
         <div class="container">
             <h1 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.08em;">CONTACT US</h1>
             <p class="p_md fw-normal lh-sm text-white text-center pt-3 pb-1">Fill in the form below or reach out to us
