@@ -20,7 +20,7 @@
     <div class="container">
         <div class="post_main_text">
             <div class="post_text">
-                <div class="fs-24 fw-normal lh-140 text-white">{!! $post->context !!}</div>
+                <div class="fs-24 fw-normal lh-140 text-white" style="text-align: justify">{!! $post->context !!}</div>
             </div>
             <div class="post_main_data d-flex align-items-center justify-content-between">
                 <p class="p_md fw-normal lh-140 text-white">{{$post->created_at}}</p>

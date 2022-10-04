@@ -22,6 +22,7 @@ class Order extends Component
     public $packaging;
     public $allergies;
     public $success;
+    public $order;
 
     function mount(){
         if(Auth::check()){
@@ -46,6 +47,7 @@ class Order extends Component
         'handling' => 'nullable',
         'packaging' => 'nullable',
         'allergies' => 'nullable',
+        'order' => 'nullable',
     ];
 
     public function submit()
@@ -66,6 +68,7 @@ class Order extends Component
         $this->handling = "";
         $this->packaging = "";
         $this->allergies = "";
+        $this->order = "";
         //file_put_contents(str_replace(":","_",Carbon::now()->toDateTimeLocalString()).".json",json_encode($data,256));
     }
     public function render()

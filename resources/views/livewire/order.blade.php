@@ -40,7 +40,7 @@
     <span class="text-danger error">{{ $message }}</span>
     @enderror
     <div class="order_select d-flex justify-content-between w-100">
-        <div class="me-2">
+        <div class="me-2 w-100">
             <select wire:model="deliveryDay" class="form-select" style="margin-right: 12px" aria-label="Default select example" name="deliveryDay">
                 <option selected>Delivery Day *</option>
                 @foreach(range(1,31) as $day)
@@ -51,16 +51,13 @@
             <span class="text-danger error">{{ $message }}</span>
             @enderror
         </div>
-        <div class="ms-2">
-            <select wire:model="deliveryTime" class="form-select" aria-label="Default select example" name="deliveryTime">
-                <option selected>Delivery time (LT) *</option>
-                @foreach(range(0,24) as $time)
-                    <option value="{{ $time }}">{{ $time }}</option>
-                @endforeach
-            </select>
-            @error('deliveryTime')
-            <span class="text-danger error">{{ $message }}</span>
-            @enderror
+        <div class="ms-2 w-100">
+            <div class="fake_input d-flex position-relative @if(strlen($deliveryTime) > 0) focus @endif" >
+                <div class="part left"></div>
+                <div class="part main"><span class="title">Delivery time (LT) *</span></div>
+                <div class="part right"></div>
+                <input wire:model="deliveryTime" name="deliveryTime" >
+            </div>
         </div>
     </div>
     <div class="fake_input d-flex position-relative @if(strlen($company) > 0) focus @endif" >
@@ -97,6 +94,15 @@
         <input wire:model="allergies" name="allergies" value="">
     </div>
     @error('allergies')
+    <span class="text-danger error">{{ $message }}</span>
+    @enderror
+    <div class="fake_input textarea d-flex position-relative w-100 @if(strlen($order) > 0) focus @endif">
+        <div class="part left"></div>
+        <div class="part main"><span class="title">Order</span></div>
+        <div class="part right"></div>
+        <textarea wire:model="order"></textarea>
+    </div>
+    @error('order')
     <span class="text-danger error">{{ $message }}</span>
     @enderror
     @if($success)

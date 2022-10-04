@@ -33,7 +33,7 @@
                 <ul class="navbar">
                     <li class="nav-item"><a class="nav-link text-uppercase text-gray-1" href="{{route("all_airports")}}">Airports</a></li>
                     <li class="nav-item"><a class="nav-link text-uppercase text-gray-1" href="{{route("all_news")}}">News</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase text-gray-1" href="{{route("partnership")}}">Partnership</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase text-gray-1" href="{{route("partnership")}}">Partnerships</a></li>
                     <li class="nav-item"><a class="nav-link text-uppercase text-gray-1" href="{{route("contact")}}">Contacts</a></li>
                 </ul>
             </div>
@@ -44,7 +44,7 @@
                 <ul>
                     <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("all_airports")}}">Airports</a></li>
                     <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("all_news")}}">News</a></li>
-                    <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("partnership")}}">Partnership</a></li>
+                    <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("partnership")}}">Partnerships</a></li>
                     <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("contact")}}">Contacts</a></li>
                 </ul>
                 @if(\Illuminate\Support\Facades\Auth::check())
@@ -98,7 +98,7 @@
             <ul class="navbar">
                 <li class="nav-item "><a class="nav-link text-uppercase text-gray-1" href="{{route("all_airports")}}">Airports</a></li>
                 <li class="nav-item "><a class="nav-link text-uppercase text-gray-1" href="{{route("all_news")}}">News</a></li>
-                <li class="nav-item "><a class="nav-link text-uppercase text-gray-1" href="{{route("partnership")}}">Partnership</a></li>
+                <li class="nav-item "><a class="nav-link text-uppercase text-gray-1" href="{{route("partnership")}}">Partnerships</a></li>
                 <li class="nav-item "><a class="nav-link text-uppercase text-gray-1" href="{{route("contact")}}">Contacts</a></li>
             </ul>
         </div>
@@ -109,7 +109,7 @@
             <ul>
                 <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("all_airports")}}">Airports</a></li>
                 <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("all_news")}}">News</a></li>
-                <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("partnership")}}">Partnership</a></li>
+                <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("partnership")}}">Partnerships</a></li>
                 <li class="p_md"><a class="text-uppercase text-gray-1" href="{{route("contact")}}">Contacts</a></li>
             </ul>
             @if(\Illuminate\Support\Facades\Auth::check())

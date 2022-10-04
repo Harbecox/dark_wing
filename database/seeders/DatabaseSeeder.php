@@ -11,9 +11,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CountrySeeder::class);
 
-        \App\Models\User::factory(10)->create();
+        //\App\Models\User::factory(10)->create();
 
-        \App\Models\Airport::factory(11)->create();
+//        \App\Models\Airport::factory(11)->create();
+
+        $this->call(AirportSeeder::class);
 
         \App\Models\User::factory()->create([
             'firstName' => 'admin',
