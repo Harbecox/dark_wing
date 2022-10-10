@@ -16,6 +16,8 @@
                                 <p>Airport</p>
                                 @if($order->airport)
                                     <span>{{ $order->airport->title }}</span>
+                                @elseif($order->deliveryAirport)
+                                    <span>{{ $order->deliveryAirport }}</span>
                                 @else
                                     <span>&nbsp</span>
                                 @endif

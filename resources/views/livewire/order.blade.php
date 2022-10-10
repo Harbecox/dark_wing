@@ -26,30 +26,32 @@
     @error('phone')
     <span class="text-danger error">{{ $message }}</span>
     @enderror
-    <div class="fake_input d-flex position-relative" @if(strlen($deliveryAirport) > 0) focus @endif">
-        <div class="part right">
-            <select wire:model="deliveryAirport" class="form-select" style="margin-right: 12px" aria-label="Default select example" name="deliveryAirport">
-                <option selected class="title">Delivery Airport *</option>
-                @foreach($airports as $airport)
-                    <option value="{{$airport->id}}">{{$airport->title}}</option>
-                @endforeach
-            </select>
-        </div>
+    <div class="fake_input d-flex position-relative @if(strlen($deliveryAirport) > 0) focus @endif">
+        <div class="part left"></div>
+        <div class="part main"><span class="title">Delivery Airport *</span></div>
+        <div class="part right"></div>
+        <input wire:model="deliveryAirport" name="deliveryAirport">
     </div>
     @error('deliveryAirport')
     <span class="text-danger error">{{ $message }}</span>
     @enderror
     <div class="order_select d-flex justify-content-between w-100">
         <div class="me-2 w-100">
-            <select wire:model="deliveryDay" class="form-select" style="margin-right: 12px" aria-label="Default select example" name="deliveryDay">
-                <option selected>Delivery Day *</option>
-                @foreach(range(1,31) as $day)
-                    <option value="{{ $day }}">{{ $day }}</option>
-                @endforeach
-            </select>
-            @error('deliveryDay')
-            <span class="text-danger error">{{ $message }}</span>
-            @enderror
+            <div class="fake_input d-flex position-relative @if(strlen($deliveryDay) > 0) focus @endif" >
+                <div class="part left"></div>
+                <div class="part main"><span class="title">Delivery Day *</span></div>
+                <div class="part right"></div>
+                <input wire:model="deliveryDay" name="deliveryDay">
+            </div>
+{{--            <select wire:model="deliveryDay" class="form-select" style="margin-right: 12px" aria-label="Default select example" name="deliveryDay">--}}
+{{--                <option selected>Delivery Day *</option>--}}
+{{--                @foreach(range(1,31) as $day)--}}
+{{--                    <option value="{{ $day }}">{{ $day }}</option>--}}
+{{--                @endforeach--}}
+{{--            </select>--}}
+{{--            @error('deliveryDay')--}}
+{{--            <span class="text-danger error">{{ $message }}</span>--}}
+{{--            @enderror--}}
         </div>
         <div class="ms-2 w-100">
             <div class="fake_input d-flex position-relative @if(strlen($deliveryTime) > 0) focus @endif" >
@@ -80,7 +82,7 @@
     @enderror
     <div class="fake_input d-flex position-relative @if(strlen($packaging) > 0) focus @endif">
         <div class="part left"></div>
-        <div class="part main"><span class="title">Packaging(foil or MW)</span></div>
+        <div class="part main"><span class="title">Packaging (foil or MW)</span></div>
         <div class="part right"></div>
         <input wire:model="packaging" name="packaging" value="">
     </div>
@@ -111,4 +113,11 @@
     <button type="submit" class="btn text-white text-uppercase" style="width: 100%"><span class="pnt">~</span>SEND order<span
             class="pnt">~</span>
     </button>
+    <link rel="stylesheet" href="/css/dtsel.css">
+    <script src="/js/dtsel.js"></script>
+    <script>
+        instance = new dtsel.DTS('input[name="deliveryDay"]',  {
+            direction: 'BOTTOM',
+        });
+    </script>
 </form>

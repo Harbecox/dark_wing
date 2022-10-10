@@ -55,27 +55,18 @@ class OrderController extends Controller
 
     public function update(Request $request, Order $order)
     {
-        $request->validate([
-            'firstName' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'deliveryAirport' => 'required',
-            'deliveryDay' => 'required',
-            'deliveryTime' => 'required',
-            'company' => 'required'
-        ]);
 
         $order = Order::find($order->id);
 
-        $order->firstName = $request->firstName;
-        $order->email = $request->email;
-        $order->phone = $request->phone;
-        $order->deliveryAirport = $request->deliveryAirport;
-        $order->deliveryDay = $request->deliveryDay;
-        $order->company = $request->company;
-        $order->handling = $request->handling;
-        $order->packaging = $request->packaging;
-        $order->allergies = $request->allergies;
+        $order->firstName = $request->get("firstName",null);
+        $order->email = $request->get("email",null);
+        $order->phone = $request->get("phone",null);
+        $order->deliveryAirport = $request->get("deliveryAirport",null);
+        $order->deliveryDay = $request->get("deliveryDay",null);
+        $order->company = $request->get("company",null);
+        $order->handling = $request->get("handling",null);
+        $order->packaging = $request->get("packaging",null);
+        $order->allergies = $request->get("allergies",null);
 
         if($request->hasFile('order_pdf')){
             $request->validate([
