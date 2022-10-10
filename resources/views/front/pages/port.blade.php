@@ -111,6 +111,13 @@
                 <livewire:contact />
             </div>
         </div>
+        <style>
+            @media only screen and (max-width: 420px)  {
+                .menu{
+                    padding-top: 200px;
+                }
+            }
+        </style>
     </div>
 @endsection
 
