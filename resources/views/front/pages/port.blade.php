@@ -75,7 +75,7 @@
                                 <img src="{{ Storage::url($airport->country->flag) }}">
                             </div>
                             <div class="city_name">
-                                <h5 class="fw-normal lh-sm text-white">{{ $airport->title }}</h5>
+                                <h5 class="fw-normal lh-sm text-white"><a href="{{ route("show_airport",$airport->id) }}" >{{ $airport->title }}</a></h5>
                                 <p class="p_sm text-white lh-sm fw-normal opacity-75">{{ $airport->country->name }}</p>
                                 <p class="city_open fw-normal p_md lh-sm text-white text-uppercase">
                                     <a class="d-flex align-items-center" href="{{ route("show_airport",$airport->id) }}">Open<i class="icon-Line-right"></i></a></p>
