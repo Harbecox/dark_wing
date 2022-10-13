@@ -45,6 +45,7 @@ class UserAccountController extends Controller
 
     public function upload_pdf(Request $request){
         if($request->hasFile('order_pdf')){
+
             $request->validate([
                 'order_pdf' => 'required|mimes:pdf',
             ]);
