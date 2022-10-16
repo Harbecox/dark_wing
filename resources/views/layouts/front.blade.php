@@ -28,15 +28,15 @@
 
             setTimeout(function (){
                 document.querySelector(".circle_two").classList.add("c_animate");
-            },250);
+            },200);
 
             setTimeout(function (){
                 document.querySelector(".circle_three").classList.add("c_animate");
-            },500);
+            },400);
 
             setTimeout(function (){
                 document.querySelector(".circle_four").classList.add("c_animate");
-            },750);
+            },600);
         </script>
     </div>
 </div>
