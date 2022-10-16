@@ -2,6 +2,8 @@
   .main_wrapper {
     margin-top: 0;
   }
+}
+@media only screen and (min-width: 1399px) {
   .luxury > div {
     min-height: 917px !important;
   }
