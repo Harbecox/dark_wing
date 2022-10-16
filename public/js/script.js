@@ -188,11 +188,11 @@ function scrollToMenu(){
 
 setTimeout(function (){
     document.querySelector(".circle_one").classList.add("c_animate");
-},100);
+},10);
 
 setTimeout(function (){
     document.querySelector(".circle_two").classList.add("c_animate");
-},300);
+},250);
 
 setTimeout(function (){
     document.querySelector(".circle_three").classList.add("c_animate");
@@ -200,7 +200,7 @@ setTimeout(function (){
 
 setTimeout(function (){
     document.querySelector(".circle_four").classList.add("c_animate");
-},700);
+},750);
 
 window.onload = function (){
     document.querySelector("body").classList.remove("preloader_show");
