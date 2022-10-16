@@ -21,6 +21,23 @@
         <div class="circle circle_three"></div>
         <div class="circle circle_two"></div>
         <div class="circle circle_one"></div>
+        <script>
+            setTimeout(function (){
+                document.querySelector(".circle_one").classList.add("c_animate");
+            },10);
+
+            setTimeout(function (){
+                document.querySelector(".circle_two").classList.add("c_animate");
+            },250);
+
+            setTimeout(function (){
+                document.querySelector(".circle_three").classList.add("c_animate");
+            },500);
+
+            setTimeout(function (){
+                document.querySelector(".circle_four").classList.add("c_animate");
+            },750);
+        </script>
     </div>
 </div>
 @if(\Request::route()->getName() == "index" || \Illuminate\Support\Facades\Route::is("show_airport"))

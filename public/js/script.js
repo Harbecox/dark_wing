@@ -1,3 +1,9 @@
+
+
+window.onload = function (){
+    document.querySelector("body").classList.remove("preloader_show");
+}
+
 document.querySelectorAll(".fake_input").forEach(function (fake_input) {
   let input = fake_input.querySelector("input") || fake_input.querySelector("textarea");
   if(input){
@@ -186,22 +192,4 @@ function scrollToMenu(){
     document.querySelector(".menu").scrollIntoView();
 }
 
-setTimeout(function (){
-    document.querySelector(".circle_one").classList.add("c_animate");
-},10);
 
-setTimeout(function (){
-    document.querySelector(".circle_two").classList.add("c_animate");
-},250);
-
-setTimeout(function (){
-    document.querySelector(".circle_three").classList.add("c_animate");
-},500);
-
-setTimeout(function (){
-    document.querySelector(".circle_four").classList.add("c_animate");
-},750);
-
-window.onload = function (){
-    document.querySelector("body").classList.remove("preloader_show");
-}
