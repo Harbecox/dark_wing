@@ -120,7 +120,7 @@
             </ul>
         </div>
         <div class="mobile_menu">
-            <a href="{{route('index')}}"><img src="/image/menu.svg" style="margin-right: 5px"></a>
+            <img src="/image/menu.svg" style="margin-right: 5px">
         </div>
         <div class="mobile_menu_open text-start">
             <ul>
