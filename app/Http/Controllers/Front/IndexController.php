@@ -23,7 +23,7 @@ class IndexController extends Controller
         $headers = [
             'Content-Type' => 'application/pdf',
         ];
-        return response()->download($file, 'filename.pdf', $headers);
+        return response()->download($file, 'menu.pdf', $headers);
     }
 
     public function partnership(){
