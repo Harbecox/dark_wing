@@ -33,6 +33,7 @@
                         <button class="btn  text-white text-uppercase contact_button" style="width: 386px"><span class="pnt">~</span>LOGIN<span class="pnt">~</span>
                         </button>
                     </div>
+                    <a href="{{ route("contact") }}"><h6 class="text-white text-center">Forget your password please contact us</h6></a>
                 </form>
             </div>
         </div>
