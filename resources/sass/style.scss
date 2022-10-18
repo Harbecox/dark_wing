@@ -1004,7 +1004,7 @@ span#context {
         margin-right: 8px;
     }
 
-    &:hover {
+    &:hover,&.active {
         background: linear-gradient(156.22deg, #3284F2 15.29%, #004C77 137.56%), #0D1A27;
         box-shadow: inset 0px 12px 28px rgba(113, 211, 255, 0.5);
     }

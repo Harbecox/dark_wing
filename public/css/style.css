@@ -839,7 +839,7 @@ span#context {
 .personal_btn img {
   margin-right: 8px;
 }
-.personal_btn:hover {
+.personal_btn:hover, .personal_btn.active {
   background: linear-gradient(156.22deg, #3284F2 15.29%, #004C77 137.56%), #0D1A27;
   box-shadow: inset 0px 12px 28px rgba(113, 211, 255, 0.5);
 }
