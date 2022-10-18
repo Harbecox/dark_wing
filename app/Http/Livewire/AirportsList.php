@@ -28,7 +28,10 @@ class AirportsList extends Component
     {
         $query = Airport::query();
         if(strlen($this->search) > 0){
-            $query = $query->where("title","like",$this->search."%");
+            $query = $query
+                ->where("title", "like", $this->search . "%")
+                ->orWhere("IATA", "like", $this->search . "%")
+                ->orWhere("OACI", "like", $this->search . "%");
         }
         $data['airports'] = $query->limit($this->count)->get();
         $data['all_count'] = Airport::query()->count();

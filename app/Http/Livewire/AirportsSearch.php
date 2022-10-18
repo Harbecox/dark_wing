@@ -16,7 +16,11 @@ class AirportsSearch extends Component
 
         $data['airports'] = [];
         if (strlen($this->search) > 0) {
-            $data['airports'] = Airport::query()->where("title", "like", $this->search . "%")->limit(4)->get();
+            $data['airports'] = Airport::query()
+                ->where("title", "like", $this->search . "%")
+                ->orWhere("IATA", "like", $this->search . "%")
+                ->orWhere("OACI", "like", $this->search . "%")
+                ->limit(4)->get();
             $this->count = count($data['airports']);
         }
         return view('livewire.airports-search', $data);
