@@ -36,7 +36,7 @@ class VerificationController extends Controller
 
         }
 
-        return redirect('/home');
+        return redirect()->route('account');
     }
 
     /**

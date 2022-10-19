@@ -36,7 +36,10 @@ class ResetPasswordController extends Controller
 
         }
 
-        return redirect('/home');
+        return redirect()->route('account');
     }
 
+    public function redirectTo(){
+        return "/personal/account";
+    }
 }

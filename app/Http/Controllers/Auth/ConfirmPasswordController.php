@@ -36,7 +36,7 @@ class ConfirmPasswordController extends Controller
 
         }
 
-        return redirect('/home');
+        return response()->redirectToRoute('account');
     }
 
     /**
