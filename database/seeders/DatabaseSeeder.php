@@ -21,5 +21,7 @@ class DatabaseSeeder extends Seeder
 //        ]);
 //
 //        Post::factory()->count(12)->create();
+
+        $this->call(PagesSeeder::class);
     }
 }
