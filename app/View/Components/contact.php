@@ -30,6 +30,7 @@ class contact extends Component
             }
         }
         $data['texts'] = $this->texts;
+        dd($data);
         return view('components.contact',$data);
     }
 }
