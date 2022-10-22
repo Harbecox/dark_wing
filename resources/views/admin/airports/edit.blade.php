@@ -42,7 +42,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Country</label>
-                        <select class="form-control" id="type" name="country_id">
+                        <select class="form-control form-control" id="type" name="country_id">
                             @foreach($countries as $country)
                                 <option value="{{ $country->id }}" {{ $country->id == $airport->country_id ? 'selected' : '' }}>
                                     {{ $country->name }}-{{$country->code}}

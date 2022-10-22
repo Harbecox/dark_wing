@@ -4,16 +4,18 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminOrderStoreRequest;
+use App\Jobs\SendOrderMail;
 use App\Models\Airport;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
     public function index(Request $request)
     {
-        $order = $request->get("order","id");
-        $sort = $request->get("sort","asc");
+        $order = $request->get("order", "id");
+        $sort = $request->get("sort", "asc");
 
         $orders = Order::query()
             ->orderBy($order, $sort)
@@ -26,25 +28,26 @@ class OrderController extends Controller
     {
         $data['orders'] = Order::all();
         $data['airports'] = Airport::all();
-        return view('admin.orders.create',$data);
+        return view('admin.orders.create', $data);
     }
 
     public function store(AdminOrderStoreRequest $request)
     {
         $order = new Order();
-        $order->firstName = $request->firstName;
-        $order->email = $request->email;
-        $order->phone = $request->phone;
-        $order->deliveryAirport = $request->deliveryAirport;
-        $order->deliveryDay = $request->deliveryDay;
-        $order->company = $request->company;
-        $order->handling = $request->handling;
-        $order->packaging = $request->packaging;
-        $order->allergies = $request->allergies;
+        $order->firstName = $request->get('firstName');
+        $order->email = $request->get('email');
+        $order->phone = $request->get('phone');
+        $order->deliveryAirport = $request->get('deliveryAirport');
+        $order->deliveryDay = $request->get('deliveryDay');
+        $order->deliveryTime = $request->get('deliveryTime');
+        $order->company = $request->get('company', null);
+        $order->handling = $request->get('handling', null);
+        $order->packaging = $request->get('packaging', null);
+        $order->allergies = $request->get('allergies', null);
         $order->save();
 
         return redirect()->route('order.index')
-            ->with('success','Order has been created successfully.');
+            ->with('success', 'Order has been created successfully.');
     }
 
 
@@ -58,17 +61,17 @@ class OrderController extends Controller
 
         $order = Order::find($order->id);
 
-        $order->firstName = $request->get("firstName",null);
-        $order->email = $request->get("email",null);
-        $order->phone = $request->get("phone",null);
-        $order->deliveryAirport = $request->get("deliveryAirport",null);
-        $order->deliveryDay = $request->get("deliveryDay",null);
-        $order->company = $request->get("company",null);
-        $order->handling = $request->get("handling",null);
-        $order->packaging = $request->get("packaging",null);
-        $order->allergies = $request->get("allergies",null);
+        $order->firstName = $request->get("firstName", null);
+        $order->email = $request->get("email", null);
+        $order->phone = $request->get("phone", null);
+        $order->deliveryAirport = $request->get("deliveryAirport", null);
+        $order->deliveryDay = $request->get("deliveryDay", null);
+        $order->company = $request->get("company", null);
+        $order->handling = $request->get("handling", null);
+        $order->packaging = $request->get("packaging", null);
+        $order->allergies = $request->get("allergies", null);
 
-        if($request->hasFile('order_pdf')){
+        if ($request->hasFile('order_pdf')) {
             $request->validate([
                 'order_pdf' => 'required|mimes:pdf',
             ]);
@@ -76,14 +79,27 @@ class OrderController extends Controller
         }
 
         $order->save();
-        return redirect()->route('order.index',$order)
-            ->with('success','Order updated successfully');
+        return redirect()->route('order.index', $order)
+            ->with('success', 'Order updated successfully');
     }
 
     public function destroy(Order $order)
     {
         $order->delete();
         return redirect()->route('order.index')
-            ->with('success','Order has been deleted successfully');
+            ->with('success', 'Order has been deleted successfully');
+    }
+
+    public function changeStatus(Request $request)
+    {
+        $order = Order::find($request->get("order_id"));
+        if (!$order->email) {
+            return back()->with("error","order dont have email!!");
+        }
+        $order->statuses()->create(['status' => $request->get("status")]);
+        $data['email'] = $order->email;
+        $data['msg'] = $request->get('message');
+        SendOrderMail::dispatch($data);
+        return back()->with('success', 'Order status has been changed successfully');
     }
 }

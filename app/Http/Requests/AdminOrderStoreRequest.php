@@ -20,7 +20,6 @@ class AdminOrderStoreRequest extends FormRequest
             'deliveryAirport' => 'required',
             'deliveryDay' => 'required',
             'deliveryTime' => 'required',
-            'company' => 'required'
         ];
     }
 }

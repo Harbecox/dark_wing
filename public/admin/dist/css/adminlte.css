@@ -10687,6 +10687,7 @@ body,
 
 .wrapper .content-wrapper {
   min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px));
+    overflow-x: auto;
 }
 
 .layout-boxed .wrapper {
@@ -11752,6 +11753,7 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
 
 .content-wrapper {
   background-color: #f4f6f9;
+    overflow-x: auto;
 }
 
 .content-wrapper > .content {

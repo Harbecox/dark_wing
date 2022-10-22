@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Delivery Day</label>
-                        <input type="text" value="{{ $order->deliveryDay }}" name="deliveryDay" class="form-control">
+                        <input type="date" value="{{ $order->deliveryDay }}" name="deliveryDay" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Delivery Time</label>

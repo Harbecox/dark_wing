@@ -37,56 +37,43 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">First Name</label>
-                        <input type="text" name="firstName" class="form-control">
+                        <input type="text" value="{{ old('firstName') ?? "" }}" name="firstName" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email</label>
-                        <input type="text" name="email" class="form-control">
+                        <input type="text" value="{{ old('email') ?? "" }}" name="email" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Phone</label>
-                        <input type="text" name="phone" class="form-control">
+                        <input type="text" value="{{ old('phone') ?? "" }}" name="phone" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Delivery Airport</label><br>
-                        <select class="form-select" style="margin-right: 12px" aria-label="Default select example" name="deliveryAirport">
-                            <option selected class="title">Choose</option>
-                            @foreach($airports as $airport)
-                                <option value="{{$airport->id}}">{{$airport->title}}</option>
-                            @endforeach
-                        </select>
+                        <input type="text" name="deliveryAirport" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Delivery Day</label><br>
-                        <select class="form-select" style="margin-right: 12px" aria-label="Default select example" name="deliveryDay">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                        <input class="form-control" name="deliveryDay" type="date">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Delivery Time</label><br>
-                        <select class="form-select" aria-label="Default select example" name="deliveryTime">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                        <input class="form-control" type="text" name="deliveryTime">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Company</label>
-                        <input type="text" name="company" class="form-control">
+                        <input type="text" value="{{ old('company') ?? "" }}" name="company" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Handling</label>
-                        <input type="text" name="handling" class="form-control">
+                        <input type="text" value="{{ old('handling') ?? "" }}" name="handling" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Packaging</label>
-                        <input type="text" name="packaging" class="form-control">
+                        <input type="text" value="{{ old('packaging') ?? "" }}" name="packaging" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Allergies</label>
-                        <input type="text" name="allergies" class="form-control">
+                        <input type="text" value="{{ old('allergies') ?? "" }}" name="allergies" class="form-control">
                     </div>
                 </div>
 

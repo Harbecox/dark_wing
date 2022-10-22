@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class Order extends Model
 {
@@ -26,5 +27,13 @@ class Order extends Model
 
     function airport(){
         return $this->hasOne(Airport::class,"id","deliveryAirport");
+    }
+
+    function statuses(){
+        return $this->hasMany(OrderStatus::class,"order_id",'id');
+    }
+
+    function lastStatus(){
+        return $this->statuses->sortByDesc("created_at")->first()->status;
     }
 }

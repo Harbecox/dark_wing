@@ -15,8 +15,8 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('phone',256)->nullable();
             $table->string('deliveryAirport')->nullable();
-            $table->integer('deliveryDay')->default(1)->nullable();
-            $table->integer('deliveryTime')->default(1)->nullable();
+            $table->date('deliveryDay')->nullable();
+            $table->string('deliveryTime')->nullable();
             $table->string('company')->nullable();
             $table->string('handling')->nullable();
             $table->string('packaging')->nullable();

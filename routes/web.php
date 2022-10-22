@@ -56,6 +56,8 @@ Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
 
     Route::resource('order', OrderController::class);
 
+    Route::post('order/change_status', [OrderController::class,'changeStatus'])->name('order.status');
+
     Route::post('pdf', [MenuController::class,"upload"])->name("admin.pdf");
 
     Route::resource('airport', AirportController::class,['as' => 'admin']);
@@ -63,5 +65,9 @@ Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
     Route::post('user/block/{user}', [UserController::class,'block'])->name("user.block");
 
     Route::post('order_pdf', [OrderController::class,"update"])->name("order_pdf");
+
+    Route::get('pages',[\App\Http\Controllers\Admin\PagesController::class,"index"])->name("pages.index");
+
+    Route::post('pages',[\App\Http\Controllers\Admin\PagesController::class,"save"])->name("pages.save");
 });
 

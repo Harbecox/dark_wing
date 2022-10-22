@@ -1,7 +1,7 @@
 <div class="d-flex flex-column align-items-center">
     <h1 class="fw-normal lh-1 text-white text-uppercase tenor" style="letter-spacing: -0.08em;">
-        Airports</h1>
-    <p class="airport_text p_lg fw-normal lh-sm text-white text-center pt-2">All the airports we work with are displayed here. For convenience, use the search bar</p>
+        {{ $texts['airports']['h1'] }}</h1>
+    <p class="airport_text p_lg fw-normal lh-sm text-white text-center pt-2">{{ $texts['airports']['under h1'] }}</p>
     <div class="airport_input my-5">
         <input wire:model="search" class="text-gray-6 fw-normal form-control-sm fs-20" type="text"
                placeholder="&#xE914; Enter the name of the airport">
