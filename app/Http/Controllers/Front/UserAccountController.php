@@ -54,6 +54,6 @@ class UserAccountController extends Controller
             $order->order_pdf = $request->file('order_pdf')->store('public/orders');
             $order->save();
         }
-        return back();
+        return response()->redirectToRoute('account');
     }
 }
