@@ -12,8 +12,8 @@
                             <div class="partner_card_image">
                                 <img src="image/partner1.png">
                             </div>
-                            <p class="fs-34 fw-bold text-white lh-110 partner_card_title">Your <br>benefits</p>
-                            <span class="span_md fw-normal lh-140 text-white" style=" opacity: 0.8">{!! $texts['partnership']['Your benefits'] !!}</span>
+                            <p class="fs-34 fw-bold text-white lh-110 partner_card_title">{{ $texts['partnership']['title 1'] }}</p>
+                            <span class="span_md fw-normal lh-140 text-white" style=" opacity: 0.8">{!! $texts['partnership']['text 1'] !!}</span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-12">
@@ -21,8 +21,8 @@
                             <div class="partner_card_image">
                                 <img src="image/partner2.png">
                             </div>
-                            <p class="fs-34 fw-bold text-white lh-110 partner_card_title">Your <br>engagement</p>
-                            <span class="span_md fw-normal lh-140 text-white" style=" opacity: 0.8">{!! $texts['partnership']['Your engagement'] !!}</span>
+                            <p class="fs-34 fw-bold text-white lh-110 partner_card_title">{{ $texts['partnership']['title 2'] }}</p>
+                            <span class="span_md fw-normal lh-140 text-white" style=" opacity: 0.8">{!! $texts['partnership']['text 2'] !!}</span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-12">
@@ -30,8 +30,8 @@
                             <div class="partner_card_image">
                                 <img src="image/partner3.png">
                             </div>
-                            <p class="fs-34 fw-bold text-white lh-110 partner_card_title">How become a<br> partner of Dark Wing</p>
-                            <span class="span_md fw-normal lh-140 text-white" style=" opacity: 0.8">{!! $texts['partnership']['How become a partner of Dark Wing'] !!}</span>
+                            <p class="fs-34 fw-bold text-white lh-110 partner_card_title">{{ $texts['partnership']['title 3'] }}</p>
+                            <span class="span_md fw-normal lh-140 text-white" style=" opacity: 0.8">{!! $texts['partnership']['text 3'] !!}</span>
                         </div>
                     </div>
                 </div>

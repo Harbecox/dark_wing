@@ -140,21 +140,42 @@ We accept only Private Flight attendants.",
         ]);
 
         PageTexts::create([
-            "name" => "Your benefits",
+            "name" => "title 1",
+            "text" => "Your benefits",
+            "type" => "title",
+            "page" => "partnership",
+        ]);
+
+        PageTexts::create([
+            "name" => "text 1",
             "text" => "You create your team and take benefits from them. You take benefits from your collaboration with us.We regularly propose online training sessions on different thematics",
             "type" => "text",
             "page" => "partnership",
         ]);
 
         PageTexts::create([
-            "name" => "Your engagement",
+            "name" => "title 2",
+            "text" => "Your engagement",
+            "type" => "title",
+            "page" => "partnership",
+        ]);
+
+        PageTexts::create([
+            "name" => "text 2",
             "text" => "You represent us and speak about us. Give your feedback about your destination. We give % for the orders.",
             "type" => "text",
             "page" => "partnership",
         ]);
 
         PageTexts::create([
-            "name" => "How become a partner of Dark Wing",
+            "name" => "title 3",
+            "text" => "How become a partner of Dark Wing",
+            "type" => "title",
+            "page" => "partnership",
+        ]);
+
+        PageTexts::create([
+            "name" => "text 3",
             "text" => "The ambassador program is about to get started. We will announce it very soon.",
             "type" => "text",
             "page" => "partnership",
@@ -170,8 +191,15 @@ We accept only Private Flight attendants.",
         ]);
 
         PageTexts::create([
-            "name" => "phone",
+            "name" => "phone Ops",
             "text" => "+33638888695",
+            "type" => "title",
+            "page" => "contact",
+        ]);
+
+        PageTexts::create([
+            "name" => "phone Main",
+            "text" => "+442038087779",
             "type" => "title",
             "page" => "contact",
         ]);
