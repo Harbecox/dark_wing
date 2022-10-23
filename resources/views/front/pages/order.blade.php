@@ -17,7 +17,8 @@
                             <a onclick="this.parentNode.querySelector('input').click()" type="button" class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img src="/image/btn4.svg">Upload PDF
                             </a>
                             <input name="order_pdf" onchange="this.parentNode.submit()" type="file" style="display: none">
-                            <input type="hidden" name="_token" value="3SdNZuSfFNza22gIstvmQANe8KzXP9dd5wA23EYO">                </form>
+                            @csrf
+                        </form>
                         <a href="{{route('contact')}}" class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img src="/image/btn5.svg">Free form</a>
                     </div>
                 </div>
