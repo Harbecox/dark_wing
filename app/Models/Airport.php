@@ -19,6 +19,8 @@ use Intervention\Image\Facades\Image;
  * @property false|mixed|string bg_image
  * @property mixed iata
  * @property mixed oaci
+ * @property mixed meta_title
+ * @property mixed meta_description
  */
 class Airport extends Model
 {
@@ -26,6 +28,8 @@ class Airport extends Model
 
     protected $fillable = [
         'title',
+        'meta_title',
+        'meta_description',
         'country_id',
         'description',
         'flag',

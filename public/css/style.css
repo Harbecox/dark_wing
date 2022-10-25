@@ -242,14 +242,17 @@ select.form-select:focus-visible, select.form-select:focus {
 .airport_input input::-moz-placeholder {
   font-family: "Arsenal", "icomoon";
   font-size: 20px;
+  text-align: center;
 }
 .airport_input input:-ms-input-placeholder {
   font-family: "Arsenal", "icomoon";
   font-size: 20px;
+  text-align: center;
 }
 .airport_input input::placeholder {
   font-family: "Arsenal", "icomoon";
   font-size: 20px;
+  text-align: center;
 }
 .airport_input .airport_table {
   width: 100%;

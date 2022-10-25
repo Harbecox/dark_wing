@@ -32,8 +32,11 @@ class AirportController extends Controller
     {
         $airport = new Airport();
         $airport->title = $request->title;
+
         $airport->country_id = $request->country_id;
-        $airport->description = $request->description;
+        $airport->description = $request->meta_description;
+        $airport->meta_title = $request->meta_description;
+        $airport->meta_description = $request->description;
         $airport->iata = $request->iata;
         $airport->oaci = $request->oaci;
         $airport->image = $request->file('image')->store('public/airports');
@@ -77,10 +80,14 @@ class AirportController extends Controller
         }
 
         $airport->title = $request->title;
+        $airport->meta_title = $request->meta_description;
+        $airport->meta_description = $request->description;
         $airport->country_id = $request->country_id;
         $airport->description = $request->description;
         $airport->iata = $request->iata;
         $airport->oaci = $request->oaci;
+
+
         $airport->save();
         return redirect()->route('admin.airport.index',$airport)
             ->with('success','Airport updated successfully');

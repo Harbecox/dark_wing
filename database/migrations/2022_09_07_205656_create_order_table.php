@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->integer('userId')->nullable();
+            $table->enum('status',['to by confirmed','confirmed','completed','paid'])->default("to by confirmed")->nullable();
             $table->string('firstName')->nullable();
             $table->string('email')->nullable();
             $table->string('phone',256)->nullable();

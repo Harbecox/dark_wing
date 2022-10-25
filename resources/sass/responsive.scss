@@ -195,4 +195,20 @@
     }
 }
 
+@media only screen and (max-width: 767px){
+    .airport_input{
+        .search-input{
+            padding: 23px;
+            text-align: center;
+        }
+    }
+}
 
+@media only screen and (max-width: 340px){
+    .airport_input{
+        .search-input::placeholder{
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}

@@ -31,10 +31,10 @@
                                 <div class="d-flex align-items-center">
                                     <span>ID</span>
                                     <div class="sort ml-2">
-                                        <a href = {{route('admin.airport.index',['order'=>'ID','sort'=>'asc'])}}>
+                                        <a href = {{route('order.index',['order'=>'ID','sort'=>'asc'])}}>
                                             <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
                                         </a>
-                                        <a href = {{route('admin.airport.index',['order'=>'ID','sort'=>'desc'])}}>
+                                        <a href = {{route('order.index',['order'=>'ID','sort'=>'desc'])}}>
                                             <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -43,6 +43,14 @@
                             <th>
                                 <div class="d-flex align-items-center">
                                     <span>Status</span>
+                                    <div class="sort ml-2">
+                                        <a href = {{route('order.index',['order'=>'Status','sort'=>'asc'])}}>
+                                            <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                        </a>
+                                        <a href = {{route('order.index',['order'=>'Status','sort'=>'desc'])}}>
+                                            <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </th>
                             <th>
@@ -198,7 +206,7 @@
                                     <a>{{$order->id}}</a>
                                 </td>
                                 <td>
-                                    <a>{{$order->lastStatus()}}</a>
+                                    <a>{{$order->status}}</a>
                                 </td>
                                 <td>
                                     <a>{{$order->firstName}}</a>

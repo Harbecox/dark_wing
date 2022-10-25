@@ -1,6 +1,6 @@
 @extends('layouts.front')
-@section('title') Darkwings {{ $airport->title }} @endsection
-@section('description') Darkwings {{ $airport->description }} @endsection
+@section('title') Darkwings {{ $airport->meta_title }} @endsection
+@section('description') Darkwings {{ $airport->meta_description }} @endsection
 @section('header_bg')
     {{ Storage::url($airport->bg_image) }}
 @endsection

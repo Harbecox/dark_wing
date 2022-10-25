@@ -3,7 +3,7 @@
         {{ $texts['airports']['h1'] }}</h1>
     <p class="airport_text p_lg fw-normal lh-sm text-white text-center pt-2">{{ $texts['airports']['under h1'] }}</p>
     <div class="airport_input my-5">
-        <input wire:model="search" class="text-gray-6 fw-normal form-control-sm fs-20" type="text"
+        <input wire:model="search" class="text-gray-6 fw-normal form-control-sm fs-20 search-input" type="text"
                placeholder="&#xE914; Enter the name of the airport">
         <div class="search_close">
             <img src="/image/close.svg">

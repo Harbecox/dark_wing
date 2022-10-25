@@ -1,5 +1,5 @@
 <div class="airport_input my-3">
-    <input wire:model="search" class="text-gray-6 fw-normal form-control-sm fs-20" type="text"
+    <input wire:model="search" class="text-gray-6 fw-normal form-control-sm fs-20  search-input" type="text"
            placeholder="&#xE914; Enter the name of the airport">
         @if($count>0)
             <div class="airport_table">

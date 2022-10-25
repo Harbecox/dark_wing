@@ -96,7 +96,8 @@ class OrderController extends Controller
         if (!$order->email) {
             return back()->with("error","order dont have email!!");
         }
-        $order->statuses()->create(['status' => $request->get("status")]);
+        $order->status = $request->get("status");
+        $order->save();
         $data['email'] = $order->email;
         $data['msg'] = $request->get('message');
         SendOrderMail::dispatch($data);

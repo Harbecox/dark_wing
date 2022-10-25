@@ -58,31 +58,37 @@
                         <label for="exampleInputEmail1">Intro</label>
                         <input type="text" name="intro" class="form-control" placeholder="Enter intro">
                     </div>
+
                     <div class="form-group">
                         <label for="exampleInputEmail1">Meta title</label>
                         <input type="text" name="meta_title" class="form-control" placeholder="Enter meta title">
                     </div>
+
                     <div class="form-group">
                         <label for="exampleInputEmail1">Meta description</label>
                         <input type="text" name="meta_description" class="form-control" placeholder="Enter meta description">
                     </div>
+
                     <div class="form-group">
                         <label for="exampleInputEmail1">Seo url</label>
                         <input type="text" name="seo_url" class="form-control" placeholder="seo url">
                     </div>
-                  <div class="form-group">
+
+                    <div class="form-group">
                         <label for="customFile">Custom File</label>
                         <label for="exampleInputEmail1">Image</label>
                         <div class="custom-file">
                             <input type="file" name="image" class="form-control" id="customFile">
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
-                  </div>
+                    </div>
+
                     <div class="form-group">
                         <label for="exampleInputEmail1">Enabled</label><br>
                         <input type="checkbox" name="enabled">
                     </div>
                 </div>
+
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

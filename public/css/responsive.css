@@ -161,3 +161,23 @@
     margin-bottom: 0;
   }
 }
+@media only screen and (max-width: 767px) {
+  .airport_input .search-input {
+    padding: 23px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .airport_input .search-input::-moz-placeholder {
+    font-size: 18px;
+    text-align: center;
+  }
+  .airport_input .search-input:-ms-input-placeholder {
+    font-size: 18px;
+    text-align: center;
+  }
+  .airport_input .search-input::placeholder {
+    font-size: 18px;
+    text-align: center;
+  }
+}
