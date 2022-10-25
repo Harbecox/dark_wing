@@ -15,7 +15,7 @@ class OrderObserver
      */
     public function created(Order $order)
     {
-        OrderStatus::create(['order_id' => $order->id]);
+//        OrderStatus::create(['order_id' => $order->id]);
     }
 
     /**
