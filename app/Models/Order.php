@@ -24,6 +24,7 @@ class Order extends Model
         'packaging',
         'allergies',
         'order_pdf',
+        'order',
     ];
 
     function airport(){

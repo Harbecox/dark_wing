@@ -209,7 +209,10 @@ select.form-select {
         justify-content: center;
         top: 20px;
         height: 116px;
-
+        a{
+            display: inline-block;
+            align-items: center;
+        }
         img {
             height: 100%;
         }

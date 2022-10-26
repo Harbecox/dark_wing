@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('handling')->nullable();
             $table->string('packaging')->nullable();
             $table->string('allergies')->nullable();
+            $table->text('order')->nullable();
             $table->string('order_pdf')->nullable();
             $table->timestamps();
         });
