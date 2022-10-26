@@ -65,6 +65,10 @@
                         <label for="exampleInputEmail1">Allergies</label>
                         <input type="text" value="{{ $order->allergies }}" name="allergies" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Order</label>
+                        <input type="text" value="{{ $order->order }}" name="order" class="form-control">
+                    </div>
 
                     <div class="form-group">
                         <label for="customFile">File</label>

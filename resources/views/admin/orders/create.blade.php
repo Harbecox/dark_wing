@@ -75,6 +75,10 @@
                         <label for="exampleInputEmail1">Allergies</label>
                         <input type="text" value="{{ old('allergies') ?? "" }}" name="allergies" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Order</label>
+                        <input type="text" value="{{ old('order') ?? "" }}" name="order" class="form-control">
+                    </div>
                 </div>
 
                 <div class="card-footer">

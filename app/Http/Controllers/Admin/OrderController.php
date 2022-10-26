@@ -44,6 +44,7 @@ class OrderController extends Controller
         $order->handling = $request->get('handling', null);
         $order->packaging = $request->get('packaging', null);
         $order->allergies = $request->get('allergies', null);
+        $order->order = $request->get('order', null);
         $order->save();
 
         return redirect()->route('order.index')
@@ -70,6 +71,7 @@ class OrderController extends Controller
         $order->handling = $request->get("handling", null);
         $order->packaging = $request->get("packaging", null);
         $order->allergies = $request->get("allergies", null);
+        $order->order = $request->get("order", null);
 
         if ($request->hasFile('order_pdf')) {
             $request->validate([
