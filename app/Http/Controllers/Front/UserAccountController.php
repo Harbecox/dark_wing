@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\OrderStoreRequest;
+use App\Jobs\SendNewOrderMail;
 use App\Models\Airport;
 use App\Models\Order;
 use App\Models\User;
@@ -12,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\URL;
 
 class UserAccountController extends Controller
 {
@@ -53,6 +55,9 @@ class UserAccountController extends Controller
             $order->userId = Auth::user()->id;
             $order->order_pdf = $request->file('order_pdf')->store('public/orders');
             $order->save();
+            $order_arr = $order->toArray();
+            $order_arr['order_pdf'] = \url(str_replace("public","storage",$order_arr['order_pdf']));
+            SendNewOrderMail::dispatch($order_arr);
         }
         return response()->redirectToRoute('account');
     }

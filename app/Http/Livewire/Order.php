@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\SendNewOrderMail;
 use App\Models\Airport;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -56,7 +57,8 @@ class Order extends Component
         if(Auth::check()){
             $data['userId'] = $this->user->id;
         }
-        \App\Models\Order::create($data);
+        $order = \App\Models\Order::create($data);
+        SendNewOrderMail::dispatch($order->toArray());
         $this->success = true;
         $this->firstName = "";
         $this->email = "";
