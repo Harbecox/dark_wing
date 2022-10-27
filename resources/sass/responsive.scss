@@ -108,7 +108,7 @@
         display: block!important;
         text-align: center;
         .logo{
-            display: inline-block;
+            display: flex;
             width: auto;
             //transform: translateX(50%);
             position: static;
