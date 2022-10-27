@@ -210,8 +210,8 @@ select.form-select {
         top: 20px;
         height: 116px;
         a{
-            display: inline-block;
-            align-items: center;
+            display: flex;
+            justify-content: center;
         }
         img {
             height: 100%;

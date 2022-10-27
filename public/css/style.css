@@ -176,8 +176,8 @@ select.form-select:focus-visible, select.form-select:focus {
   height: 116px;
 }
 .header .logo a {
-  display: inline-block;
-  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .header .logo img {
   height: 100%;
