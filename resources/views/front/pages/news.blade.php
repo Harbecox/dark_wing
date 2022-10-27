@@ -1,5 +1,6 @@
 @extends('layouts.front')
-@section('title') Darkwings News @endsection
+@section('title') Aviation news Dark Wing inflight catering @endsection
+@section('description') Last news in bizav industry and inflight Private jets catering around the world. @endsection
 @section('content')
 
     <div class="container">

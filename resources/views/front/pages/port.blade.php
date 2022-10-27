@@ -1,6 +1,6 @@
 @extends('layouts.front')
-@section('title') Darkwings {{ $airport->meta_title }} @endsection
-@section('description') Darkwings {{ $airport->meta_description }} @endsection
+@section('title') VIP Catering for private jets {{ $airport->title }} {{ $airport->OACI }} {{ $airport->IATA }} Airport@endsection
+@section('description') We provide VIP catering in {{ $airport->meta_description }} airport. Best catering solution for your VIP pax @endsection
 @section('header_bg')
     {{ Storage::url($airport->bg_image) }}
 @endsection
@@ -20,7 +20,7 @@
                 </div>
                 <div class="p_lg fw-normal lh-sm text-white text-center pb-4">
                     <i class="icon-at-sign"></i>
-                    {!!$airport->description !!}
+                    {!! $airport->description !!}
                 </div>
                 <div class="w-100">
                     <div class="d-flex justify-content-center top_buttons">

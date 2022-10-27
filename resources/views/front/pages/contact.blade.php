@@ -1,5 +1,6 @@
 @extends('layouts.front')
-@section('title') Darkwings Contacts @endsection
+@section('title') Contact Dark Wing Inflight catering @endsection
+@section('description') You can find  our phone number, operation number, whatsapp Dark Wing Inflight private jets catering @endsection
 @section('content')
     <div class="contact_main" style="margin-bottom: 100px">
         <div class="container">

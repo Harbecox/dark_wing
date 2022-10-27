@@ -1,5 +1,6 @@
 @extends('layouts.front')
-@section('title') Darkwings Partnership @endsection
+@section('title') Become a partner of Dark wing inflight catering worldwide @endsection
+@section('description') We built our network in order to provide the best catering solution around the world. We can find a solution on each airport in the world @endsection
 @section('content')
     <div class="container">
         <div class="partnerships_main">

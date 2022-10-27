@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title') Darkwings Airports @endsection
+@section('title') Catering for Private jets around the world @endsection
 @section('content')
     <div class="airport">
         <div class="container">

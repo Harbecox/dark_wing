@@ -1,5 +1,6 @@
 @extends('layouts.front')
-
+@section('title') Dark Wing inflight luxury catering around the world @endsection
+@section('description') We Provide luxury catering for private jets around the world. Best catering solution on the market @endsection
 @section('header_bg')
     'image/БГ-.jpg'
 @endsection
