@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Tenor+Sans&display=swap"
           rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favico.ico">
+    <link rel="icon" type="image/x-icon" href="/favico.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/lib.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
