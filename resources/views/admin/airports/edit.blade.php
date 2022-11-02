@@ -40,15 +40,15 @@
                         <input type="text" value="{{ $airport->title }}" name="title" class="form-control" placeholder="Enter Title">
                     </div>
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Meta title</label>
-                        <input type="text" value="{{ $airport->meta_title }}" name="meta_title" class="form-control" placeholder="Enter Meta title">
-                    </div>
+{{--                    <div class="form-group">--}}
+{{--                        <label for="exampleInputEmail1">Meta title</label>--}}
+{{--                        <input type="text" value="{{ $airport->meta_title }}" name="meta_title" class="form-control" placeholder="Enter Meta title">--}}
+{{--                    </div>--}}
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Meta Description</label>
-                        <input type="text" value="{{ $airport->meta_description }}" name="meta_description" class="form-control" placeholder="Enter Meta title">
-                    </div>
+{{--                    <div class="form-group">--}}
+{{--                        <label for="exampleInputEmail1">Meta Description</label>--}}
+{{--                        <input type="text" value="{{ $airport->meta_description }}" name="meta_description" class="form-control" placeholder="Enter Meta title">--}}
+{{--                    </div>--}}
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Country</label>

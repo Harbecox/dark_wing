@@ -39,15 +39,15 @@
                         <input type="text" name="title" class="form-control" placeholder="Enter Title">
                     </div>
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Meta title</label>
-                        <input type="text" name="meta_title" class="form-control" placeholder="Enter meta title">
-                    </div>
+{{--                    <div class="form-group">--}}
+{{--                        <label for="exampleInputEmail1">Meta title</label>--}}
+{{--                        <input type="text" name="meta_title" class="form-control" placeholder="Enter meta title">--}}
+{{--                    </div>--}}
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Meta description</label>
-                        <input type="text" name="meta_description" class="form-control" placeholder="Enter meta description">
-                    </div>
+{{--                    <div class="form-group">--}}
+{{--                        <label for="exampleInputEmail1">Meta description</label>--}}
+{{--                        <input type="text" name="meta_description" class="form-control" placeholder="Enter meta description">--}}
+{{--                    </div>--}}
 
                     <div class="form-group">
                         <select class="form-select form-control" name="country_id">
