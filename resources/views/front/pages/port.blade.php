@@ -89,12 +89,17 @@
     </div>
 
     <script>
-        let h = document.querySelector(".port_main").clientHeight;
-        h = h - 200;
-        h = h + "px";
-        document.querySelector(".bg_header").style.height = h;
-        document.querySelector(".bg_shadow").style.height = h;
-        document.querySelector(".header_content").style.height = h;
+        document.addEventListener('DOMContentLoaded', function(){
+            let h = document.querySelector(".port_main").clientHeight;
+            let w = document.querySelector(".port_main").clientWidth;
+            console.log(w);
+            h = h - 200;
+            h = h + "px";
+            document.querySelector(".bg_header").style.height = h;
+            document.querySelector(".bg_shadow").style.height = h;
+            document.querySelector(".header_content").style.height = h;
+        });
+
     </script>
     <x-contact></x-contact>
 @endsection
