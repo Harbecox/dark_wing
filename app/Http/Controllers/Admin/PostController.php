@@ -68,8 +68,8 @@ class PostController extends Controller
         $post->context = $request->context;
         $post->intro = $request->intro;
         $seo_url = $request->seo_url;
-        $post->meta_title = $request->meta_description;
-        $post->meta_description = $request->description;
+        $post->meta_title = $request->meta_title;
+        $post->meta_description = $request->meta_description;
         $post->seo_url =  $seo_url == null ? Str::slug($post->title, '-') : $seo_url;
         $post->enabled = $request->boolean('enabled');
         $post->save();

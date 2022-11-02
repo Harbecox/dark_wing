@@ -88,7 +88,13 @@
         </div>
     </div>
 
-
+    <script>
+        let h = document.querySelector(".port_main").clientHeight;
+        h = h - 200;
+        document.querySelector(".bg_header").style.height = h;
+        document.querySelector(".bg_shadow").style.height = h;
+        document.querySelector(".header_content").style.height = h;
+    </script>
     <x-contact></x-contact>
 @endsection
 

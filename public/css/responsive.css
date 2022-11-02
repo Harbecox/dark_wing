@@ -157,7 +157,6 @@
     padding: 0;
   }
   .bg_header:not(.airport_show) .top_buttons {
-    bottom: 100px;
     margin-bottom: 0;
   }
 }
