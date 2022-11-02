@@ -91,6 +91,7 @@
     <script>
         let h = document.querySelector(".port_main").clientHeight;
         h = h - 200;
+        h = h + "px";
         document.querySelector(".bg_header").style.height = h;
         document.querySelector(".bg_shadow").style.height = h;
         document.querySelector(".header_content").style.height = h;
