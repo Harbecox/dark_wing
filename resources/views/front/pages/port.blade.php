@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title') VIP Catering for private jets {{ $airport->title }} {{ $airport->OACI }} {{ $airport->IATA }} Airport@endsection
+@section('title') VIP Catering for private jets {{ $airport->title }} {{ $airport->OACI }} {{ $airport->IATA }} Airport @endsection
 @section('description') We provide VIP catering in {{ $airport->meta_description }} airport. Best catering solution for your VIP pax @endsection
 @section('header_bg')
     {{ Storage::url($airport->bg_image) }}
