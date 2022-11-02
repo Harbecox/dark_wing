@@ -18,7 +18,7 @@
                 <a href="tel:{{ $texts['contact']['phone Ops'] }}">Ops: {{ $texts['contact']['phone Ops'] }}</a>
             </p>
             <span class="slash fw-bold lh-sm text-white opacity-25 d-none d-lg-inline">/</span>
-            <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a href="https://api.whatsapp.com/send?phone={{ $texts['contact']['WhatsApp'] }}">WhatsApp</a></p>
+            <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a href="https://api.whatsapp.com/send?phone={{ \Illuminate\Support\Str::replace("+","",$texts['contact']['WhatsApp']) }}">WhatsApp</a></p>
             <span class="slash fw-bold lh-sm text-white opacity-25 d-none d-lg-inline">/</span>
             <p class="p_md fw-bold lh-sm text-white  mx-2 my-1"><a href="mailto:{{ $texts['contact']['Email'] }}">{{ $texts['contact']['Email'] }}</a></p>
         </div>
