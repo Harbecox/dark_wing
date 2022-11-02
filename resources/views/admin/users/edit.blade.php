@@ -61,6 +61,11 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="exampleInputEmail1">Password</label>
+                        <input type="text" name="password" class="form-control">
+                    </div>
+
+                    <div class="form-group">
                         <label for="exampleInputEmail1">IsBlocked</label><br>
                         <input type="checkbox" name="isBlocked" {{  ($user->isBlocked == 1 ? ' checked' : '') }}>
                     </div>

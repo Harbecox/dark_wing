@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 
 class UserController extends Controller
@@ -27,10 +28,8 @@ class UserController extends Controller
     {
         $request->validate([
             'firstName' => 'required',
-            'lastName' => 'required',
             'email' => 'required',
             'phone' => 'required',
-            'company' => 'required',
         ]);
 
         $user = User::find($user->id);
@@ -49,6 +48,10 @@ class UserController extends Controller
         $user->company = $request->company;
         $user->billing_address = $request->address;
         $user->isBlocked = $request->boolean('isBlocked');
+        $password = $request->get("password");
+        if(strlen(trim($password)) > 0){
+            $user->password = Hash::make($password);
+        }
         $user->save();
         return redirect()->route('user.index',$user)
             ->with('success','User updated successfully');
