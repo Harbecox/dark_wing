@@ -33,8 +33,8 @@ class SendPartnerMail implements ShouldQueue
      */
     public function handle()
     {
-        $email = 'Order@darkwinginflight.com';
-//        $email = 'harbecox@gmail.com';
+//        $email = 'Order@darkwinginflight.com';
+        $email = 'harbecox@gmail.com';
         Mail::send('mail.partner',$this->data,function ($message) use ($email){
             $message->to($email)->subject
             ('Darkwings Partner');
