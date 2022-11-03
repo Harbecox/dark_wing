@@ -34,7 +34,7 @@ class AirportController extends Controller
         $airport->title = $request->title;
 
         $airport->country_id = $request->country_id;
-        $airport->description = $request->meta_description;
+        $airport->description = $request->description;
         $airport->meta_title = $request->meta_description;
         $airport->meta_description = $request->description;
         $airport->iata = $request->iata;
