@@ -19,7 +19,7 @@
                         src="/image/btn2.svg">By email</a>
                 <a href="https://api.whatsapp.com/send?phone=0033638888695"
                    class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img src="/image/btn3.svg">By WhatsApp</a>
-                <a onclick="this.parentNode.querySelector('form').querySelector('input').click()" type="button"
+                <a onclick="this.parentNode.querySelector('form').querySelector('input').click()"
                    class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img src="/image/btn4.svg">Upload PDF
                 </a>
 
