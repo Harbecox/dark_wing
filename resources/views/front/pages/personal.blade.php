@@ -19,15 +19,16 @@
                         src="/image/btn2.svg">By email</a>
                 <a href="https://api.whatsapp.com/send?phone=0033638888695"
                    class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img src="/image/btn3.svg">By WhatsApp</a>
+                <a onclick="this.parentNode.querySelector('form').querySelector('input').click()" type="button"
+                   class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img src="/image/btn4.svg">Upload PDF
+                </a>
+
+                <a href="{{route('contact')}}" class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img
+                        src="/image/btn5.svg">Free form</a>
                 <form action="{{ route('upload_pdf') }}" method="post" enctype="multipart/form-data">
-                    <a onclick="this.parentNode.querySelector('input').click()" type="button"
-                            class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img src="/image/btn4.svg">Upload PDF
-                    </a>
                     <input name="order_pdf" onchange="this.parentNode.submit()" type="file" style="display: none">
                     @csrf
                 </form>
-                <a href="{{route('contact')}}" class="personal_btn d-flex align-items-center  my-2 my-lg-0"><img
-                        src="/image/btn5.svg">Free form</a>
             </div>
         </div>
     </div>
