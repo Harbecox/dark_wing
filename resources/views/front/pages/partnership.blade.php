@@ -43,7 +43,7 @@
 
     <div class="contact contact_partner">
         <div class="container">
-            <p class="p_lg fw-normal lh-sm text-white text-center contact_text">{!! $texts['partnership']['contact'] !!}<</p>
+            <p class="p_lg fw-normal lh-sm text-white text-center contact_text">{!! $texts['partnership']['contact'] !!}</p>
             <livewire:partnership />
         </div>
     </div>

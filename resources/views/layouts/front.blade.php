@@ -184,7 +184,7 @@
             </p>
         </div>
         <hr>
-        <p class="p_small fw-normal lh-sm text-center text-gray-6 text-uppercase py-4">Copyright 2020 Darkwing Catering.
+        <p class="p_small fw-normal lh-sm text-center text-gray-6 text-uppercase py-4">Copyright {{ \Illuminate\Support\Carbon::now()->year }} Darkwing Catering.
             All Rights Reserved</p>
     </div>
 </div>
