@@ -54,7 +54,7 @@ class UserAccountController extends Controller
             $order->userId = Auth::user()->id;
             $order->order_pdf = $request->file('order_pdf')->store('public/orders');
             try {
-                $request->file('order_pdf')->store('public/orders');
+                dd($request->file('order_pdf')->store('public/orders'));
             }catch (\Exception $e){
                 dd($e);
             }
