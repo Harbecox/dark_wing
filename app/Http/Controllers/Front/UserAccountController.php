@@ -53,7 +53,11 @@ class UserAccountController extends Controller
             $order = new Order();
             $order->userId = Auth::user()->id;
             $order->order_pdf = $request->file('order_pdf')->store('public/orders');
-            dd($order->order_pdf,$request->file('order_pdf'));
+            try {
+                $request->file('order_pdf')->store('public/orders');
+            }catch (\Exception $e){
+                dd($e);
+            }
             $order->save();
             $order_arr = $order->toArray();
             $order_arr['order_pdf'] = \url(str_replace("public","storage",$order_arr['order_pdf']));
