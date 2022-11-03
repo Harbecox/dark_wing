@@ -46,6 +46,7 @@ class UserAccountController extends Controller
     }
 
     public function upload_pdf(Request $request){
+        var_dump($request->hasFile('order_pdf'));
         if($request->hasFile('order_pdf')){
 
             $request->validate([
@@ -55,9 +56,11 @@ class UserAccountController extends Controller
             $order->userId = Auth::user()->id;
             $order->order_pdf = $request->file('order_pdf')->store('public/orders');
             $order->save();
+            var_dump($order);
             $order_arr = $order->toArray();
             $order_arr['order_pdf'] = \url(str_replace("public","storage",$order_arr['order_pdf']));
-            SendNewOrderMail::dispatch($order_arr);
+            $response = SendNewOrderMail::dispatch($order_arr);
+            dd($response);
         }
         return response()->redirectToRoute('account');
     }
