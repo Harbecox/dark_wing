@@ -52,6 +52,9 @@ class UserAccountController extends Controller
             ]);
             $order = new Order();
             $order->userId = Auth::user()->id;
+            $order->email = Auth::user()->email;
+            $order->firstName = Auth::user()->firstName;
+            $order->phone = Auth::user()->phone;
             $order->order_pdf = $request->file('order_pdf')->store('public/orders');
             $order->save();
             $order_arr = $order->toArray();
