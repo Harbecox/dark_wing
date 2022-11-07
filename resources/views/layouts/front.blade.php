@@ -174,7 +174,8 @@
             <div class="d-flex footer_text">
                 <p class="p_md fw-normal lh-sm text-white opacity-25"><a href="{{route("all_airports")}}">Airports</a></p>
                 <p class="p_md fw-normal lh-sm text-white opacity-25 mx-4"><a href="{{route("all_news")}}">News</a></p>
-                <p class="p_md fw-normal lh-sm text-white opacity-25"><a href="{{route('contact')}}">Contacts</a></p>
+                <p class="p_md fw-normal lh-sm text-white opacity-25 me-4"><a href="{{route('contact')}}">Contacts</a></p>
+                <p class="p_md fw-normal lh-sm text-white opacity-25"><a target="_blank" href="https://www.instagram.com/darkwinginflight/"><img src="/image/instagram.svg" ></a></p>
             </div>
             <div class="my-3 mt-lg-0">
                 <img src="/image/logo-footer.svg">
