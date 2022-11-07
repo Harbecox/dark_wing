@@ -57,6 +57,11 @@ class UserController extends Controller
             ->with('success','User updated successfully');
     }
 
+    public function destroy(User $user){
+        $user->delete();
+        return back();
+    }
+
     public function block(User $user){
         $user->isBlocked = true;
         $user->save();

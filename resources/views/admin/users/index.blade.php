@@ -148,13 +148,18 @@
                                         <a><img src="{{ Storage::url($user->avatar) }}" height="50" width="50" alt=""/></a>
                                     </td>
 
-                                    <td class="project-actions text-right">
+                                    <td class="project-actions text-right d-flex justify-content-between">
                                         <form action="{{ route('user.block',$user) }}" method="POST">
                                             @csrf
                                             <a class="btn btn-primary" href="{{ route('user.edit',$user) }}">Edit</a>
                                             @if($user->isBlocked == 0)
                                                 <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger" id="button">Block</button>
                                             @endif
+                                        </form>
+                                        <form action="{{ route('user.destroy',$user) }}" onsubmit="return confirm('delete ? ?')" method="POST" class="ml-1">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-warning">Delete</button>
                                         </form>
                                     </td>
                                 </tr>

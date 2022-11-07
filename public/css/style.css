@@ -14,6 +14,14 @@ body {
   overflow-x: hidden;
 }
 
+.btn-outline-primary {
+  background-color: transparent !important;
+  border: 2px solid #0056BF;
+}
+.btn-outline-primary:hover {
+  background-color: #0056BF !important;
+}
+
 .tenor {
   font-family: "Tenor Sans", sans-serif !important;
 }
@@ -390,6 +398,11 @@ select.form-select:focus-visible, select.form-select:focus {
 .card_city .city_name .city_open {
   display: none;
   padding-top: 12px;
+}
+@media only screen and (max-width: 995px) {
+  .card_city .city_name .city_open {
+    display: block;
+  }
 }
 .card_city .city_name .city_open i {
   font-size: 10px;
@@ -1053,4 +1066,8 @@ body.preloader_show .preloader-wrapper {
 .share-btn a {
   cursor: pointer;
   color: #fff;
+}
+
+.partner_card_image img {
+  height: 54px;
 }

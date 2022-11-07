@@ -35,9 +35,9 @@ body {
 
 .btn-outline-primary{
     background-color:transparent!important;
-    border: 2px solid $primary;
+    border: 2px solid $primary-600;
     &:hover{
-        background-color: $primary!important;
+        background-color: $primary-600!important;
     }
 }
 
@@ -467,7 +467,9 @@ select.form-select {
         .city_open {
             display: none;
             padding-top: 12px;
-
+            @media only screen and (max-width: 995px){
+                display: block;
+            }
             i {
                 font-size: 10px;
                 margin-left: 8px;
@@ -1250,5 +1252,11 @@ body.preloader_show{
     a{
         cursor: pointer;
         color: #fff;
+    }
+}
+
+.partner_card_image{
+    img{
+        height: 54px;
     }
 }
