@@ -44,6 +44,10 @@ class Airport extends Model
         return $this->hasOne(Country::class,"id","country_id");
     }
 
+    function info(){
+        return $this->hasOne(AirportInfo::class,"airport_id","id");
+    }
+
     function setImageAttribute($value){
         $this->resizeImage($value,308,361);
         $this->attributes['image'] = $value;

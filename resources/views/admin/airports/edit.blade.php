@@ -51,6 +51,17 @@
 {{--                    </div>--}}
 
                     <div class="form-group">
+                        <label for="exampleInputEmail1">Continent</label>
+                        <select class="form-control form-control" id="type" name="info[continent]">
+                            @foreach(\App\Models\AirportInfo::CONTINENTS as $continent)
+                                <option value="{{ $continent }}" {{ $continent == $airport->info->continent ? 'selected' : '' }}>
+                                    {{ $continent }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Country</label>
                         <select class="form-control form-control" id="type" name="country_id">
                             @foreach($countries as $country)
@@ -62,29 +73,46 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Description</label>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card card-outline card-info">
-                                    <div class="card-body">
-                                        <textarea id="summernote" name="description">
-                                             {{$airport->description}}
-                                        </textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <label for="exampleInputEmail1">City</label>
+                        <input type="text" value="{{ $airport->info->city }}" name="info[city]" class="form-control" placeholder="IATA">
                     </div>
+
+{{--                    <div class="form-group">--}}
+{{--                        <label for="exampleInputEmail1">Description</label>--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-md-12">--}}
+{{--                                <div class="card card-outline card-info">--}}
+{{--                                    <div class="card-body">--}}
+{{--                                        <textarea id="summernote" name="description">--}}
+{{--                                             {{$airport->description}}--}}
+{{--                                        </textarea>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">IATA</label>
-                        <input type="text" value="{{$airport->IATA}}" name="iata" class="form-control" placeholder="Enter Title">
+                        <input type="text" value="{{ $airport->info->iata }}" name="info[iata]" class="form-control" placeholder="IATA">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">OACI</label>
-                        <input type="text" value="{{$airport->OACI}}" name="oaci" class="form-control" placeholder="Enter Title">
+                        <input type="text" value="{{ $airport->info->oaci }}" name="info[oaci]" class="form-control" placeholder="OACI">
                     </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Latitude</label>
+                        <input type="text" value="{{ $airport->info->latitude }}" name="info[latitude]" class="form-control" placeholder="Latitude">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Longitude</label>
+                        <input type="text" value="{{ $airport->info->longitude }}" name="info[longitude]" class="form-control" placeholder="Longitude">
+                    </div>
+
+
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Image</label>

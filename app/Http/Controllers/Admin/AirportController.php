@@ -50,6 +50,9 @@ class AirportController extends Controller
     public function edit(Airport $airport)
     {
         $countries = Country::all();
+        if(!$airport->info){
+            $airport->info()->create();
+        }
         return view('admin.airports.edit', compact('airport','countries'));
     }
 
@@ -58,12 +61,11 @@ class AirportController extends Controller
         $request->validate([
             'title' => 'required',
             'country_id' => 'required',
-            'description' => 'required',
-            'iata' => 'required',
-            'oaci' => 'required'
         ]);
 
         $airport = Airport::find($airport->id);
+
+        $airport->info()->update($request->get("info"));
 
         if($request->hasFile('image')){
             $request->validate([
@@ -82,10 +84,10 @@ class AirportController extends Controller
         $airport->title = $request->title;
 //        $airport->meta_title = $request->meta_description;
 //        $airport->meta_description = $request->description;
-        $airport->country_id = $request->country_id;
-        $airport->description = $request->description;
-        $airport->iata = $request->iata;
-        $airport->oaci = $request->oaci;
+//        $airport->country_id = $request->country_id;
+//        $airport->description = $request->description;
+//        $airport->iata = $request->iata;
+//        $airport->oaci = $request->oaci;
 
 
         $airport->save();
