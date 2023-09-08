@@ -262,56 +262,56 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr class="body_line">
+                            <tr class="body_line" onclick="location.href='/airports/1'">
                                 <td>ICAO</td>
                                 <td>IATA</td>
                                 <td>Félix-Houphouët-Boigny International Airport</td>
                                 <td>Abidjan</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr onclick="location.href='/airports/1'">
                                 <td>ICAO</td>
                                 <td>IATA</td>
                                 <td>Félix-Houphouët-Boigny International Airport</td>
                                 <td>Abidjan</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr onclick="location.href='/airports/1'">
                                 <td>ICAO</td>
                                 <td>IATA</td>
                                 <td>Félix-Houphouët-Boigny International Airport</td>
                                 <td>Abidjan</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr onclick="location.href='/airports/1'">
                                 <td>ICAO</td>
                                 <td>IATA</td>
                                 <td>Félix-Houphouët-Boigny International Airport</td>
                                 <td>Abidjan</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr onclick="location.href='/airports/1'">
                                 <td>ICAO</td>
                                 <td>IATA</td>
                                 <td>Félix-Houphouët-Boigny International Airport</td>
                                 <td>Abidjan</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr onclick="location.href='/airports/1'">
                                 <td>ICAO</td>
                                 <td>IATA</td>
                                 <td>Félix-Houphouët-Boigny International Airport</td>
                                 <td>Abidjan</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr onclick="location.href='/airports/1'">
                                 <td>ICAO</td>
                                 <td>IATA</td>
                                 <td>Félix-Houphouët-Boigny International Airport</td>
                                 <td>Abidjan</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr onclick="location.href='/airports/1'">
                                 <td>ICAO</td>
                                 <td>IATA</td>
                                 <td>Félix-Houphouët-Boigny International Airport</td>
