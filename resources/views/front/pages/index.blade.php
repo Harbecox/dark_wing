@@ -27,35 +27,45 @@
         @section('content')
             <div class="airport">
                 <div class="container" style="margin-bottom: 120px">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor"
-                            style="letter-spacing: -0.06em;">
-                            Airport Search</h2>
-                        <livewire:airports-search/>
-                    </div>
-                    <div class="owl-city owl-carousel owl-theme">
-                        @foreach($airports as $airport)
-                            <div class="item">
-                                <div class="card_city">
-                                    <img src='{{ Storage::url($airport->image) }}'>
-                                    <div class="city_shadow"></div>
-                                    <div class="flag">
-                                        <img src="{{ Storage::url($airport->country->flag) }}">
+                    <div>
+                        <div class="simvol_title d-flex flex-column align-items-center">
+                            <div class="simvol_image"><img src="/image/simvol.png"></div>
+                            <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">AIRPORT SEARCH</h2>
+                        </div>
+                        <div class="airport_search_steps" style="background-image: url(/image/fon.svg)">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="d-flex flex-column align-items-center pb-5 pb-lg-0">
+                                        <h2 class="fw-normal text-white lh-1 text-uppercase">1</h2>
+                                        <h6 class="fw-normal text-white lh-sm " style="letter-spacing: -0.56px;">CHOOSE AIRPORT</h6>
+                                        <p class="fw-normal text-gray-4 lh-sm fs-22 text-center">by Continent, ICAO, IATA or City</p>
                                     </div>
-                                    <div class="city_name">
-                                        <h5 class="fw-normal lh-sm text-white"><a href="{{ route("show_airport",$airport->id) }}" >{{ $airport->title }}, {{ $airport->IATA }}</a></h5>
-                                        <p class="p_sm text-white lh-sm fw-normal opacity-75">{{ $airport->country->name }}</p>
-                                        <p class="city_open fw-normal p_md lh-sm text-white text-uppercase">
-                                            <a class="d-flex align-items-center"
-                                               href="{{ route("show_airport",$airport->id) }}">Open<i
-                                                    class="icon-Line-right"></i></a></p>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="d-flex flex-column align-items-center pb-5 pb-lg-0">
+                                        <h2 class="fw-normal text-white lh-1 text-uppercase">2</h2>
+                                        <h6 class="fw-normal text-white lh-sm " style="letter-spacing: -0.56px;">REQUEST & CONFIRM QUOTE</h6>
+                                        <p class="fw-normal text-gray-4 lh-sm fs-22 text-center">contact us directly via email
+                                            <a class="fw-bold" href="#">order@darkwinginflight.com</a> or
+                                            WhatsApp <a class="fw-bold" href="#">+33638888695</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <h2 class="fw-normal text-white lh-1 text-uppercase">3</h2>
+                                        <h6 class="fw-normal text-white lh-sm " style="letter-spacing: -0.56px;">RECEIVE CATERING TO YOUR JET</h6>
+                                        <p class="fw-normal text-gray-4 lh-sm fs-22 text-center">and enjoy your VIP meal under the sky</p>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn text-white text-uppercase all_airports">
+                                <span class="pnt">~</span>ALL AIRPORTS<span class="pnt">~</span>
+                            </a>
+                        </div>
                     </div>
-                    <p class="p_md fw-bold lh-sm text-gray-6 text-center text-uppercase pt-1"><a
-                            href="{{ route("all_airports") }}">All airports</a></p>
                 </div>
                 <div class="about" style="background-image: url('/image/about_bg.jpg')">
                     <div class="container">

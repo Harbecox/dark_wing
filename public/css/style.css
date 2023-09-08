@@ -127,6 +127,18 @@ p_small {
   font-size: 20px;
 }
 
+.fs-22 {
+  font-size: 22px;
+}
+
+.fs-30 {
+  font-size: 30px;
+}
+
+.fs-67 {
+  font-size: 67px;
+}
+
 .lh-140 {
   line-height: 140%;
 }
@@ -1071,4 +1083,157 @@ body.preloader_show .preloader-wrapper {
 
 .partner_card_image img {
   height: 54px;
+}
+
+.all_airports {
+  width: 258px;
+}
+
+.airport_search_steps {
+  padding: 144px 0 43px;
+  background-repeat: no-repeat;
+}
+.airport_search_steps h6 {
+  margin: 30px 0 20px;
+}
+
+.airport_table .table {
+  width: 100%;
+  border-collapse: initial;
+  border-spacing: unset;
+  background: #1F495F;
+  box-shadow: 0px 12px 60px -8px rgba(14, 75, 105, 0.75), 0px 4px 12px -8px rgba(14, 75, 105, 0.55);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 100px;
+}
+.airport_table .table tr {
+  padding: 42px;
+  cursor: pointer;
+  margin: auto;
+  border: none;
+}
+.airport_table .table tr.table_header {
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #1F495F;
+  box-shadow: 0px 12px 60px -8px rgba(14, 75, 105, 0.75), 0px 4px 12px -8px rgba(14, 75, 105, 0.55);
+}
+.airport_table .table tr.table_header:hover {
+  background: inherit;
+  box-shadow: inherit;
+}
+.airport_table .table tr:hover {
+  background: linear-gradient(156deg, #3284F2 15.29%, #004C77 137.56%), #0D1A27;
+  box-shadow: 0px 11px 32px 0px rgba(24, 64, 84, 0.3), 0px 12px 28px 0px rgba(113, 211, 255, 0.5) inset;
+}
+.airport_table .table tr:hover td {
+  color: #F6F7F9;
+}
+.airport_table .table th {
+  font-size: 26px;
+  color: #B9BFC6;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+  padding: 35px 0;
+  border: 0;
+}
+.airport_table .table td {
+  vertical-align: middle;
+  color: #B9BFC6;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+  padding: 17px 10px;
+  border: 0;
+  width: 20%;
+  margin: auto;
+  border: none;
+}
+
+.airport_map {
+  margin: 100px 0 50px;
+}
+
+.airports_search {
+  width: 574px;
+  position: relative;
+}
+.airports_search .input_search {
+  width: 100%;
+  text-align: center;
+  padding: 18px 25px;
+  color: #838A91;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 130%;
+  border-radius: 6px;
+  border: 1px solid #2E78A1;
+  background: #03171F;
+  box-shadow: 0px 3.25926px 5.62222px 0px rgba(0, 122, 183, 0.07), 0px 8px 11.2125px 0px rgba(0, 122, 183, 0.09), 0px 25.92593px 40.40972px 0px rgba(0, 122, 183, 0.14), 0px 40px 69px 0px rgba(0, 122, 183, 0.19);
+}
+.airports_search .search_icon {
+  position: absolute;
+  margin-right: 8px;
+  top: 20px;
+  left: 145px;
+}
+
+.airport_info {
+  border-radius: 6px;
+  background: rgba(16, 33, 48, 0.53);
+  margin: 50px 0;
+  padding: 43px 150px;
+}
+.airport_info h5 {
+  margin-bottom: 50px;
+}
+.airport_info .info_text {
+  margin-right: 200px;
+}
+.airport_info .info_text:last-child {
+  margin: 0;
+}
+
+.port_text {
+  margin-top: 120px;
+}
+.port_text .port_text_title {
+  padding: 0 155px;
+}
+.port_text .port_text_title h5 {
+  margin-bottom: 27px;
+}
+.port_text .port_section {
+  padding: 53px 0 40px 0;
+}
+.port_text .port_section .section_title {
+  padding: 0 165px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 130%;
+  color: #838A91;
+  margin-bottom: 40px;
+}
+.port_text .port_section .section_main {
+  margin-bottom: 60px;
+}
+.port_text .port_section .section_main .section_img img {
+  width: 100%;
+}
+.port_text .port_section .section_main .section_text {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 130%;
+  color: white;
+}
+.port_text .port_section .section_main .col-12 {
+  margin-bottom: 40px;
+}
+
+.port_airports_search {
+  padding: 112px 0;
 }

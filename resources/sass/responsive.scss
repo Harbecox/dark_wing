@@ -1,12 +1,12 @@
 @media only screen and (min-width: 1500px) {
-    .main_wrapper{
+    .main_wrapper {
         margin-top: 0;
     }
 }
 
 @media only screen and (min-width: 1399px) {
-    .luxury > div{
-        min-height: 917px!important;
+    .luxury > div {
+        min-height: 917px !important;
     }
 }
 
@@ -15,7 +15,7 @@
     .logo {
         height: 80px !important;
     }
-    .port_main{
+    .port_main {
         padding-top: 130px;
     }
 }
@@ -28,6 +28,11 @@
             justify-content: center;
             width: 100%;
             margin-bottom: 10px;
+        }
+    }
+    .airport_info {
+        .info_text {
+            margin-right: 90px;
         }
     }
 }
@@ -82,6 +87,16 @@
             transform: scale(0.8);
         }
     }
+    .airport_info {
+        padding: 43px 60px;
+    }
+    .port_text {
+        .port_section {
+            .section_title {
+                padding: 0;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1120px) {
@@ -101,18 +116,19 @@
 }
 
 @media only screen and (max-width: 995px) {
-    .main_wrapper{
+    .main_wrapper {
         margin-top: 0;
     }
-    .header{
-        display: block!important;
+    .header {
+        display: block !important;
         text-align: center;
-        .logo{
+
+        .logo {
             display: flex;
             width: auto;
             //transform: translateX(50%);
             position: static;
-            top:auto;
+            top: auto;
 
         }
     }
@@ -120,92 +136,98 @@
         padding: 0;
         left: 7px;
     }
-    .luxury{
+    .luxury {
         height: 800px;
         overflow: hidden;
     }
     .post_main_text {
         padding: 0 0 75px 0;
     }
-    .airport_input{
+    .airport_input {
         width: 100%;
     }
-    .contact_input{
+    .contact_input {
         padding: 0;
     }
-    .our-partners-index{
+    .our-partners-index {
         padding: 25px 0 35px 0
     }
-    .about_image{
+    .about_image {
         display: none;
     }
-    .owl-menu-cards{
-        &:before,&:after{
-            content: none!important;
+    .owl-menu-cards {
+        &:before, &:after {
+            content: none !important;
         }
     }
-    .mobile_menu{
+    .mobile_menu {
         position: absolute;
         left: 10px;
         top: 10px;
         z-index: 99;
     }
-    .mobile_menu_open{
+    .mobile_menu_open {
         position: absolute;
         left: 10px;
         top: 10px;
     }
-    .airport .airport_text{
+    .airport .airport_text {
         width: 100%;
     }
-    .news_see_more{
+    .news_see_more {
         width: 100%;
     }
-    .personal_main_left{
+    .personal_main_left {
         width: 100px;
     }
-    .personal_table{
+    .personal_table {
         width: 90%;
     }
-    .order_main .order_input{
+    .order_main .order_input {
         width: 100%;
     }
-    .partnerships_main .partner_cards .partner_card{
+    .partnerships_main .partner_cards .partner_card {
         width: 100%;
     }
     .top_buttons {
         a {
-            padding: 24px!important;
-            margin: 0 12px!important;
+            padding: 24px !important;
+            margin: 0 12px !important;
         }
+
         bottom: 120px;
         margin-bottom: 100px;
     }
-    .airport{
+    .airport {
         padding: 0;
     }
-    .bg_header{
-        &:not(.airport_show){
-            .top_buttons{
+    .bg_header {
+        &:not(.airport_show) {
+            .top_buttons {
                 margin-bottom: 0;
             }
         }
 
     }
+    .airport_info {
+        .info_text {
+            margin: 0 0 40px 0;
+        }
+    }
 }
 
-@media only screen and (max-width: 767px){
-    .airport_input{
-        .search-input{
+@media only screen and (max-width: 767px) {
+    .airport_input {
+        .search-input {
             padding: 23px;
             text-align: center;
         }
     }
 }
 
-@media only screen and (max-width: 340px){
-    .airport_input{
-        .search-input::placeholder{
+@media only screen and (max-width: 340px) {
+    .airport_input {
+        .search-input::placeholder {
             font-size: 18px;
             text-align: center;
         }

@@ -25,6 +25,9 @@
     width: 100%;
     margin-bottom: 10px;
   }
+  .airport_info .info_text {
+    margin-right: 90px;
+  }
 }
 @media only screen and (max-width: 1350px) {
   .header {
@@ -62,6 +65,12 @@
 @media only screen and (max-width: 1200px) {
   .about_main .about_image {
     transform: scale(0.8);
+  }
+  .airport_info {
+    padding: 43px 60px;
+  }
+  .port_text .port_section .section_title {
+    padding: 0;
   }
 }
 @media only screen and (max-width: 1120px) {
@@ -158,6 +167,9 @@
   }
   .bg_header:not(.airport_show) .top_buttons {
     margin-bottom: 0;
+  }
+  .airport_info .info_text {
+    margin: 0 0 40px 0;
   }
 }
 @media only screen and (max-width: 767px) {
