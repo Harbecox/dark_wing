@@ -1,6 +1,6 @@
 @extends('layouts.front')
-@section('title') VIP Catering for private jets {{ $airport->title }} {{ $airport->OACI }} {{ $airport->IATA }} Airport @endsection
-@section('description') We provide VIP catering in {{ $airport->title }} {{ $airport->OACI }} {{ $airport->IATA }} airport. Best catering solution for your VIP pax @endsection
+@section('title') {{ $airport->meta_title }} @endsection
+@section('description') {{ $airport->meta_description }} @endsection
 @section('header_bg')
     {{ Storage::url($airport->bg_image) }}
 @endsection
@@ -18,7 +18,7 @@
                         CATERING</h1>
                     <div class="d-flex align-items-center">
                         <div class="circle">
-                            <img src="{{ Storage::url($airport->country->flag) }}">
+                            <img src="{{ Storage::url($airport->info->country->flag) }}">
                         </div>
                         <h1 class="fw-normal lh-1 text-white text-uppercase tenor fs-67"
                             style="letter-spacing: -0.08em;">{{ $airport->title }}, {{ $airport->IATA }}</h1>
@@ -27,21 +27,21 @@
                 <div class="airport_info">
                     <h5 class="fw-normal text-center text-white text-uppercase tenor" style="letter-spacing: -2.28px;">
                         Airport Information</h5>
-                    <div class="d-lg-flex d-block">
+                    <div class="d-lg-flex d-block justify-content-between">
                         <div class="info_text">
-                            <p class="fw-normal fs-22 text-white lh-sm">City : Nice</p>
-                            <p class="fw-normal fs-22 text-white lh-sm">Country : France</p>
-                            <p class="fw-normal fs-22 text-white lh-sm">Continent : Europe</p>
+                            <p class="fw-normal fs-22 text-white lh-sm">City : {{ $airport->info->city }}</p>
+                            <p class="fw-normal fs-22 text-white lh-sm">Country : {{ $airport->info->country->name }}</p>
+                            <p class="fw-normal fs-22 text-white lh-sm">Continent : {{ $airport->info->continent }}</p>
                         </div>
                         <div class="info_text">
-                            <p class="fw-normal fs-22 text-white lh-sm">Airport : Nice-Côte d'Azur Airport </p>
-                            <p class="fw-normal fs-22 text-white lh-sm">ICAO : LFMN</p>
-                            <p class="fw-normal fs-22 text-white lh-sm">IATA : NCE</p>
+                            <p class="fw-normal fs-22 text-white lh-sm text-nowrap">Airport : {{ $airport->title }} </p>
+                            <p class="fw-normal fs-22 text-white lh-sm">ICAO : {{ $airport->info->icao }}</p>
+                            <p class="fw-normal fs-22 text-white lh-sm">IATA : {{ $airport->info->iata }}</p>
                         </div>
                         <div class="info_text">
-                            <p class="fw-normal fs-22 text-white lh-sm">Country Code : FR</p>
-                            <p class="fw-normal fs-22 text-white lh-sm">Latitude : 43,665</p>
-                            <p class="fw-normal fs-22 text-white lh-sm">Longitude : 7,215</p>
+                            <p class="fw-normal fs-22 text-white lh-sm">Country Code : {{ $airport->info->country->code }}</p>
+                            <p class="fw-normal fs-22 text-white lh-sm">Latitude : {{ $airport->info->latitude }}</p>
+                            <p class="fw-normal fs-22 text-white lh-sm">Longitude : {{ $airport->info->longitude }}</p>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
             </div>
             <div class="port_text_main">
                 <div class="port_section">
-                    <p class="section_title">for your VIP private jet catering at <span>Nice-Côte d'Azur Airport (LFMN, NCE) in Nice</span>
+                    <p class="section_title">for your VIP private jet catering at <span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span>
                     </p>
                     <div class="section_main">
                         <div class="row">
@@ -89,27 +89,25 @@
                             <div class="col-12">
                                 <p class="section_text">Welcome to Dark Wing Inflight, offering the finest inflight
                                     dining
-                                    experience in <span>Nice,
-                            LFMN, NCE</span>. We are dedicated to providing tailored VIP inflight catering for your
-                                    private jet at<span> Nice-Côte d'Azur Airport (LFMN, NCE) in Nice</span>. Dark Wing
+                                    experience in <span>{{ $airport->info->city }}, {{ $airport->info->icao }}, {{ $airport->info->iata }}</span>. We are dedicated to providing tailored VIP inflight catering for your
+                                    private jet at<span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span>. Dark Wing
                                     Inflight
                                     redefines luxury aviation catering, making the ordering process easy and stress-free
                                     for
                                     flight attendants. We offer executive gourmet in-flight meals, customizable menus,
                                     fivestar
-                                    private jet cuisine, and a private jet concierge service in <span>Nice, LFMN</span>.
+                                    private jet cuisine, and a private jet concierge service in <span>{{ $airport->info->city }}, {{ $airport->info->icao }}</span>.
                                     Thanks to
                                     our
                                     commitment to impeccable service and exceptional quality, we deliver premium gourmet
-                                    meals directly to your jet in <span>Nice, NCE</span>. </p>
+                                    meals directly to your jet in <span>{{ $airport->info->city }}, {{ $airport->info->iata }}</span>. </p>
                             </div>
                         </div>
                     </div>
 
                 </div>
                 <div class="port_section">
-                    <p class="section_title">Local VIP private kitchen with high-quality meals at <span>Nice-Côte d'Azur Airport
-                        (LFMN, NCE) in Nice</span></p>
+                    <p class="section_title">Local VIP private kitchen with high-quality meals at <span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span></p>
                     <div class="section_main">
                         <div class="row">
                             <div class="col-lg-6 col-12">
@@ -119,11 +117,9 @@
                             </div>
                             <div class="col-lg-6 col-12">
                                 <p class="section_text">Our kitchen, designed for premium private jet
-                                    catering at <span>Nice-Côte d'Azur Airport (LFMN,
-                                        NCE) in Nice</span>, is under the watchful guidance of
+                                    catering at <span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span>, is under the watchful guidance of
                                     our head chef and his experienced team. Dark Wing
-                                    Inflight's executive aviation culinary experts in <span>Nice,
-                                        NCE</span>, boast extensive years of experience spanning
+                                    Inflight's executive aviation culinary experts in <span>{{ $airport->info->city }}, {{ $airport->info->iata }}</span>, boast extensive years of experience spanning
                                     fine dining restaurants, luxury hotels, exclusive VIP
                                     private events, and tailored private aviation catering.
                                     This expertise empowers Dark Wing Inflight to
@@ -134,7 +130,7 @@
                                     passenger enjoys a VIP inflight culinary experience.
                                     The commitment to excellence allows Dark Wing
                                     Inflight to effortlessly deliver exclusive fine dining
-                                    cuisine to private jets in <span>Nice, LFMN</span>, while
+                                    cuisine to private jets in <span>{{ $airport->info->city }}, {{ $airport->info->icao }}</span>, while
                                     maintaining an impeccable level of quality. </p>
                             </div>
                         </div>
@@ -144,16 +140,15 @@
                 <div class="port_section">
                     <p class="section_title">Tailored menus and personalized cuisine for your private jet catering
                         orders at
-                        <span>Nice-Côte d'Azur Airport (LFMN, NCE) in Nice</span></p>
+                        <span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span></p>
                     <div class="section_main">
                         <div class="row">
                             <div class="col-lg-6 col-12">
-                                <p class="section_text">At Dark Wing Inflight, our head chef and skilled team in <span>Nice</span>
+                                <p class="section_text">At Dark Wing Inflight, our head chef and skilled team in <span>{{ $airport->info->city }}</span>
                                     specialize in crafting customized menus that exceed expectations. Each meal is
                                     thoughtfully curated to perfectly match individual preferences. Whether it's a
                                     preference for specific flavors, dietary restrictions, or cultural influences, our
-                                    team is dedicated to delivering a dining experience at <span>Nice-Côte d'Azur Airport
-                                        (LFMN, NCE) in Nice</span>.</p>
+                                    team is dedicated to delivering a dining experience at <span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span>.</p>
                             </div>
                             <div class="col-lg-6 col-12">
                                 <div class="section_img">
@@ -165,7 +160,7 @@
 
                 </div>
                 <div class="port_section">
-                    <p class="section_title">Private aviation experts in <span>Nice, LFMN</span>, available 24/7, 365
+                    <p class="section_title">Private aviation experts in <span>{{ $airport->info->city }}, {{ $airport->info->icao }}</span>, available 24/7, 365
                         days a year to
                         fulfill your catering orders</p>
                     <div class="section_main">
@@ -179,10 +174,10 @@
                                 <p class="section_text">Dark Wing Inflight is proud to have a multilingual team with
                                     years of experience in the Bizav industry, encompassing both aviation catering and
                                     gourmet cuisine. This team coordinates all private aviation catering orders at
-                                    <span>Nice-Côte d'Azur Airport (LFMN, NCE) in Nice</span>. They are available 24/7,
+                                    <span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span>. They are available 24/7,
                                     365 days a
                                     year to respond to catering orders and flawlessly process premium requirements for
-                                    your private jet in <span>Nice, NCE</span>. Their dedication ensures that every dish
+                                    your private jet in <span>{{ $airport->info->city }}, {{ $airport->info->iata }}</span>. Their dedication ensures that every dish
                                     is a
                                     masterpiece, crafted to perfection, tailored to meet VIP clients' needs, and Nice,
                                     LFMN, delivered on time to your private jet.</p>
@@ -192,16 +187,15 @@
 
                 </div>
                 <div class="port_section">
-                    <p class="section_title">VIP concierge service for private aviation at <span>Nice-Côte d'Azur Airport
-                            (LFMN, NCE) in Nice</span>, including onboard delivery</p>
+                    <p class="section_title">VIP concierge service for private aviation at <span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span>, including onboard delivery</p>
                     <div class="section_main">
                         <div class="row">
                             <div class="col-lg-7 col-12">
                                 <p class="section_text">Dark Wing Inflight's concierge team provides a VIP inflight
-                                    concierge service for private aviation in <span>Nice, LFMN</span>, assisting private
+                                    concierge service for private aviation in <span>{{ $airport->title }}, {{ $airport->info->icao }}</span>, assisting private
                                     jet flight
                                     attendants with cabin preparations. Whether you need a pick-up service from your
-                                    client's favorite shops, restaurants, and hotels in <span>Nice, NCE</span>, our team
+                                    client's favorite shops, restaurants, and hotels in <span>{{ $airport->title }}, {{ $airport->info->iata }}</span>, our team
                                     is at your
                                     disposal to make your journey a seamless and luxurious experience.</p>
                             </div>
@@ -216,7 +210,7 @@
                 </div>
                 <div class="port_section">
                     <p class="section_title">Seamless ordering process, operational excellence, and timely delivery of
-                        your private jet catering orders at <span>Nice-Côte d'Azur Airport (LFMN, NCE) in Nice</span>
+                        your private jet catering orders at <span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span>
                     </p>
                     <div class="section_main">
                         <div class="row">
@@ -226,7 +220,7 @@
                                     facet of our service. Our streamlined and user-friendly ordering process, combined
                                     with our unwavering commitment to timely delivery, guarantees that your carefully
                                     curated jet meals arrive at your aircraft precisely when you need them in
-                                    <span>Nice</span>.</p>
+                                    <span>{{ $airport->info->city }}</span>.</p>
                             </div>
                             <div class="col-12">
                                 <div class="section_img">
@@ -305,7 +299,7 @@
 
             </div>
             <div class="d-flex justify-content-center">
-                <a class="btn text-white text-uppercase all_airports">
+                <a href="/airports" class="btn text-white text-uppercase all_airports">
                     <span class="pnt">~</span>ALL AIRPORTS<span class="pnt">~</span>
                 </a>
             </div>
@@ -324,8 +318,16 @@
                 document.querySelector(".header_content").style.height = h;
             }
         });
-
     </script>
+    <style>
+        .main_wrapper{
+            margin-top: 0!important;
+        }
+        .bg_header.airport_show {
+            background-position: top center;
+            background-size: cover!important;
+        }
+    </style>
     <x-contact></x-contact>
 @endsection
 

@@ -1304,6 +1304,8 @@ body.preloader_show {
 }
 
 .airport_table {
+    max-width: 100%;
+    overflow-x: hidden;
     .table {
         width: 100%;
         border-collapse: initial;
@@ -1400,6 +1402,7 @@ body.preloader_show {
 }
 
 .airport_info {
+    width: 100%;
     border-radius: 6px;
     background: rgba(16, 33, 48, 0.53);
     margin: 50px 0;
@@ -1408,14 +1411,16 @@ body.preloader_show {
     h5 {
         margin-bottom: 50px;
     }
-
     .info_text {
-        margin-right: 200px;
 
-        &:last-child {
-            margin: 0;
-        }
     }
+    //.info_text {
+    //    margin-right: 200px;
+    //
+    //    &:last-child {
+    //        margin: 0;
+    //    }
+    //}
 }
 
 .port_text {
@@ -1470,4 +1475,21 @@ body.preloader_show {
 
 .port_airports_search {
     padding: 112px 0;
+}
+
+.str0 {stroke:#0A3A54;stroke-width:7.62;stroke-miterlimit:22.9256}
+.fil3 {fill:none}
+.fil1 {fill:none;fill-rule:nonzero}
+.fil2 {fill:#021720}
+.fil0 {fill:#021720;fill-rule:nonzero}
+
+.airport_map{
+    .continent{
+        cursor: pointer;
+        &.hovered,&.hovered_c{
+            path,polygon{
+                fill: #1B6AB9;
+            }
+        }
+    }
 }

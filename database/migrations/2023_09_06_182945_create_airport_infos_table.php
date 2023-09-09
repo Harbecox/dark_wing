@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('airport_infos', function (Blueprint $table) {
             $table->unsignedBigInteger("airport_id")->primary();
-            $table->string("oaci")->nullable();
+            $table->string("icao")->nullable();
             $table->string("iata")->nullable();
             $table->string("city")->nullable();
             $table->string("country_id")->nullable();

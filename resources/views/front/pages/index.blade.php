@@ -61,7 +61,7 @@
 
                         </div>
                         <div class="d-flex justify-content-center">
-                            <a class="btn text-white text-uppercase all_airports">
+                            <a href="/airports" class="btn text-white text-uppercase all_airports">
                                 <span class="pnt">~</span>ALL AIRPORTS<span class="pnt">~</span>
                             </a>
                         </div>

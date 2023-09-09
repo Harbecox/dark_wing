@@ -14,9 +14,7 @@ return new class extends Migration
             $table->string('meta_title')->nullable();
             $table->string('meta_description')->nullable();
             $table->unsignedBigInteger('country_id');
-            $table->longText('description');
-            $table->string('IATA');
-            $table->string('OACI');
+            $table->longText('description')->nullable();
             $table->string('image')->nullable();
             $table->string('bg_image')->nullable();
             $table->timestamps();

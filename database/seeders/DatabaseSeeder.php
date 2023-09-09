@@ -9,9 +9,9 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        //$this->call(CountrySeeder::class);
+        $this->call(CountrySeeder::class);
 
-        //$this->call(AirportSeeder::class);
+        $this->call(AirportSeeder::class);
 
         \App\Models\User::factory()->create([
             'firstName' => 'admin',
@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
 
         ]);
 //
-//        Post::factory()->count(12)->create();
+        Post::factory()->count(12)->create();
 
         $this->call(PagesSeeder::class);
     }

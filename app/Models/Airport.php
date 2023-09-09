@@ -63,6 +63,9 @@ class Airport extends Model
         $img = Image::make(Storage::get($value));
         $w = $img->width();
         $h = $img->height();
+        if($w == $ow && $h == $oh){
+            return true;
+        }
         if($w / $h > $k){
             $nh = $oh;
             $nw = $w * $nh / $h;

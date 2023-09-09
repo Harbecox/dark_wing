@@ -4,6 +4,8 @@ window.onload = function (){
     document.querySelector("body").classList.remove("preloader_show");
 }
 
+
+
 document.querySelectorAll(".fake_input").forEach(function (fake_input) {
   let input = fake_input.querySelector("input") || fake_input.querySelector("textarea");
   if(input){
@@ -193,3 +195,19 @@ function scrollToMenu(){
 }
 
 
+let airport_map = document.querySelector(".airport_map");
+if(airport_map){
+    airport_map.querySelectorAll(".continent").forEach(function (continent){
+        continent.querySelectorAll("path").forEach(function (path){
+            path.addEventListener("click",function (){
+                console.log(continent.dataset.id);
+            })
+            path.addEventListener("mouseover",function (){
+                continent.classList.add("hovered");
+            })
+            path.addEventListener("mouseout",function (){
+                continent.classList.remove("hovered");
+            })
+        })
+    })
+}

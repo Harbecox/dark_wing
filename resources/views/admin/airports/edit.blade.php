@@ -53,6 +53,7 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1">Continent</label>
                         <select class="form-control form-control" id="type" name="info[continent]">
+                            <option value="">Select Continent</option>
                             @foreach(\App\Models\AirportInfo::CONTINENTS as $continent)
                                 <option value="{{ $continent }}" {{ $continent == $airport->info->continent ? 'selected' : '' }}>
                                     {{ $continent }}
@@ -63,7 +64,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Country</label>
-                        <select class="form-control form-control" id="type" name="country_id">
+                        <select class="form-control form-control" id="type" name="info[country_id]">
                             @foreach($countries as $country)
                                 <option value="{{ $country->id }}" {{ $country->id == $airport->country_id ? 'selected' : '' }}>
                                     {{ $country->name }}-{{$country->code}}
@@ -151,4 +152,5 @@
             $('#summernote').summernote()
         })
     </script>
+
 @endsection

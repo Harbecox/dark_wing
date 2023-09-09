@@ -14,12 +14,12 @@ class AirportInfo extends Model
     public $timestamps = false;
 
     const CONTINENTS = [
+        "Europe",
         "Africa",
-        "Eurasia",
+        "Asia",
         "North America",
         "South America",
-        "Antarctica",
-        "Australia",
+        "Australia & Oceania",
     ];
 
     protected $fillable = [
@@ -32,4 +32,9 @@ class AirportInfo extends Model
         "latitude",
         "longitude",
     ];
+
+    function country(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(Country::class,"id","country_id");
+    }
 }

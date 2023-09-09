@@ -85,7 +85,9 @@
                                     <a>{{$airport->title}}</a>
                                 </td>
                                 <td>
-                                    <a>{{$airport->country->name}}</a>
+                                    @if($airport->info)
+                                        <a>{{$airport->info->country->name}}</a>
+                                    @endif
                                 </td>
                                 <td>
                                     <a><img src="{{ Storage::url($airport->image) }}" height="120" width="100" alt="" /></a>

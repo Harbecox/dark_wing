@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminAirportStoreRequest;
 use App\Models\Airport;
+use App\Models\AirportInfo;
 use App\Models\Country;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class AirportController extends Controller
         $order = $request->get("order","id");
         $sort = $request->get("sort","asc");
 
-        $airports = Airport::query()->with("country")
+        $airports = Airport::query()->with("info")->with("country")
             ->orderBy($order, $sort)
             ->paginate(10);
 
@@ -32,16 +33,15 @@ class AirportController extends Controller
     {
         $airport = new Airport();
         $airport->title = $request->title;
-
-        $airport->country_id = $request->country_id;
-        $airport->description = $request->description;
-//        $airport->meta_title = $request->meta_description;
-//        $airport->meta_description = $request->description;
-        $airport->iata = $request->iata;
-        $airport->oaci = $request->oaci;
+//        $airport->country_id = $request->country_id;
+        $airport->description = "";
+        $airport->meta_title = "";
+        $airport->meta_description = "";
         $airport->image = $request->file('image')->store('public/airports');
         $airport->bg_image = $request->file('bg_image')->store('public/airports');
         $airport->save();
+
+        $airport->info()->create($request->get("info"));
 
         return redirect()->route('admin.airport.index')
             ->with('success','Airport has been created successfully.');
@@ -52,6 +52,7 @@ class AirportController extends Controller
         $countries = Country::all();
         if(!$airport->info){
             $airport->info()->create();
+            return redirect(request()->url());
         }
         return view('admin.airports.edit', compact('airport','countries'));
     }
@@ -60,12 +61,12 @@ class AirportController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'country_id' => 'required',
         ]);
 
         $airport = Airport::find($airport->id);
 
-        $airport->info()->update($request->get("info"));
+        $info = $request->get("info");
+        $airport->info()->update($info);
 
         if($request->hasFile('image')){
             $request->validate([
@@ -82,13 +83,8 @@ class AirportController extends Controller
         }
 
         $airport->title = $request->title;
-//        $airport->meta_title = $request->meta_description;
-//        $airport->meta_description = $request->description;
-//        $airport->country_id = $request->country_id;
-//        $airport->description = $request->description;
-//        $airport->iata = $request->iata;
-//        $airport->oaci = $request->oaci;
-
+        $airport->meta_title = "";
+        $airport->meta_description = "";
 
         $airport->save();
         return redirect()->route('admin.airport.index',$airport)
