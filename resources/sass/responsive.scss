@@ -35,6 +35,20 @@
             margin-right: 90px;
         }
     }
+    .airport_search_steps{
+        h6{
+            font-size: 24px;
+        }
+    }
+    .port_text{
+        .port_section{
+            .section_main{
+                .section_text{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1350px) {
@@ -79,6 +93,7 @@
         padding: 0 50px !important;
     }
 
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -97,6 +112,14 @@
             }
         }
     }
+    .airport_search_steps{
+        h6{
+            font-size: 21px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
 }
 
 @media only screen and (max-width: 1120px) {
@@ -111,6 +134,11 @@
     .post_main {
         .post_title {
             font-size: 54px;
+        }
+    }
+    .port_text{
+        .port_text_title{
+            padding: 0;
         }
     }
 }
@@ -214,6 +242,13 @@
             margin: 0 0 40px 0;
         }
     }
+    .port_main{
+        .port_title{
+            h1{
+                font-size: 50px;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -221,6 +256,48 @@
         .search-input {
             padding: 23px;
             text-align: center;
+        }
+    }
+    .airports_search{
+        .search_icon{
+            left: 120px;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .airports_search{
+        .search_icon{
+            left: 100px;
+        }
+    }
+    .airport_table{
+        .table{
+            th{
+                font-size: 22px;
+            }
+        }
+
+    }
+    .port_main{
+        .port_title{
+            h1{
+                font-size: 40px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 470px){
+    .airports_search{
+        .search_icon{
+            left: 80px;
+        }
+    }
+}
+@media only screen and (max-width: 450px){
+    .airports_search{
+        .search_icon{
+            left: 40px;
         }
     }
 }

@@ -249,7 +249,7 @@
 
             </div>
             <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-12">
+                <div class="col-lg-8 offset-lg-2 col-12 p-0">
                     <div class="airport_table">
                         <table class="table">
                             <thead>
