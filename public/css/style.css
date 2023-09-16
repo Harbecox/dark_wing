@@ -1098,64 +1098,59 @@ body.preloader_show .preloader-wrapper {
 }
 
 .airport_table {
-  max-width: 100%;
-  overflow-x: hidden;
+  min-width: 600px;
+  overflow-x: scroll;
+  margin-bottom: 50px;
 }
-.airport_table .table {
+.airport_table .table_body {
   width: 100%;
-  border-collapse: initial;
-  border-spacing: unset;
   background: #102130;
   box-shadow: 0px 12px 60px -8px rgba(14, 75, 105, 0.75), 0px 4px 12px -8px rgba(14, 75, 105, 0.55);
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   margin-top: 100px;
 }
-.airport_table .table tr {
-  padding: 42px;
-  cursor: pointer;
-  margin: auto;
-  border: none;
-}
-.airport_table .table tr.table_header {
+.airport_table .table_body .table_header {
+  width: 100%;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   background: #1F495F;
   box-shadow: 0px 12px 60px -8px rgba(14, 75, 105, 0.75), 0px 4px 12px -8px rgba(14, 75, 105, 0.55);
 }
-.airport_table .table tr.table_header:hover {
-  background: #1F495F;
-  box-shadow: 0px 12px 60px -8px rgba(14, 75, 105, 0.75), 0px 4px 12px -8px rgba(14, 75, 105, 0.55);
-}
-.airport_table .table tr:hover {
-  background: linear-gradient(156deg, #3284F2 15.29%, #004C77 137.56%), #0D1A27;
-  box-shadow: 0px 11px 32px 0px rgba(24, 64, 84, 0.3), 0px 12px 28px 0px rgba(113, 211, 255, 0.5) inset;
-}
-.airport_table .table tr:hover td {
-  color: #F6F7F9;
-}
-.airport_table .table th {
-  vertical-align: middle;
-  font-size: 26px;
+.airport_table .table_body .table_header .header_cell {
+  flex: 0 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #B9BFC6;
+  font-size: 26px;
   font-weight: 400;
   line-height: 140%;
-  text-align: center;
   padding: 35px 0;
-  border: 0;
+  text-align: center;
 }
-.airport_table .table td {
-  vertical-align: middle;
+.airport_table .table_body .row_div {
+  width: 100%;
+  display: flex;
+}
+.airport_table .table_body .row_div .table_cell {
+  text-align: center;
   color: #B9BFC6;
   font-size: 18px;
   font-weight: 400;
   line-height: 140%;
-  text-align: center;
   padding: 17px 10px;
   border: 0;
-  width: 20%;
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   border: none;
+}
+.airport_table .table_body .row_div:hover {
+  background: linear-gradient(156deg, #3284F2 15.29%, #004C77 137.56%), #0D1A27;
+  box-shadow: 0px 11px 32px 0px rgba(24, 64, 84, 0.3), 0px 12px 28px 0px rgba(113, 211, 255, 0.5) inset;
 }
 
 .airport_map {
@@ -1181,9 +1176,8 @@ body.preloader_show .preloader-wrapper {
 }
 .airports_search .search_icon {
   position: absolute;
-  margin-right: 8px;
   top: 20px;
-  left: 145px;
+  left: 140px;
 }
 
 .airport_info {
@@ -1205,9 +1199,6 @@ body.preloader_show .preloader-wrapper {
 .port_text .port_text_title h5 {
   margin-bottom: 27px;
 }
-.port_text .port_section {
-  padding: 53px 0 40px 0;
-}
 .port_text .port_section .section_title {
   padding: 0 165px;
   text-align: center;
@@ -1228,6 +1219,7 @@ body.preloader_show .preloader-wrapper {
   font-weight: 400;
   line-height: 130%;
   color: white;
+  text-align: justify;
 }
 .port_text .port_section .section_main .col-12 {
   margin-bottom: 40px;
@@ -1261,9 +1253,16 @@ body.preloader_show .preloader-wrapper {
   fill-rule: nonzero;
 }
 
+.airport_map {
+  position: relative;
+}
 .airport_map .continent {
   cursor: pointer;
 }
 .airport_map .continent.hovered path, .airport_map .continent.hovered polygon, .airport_map .continent.hovered_c path, .airport_map .continent.hovered_c polygon {
   fill: #1B6AB9;
+}
+.airport_map .map_text {
+  position: absolute;
+  top: 50px;
 }

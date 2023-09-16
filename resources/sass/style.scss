@@ -1298,75 +1298,69 @@ body.preloader_show {
 .airport_search_steps {
     padding: 144px 0 43px;
     background-repeat: no-repeat;
+
     h6 {
         margin: 30px 0 20px;
     }
 }
 
 .airport_table {
-    max-width: 100%;
-    overflow-x: hidden;
-    .table {
+    min-width: 600px;
+    overflow-x: scroll;
+    margin-bottom: 50px;
+
+    .table_body {
         width: 100%;
-        border-collapse: initial;
-        border-spacing: unset;
         background: #102130;
         box-shadow: 0px 12px 60px -8px rgba(14, 75, 105, 0.75), 0px 4px 12px -8px rgba(14, 75, 105, 0.55);
         border-radius: 6px;
         border: 1px solid rgba(255, 255, 255, 0.05);
         margin-top: 100px;
 
-        tr {
-            padding: 42px;
-            cursor: pointer;
-            margin: auto;
-            border: none;
+        .table_header {
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: #1F495F;
+            box-shadow: 0px 12px 60px -8px rgba(14, 75, 105, 0.75), 0px 4px 12px -8px rgba(14, 75, 105, 0.55);
 
-            &.table_header {
-                border-radius: 6px;
-                border: 1px solid rgba(255, 255, 255, 0.05);
-                background: #1F495F;
-                box-shadow: 0px 12px 60px -8px rgba(14, 75, 105, 0.75), 0px 4px 12px -8px rgba(14, 75, 105, 0.55);
-                &:hover{
-                    background: #1F495F;
-                    box-shadow: 0px 12px 60px -8px rgba(14, 75, 105, 0.75), 0px 4px 12px -8px rgba(14, 75, 105, 0.55);
-                }
+            .header_cell {
+                flex: 0 0 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #B9BFC6;
+                font-size: 26px;
+                font-weight: 400;
+                line-height: 140%;
+                padding: 35px 0;
+                text-align: center;
             }
+        }
 
-            &:hover {
+        .row_div{
+            width: 100%;
+            display: flex;
+            .table_cell {
+                text-align: center;
+                color: #B9BFC6;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 140%;
+                padding: 17px 10px;
+                border: 0;
+                flex: 0 0 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                border: none;
+            }
+            &:hover{
                 background: linear-gradient(156deg, #3284F2 15.29%, #004C77 137.56%), #0D1A27;
                 box-shadow: 0px 11px 32px 0px rgba(24, 64, 84, 0.30), 0px 12px 28px 0px rgba(113, 211, 255, 0.50) inset;
 
-                td {
-                    color: #F6F7F9;
-                }
             }
-
-        }
-
-        th {
-            vertical-align: middle;
-            font-size: 26px;
-            color: #B9BFC6;
-            font-weight: 400;
-            line-height: 140%;
-            text-align: center;
-            padding: 35px 0;
-            border: 0;
-        }
-
-        td {
-            vertical-align: middle;
-            color: #B9BFC6;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 140%;
-            text-align: center;
-            padding: 17px 10px;
-            border: 0;
-            width: 20%;
-            margin: auto;
-            border: none;
         }
     }
 }
@@ -1395,9 +1389,8 @@ body.preloader_show {
 
     .search_icon {
         position: absolute;
-        margin-right: 8px;
         top: 20px;
-        left: 145px;
+        left: 140px;
     }
 }
 
@@ -1411,9 +1404,11 @@ body.preloader_show {
     h5 {
         margin-bottom: 50px;
     }
+
     .info_text {
 
     }
+
     //.info_text {
     //    margin-right: 200px;
     //
@@ -1435,7 +1430,6 @@ body.preloader_show {
     }
 
     .port_section {
-        padding: 53px 0 40px 0;
 
         .section_title {
             padding: 0 165px;
@@ -1461,6 +1455,7 @@ body.preloader_show {
                 font-weight: 400;
                 line-height: 130%;
                 color: white;
+                text-align: justify;
 
             }
 
@@ -1477,19 +1472,45 @@ body.preloader_show {
     padding: 112px 0;
 }
 
-.str0 {stroke:#0A3A54;stroke-width:7.62;stroke-miterlimit:22.9256}
-.fil3 {fill:none}
-.fil1 {fill:none;fill-rule:nonzero}
-.fil2 {fill:#021720}
-.fil0 {fill:#021720;fill-rule:nonzero}
+.str0 {
+    stroke: #0A3A54;
+    stroke-width: 7.62;
+    stroke-miterlimit: 22.9256
+}
 
-.airport_map{
-    .continent{
+.fil3 {
+    fill: none
+}
+
+.fil1 {
+    fill: none;
+    fill-rule: nonzero
+}
+
+.fil2 {
+    fill: #021720
+}
+
+.fil0 {
+    fill: #021720;
+    fill-rule: nonzero
+}
+
+.airport_map {
+    position: relative;
+
+    .continent {
         cursor: pointer;
-        &.hovered,&.hovered_c{
-            path,polygon{
+
+        &.hovered, &.hovered_c {
+            path, polygon {
                 fill: #1B6AB9;
             }
         }
+    }
+
+    .map_text {
+        position: absolute;
+        top: 50px;
     }
 }

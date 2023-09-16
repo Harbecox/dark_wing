@@ -10,7 +10,7 @@ class Map extends Component
 {
     public $search = "";
     public $airports = [];
-    public $selected_continent = null;
+    public $selected_continent = "Asia";// = null;
     public $countries = [];
 
     function mount()

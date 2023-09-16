@@ -14,14 +14,14 @@
                     <a href="{{route('all_airports')}}" class="d-flex align-items-center"><i class="icon-Line"></i>back</a>
                 </p>
                 <div class="d-flex flex-column align-items-center port_title">
-                    <h1 class="fw-normal fs-67 text-uppercase text-gray-4 text-center tenor">VIP PRIVATE JET
-                        CATERING</h1>
+                    <h4 class="fw-normal text-uppercase text-gray-4 text-center tenor">VIP PRIVATE JET
+                        CATERING</h4>
                     <div class="d-flex align-items-center">
                         <div class="circle">
                             <img src="{{ Storage::url($airport->info->country->flag) }}">
                         </div>
-                        <h1 class="fw-normal lh-1 text-white text-uppercase tenor fs-67"
-                            style="letter-spacing: -0.08em;">{{ $airport->title }}, {{ $airport->IATA }}</h1>
+                        <h4 class="fw-normal lh-1 text-white text-uppercase tenor"
+                            style="letter-spacing: -0.08em;">{{ $airport->title }}, {{ $airport->IATA }}</h4>
                     </div>
                 </div>
                 <div class="airport_info">
@@ -90,12 +90,12 @@
                                 <p class="section_text">Welcome to Dark Wing Inflight, offering the finest inflight
                                     dining
                                     experience in <span>{{ $airport->info->city }}, {{ $airport->info->icao }}, {{ $airport->info->iata }}</span>. We are dedicated to providing tailored VIP inflight catering for your
-                                    private jet at<span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span>. Dark Wing
+                                    private jet at <span>{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }}) in {{ $airport->info->city }}</span>. Dark Wing
                                     Inflight
                                     redefines luxury aviation catering, making the ordering process easy and stress-free
                                     for
                                     flight attendants. We offer executive gourmet in-flight meals, customizable menus,
-                                    fivestar
+                                    five-star
                                     private jet cuisine, and a private jet concierge service in <span>{{ $airport->info->city }}, {{ $airport->info->icao }}</span>.
                                     Thanks to
                                     our

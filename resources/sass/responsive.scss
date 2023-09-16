@@ -272,9 +272,11 @@
         }
     }
     .airport_table{
-        .table{
-            th{
-                font-size: 22px;
+        .table_body{
+            .table_header{
+                .header_cell{
+                    font-size: 22px;
+                }
             }
         }
 
@@ -283,6 +285,15 @@
         .port_title{
             h1{
                 font-size: 40px;
+            }
+        }
+    }
+    .airport_map{
+        .map_text{
+            top: 20px;
+            h4{
+                font-size: 20px;
+
             }
         }
     }
@@ -297,7 +308,7 @@
 @media only screen and (max-width: 450px){
     .airports_search{
         .search_icon{
-            left: 40px;
+            left: 25px;
         }
     }
 }
@@ -310,3 +321,6 @@
         }
     }
 }
+
+
+

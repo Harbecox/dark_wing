@@ -1379,48 +1379,53 @@
                         </g>
                     </g>
                 </svg>
-    </div>
-    <div class="d-flex justify-content-center">
-        <div class="airports_search">
-            <div class="search_icon">
-                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M10.5833 17.4167C14.6334 17.4167 17.9167 14.1334 17.9167 10.0833C17.9167 6.03325 14.6334 2.75 10.5833 2.75C6.53325 2.75 3.25 6.03325 3.25 10.0833C3.25 14.1334 6.53325 17.4167 10.5833 17.4167Z"
-                        stroke="#838A91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M19.7502 19.25L15.7627 15.2625" stroke="#838A91" stroke-width="2"
-                          stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <input class="input_search" wire:model="search" placeholder="Enter ICAO, IATA or City">
+        <div class="map_text">
+            <h4 class="fw-normal text-gray-4 tenor text-center " style="letter-spacing: -2.4px;"><p class="text-uppercase">SEARCH AIRPORTS</p> by clicking on continent</h4>
         </div>
-
     </div>
+    <div>
+        <div class="search_title mb-5">
+            <h4 class="fw-normal text-gray-4 tenor text-center " style="letter-spacing: -2.4px;"><p class="text-uppercase">SEARCH AIRPORTS</p>by entering ICAO, IATA or City</h4>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="airports_search">
+                <div class="search_icon">
+                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.5833 17.4167C14.6334 17.4167 17.9167 14.1334 17.9167 10.0833C17.9167 6.03325 14.6334 2.75 10.5833 2.75C6.53325 2.75 3.25 6.03325 3.25 10.0833C3.25 14.1334 6.53325 17.4167 10.5833 17.4167Z"
+                            stroke="#838A91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.7502 19.25L15.7627 15.2625" stroke="#838A91" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <input class="input_search" wire:model="search" placeholder="Enter ICAO, IATA or City">
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 col-12 p-0">
                 <div class="airport_table">
-                    <table class="table">
-                        <thead>
-                        <tr class="table_header">
-                            <th>ICAO</th>
-                            <th>IATA</th>
-                            <th>Airport Name</th>
-                            <th>City</th>
-                            <th>Country</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+                    <div class="table_body">
+                        <div class="table_header d-flex">
+                            <div class="header_cell">ICAO</div>
+                            <div class="header_cell">IATA</div>
+                            <div class="header_cell">Airport Name</div>
+                            <div class="header_cell">City</div>
+                            <div class="header_cell">Country</div>
+                        </div>
                         @foreach($airports as $airport)
-                            <tr onclick="location.href='/airports/{{ $airport->id }}'">
-                                <td>{{ $airport->icao }}</td>
-                                <td>{{ $airport->iata }}</td>
-                                <td>{{ $airport->title }}</td>
-                                <td>{{ $airport->city }}</td>
-                                <td>{{ $countries->where("id",$airport->country_id)->first()->name  }}</td>
-                            </tr>
+                            <div class="row_div" onclick="location.href='/airports/{{ $airport->id }}'">
+                                <div class="table_cell">{{ $airport->icao }}</div>
+                                <div class="table_cell">{{ $airport->iata }}</div>
+                                <div class="table_cell">{{ $airport->title }}</div>
+                                <div class="table_cell">{{ $airport->city }}</div>
+                                <div class="table_cell">{{ $countries->where("id",$airport->country_id)->first()->name  }}</div>
+                            </div>
                         @endforeach
-                        </tbody>
-                    </table>
+
+                    </div>
                 </div>
             </div>
         </div>
