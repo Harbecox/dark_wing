@@ -1419,6 +1419,9 @@ body.preloader_show {
 }
 
 .port_text {
+    img {
+        width: 100%!important;
+    }
     margin-top: 120px;
 
     .port_text_title {
@@ -1443,12 +1446,6 @@ body.preloader_show {
 
         .section_main {
             margin-bottom: 60px;
-
-            .section_img {
-                img {
-                    width: 100%;
-                }
-            }
 
             .section_text {
                 font-size: 30px;

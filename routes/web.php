@@ -25,7 +25,7 @@ Route::get('/airports', [\App\Http\Controllers\Front\AirportsController::class,"
 
 Route::get('/news/{id}', [\App\Http\Controllers\Front\NewsController::class,"show"])->name("show_news");
 
-Route::get('/airports/{id}', [\App\Http\Controllers\Front\AirportsController::class,"show"])->name("show_airport");
+Route::get('/airports/{slug}', [\App\Http\Controllers\Front\AirportsController::class,"show"])->name("show_airport");
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -61,6 +61,8 @@ Route::prefix('admin_panel')->middleware('admin.status')->group(function () {
     Route::post('pdf', [MenuController::class,"upload"])->name("admin.pdf");
 
     Route::resource('airport', AirportController::class,['as' => 'admin']);
+
+    Route::post('airport/search', [AirportController::class,"search"])->name("admin.airport.search");
 
     Route::post('user/block/{user}', [UserController::class,'block'])->name("user.block");
 

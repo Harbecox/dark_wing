@@ -19,12 +19,12 @@ class AirportInfo extends Model
         "Asia",
         "North America",
         "South America",
-        "Australia & Oceania",
+        "Oceania",
     ];
 
     protected $fillable = [
         "airport_id",
-        "oaci",
+        "icao",
         "iata",
         "city",
         "country_id",

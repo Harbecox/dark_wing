@@ -1193,6 +1193,9 @@ body.preloader_show .preloader-wrapper {
 .port_text {
   margin-top: 120px;
 }
+.port_text img {
+  width: 100% !important;
+}
 .port_text .port_text_title {
   padding: 0 155px;
 }
@@ -1210,9 +1213,6 @@ body.preloader_show .preloader-wrapper {
 }
 .port_text .port_section .section_main {
   margin-bottom: 60px;
-}
-.port_text .port_section .section_main .section_img img {
-  width: 100%;
 }
 .port_text .port_section .section_main .section_text {
   font-size: 30px;

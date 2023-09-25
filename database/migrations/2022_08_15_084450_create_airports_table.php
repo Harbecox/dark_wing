@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('airports', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('slug')->nullable();
             $table->string('meta_title')->nullable();
             $table->string('meta_description')->nullable();
             $table->unsignedBigInteger('country_id');

@@ -25,6 +25,9 @@
     width: 100%;
     margin-bottom: 10px;
   }
+  .airport_info .info_text p {
+    font-size: 20px !important;
+  }
   .airport_search_steps h6 {
     font-size: 24px;
   }
@@ -71,6 +74,9 @@
   }
   .airport_info {
     padding: 43px 60px;
+  }
+  .airport_info .info_text p {
+    font-size: 19px !important;
   }
   .port_text .port_section .section_title {
     padding: 0;

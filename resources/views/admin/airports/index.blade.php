@@ -21,8 +21,18 @@
             </div>
         @endif
 
-        <a class="btn btn-primary" href="{{route('admin.airport.create')}}" role="button">+ Add new</a>
-            <br><br>
+        <div class="mb-3 d-flex">
+            <a class="btn btn-primary mb-3 mr-3" href="{{route('admin.airport.create')}}" role="button">+ Add new</a>
+
+            <form action="{{ route("admin.airport.search") }}" method="post" >
+                @csrf
+                <div class="form-group d-flex">
+                    <input type="text" name="search" value="{{ $search ?? "" }}" class="form-control mr-1" placeholder="Airport, ICAO, IATA ">
+                    <button class="btn btn-success">Search</button>
+                </div>
+            </form>
+        </div>
+
         <div class="card">
             <div class="card-body p-0">
                 <table class="table table-striped projects">
@@ -70,6 +80,19 @@
                                 </div>
                             </th>
                             <th>
+                                <div class="d-flex align-items-center">
+                                    <span>ICAO</span>
+                                    <div class="sort ml-2">
+                                        <a href = {{route('admin.airport.index',['order'=>'icao','sort'=>'asc'])}}>
+                                            <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
+                                        </a>
+                                        <a href = {{route('admin.airport.index',['order'=>'icao','sort'=>'desc'])}}>
+                                            <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
                                 Image
                             </th>
                         </tr>
@@ -88,6 +111,9 @@
                                     @if($airport->info)
                                         <a>{{$airport->info->country->name}}</a>
                                     @endif
+                                </td>
+                                <td>
+                                    <a>{{$airport->info->icao}}</a>
                                 </td>
                                 <td>
                                     <a><img src="{{ Storage::url($airport->image) }}" height="120" width="100" alt="" /></a>

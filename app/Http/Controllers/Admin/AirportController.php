@@ -16,7 +16,7 @@ class AirportController extends Controller
         $order = $request->get("order","id");
         $sort = $request->get("sort","asc");
 
-        $airports = Airport::query()->with("info")->with("country")
+        $airports = Airport::query()->join("airport_infos", "id", "airport_id")
             ->orderBy($order, $sort)
             ->paginate(10);
 
@@ -26,22 +26,27 @@ class AirportController extends Controller
     public function create()
     {
         $data['countries'] = Country::all();
-        return view('admin.airports.create',$data);
+        $data['action'] = route("admin.airport.store");
+        $data['method'] = "POST";
+        return view('admin.airports.edit',$data);
     }
 
     public function store(AdminAirportStoreRequest $request)
     {
         $airport = new Airport();
         $airport->title = $request->title;
-//        $airport->country_id = $request->country_id;
+        $airport->country_id = $request->get("info")['country_id'];
         $airport->description = "";
-        $airport->meta_title = "";
-        $airport->meta_description = "";
+        $airport->meta_title = $request->get("meta_title");
+        $airport->meta_description = $request->get("meta_description");
         $airport->image = $request->file('image')->store('public/airports');
         $airport->bg_image = $request->file('bg_image')->store('public/airports');
         $airport->save();
 
         $airport->info()->create($request->get("info"));
+
+        $airport->description = view('components.airport-description',['airport' => $airport])->render();
+        $airport->save();
 
         return redirect()->route('admin.airport.index')
             ->with('success','Airport has been created successfully.');
@@ -54,7 +59,11 @@ class AirportController extends Controller
             $airport->info()->create();
             return redirect(request()->url());
         }
-        return view('admin.airports.edit', compact('airport','countries'));
+        $data['action'] = route('admin.airport.update',$airport->id);
+        $data['method'] = "PUT";
+        $data['airport'] = $airport;
+        $data['countries'] = $countries;
+        return view('admin.airports.edit', $data);
     }
 
     public function update(Request $request, Airport $airport)
@@ -83,8 +92,9 @@ class AirportController extends Controller
         }
 
         $airport->title = $request->title;
-        $airport->meta_title = "";
-        $airport->meta_description = "";
+        $airport->description = $request->description;
+        $airport->meta_title = $request->meta_title;
+        $airport->meta_description = $request->meta_description;
 
         $airport->save();
         return redirect()->route('admin.airport.index',$airport)
@@ -96,6 +106,21 @@ class AirportController extends Controller
         $airport->delete();
         return redirect()->route('admin.airport.index')
             ->with('success','Airport has been deleted successfully');
+    }
+
+    public function search(Request $request){
+        $s = $request->get("search");
+        $data['search'] = $s;
+        $data['airports'] = Airport::query()->join("airport_infos", "id", "airport_id")
+            ->where(function ($q) use($s) {
+                $q->orWhere("title", "LIKE", $s . "%");
+                $q->orWhere("icao", "LIKE", $s . "%");
+                $q->orWhere("iata", "LIKE", $s . "%");
+                $q->orWhere("city", "LIKE", $s . "%");
+            })
+            ->paginate(10);
+
+        return view('admin.airports.index', $data);
     }
 }
 

@@ -28,10 +28,10 @@ class AirportsController extends Controller
         return view('front.pages.airports',$data);
     }
 
-    public function show($id){
+    public function show($slug){
         $data['texts'] = $this->texts;
         $data['airports'] = Airport::query()->limit(12)->get();
-        $data['airport'] = Airport::findOrFail($id);
+        $data['airport'] = Airport::query()->where("slug",$slug)->firstOrFail();
         $data['menu_images'] = Photo::query()->orderBy("position")->get();
         return view('front.pages.port', $data);
     }

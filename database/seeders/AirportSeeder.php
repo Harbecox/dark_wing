@@ -8,6 +8,7 @@ use Faker\Factory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class AirportSeeder extends Seeder
 {
@@ -22,20 +23,7 @@ class AirportSeeder extends Seeder
             return $co->id;
         });
 
-        $arr = explode("\r",Storage::get("airports.csv"));
-        $airports = [];
-        $keys = array_slice(explode(";",$arr[0]),0,9);
-        $keys[0] = mb_substr($keys[0],1);
-        foreach ($arr as $k => $v){
-            if($k > 0){
-                $row = [];
-                foreach (array_slice(explode(";",$v),0,9) as $kk => $item){
-                    $row[$keys[$kk]] = trim($item);
-                }
-                $airports[] = $row;
-            }
-        }
-        //Continent,Country,ICAO,IATA,City,Airport,Country code,Latitude,Longitude
+        $airports = json_decode(Storage::get("airports.json"),true);
 
         foreach ($airports as $airport){
             if(!isset($airport['Airport'])){
@@ -61,6 +49,8 @@ class AirportSeeder extends Seeder
                 "longitude" => $airport['Longitude'],
             ];
             $port->info()->create($ai);
+            $port->description = view('components.airport-description',['airport' => $port])->render();
+            $port->save();
         }
 
     }
