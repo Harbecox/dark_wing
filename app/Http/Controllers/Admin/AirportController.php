@@ -39,8 +39,8 @@ class AirportController extends Controller
         $airport->description = "";
         $airport->meta_title = $request->get("meta_title");
         $airport->meta_description = $request->get("meta_description");
-        $airport->image = $request->file('image')->store('public/airports');
-        $airport->bg_image = $request->file('bg_image')->store('public/airports');
+        $airport->image = $request->file('image')->store('airports');
+        $airport->bg_image = $request->file('bg_image')->store('airports');
         $airport->save();
 
         $airport->info()->create($request->get("info"));
@@ -81,14 +81,14 @@ class AirportController extends Controller
             $request->validate([
                 'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             ]);
-            $airport->image = $request->file('image')->store('public/airports');
+            $airport->image = $request->file('image')->store('airports');
         }
 
         if($request->hasFile('bg_image')){
             $request->validate([
                 'bg_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             ]);
-            $airport->bg_image = $request->file('bg_image')->store('public/airports');
+            $airport->bg_image = $request->file('bg_image')->store('airports');
         }
 
         $airport->title = $request->title;
