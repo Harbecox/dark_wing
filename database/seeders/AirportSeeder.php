@@ -23,7 +23,8 @@ class AirportSeeder extends Seeder
             return $co->id;
         });
 
-        $airports = json_decode(Storage::get("airports.json"),true);
+        $json = Storage::get("airports.json");
+        $airports = json_decode($json,true);
 
         foreach ($airports as $airport){
             if(!isset($airport['Airport'])){
@@ -35,8 +36,8 @@ class AirportSeeder extends Seeder
                 "meta_description" => $airport['Airport'],
                 "country_id" => 0,
                 "description" => "",
-                "image" => "/airports/img.jpg",
-                "bg_image" => "/airports/bg.jpg",
+                "image" => "airports/img.jpg",
+                "bg_image" => "airports/bg.jpg",
             ];
             $port = Airport::create($a);
             $ai = [
