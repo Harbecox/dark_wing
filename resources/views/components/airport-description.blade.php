@@ -102,8 +102,7 @@
                         year to respond to catering orders and flawlessly process premium requirements for
                         your private jet in <span>{{ $airport->info->city }}, {{ $airport->info->iata }}</span>. Their dedication ensures that every dish
                         is a
-                        masterpiece, crafted to perfection, tailored to meet VIP clients' needs, and {{ $airport->info->city }},
-                        {{ $airport->info->icao }}, delivered on time to your private jet.</p>
+                        masterpiece, crafted to perfection, tailored to meet VIP clients' needs, and delivered on time to your private jet.</p>
                 </div>
             </div>
         </div>
@@ -115,10 +114,10 @@
             <div class="row">
                 <div class="col-lg-7 col-12">
                     <p class="section_text">Dark Wing Inflight's concierge team provides a VIP inflight
-                        concierge service for private aviation in <span>{{ $airport->title }}, {{ $airport->info->icao }}</span>, assisting private
+                        concierge service for private aviation in <span>{{ $airport->info->city }}, {{ $airport->info->icao }}</span>, assisting private
                         jet flight
                         attendants with cabin preparations. Whether you need a pick-up service from your
-                        client's favorite shops, restaurants, and hotels in <span>{{ $airport->title }}, {{ $airport->info->iata }}</span>, our team
+                        client's favorite shops, restaurants, and hotels in <span>{{ $airport->info->city }}, {{ $airport->info->iata }}</span>, our team
                         is at your
                         disposal to make your journey a seamless and luxurious experience.</p>
                 </div>
