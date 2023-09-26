@@ -31,7 +31,7 @@ class PostController extends Controller
         $post->meta_description = $request->meta_description;
         $seo_url = $request->get("seo_url",null);
         $post->seo_url = $seo_url == null ? Str::slug($post->title, '-') : $seo_url;
-        $post->image = $request->file('image')->store('public/images');
+        $post->image = $request->file('image')->store('images');
         $post->enabled = $request->boolean('enabled');
         $post->save();
 
@@ -61,7 +61,7 @@ class PostController extends Controller
             $request->validate([
                 'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             ]);
-            $post->image = $request->file('image')->store('public/images');
+            $post->image = $request->file('image')->store('images');
         }
 
         $post->title = $request->title;
