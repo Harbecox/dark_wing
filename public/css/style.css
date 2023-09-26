@@ -5,6 +5,11 @@ a {
   color: inherit;
 }
 
+html {
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   background: #0D1A27;
   font-family: "Arsenal", sans-serif;
@@ -1099,7 +1104,7 @@ body.preloader_show .preloader-wrapper {
 
 .airport_table {
   min-width: 600px;
-  overflow-x: scroll;
+  overflow-x: auto;
   margin-bottom: 50px;
 }
 .airport_table .table_body {

@@ -32,6 +32,7 @@ class Map extends Component
         }
         if ($this->selected_continent) {
             $q->where("continent", $this->selected_continent);
+            $this->dispatchBrowserEvent("mapScrollTable");
         }
         if (strlen($this->search) >= 3 || $this->selected_continent) {
             $this->airports = $q->get();

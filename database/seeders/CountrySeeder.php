@@ -261,7 +261,7 @@ class CountrySeeder extends Seeder
         foreach ($countries as $key => $value) {
             $file_name = str_replace(" ","-",strtolower($value['name'])).".png";
             if(file_exists("storage/app/public/flag/".$file_name)){
-                $value['flag'] = 'public/flag/'.$file_name;
+                $value['flag'] = 'flag/'.$file_name;
             }else{
                 $value['flag'] = null;
             }

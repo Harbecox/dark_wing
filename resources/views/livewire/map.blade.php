@@ -1430,4 +1430,9 @@
             </div>
         </div>
     </div>
+    <script>
+        window.addEventListener("mapScrollTable",function (){
+            document.querySelector(".airport_table").scrollIntoView();
+        })
+    </script>
 </div>
