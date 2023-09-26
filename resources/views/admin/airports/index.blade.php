@@ -42,10 +42,10 @@
                                 <div class="d-flex align-items-center">
                                     <span>ID</span>
                                     <div class="sort ml-2">
-                                        <a href = {{route('admin.airport.index',['order'=>'ID','sort'=>'asc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'airports.id','sort'=>'asc'])}}>
                                             <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
                                         </a>
-                                        <a href = {{route('admin.airport.index',['order'=>'ID','sort'=>'desc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'airports.id','sort'=>'desc'])}}>
                                             <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -56,10 +56,10 @@
                                 <div class="d-flex align-items-center">
                                     <span>Title</span>
                                     <div class="sort ml-2">
-                                        <a href = {{route('admin.airport.index',['order'=>'title','sort'=>'asc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'airports.title','sort'=>'asc'])}}>
                                             <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
                                         </a>
-                                        <a href = {{route('admin.airport.index',['order'=>'title','sort'=>'desc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'airports.title','sort'=>'desc'])}}>
                                             <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -70,10 +70,10 @@
                                 <div class="d-flex align-items-center">
                                     <span>Country</span>
                                     <div class="sort ml-2">
-                                        <a href = {{route('admin.airport.index',['order'=>'country_id','sort'=>'asc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'airport_infos.country_id','sort'=>'asc'])}}>
                                             <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
                                         </a>
-                                        <a href = {{route('admin.airport.index',['order'=>'country_id','sort'=>'desc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'airport_infos.country_id','sort'=>'desc'])}}>
                                             <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -83,10 +83,10 @@
                                 <div class="d-flex align-items-center">
                                     <span>ICAO</span>
                                     <div class="sort ml-2">
-                                        <a href = {{route('admin.airport.index',['order'=>'icao','sort'=>'asc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'airport_infos.icao','sort'=>'asc'])}}>
                                             <i class="fa fa-arrow-up fs-6" aria-hidden="true"></i>
                                         </a>
-                                        <a href = {{route('admin.airport.index',['order'=>'icao','sort'=>'desc'])}}>
+                                        <a href = {{route('admin.airport.index',['order'=>'airport_infos.icao','sort'=>'desc'])}}>
                                             <i class="fa fa-arrow-down fs-6" aria-hidden="true"></i>
                                         </a>
                                     </div>

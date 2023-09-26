@@ -95,7 +95,7 @@
                         <label for="exampleInputEmail1">Country</label>
                         <select class="form-control form-control" id="type" name="info[country_id]">
                             @foreach($countries as $country)
-                                <option value="{{ $country->id }}" {{ $country->id == ( $airport->country_id ?? old("country_id") ) ? 'selected' : '' }}>
+                                <option value="{{ $country->id }}" {{ $country->id == ( $airport->info->country_id ?? old("country_id") ) ? 'selected' : '' }}>
                                     {{ $country->name }}-{{$country->code}}
                                 </option>
                             @endforeach

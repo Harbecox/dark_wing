@@ -48,7 +48,7 @@ class AirportController extends Controller
         $airport->description = view('components.airport-description',['airport' => $airport])->render();
         $airport->save();
 
-        return redirect()->route('admin.airport.index')
+        return redirect()->route('admin.airport.edit',$airport->id)
             ->with('success','Airport has been created successfully.');
     }
 
