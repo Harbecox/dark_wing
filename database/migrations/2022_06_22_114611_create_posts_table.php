@@ -14,7 +14,7 @@ return new class extends Migration
             $table->longtext('context');
             $table->text('intro');
             $table->string('meta_title')->nullable();;
-            $table->string('meta_description')->nullable();;
+            $table->string('meta_description',1024)->nullable();;
             $table->string('seo_url');
             $table->boolean('enabled')->default(true);
             $table->timestamps();
