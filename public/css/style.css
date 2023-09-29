@@ -1154,7 +1154,7 @@ body.preloader_show .preloader-wrapper {
 }
 
 .airport_map {
-  margin: 100px 0 50px;
+  margin: 125px 0 50px;
 }
 
 .airports_search {
@@ -1264,5 +1264,5 @@ body.preloader_show .preloader-wrapper {
 }
 .airport_map .map_text {
   position: absolute;
-  top: 50px;
+  top: -50px;
 }

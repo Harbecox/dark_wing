@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="/css/responsive.css">
     @livewireStyles
 </head>
-<body style="background-image: url('/image/bggg.png')" class="preloader_show">
+<body style="background-image: url(@yield('body_bg','/image/bggg.png'))" class="preloader_show">
 <div class="preloader-wrapper">
     <div class="circle-loader">
         <div class="circle circle_four"></div>

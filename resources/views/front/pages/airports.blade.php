@@ -1,5 +1,7 @@
 @extends('layouts.front')
-
+@section('body_bg')
+    'image/bg2.png'
+@endsection
 @section('title')
     Catering for Private jets around the world
 @endsection
