@@ -151,6 +151,9 @@
 }
 
 @media only screen and (max-width: 995px) {
+    .map_text{
+        transform: translateY(-80px);
+    }
     .main_wrapper {
         margin-top: 0;
     }

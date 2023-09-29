@@ -1406,25 +1406,27 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 col-12 p-0">
-                <div class="airport_table">
-                    <div class="table_body">
-                        <div class="table_header d-flex">
-                            <div class="header_cell">ICAO</div>
-                            <div class="header_cell">IATA</div>
-                            <div class="header_cell">Airport Name</div>
-                            <div class="header_cell">City</div>
-                            <div class="header_cell">Country</div>
-                        </div>
-                        @foreach($airports as $airport)
-                            <div class="row_div" style="cursor: pointer" onclick="location.href='/airports/{{ $airport->slug }}'">
-                                <div class="table_cell">{{ $airport->icao }}</div>
-                                <div class="table_cell">{{ $airport->iata }}</div>
-                                <div class="table_cell">{{ $airport->title }}</div>
-                                <div class="table_cell">{{ $airport->city }}</div>
-                                <div class="table_cell">{{ $countries->where("id",$airport->country_id)->first()->name  }}</div>
+                <div style="max-width: 100%; overflow-x: auto">
+                    <div class="airport_table">
+                        <div class="table_body">
+                            <div class="table_header d-flex">
+                                <div class="header_cell">ICAO</div>
+                                <div class="header_cell">IATA</div>
+                                <div class="header_cell">Airport Name</div>
+                                <div class="header_cell">City</div>
+                                <div class="header_cell">Country</div>
                             </div>
-                        @endforeach
+                            @foreach($airports as $airport)
+                                <div class="row_div" style="cursor: pointer" onclick="location.href='/airports/{{ $airport->slug }}'">
+                                    <div class="table_cell">{{ $airport->icao }}</div>
+                                    <div class="table_cell">{{ $airport->iata }}</div>
+                                    <div class="table_cell">{{ $airport->title }}</div>
+                                    <div class="table_cell">{{ $airport->city }}</div>
+                                    <div class="table_cell">{{ $countries->where("id",$airport->country_id)->first()->name  }}</div>
+                                </div>
+                            @endforeach
 
+                        </div>
                     </div>
                 </div>
             </div>
