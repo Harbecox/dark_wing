@@ -1228,6 +1228,12 @@ body.preloader_show .preloader-wrapper {
   line-height: 130% !important;
   color: white !important;
   text-align: justify !important;
+  font-size: 30px !important;
+}
+@media only screen and (max-width: 1400px) {
+  .port_text .port_section .section_main .col-12 {
+    font-size: 24px !important;
+  }
 }
 
 .port_airports_search {

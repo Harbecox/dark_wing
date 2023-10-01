@@ -1468,6 +1468,10 @@ body.preloader_show {
                 line-height: 130%!important;
                 color: white!important;
                 text-align: justify!important;
+                font-size: 30px!important;
+                @media only screen and (max-width: 1400px){
+                    font-size: 24px!important;
+                }
             }
         }
 
