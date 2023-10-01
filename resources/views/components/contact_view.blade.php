@@ -1,4 +1,4 @@
-<div class="contact">
+<div class="contact" id="contacts">
     <div class="container">
         <div class="simvol_title d-flex flex-column align-items-center">
             <div class="simvol_image"><img src="/image/simvol.png"></div>

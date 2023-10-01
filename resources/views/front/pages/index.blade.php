@@ -45,9 +45,10 @@
                                     <div class="d-flex flex-column align-items-center pb-5 pb-lg-0">
                                         <h2 class="fw-normal text-white lh-1 text-uppercase">2</h2>
                                         <h6 class="fw-normal text-white lh-sm " style="letter-spacing: -0.56px;">REQUEST & CONFIRM QUOTE</h6>
-                                        <p class="fw-normal text-gray-4 lh-sm fs-22 text-center px-5 px-lg-0">contact us directly via email
-                                            <a class="fw-bold" href="#">order@darkwinginflight.com</a> or
-                                            WhatsApp <a class="fw-bold" href="#">+33638888695</a></p>
+                                        <p class="fw-normal text-gray-4 lh-sm fs-22 text-center px-5 px-lg-0">
+                                            <a href="#contacts">click here to contact us</a>
+                                            <a class="fw-bold" href="mailto:order@darkwinginflight.com">order@darkwinginflight.com</a> or
+                                            WhatsApp <a class="fw-bold" href="https://api.whatsapp.com/send?phone=33638888695">+33638888695</a></p>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4">

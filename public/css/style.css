@@ -1132,6 +1132,7 @@ body.preloader_show .preloader-wrapper {
 .airport_table .table_body .row_div {
   width: 100%;
   display: flex;
+  cursor: pointer;
 }
 .airport_table .table_body .row_div .table_cell {
   text-align: center;
@@ -1223,6 +1224,10 @@ body.preloader_show .preloader-wrapper {
 }
 .port_text .port_section .section_main .col-12 {
   margin-bottom: 40px;
+  font-weight: 400 !important;
+  line-height: 130% !important;
+  color: white !important;
+  text-align: justify !important;
 }
 
 .port_airports_search {

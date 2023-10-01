@@ -1346,6 +1346,7 @@ body.preloader_show {
         .row_div{
             width: 100%;
             display: flex;
+            cursor: pointer;
             .table_cell {
                 text-align: center;
                 color: #B9BFC6;
@@ -1463,6 +1464,10 @@ body.preloader_show {
 
             .col-12 {
                 margin-bottom: 40px;
+                font-weight: 400!important;
+                line-height: 130%!important;
+                color: white!important;
+                text-align: justify!important;
             }
         }
 
