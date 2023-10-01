@@ -1222,7 +1222,7 @@ body.preloader_show .preloader-wrapper {
   color: white;
   text-align: justify;
 }
-.port_text .port_section .section_main .col-12 {
+.port_text .port_section .section_main .col-12, .port_text .port_section .section_main .col-12 span, .port_text .port_section .section_main .col-12 p {
   margin-bottom: 40px;
   font-weight: 400 !important;
   line-height: 130% !important;
@@ -1231,7 +1231,7 @@ body.preloader_show .preloader-wrapper {
   font-size: 30px !important;
 }
 @media only screen and (max-width: 1400px) {
-  .port_text .port_section .section_main .col-12 {
+  .port_text .port_section .section_main .col-12, .port_text .port_section .section_main .col-12 span, .port_text .port_section .section_main .col-12 p {
     font-size: 24px !important;
   }
 }
