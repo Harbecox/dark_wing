@@ -23,7 +23,7 @@
                         CATERING</h4>
                     <div class="d-flex align-items-center">
                         <div class="circle">
-                            <img src="{{ Storage::url($airport->info->country->flag) }}">
+                            <img src="/flags/{{ str($airport->info->country->code)->lower() }}.svg">
                         </div>
                         <h1 class="fw-normal lh-1 text-white text-uppercase tenor"
                             style="letter-spacing: -0.08em;">{{ $airport->title }} ({{ $airport->info->icao }}, {{ $airport->info->iata }})</h1>
