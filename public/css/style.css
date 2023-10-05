@@ -1230,7 +1230,6 @@ body.preloader_show .preloader-wrapper {
   text-align: justify !important;
   font-size: 30px !important;
   font-family: inherit !important;
-  padding: 0 !important;
 }
 @media only screen and (max-width: 1400px) {
   .port_text .port_section .section_main .col-12, .port_text .port_section .section_main .col-12 span, .port_text .port_section .section_main .col-12 p {
