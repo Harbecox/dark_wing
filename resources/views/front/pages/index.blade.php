@@ -2,13 +2,13 @@
 @section('title') Dark Wing inflight luxury catering around the world @endsection
 @section('description') We Provide luxury catering for private jets around the world. Best catering solution on the market @endsection
 @section('header_bg')
-    'image/БГ-.jpg'
+    'image/БГ-.webp'
 @endsection
 
 @section("header_content")
     <div class="luxury position-relative">
         <div class="container position-relative" style="min-height: 760px">
-            <div class="header_map" style="background-image: url('image/10.png');">
+            <div class="header_map" style="background-image: url('image/10.webp');">
             </div>
             <div class="position-absolute luxury_title">
                 <h1 class="fw-normal lh-1 text-white text-uppercase text-center tenor">{{ $texts['index']['h1'] }}</h1>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about" style="background-image: url('/image/about_bg.jpg')">
+                <div class="about" style="background-image: url('/image/about_bg.webp')">
                     <div class="container">
                         <div class="about_main">
                             <div class="simvol_title d-flex flex-column align-items-center">
@@ -77,7 +77,7 @@
                             </div>
                             <p class="p_lg fw-normal text-gray-5 lh-sm text-center pt-3">{!! $texts['index']['index about'] !!}</p>
                             <div class="position-relative about_image">
-                                <img src="/image/bg_2.png">
+                                <img src="/image/bg_2.webp">
                                 <p class="p_sm fw-normal lh-sm text-white position-absolute"
                                    style="bottom: 160px; left: 130px">Quality</p>
                                 <p class="p_sm fw-normal lh-sm text-white position-absolute"

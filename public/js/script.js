@@ -1,10 +1,10 @@
-
-
-window.onload = function (){
-    document.querySelector("body").classList.remove("preloader_show");
-}
-
-
+//
+//
+// window.onload = function (){
+//     document.querySelector("body").classList.remove("preloader_show");
+// }
+//
+//
 
 document.querySelectorAll(".fake_input").forEach(function (fake_input) {
   let input = fake_input.querySelector("input") || fake_input.querySelector("textarea");

@@ -4,6 +4,19 @@
 @section('content')
     <div class="contact_main" style="margin-bottom: 100px">
         <div class="container">
+            <p class=" mb-5 p_md fw-bold lh-sm text-uppercase text-white text_back mt-0 mt-lg-5 d-flex justify-content-center"
+               style="opacity: 0.4" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <a itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"
+                   href="{{route('index')}}" style="margin-right: 5px;">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1"/>
+                </a>
+                <span style="margin: 0 5px;">/</span>
+                <span style="margin-left: 5px;" itemprop="itemListElement" itemscope
+                      itemtype="http://schema.org/ListItem">
+                    <span itemprop="name">CONTACT US</span>
+                </span>
+            </p>
             <h1 class="fw-normal lh-1 text-white text-uppercase  text-center tenor" style="letter-spacing: -0.08em;">CONTACT US</h1>
             <p class="p_md fw-normal lh-sm text-white text-center pt-3 pb-1">Fill in the form below or reach out to us
                 using</p>

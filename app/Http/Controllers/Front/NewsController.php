@@ -27,10 +27,10 @@ class NewsController extends Controller
         return view('front.pages.news',$data);
     }
 
-    public function show($id){
+    public function show($slug){
         $data['texts'] = $this->texts;
         $data['posts'] = Post::query()->limit(9)->get();
-        $data['post'] = Post::findOrFail($id);
+        $data['post'] = Post::query()->where("seo_url",$slug)->firstOrFail();
         return view('front.pages.post', $data);
     }
 }

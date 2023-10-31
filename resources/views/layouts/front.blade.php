@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="/css/responsive.css">
     @livewireStyles
 </head>
-<body style="background-image: url(@yield('body_bg','/image/bggg.png'))" class="preloader_show">
+<body style="background-image: url(@yield('body_bg','/image/bggg.webp'))">
 <div class="preloader-wrapper">
     <div class="circle-loader">
         <div class="circle circle_four"></div>
@@ -42,7 +42,7 @@
     </div>
 </div>
 @if(\Request::route()->getName() == "index" || \Illuminate\Support\Facades\Route::is("show_airport"))
-    <div class="bg_header @if(\Illuminate\Support\Facades\Route::is("show_airport")) airport_show @endif" style="background-image: url(@yield('header_bg','/image/bggg.png')">
+    <div class="bg_header @if(\Illuminate\Support\Facades\Route::is("show_airport")) airport_show @endif" style="background-image: url(@yield('header_bg','/image/bggg.webp')">
         <div class="header d-flex justify-content-between align-items-center">
             <div class="logo">
                 <a href="{{route('index')}}"><img src="/image/logo.png"></a>

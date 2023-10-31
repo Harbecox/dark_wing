@@ -19,6 +19,7 @@ class AirportSeeder extends Seeder
      */
     public function run()
     {
+        return 0;
         $countries = Country::all()->keyBy("code")->map(function ($co){
             return $co->id;
         });

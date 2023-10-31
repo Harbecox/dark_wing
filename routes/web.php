@@ -23,7 +23,7 @@ Route::get('/news', [\App\Http\Controllers\Front\NewsController::class,"index"])
 
 Route::get('/airports', [\App\Http\Controllers\Front\AirportsController::class,"index"])->name("all_airports");
 
-Route::get('/news/{id}', [\App\Http\Controllers\Front\NewsController::class,"show"])->name("show_news");
+Route::get('/news/{slug}', [\App\Http\Controllers\Front\NewsController::class,"show"])->name("show_news");
 
 Route::get('/airports/{slug}', [\App\Http\Controllers\Front\AirportsController::class,"show"])->name("show_airport");
 

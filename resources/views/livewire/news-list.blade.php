@@ -8,7 +8,7 @@
                         <span class="span_sm fw-normal lh-sm text-gray-7">{{$post->created_at}}</span>
                         <p  style="height: 72px" class="p_lg fw-normal lh-1 text-white py-2">{{$post->title}}</p>
                         <div style="height: 160px; overflow: hidden;display: inline-block" class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</div>
-                        <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="{{ route("show_news",$post->id) }}">Read more</a></p>
+                        <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="{{ route("show_news",$post->seo_url) }}">Read more</a></p>
                     </div>
                 </div>
             </div>
