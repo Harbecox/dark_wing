@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Airport;
 use App\Models\Post;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Sitemap\SitemapGenerator;
 use Spatie\Sitemap\Tags\Url;
 
@@ -39,7 +40,11 @@ class SiteMap extends Command
         foreach (Post::all() as $a){
             $sm = $sm->add(Url::create('https://darkwinginflight.com/news/'.$a->seo_url)->setPriority(0.8));
         }
+        try{
+            unlink("public/sitemap.xml");
+        }catch (\Exception $e){
 
+        }
         $sm->writeToFile("public/sitemap.xml");
         return 0;
     }

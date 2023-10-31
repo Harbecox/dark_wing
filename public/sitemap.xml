@@ -11,12 +11,27 @@
         <priority>0.8</priority>
             </url>
     <url>
+        <loc>https://darkwinginflight.com/contact</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
         <loc>https://darkwinginflight.com/partnership</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://darkwinginflight.com/contact</loc>
+        <loc>https://darkwinginflight.com/register</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>https://darkwinginflight.com/order</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>https://darkwinginflight.com/login</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
@@ -26,7 +41,12 @@
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://darkwinginflight.com/login</loc>
+        <loc>https://darkwinginflight.com/password/reset</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>https://darkwinginflight.com/news/VIP%20Catering%20Private%20Jets%20TNCM%20SXM%20and%20VRMM%20MLE</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
@@ -41,12 +61,12 @@
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://darkwinginflight.com/news/VIP%20Catering%20Private%20Jets%20TNCM%20SXM%20and%20VRMM%20MLE</loc>
+        <loc>https://darkwinginflight.com/news/Dark%20Wing%20Inflight%20VIsion%20of%20Luxury%20Catering%20for%20Private%20Jets%20around%20the%20world</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://darkwinginflight.com/news/Dark%20Wing%20Inflight%20VIsion%20of%20Luxury%20Catering%20for%20Private%20Jets%20around%20the%20world</loc>
+        <loc>https://darkwinginflight.com/news/Cannes%20Film%20Festival%20and%20Private%20Jet%20Aviation%20with%20Dark%20Wing%20Inflight</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
@@ -66,27 +86,7 @@
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://darkwinginflight.com/news/Cannes%20Film%20Festival%20and%20Private%20Jet%20Aviation%20with%20Dark%20Wing%20Inflight</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>https://darkwinginflight.com/password/reset</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>https://darkwinginflight.com/register</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
         <loc>https://darkwinginflight.com/news/Dark%20Wing%20inflight%20vip%20catering%20and%20the%20history%20name</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>https://darkwinginflight.com/order</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
