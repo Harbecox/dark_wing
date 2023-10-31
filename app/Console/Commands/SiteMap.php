@@ -40,7 +40,7 @@ class SiteMap extends Command
             $sm = $sm->add(Url::create('https://darkwinginflight.com/news/'.$a->seo_url)->setPriority(0.8));
         }
 
-        $sm->writeToFile("sitemap.xml");
+        $sm->writeToFile("public/sitemap.xml");
         return 0;
     }
 }
