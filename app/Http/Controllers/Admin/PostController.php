@@ -59,7 +59,7 @@ class PostController extends Controller
 
         if($request->hasFile('image')){
             $request->validate([
-                'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                'image' => 'required|image',
             ]);
             $post->image = $request->file('image')->store('images');
         }

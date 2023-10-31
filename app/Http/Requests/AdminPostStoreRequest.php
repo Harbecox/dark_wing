@@ -19,7 +19,7 @@ class AdminPostStoreRequest extends FormRequest
             'intro' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'required|image',
         ];
     }
 }
