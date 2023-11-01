@@ -35,6 +35,10 @@ Route::get('download_order/{order}', [App\Http\Controllers\Front\UserAccountCont
 
 Route::get('upload_image', [App\Http\Controllers\Front\UserAccountController::class, 'upload_image'])->name('image.upload');
 
+Route::get('get_menu', [App\Http\Controllers\Front\IndexController::class, 'get_menu'])->name('getMenu');
+
+Route::get('get_posts', [App\Http\Controllers\Front\IndexController::class, 'get_posts'])->name('getPosts');
+
 Route::prefix('personal')->middleware("auth")->group(function (){
 
     Route::get('account', [App\Http\Controllers\Front\UserAccountController::class, 'index'])->name('account');

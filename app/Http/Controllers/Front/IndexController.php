@@ -26,8 +26,6 @@ class IndexController extends Controller
 
     public function index(){
         $data['airports'] = Airport::query()->limit(10)->get();
-        $data['posts'] = Post::query()->limit(10)->get();
-        $data['menu_images'] = Photo::query()->orderBy("position")->get();
         $data['texts'] = $this->texts;
         return view('front.pages.index',$data);
     }
@@ -49,5 +47,16 @@ class IndexController extends Controller
     public function contact(){
         $data['texts'] = $this->texts;
         return view('front.pages.contact',$data);
+    }
+    public function get_menu()
+    {
+        $data['menu_images'] = Photo::query()->orderBy("position")->get();
+        return view('front.pages.menu',$data)->render();
+    }
+
+    public function get_posts()
+    {
+        $data['posts'] = Post::query()->limit(10)->get();
+        return view('front.pages.newsCont',$data)->render();
     }
 }
