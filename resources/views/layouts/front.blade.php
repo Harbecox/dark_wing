@@ -12,9 +12,10 @@
 
     <link rel="icon" type="image/x-icon" href="/favico.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/lib.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/css/first.css">
+    <link async rel="stylesheet" type="text/css" href="/css/lib.css">
+    <link async rel="stylesheet" type="text/css" href="/css/style.css">
+    <link async rel="stylesheet" type="text/css" href="/css/responsive.css">
     @livewireStyles
 </head>
 <body style="background-image: url(@yield('body_bg','/image/bggg.webp'))">
