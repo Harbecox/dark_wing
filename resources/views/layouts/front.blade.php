@@ -13,9 +13,9 @@
     <link rel="icon" type="image/x-icon" href="/favico.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/first.css">
-    <link defer rel="stylesheet" type="text/css" href="/css/lib.css">
-    <link defer rel="stylesheet" type="text/css" href="/css/style.css">
-    <link defer rel="stylesheet" type="text/css" href="/css/responsive.css">
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css" href="/css/lib.css">
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css" href="/css/style.css">
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css" href="/css/responsive.css">
     @livewireStyles
 </head>
 <body style="background-image: url(@yield('body_bg','/image/bggg.webp'))">
