@@ -142,12 +142,12 @@
                         </div>
                         <p class="p_lg fw-normal text-gray-5 lh-sm text-center our-partners-index">{!! $texts['index']['OUR PARTNERS'] !!}</p>
                         <div class="row">
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_1.png"  width="auto" height="auto"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_2.png"  width="auto" height="auto"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_3.png"  width="auto" height="auto"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_4.png"  width="auto" height="auto"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_5.png"  width="auto" height="auto"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_6.png"  width="auto" height="auto"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100 h-100" src="image/hotel_1.png"  width="200px" height="200px"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100 h-100" src="image/hotel_2.png"  width="200px" height="200px"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100 h-100" src="image/hotel_3.png"  width="200px" height="200px"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100 h-100" src="image/hotel_4.png"  width="200px" height="200px"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100 h-100" src="image/hotel_5.png"  width="200px" height="200px"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100 h-100" src="image/hotel_6.png"  width="200px" height="200px"></div>
                         </div>
                     </div>
                 </div>
