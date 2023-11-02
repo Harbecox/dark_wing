@@ -29,7 +29,7 @@
                 <div class="container" style="margin-bottom: 120px">
                     <div>
                         <div class="simvol_title d-flex flex-column align-items-center">
-                            <div class="simvol_image"><img src="/image/simvol.png"  width="auto" height="auto"></div>
+                            <div class="simvol_image"><img src="/image/simvol.png"></div>
                             <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">AIRPORT SEARCH</h2>
                         </div>
                         <div class="airport_search_steps" style="background-image: url(/image/fon.svg)">
@@ -77,7 +77,7 @@
                             </div>
                             <p class="p_lg fw-normal text-gray-5 lh-sm text-center pt-3">{!! $texts['index']['index about'] !!}</p>
                             <div class="position-relative about_image">
-                                <img src="/image/bg_2.webp" width="auto" height="auto">
+                                <img src="/image/bg_2.webp" class="w-100 h-100" width="1200px" height="300px">
                                 <p class="p_sm fw-normal lh-sm text-white position-absolute"
                                    style="bottom: 160px; left: 130px">Quality</p>
                                 <p class="p_sm fw-normal lh-sm text-white position-absolute"
