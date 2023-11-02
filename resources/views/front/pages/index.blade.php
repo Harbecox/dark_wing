@@ -8,7 +8,7 @@
 @section("header_content")
     <div class="luxury position-relative">
         <div class="container position-relative" style="min-height: 760px">
-            <div class="header_map" style="background-image: url('image/10.webp');">
+            <div class="header_map header_map_home">
             </div>
             <div class="position-absolute luxury_title">
                 <h1 class="fw-normal lh-1 text-white text-uppercase text-center tenor">{{ $texts['index']['h1'] }}</h1>
