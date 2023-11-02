@@ -48,7 +48,7 @@
     <div class="bg_header @if(\Illuminate\Support\Facades\Route::is("show_airport")) airport_show @endif" style="background-image: url(@yield('header_bg','/image/bggg.webp')">
         <div class="header d-flex justify-content-between align-items-center">
             <div class="logo">
-                <a href="{{route('index')}}"><img src="/image/logo.png"></a>
+                <a href="{{route('index')}}"><img src="/image/logo.png" width="140px" height="80px" class="w-100 h-100" ></a>
             </div>
             <div class="header_menu">
                 <ul class="navbar">
@@ -59,7 +59,13 @@
                 </ul>
             </div>
             <div class="mobile_menu">
-                <img src="/image/menu.svg" style="margin-right: 5px">
+                <div style="display: inline-block;margin-right: 5px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 12H20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 6H20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 18H20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </div>
             <div class="mobile_menu_open text-start">
                 <ul>
