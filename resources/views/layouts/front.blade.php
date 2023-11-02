@@ -225,8 +225,8 @@
     @endforeach
 @endif
 @livewireScripts
-{{--<script src="/js/jquery-3.6.0.min.js"></script>--}}
-{{--<script src="/js/owl.carousel.min.js"></script>--}}
-{{--<script src="/js/script.js"></script>--}}
+<script defer src="/js/jquery-3.6.0.min.js"></script>
+<script defer src="/js/owl.carousel.min.js"></script>
+<script defer src="/js/script.js"></script>
 </body>
 </html>
