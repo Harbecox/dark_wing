@@ -45,57 +45,50 @@ if(ai && ai.querySelector(".search_close")){
 
 
 
-$('.owl-city').owlCarousel({
-  loop:true,
-  margin:31,
-  nav:true,
-  responsive:{
-    0:{
-      items:2,
-      nav:false,
-      dots:false
-    },
-    600:{
-      items:2,
-      nav:false,
-      dots:false
-    },
-    1200:{
-      items:3,
-      nav:false,
-      dots:false
-    },
-    1400:{
-      items:4
-    }
-  },
-  navText: ["<img src='/image/chevron-left.svg'>","<img src='/image/chevron-right.svg'>"],
-})
+// $('.owl-city').owlCarousel({
+//   loop:true,
+//   margin:31,
+//   nav:true,
+//   responsive:{
+//     0:{
+//       items:2,
+//       nav:false,
+//       dots:false
+//     },
+//     600:{
+//       items:2,
+//       nav:false,
+//       dots:false
+//     },
+//     1200:{
+//       items:3,
+//       nav:false,
+//       dots:false
+//     },
+//     1400:{
+//       items:4
+//     }
+//   },
+//   navText: ["<img src='/image/chevron-left.svg'>","<img src='/image/chevron-right.svg'>"],
+// })
+//
+// let owl_text = $('.owl-text').owlCarousel({
+//   loop:true,
+//   margin:0,
+//   nav:true,
+//   responsive:{
+//     0:{
+//       items:1
+//     },
+//     600:{
+//       items:1
+//     },
+//     1000:{
+//       items:1
+//     }
+//   }
+// })
 
-let owl_text = $('.owl-text').owlCarousel({
-  loop:true,
-  margin:0,
-  nav:true,
-  responsive:{
-    0:{
-      items:1
-    },
-    600:{
-      items:1
-    },
-    1000:{
-      items:1
-    }
-  }
-})
-
-if(document.querySelector(".about_main .about_image")){
-    document.querySelector(".about_main .about_image").querySelectorAll("p").forEach(function (p,i){
-        p.addEventListener("click",function (){
-            owl_text.trigger('to.owl.carousel', i)
-        })
-    })
-}
 
 
 let menu = document.querySelector(".mobile_menu_open");
@@ -163,74 +156,94 @@ if(airport_map){
         })
     })
 }
+//
+// let menu_show = false;
+//
+// window.onscroll = function() {
+//     if (window.scrollY >= 1000 && !menu_show) {
+//         menu_show = true;
+//         $.ajax({
+//             type:'get',
+//             url:'/get_menu',
+//             success:function(data) {
+//                 document.getElementById('menu').innerHTML = data;
+//                 $('.owl-menu-cards').owlCarousel({
+//                     stagePadding: 67,
+//                     loop:true,
+//                     margin:22,
+//                     nav:true,
+//                     dots: false,
+//                     navText: ["<img src='/image/chevron-l.svg'>","<img src='/image/chevron-r.svg'>"],
+//                     responsive:{
+//                         0:{
+//                             items:1,
+//                             margin:0,
+//                             stagePadding: 0,
+//                         },
+//                         600:{
+//                             items:1,
+//                             margin:0,
+//                             stagePadding: 0,
+//                         },
+//                         1000:{
+//                             items:2
+//                         },
+//                         1400:{
+//                             items:3
+//                         }
+//                     }
+//                 })
+//             }
+//         });
+//         $.ajax({
+//             type:'get',
+//             url:'/get_posts',
+//             success:function(data) {
+//                 document.getElementById('news').innerHTML = data;
+//                 $('.owl-info-cards').owlCarousel({
+//                     loop:true,
+//                     margin:31,
+//                     nav:true,
+//                     responsiveClass:true,
+//                     responsive:{
+//                         0:{
+//                             items:1,
+//                             nav:false,
+//                             dots:false
+//                         },
+//                         600:{
+//                             items:1,
+//                             nav:false,
+//                             dots:false
+//                         },
+//                         1000:{
+//                             items:3
+//                         }
+//                     },
+//                     navText: ["<img src='/image/chevron-left.svg'>","<img src='/image/chevron-right.svg'>"],
+//                 })
+//             }
+//         });
+//
+//     }
+// };
 
-let menu_show = false;
 
-window.onscroll = function() {
-    if (window.scrollY >= 1000 && !menu_show) {
-        menu_show = true;
-        $.ajax({
-            type:'get',
-            url:'/get_menu',
-            success:function(data) {
-                document.getElementById('menu').innerHTML = data;
-                $('.owl-menu-cards').owlCarousel({
-                    stagePadding: 67,
-                    loop:true,
-                    margin:22,
-                    nav:true,
-                    dots: false,
-                    navText: ["<img src='/image/chevron-l.svg'>","<img src='/image/chevron-r.svg'>"],
-                    responsive:{
-                        0:{
-                            items:1,
-                            margin:0,
-                            stagePadding: 0,
-                        },
-                        600:{
-                            items:1,
-                            margin:0,
-                            stagePadding: 0,
-                        },
-                        1000:{
-                            items:2
-                        },
-                        1400:{
-                            items:3
-                        }
-                    }
-                })
-            }
-        });
-        $.ajax({
-            type:'get',
-            url:'/get_posts',
-            success:function(data) {
-                document.getElementById('news').innerHTML = data;
-                $('.owl-info-cards').owlCarousel({
-                    loop:true,
-                    margin:31,
-                    nav:true,
-                    responsiveClass:true,
-                    responsive:{
-                        0:{
-                            items:1,
-                            nav:false,
-                            dots:false
-                        },
-                        600:{
-                            items:1,
-                            nav:false,
-                            dots:false
-                        },
-                        1000:{
-                            items:3
-                        }
-                    },
-                    navText: ["<img src='/image/chevron-left.svg'>","<img src='/image/chevron-right.svg'>"],
-                })
-            }
-        });
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    loop: true,
+});
 
-    }
-};
+if(document.querySelector(".about_main .about_image")){
+    let buttons = document.querySelectorAll(".text_swiper .swiper-pagination-bullet");
+    console.log(buttons);
+    document.querySelector(".about_main .about_image").querySelectorAll("p").forEach(function (p,i){
+        p.addEventListener("click",function (){
+            buttons[i].click()
+        })
+    })
+}

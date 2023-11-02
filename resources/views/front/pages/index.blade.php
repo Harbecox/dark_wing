@@ -91,42 +91,35 @@
                                 <p class="p_sm fw-normal lh-sm text-white position-absolute"
                                    style="top: 130px; right: 285px">Billing</p>
                             </div>
-                            <div class="owl-text owl-carousel owl-theme mt-3 mt-lg-0">
-                                <div class="item">
-                                    <div>
-                                        <h4 class="fw-normal lh-sm text-white text-center">Quality</h4>
-                                        <p class="p_md fw-normal lh-sm text-center text-gray-3 pt-3">{!! $texts['index']['Quality'] !!}</p>
+                            <div class="container">
+                                <div class="swiper text_swiper mySwiper mt-3 mt-lg-0">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide text-white">
+                                            <h4 class="fw-normal lh-sm text-white text-center">Quality</h4>
+                                            <p class="p_md fw-normal lh-sm text-center text-gray-3 pt-3">{!! $texts['index']['Quality'] !!}</p>
+                                        </div>
+                                        <div class="swiper-slide text-white">
+                                            <h4 class="fw-normal lh-sm text-white text-center">Cost</h4>
+                                            <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Cost'] !!}</p>
+                                        </div>
+                                        <div class="swiper-slide text-white">
+                                            <h4 class="fw-normal lh-sm text-white text-center">Network</h4>
+                                            <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Network'] !!}</p>
+                                        </div>
+                                        <div class="swiper-slide text-white">
+                                            <h4 class="fw-normal lh-sm text-white text-center">Analysis</h4>
+                                            <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Analysis'] !!}</p>
+                                        </div>
+                                        <div class="swiper-slide text-white">
+                                            <h4 class="fw-normal lh-sm text-white text-center">Team</h4>
+                                            <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Team'] !!}</p>
+                                        </div>
+                                        <div class="swiper-slide text-white">
+                                            <h4 class="fw-normal lh-sm text-white text-center">Billing</h4>
+                                            <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Billing'] !!}</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div>
-                                        <h4 class="fw-normal lh-sm text-white text-center">Cost</h4>
-                                        <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Cost'] !!}</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div>
-                                        <h4 class="fw-normal lh-sm text-white text-center">Network</h4>
-                                        <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Network'] !!}</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div>
-                                        <h4 class="fw-normal lh-sm text-white text-center">Analysis</h4>
-                                        <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Analysis'] !!}</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div>
-                                        <h4 class="fw-normal lh-sm text-white text-center">Team</h4>
-                                        <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Team'] !!}</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div>
-                                        <h4 class="fw-normal lh-sm text-white text-center">Billing</h4>
-                                        <p class="p_md fw-normal lh-sm text-center text-gray-3">{!! $texts['index']['Billing'] !!}</p>
-                                    </div>
+                                    <div class="swiper-pagination"></div>
                                 </div>
                             </div>
                         </div>

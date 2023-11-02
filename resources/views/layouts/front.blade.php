@@ -225,8 +225,13 @@
     @endforeach
 @endif
 @livewireScripts
-<script defer src="/js/jquery-3.6.0.min.js"></script>
-<script defer src="/js/owl.carousel.min.js"></script>
-<script defer src="/js/script.js"></script>
+{{--<script src="/js/jquery-3.6.0.min.js"></script>--}}
+{{--<script src="/js/owl.carousel.min.js"></script>--}}
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>
