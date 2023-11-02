@@ -29,7 +29,7 @@
                 <div class="container" style="margin-bottom: 120px">
                     <div>
                         <div class="simvol_title d-flex flex-column align-items-center">
-                            <div class="simvol_image"><img src="/image/simvol.png"></div>
+                            <div class="simvol_image"><img src="/image/simvol.png"  width="auto" height="auto"></div>
                             <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">AIRPORT SEARCH</h2>
                         </div>
                         <div class="airport_search_steps" style="background-image: url(/image/fon.svg)">
@@ -72,12 +72,12 @@
                     <div class="container">
                         <div class="about_main">
                             <div class="simvol_title d-flex flex-column align-items-center">
-                                <div class="simvol_image"><img src="/image/simvol.png"></div>
+                                <div class="simvol_image"><img src="/image/simvol.png"  width="auto" height="auto"></div>
                                 <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">About us</h2>
                             </div>
                             <p class="p_lg fw-normal text-gray-5 lh-sm text-center pt-3">{!! $texts['index']['index about'] !!}</p>
                             <div class="position-relative about_image">
-                                <img src="/image/bg_2.webp">
+                                <img src="/image/bg_2.webp" width="auto" height="auto">
                                 <p class="p_sm fw-normal lh-sm text-white position-absolute"
                                    style="bottom: 160px; left: 130px">Quality</p>
                                 <p class="p_sm fw-normal lh-sm text-white position-absolute"
@@ -142,12 +142,12 @@
                         </div>
                         <p class="p_lg fw-normal text-gray-5 lh-sm text-center our-partners-index">{!! $texts['index']['OUR PARTNERS'] !!}</p>
                         <div class="row">
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_1.png"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_2.png"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_3.png"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_4.png"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_5.png"></div>
-                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_6.png"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_1.png"  width="auto" height="auto"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_2.png"  width="auto" height="auto"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_3.png"  width="auto" height="auto"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_4.png"  width="auto" height="auto"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_5.png"  width="auto" height="auto"></div>
+                            <div class="col-lg-2 col-6 align-items-center"><img class="opacity-75 w-100" src="image/hotel_6.png"  width="auto" height="auto"></div>
                         </div>
                     </div>
                 </div>
