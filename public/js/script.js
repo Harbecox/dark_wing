@@ -236,7 +236,7 @@ let menu_show = false;
 // };
 
 
-document.onload = function (){
+window.onload = function (){
     $.ajax({
         type:'get',
         url:'/get_menu',
