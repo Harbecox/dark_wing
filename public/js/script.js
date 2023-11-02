@@ -236,7 +236,7 @@ let menu_show = false;
 // };
 
 
-setTimeout(function (){
+document.onload = function (){
     $.ajax({
         type:'get',
         url:'/get_menu',
@@ -299,4 +299,4 @@ setTimeout(function (){
             })
         }
     });
-},3000);
+}
