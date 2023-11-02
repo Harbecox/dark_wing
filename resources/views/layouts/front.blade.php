@@ -226,7 +226,11 @@
 @endif
 @livewireScripts
 {{--<script src="/js/jquery-3.6.0.min.js"></script>--}}
-{{--<script src="/js/owl.carousel.min.js"></script>--}}
+<script
+    src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+    crossorigin="anonymous"></script>
+<script src="/js/owl.carousel.min.js"></script>
 <script src="/js/script.js"></script>
 </body>
 </html>
