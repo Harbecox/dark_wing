@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <title>@yield("title","Darkwing - Luxury catering around the world")</title>
     <meta name="description" content="@yield("title","We are here to provide you the best quality catering service during your stay and departure")">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{--    <link rel="preconnect" href="https://fonts.googleapis.com">--}}
+{{--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>--}}
 
-    <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Tenor+Sans&display=swap"
-          rel="stylesheet">
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="/fonts/stylesheet.css" rel="stylesheet">
 
     <link rel="icon" type="image/x-icon" href="/favico.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,31 +18,31 @@
     @livewireStyles
 </head>
 <body style="background-image: url(@yield('body_bg','/image/bggg.webp'))">
-<div class="preloader-wrapper">
-    <div class="circle-loader">
-        <div class="circle circle_four"></div>
-        <div class="circle circle_three"></div>
-        <div class="circle circle_two"></div>
-        <div class="circle circle_one"></div>
-        <script>
-            setTimeout(function (){
-                document.querySelector(".circle_one").classList.add("c_animate");
-            },10);
+{{--<div class="preloader-wrapper">--}}
+{{--    <div class="circle-loader">--}}
+{{--        <div class="circle circle_four"></div>--}}
+{{--        <div class="circle circle_three"></div>--}}
+{{--        <div class="circle circle_two"></div>--}}
+{{--        <div class="circle circle_one"></div>--}}
+{{--        <script>--}}
+{{--            setTimeout(function (){--}}
+{{--                document.querySelector(".circle_one").classList.add("c_animate");--}}
+{{--            },10);--}}
 
-            setTimeout(function (){
-                document.querySelector(".circle_two").classList.add("c_animate");
-            },200);
+{{--            setTimeout(function (){--}}
+{{--                document.querySelector(".circle_two").classList.add("c_animate");--}}
+{{--            },200);--}}
 
-            setTimeout(function (){
-                document.querySelector(".circle_three").classList.add("c_animate");
-            },400);
+{{--            setTimeout(function (){--}}
+{{--                document.querySelector(".circle_three").classList.add("c_animate");--}}
+{{--            },400);--}}
 
-            setTimeout(function (){
-                document.querySelector(".circle_four").classList.add("c_animate");
-            },600);
-        </script>
-    </div>
-</div>
+{{--            setTimeout(function (){--}}
+{{--                document.querySelector(".circle_four").classList.add("c_animate");--}}
+{{--            },600);--}}
+{{--        </script>--}}
+{{--    </div>--}}
+{{--</div>--}}
 @if(\Request::route()->getName() == "index" || \Illuminate\Support\Facades\Route::is("show_airport"))
     <div class="bg_header @if(\Illuminate\Support\Facades\Route::is("show_airport")) airport_show @endif" style="background-image: url(@yield('header_bg','/image/bggg.webp')">
         <div class="header d-flex justify-content-between align-items-center">
