@@ -166,137 +166,71 @@ if(airport_map){
 
 let menu_show = false;
 
-// window.onscroll = function() {
-//     if (window.scrollY >= 1000 && !menu_show) {
-//         menu_show = true;
-//         $.ajax({
-//             type:'get',
-//             url:'/get_menu',
-//             success:function(data) {
-//                 document.getElementById('menu').innerHTML = data;
-//                 $('.owl-menu-cards').owlCarousel({
-//                     stagePadding: 67,
-//                     loop:true,
-//                     margin:22,
-//                     nav:true,
-//                     dots: false,
-//                     navText: ["<img src='/image/chevron-l.svg'>","<img src='/image/chevron-r.svg'>"],
-//                     responsive:{
-//                         0:{
-//                             items:1,
-//                             margin:0,
-//                             stagePadding: 0,
-//                         },
-//                         600:{
-//                             items:1,
-//                             margin:0,
-//                             stagePadding: 0,
-//                         },
-//                         1000:{
-//                             items:2
-//                         },
-//                         1400:{
-//                             items:3
-//                         }
-//                     }
-//                 })
-//             }
-//         });
-//         $.ajax({
-//             type:'get',
-//             url:'/get_posts',
-//             success:function(data) {
-//                 document.getElementById('news').innerHTML = data;
-//                 $('.owl-info-cards').owlCarousel({
-//                     loop:true,
-//                     margin:31,
-//                     nav:true,
-//                     responsiveClass:true,
-//                     responsive:{
-//                         0:{
-//                             items:1,
-//                             nav:false,
-//                             dots:false
-//                         },
-//                         600:{
-//                             items:1,
-//                             nav:false,
-//                             dots:false
-//                         },
-//                         1000:{
-//                             items:3
-//                         }
-//                     },
-//                     navText: ["<img src='/image/chevron-left.svg'>","<img src='/image/chevron-right.svg'>"],
-//                 })
-//             }
-//         });
-//
-//     }
-// };
+window.onscroll = function() {
+    if (window.scrollY >= 1000 && !menu_show) {
+        menu_show = true;
+        $.ajax({
+            type:'get',
+            url:'/get_menu',
+            success:function(data) {
+                document.getElementById('menu').innerHTML = data;
+                $('.owl-menu-cards').owlCarousel({
+                    stagePadding: 67,
+                    loop:true,
+                    margin:22,
+                    nav:true,
+                    dots: false,
+                    navText: ["<img src='/image/chevron-l.svg'>","<img src='/image/chevron-r.svg'>"],
+                    responsive:{
+                        0:{
+                            items:1,
+                            margin:0,
+                            stagePadding: 0,
+                        },
+                        600:{
+                            items:1,
+                            margin:0,
+                            stagePadding: 0,
+                        },
+                        1000:{
+                            items:2
+                        },
+                        1400:{
+                            items:3
+                        }
+                    }
+                })
+            }
+        });
+        $.ajax({
+            type:'get',
+            url:'/get_posts',
+            success:function(data) {
+                document.getElementById('news').innerHTML = data;
+                $('.owl-info-cards').owlCarousel({
+                    loop:true,
+                    margin:31,
+                    nav:true,
+                    responsiveClass:true,
+                    responsive:{
+                        0:{
+                            items:1,
+                            nav:false,
+                            dots:false
+                        },
+                        600:{
+                            items:1,
+                            nav:false,
+                            dots:false
+                        },
+                        1000:{
+                            items:3
+                        }
+                    },
+                    navText: ["<img src='/image/chevron-left.svg'>","<img src='/image/chevron-right.svg'>"],
+                })
+            }
+        });
 
-
-// window.onload = function (){
-//     $.ajax({
-//         type:'get',
-//         url:'/get_menu',
-//         success:function(data) {
-//             document.getElementById('menu').innerHTML = data;
-//             $('.owl-menu-cards').owlCarousel({
-//                 stagePadding: 67,
-//                 loop:true,
-//                 margin:22,
-//                 nav:true,
-//                 dots: false,
-//                 navText: ["<img src='/image/chevron-l.svg'>","<img src='/image/chevron-r.svg'>"],
-//                 responsive:{
-//                     0:{
-//                         items:1,
-//                         margin:0,
-//                         stagePadding: 0,
-//                     },
-//                     600:{
-//                         items:1,
-//                         margin:0,
-//                         stagePadding: 0,
-//                     },
-//                     1000:{
-//                         items:2
-//                     },
-//                     1400:{
-//                         items:3
-//                     }
-//                 }
-//             })
-//         }
-//     });
-//     $.ajax({
-//         type:'get',
-//         url:'/get_posts',
-//         success:function(data) {
-//             document.getElementById('news').innerHTML = data;
-//             $('.owl-info-cards').owlCarousel({
-//                 loop:true,
-//                 margin:31,
-//                 nav:true,
-//                 responsiveClass:true,
-//                 responsive:{
-//                     0:{
-//                         items:1,
-//                         nav:false,
-//                         dots:false
-//                     },
-//                     600:{
-//                         items:1,
-//                         nav:false,
-//                         dots:false
-//                     },
-//                     1000:{
-//                         items:3
-//                     }
-//                 },
-//                 navText: ["<img src='/image/chevron-left.svg'>","<img src='/image/chevron-right.svg'>"],
-//             })
-//         }
-//     });
-// }
+    }
+};
