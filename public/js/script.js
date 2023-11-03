@@ -294,9 +294,14 @@ window.addEventListener("show_posts",function (){
 
 })
 
-window.onload = function (){
-    window.dispatchEvent(new Event("show_posts"));
-}
+let menu_show = false;
+window.addEventListener("scroll", (event) => {
+    if(this.scrollY > 100 && !menu_show){
+        menu_show = true;
+        window.dispatchEvent(new Event("show_posts"));
+    }
+});
+
 
 if (document.querySelector(".about_main .about_image")) {
     let buttons = document.querySelectorAll(".text_swiper .swiper-pagination-bullet");
