@@ -197,6 +197,27 @@
     font-size: 50px;
   }
 }
+@media only screen and (max-width: 992px) {
+  .menu .owl-menu-cards .swiper-button-next,
+.menu .owl-menu-cards .swiper-button-prev {
+    visibility: hidden;
+  }
+  .menu .owl-menu-cards .menu_card {
+    width: 100%;
+  }
+  #news .owl-info-cards .swiper-button-next,
+#news .owl-info-cards .swiper-button-prev {
+    visibility: hidden;
+  }
+  #news .owl-info-cards .menu_card {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .menu .swiper {
+    overflow: visible;
+  }
+}
 @media only screen and (max-width: 767px) {
   .airport_input .search-input {
     padding: 23px;

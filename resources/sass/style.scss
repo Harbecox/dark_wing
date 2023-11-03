@@ -1526,3 +1526,92 @@ body.preloader_show {
         top: -50px;
     }
 }
+
+
+
+.swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px !important;
+    background: #D6D6D6;
+    opacity: 1;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+.swiper-pagination-bullet-active{
+    background: #FFFFFF !important;
+    box-shadow: 0px 0px 8px #A4FAFF, 0px 0px 16px 3px #08F1FF;
+}
+.swiper-pagination{
+    margin-top: 20px;
+    position: relative;
+}
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.swiper-slide p{
+    max-width: 1000px;
+}
+
+.swiper-slide{
+    .menu_card img{
+        width: 100%;
+        max-height: 638px;
+    }
+}
+
+.menu{
+    .owl-menu-cards:after {
+        right: -57px;
+    }
+    .owl-menu-cards:before{
+        left:-57px
+    }
+}
+.menu_button.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    content: '';
+    background: url('/image/chevron-l.svg') no-repeat center center/cover;
+    height: 126px;
+    width: 121px;
+}
+.menu_button.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    content: '';
+    background: url('/image/chevron-r.svg') no-repeat center center/cover;
+    height: 126px;
+    width: 121px;
+}
+.news_button.swiper-button-prev:after{
+    content: '';
+    background: url('/image/chevron-left.svg') no-repeat center center/cover;
+    height: 40px;
+    width: 40px;
+}
+.news_button.swiper-button-next:after{
+    content: '';
+    background: url('/image/chevron-right.svg') no-repeat center center/cover;
+    height: 40px;
+    width: 40px;
+}
+.news_button.swiper-button-next,.news_button.swiper-button-prev{
+    margin-top: 0;
+}
+.menu_button.swiper-button-next, .menu_button.swiper-button-prev{
+    height: auto;
+    width: auto;
+    transform: translateY(-50%);
+    margin-top: 0;
+}
+#news{
+    .swiper{
+        position: static;
+    }
+    .swiper-button-prev{
+        left: -30px;
+    }
+    .swiper-button-next{
+        right: -30px;
+    }
+}

@@ -4,23 +4,28 @@
         <h2 class="fw-normal lh-1 text-white text-uppercase  text-center tenor">News</h2>
     </div>
 
-    <div class="owl-info-cards owl-carousel owl-theme">
-        @foreach($posts as $post)
-            <div class="item">
-                <div class="card card_info">
-                    <img src={{Storage::url($post->image)}} class="card-img-top" alt="...">
-                    <div class="card-body">
+    <div class="owl-info-cards owl-carousel owl-theme  swiper text_swiper" style=" margin: 0 auto">
+        <div class="swiper-wrapper">
+            @foreach($posts as $post)
+                <div class="item swiper-slide">
+                    <div class="card card_info">
+                        <img src={{Storage::url($post->image)}} class="card-img-top" alt="...">
+                        <div class="card-body">
                                             <span
                                                 class="span_sm fw-normal lh-sm text-gray-7">{{ $post->created_at->toFormattedDateString() }}</span>
-                        <p class="p_lg fw-normal lh-1 text-white py-2" style="height: 72px;">{{ $post->title }}</p>
-                        <div style="height: 160px; overflow: hidden"
-                             class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</div>
-                        <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a
-                                href="{{ route("show_news",$post->seo_url) }}">Read more</a></p>
+                            <p class="p_lg fw-normal lh-1 text-white py-2" style="height: 72px;">{{ $post->title }}</p>
+                            <div style="height: 160px; overflow: hidden"
+                                 class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</div>
+                            <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a
+                                    href="{{ route("show_news",$post->seo_url) }}">Read more</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+
+            @endforeach
+        </div>
+        <div class="swiper-button-next news_button hide-for-small-only hide-for-medium-only" style="z-index: 11 "></div>
+        <div class="swiper-button-prev news_button hide-for-small-only hide-for-medium-only " style="z-index: 11"></div>
     </div>
     <p class="p_md fw-bold lh-sm text-gray-6 text-center text-uppercase "><a
             href="{{ route("all_news") }}">View all</a></p>

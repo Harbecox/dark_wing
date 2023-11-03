@@ -146,7 +146,7 @@
                 </div>
 
                 <div class="container">
-                    <div id="news"></div>
+                    <div id="news" class="position-relative"></div>
                 </div>
             </div>
 

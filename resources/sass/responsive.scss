@@ -262,7 +262,41 @@
     }
 }
 
+@media only screen and (max-width: 992px){
+    .menu{
+        .owl-menu-cards{
+            .swiper-button-next,
+            .swiper-button-prev{
+                visibility: hidden;
+            }
+            .menu_card{
+                width: 100%;
+            }
+        }
+    }
+    #news{
+        .owl-info-cards{
+            .swiper-button-next,
+            .swiper-button-prev{
+                visibility: hidden;
+            }
+            .menu_card{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .menu {
+        .swiper {
+            overflow: visible;
+        }
+    }
+}
+
 @media only screen and (max-width: 767px) {
+
     .airport_input {
         .search-input {
             padding: 23px;
