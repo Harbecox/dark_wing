@@ -234,62 +234,69 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
 });
 
-fetch('/get_menu')
-    .then((response) => {
-        return response.text();
-    })
-    .then((data) => {
-        if (document.getElementById('menu')){
-            document.getElementById('menu').innerHTML = data;
-        }
-        var swiperNews = new Swiper(".owl-menu-cards", {
-            slidesPerView: 3,
-            loop: true,
-            initialSlide: 2,
-            navigation: {
-                nextEl: '.menu_button.swiper-button-prev',
-                prevEl: '.menu_button.swiper-button-next',
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
+
+window.addEventListener("show_posts",function (){
+    fetch('/get_menu')
+        .then((response) => {
+            return response.text();
+        })
+        .then((data) => {
+            if (document.getElementById('menu')){
+                document.getElementById('menu').innerHTML = data;
+            }
+            var swiperNews = new Swiper(".owl-menu-cards", {
+                slidesPerView: 3,
+                loop: true,
+                initialSlide: 2,
+                navigation: {
+                    nextEl: '.menu_button.swiper-button-prev',
+                    prevEl: '.menu_button.swiper-button-next',
                 },
-                992: {
-                    slidesPerView: 3
-                }
-            },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    992: {
+                        slidesPerView: 3
+                    }
+                },
+            });
+
         });
 
-    });
-
-fetch('/get_posts')
-    .then((response) => {
-        return response.text();
-    })
-    .then((data) => {
-        if ( document.getElementById('news')){
-            document.getElementById('news').innerHTML = data;
-        }
-        var swiperNews = new Swiper(".owl-info-cards", {
-            slidesPerView: 3,
-            loop: true,
-            spaceBetween: 31,
-            navigation: {
-                nextEl: '.news_button.swiper-button-prev',
-                prevEl: '.news_button.swiper-button-next',
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
+    fetch('/get_posts')
+        .then((response) => {
+            return response.text();
+        })
+        .then((data) => {
+            if ( document.getElementById('news')){
+                document.getElementById('news').innerHTML = data;
+            }
+            var swiperNews = new Swiper(".owl-info-cards", {
+                slidesPerView: 3,
+                loop: true,
+                spaceBetween: 31,
+                navigation: {
+                    nextEl: '.news_button.swiper-button-prev',
+                    prevEl: '.news_button.swiper-button-next',
                 },
-                992: {
-                    slidesPerView: 3
-                }
-            },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                    },
+                    992: {
+                        slidesPerView: 3
+                    }
+                },
+            });
         });
-    });
 
+})
+
+window.onload = function (){
+    window.dispatchEvent(new Event("show_posts"));
+}
 
 if (document.querySelector(".about_main .about_image")) {
     let buttons = document.querySelectorAll(".text_swiper .swiper-pagination-bullet");
