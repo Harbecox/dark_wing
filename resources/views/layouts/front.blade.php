@@ -8,6 +8,7 @@
     {{--    <link rel="preconnect" href="https://fonts.googleapis.com">--}}
     {{--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>--}}
     <link
+        media="print" onload="this.onload=null;this.removeAttribute('media');"
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
@@ -27,7 +28,7 @@
     </script>
     <link rel="icon" type="image/x-icon" href="/favico.ico">
 
-    <link rel="stylesheet" type="text/css" href="/css/first.css">
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css" href="/css/first.css">
     <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css"
           href="/css/lib.css">
     <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css"
