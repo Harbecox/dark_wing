@@ -222,8 +222,8 @@
                 <p class="p_md fw-normal lh-sm text-white opacity-25 mx-4"><a href="{{route("all_news")}}">News</a></p>
                 <p class="p_md fw-normal lh-sm text-white opacity-25 me-4"><a href="{{route('contact')}}">Contacts</a>
                 </p>
-                <p class="p_md fw-normal lh-sm text-white opacity-25"><a target="_blank"
-                                                                         href="https://www.instagram.com/darkwinginflight/">
+                <p class="p_md fw-normal lh-sm text-white opacity-25">
+                    <span style="cursor: pointer;position:relative;top: 5px" onclick="window.location.href='https://www.instagram.com/darkwinginflight/'">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                             <g clip-path="url(#clip0_2605_309)">
                                 <path
@@ -242,7 +242,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                    </a></p>
+                    </span></p>
             </div>
             <div class="my-3 mt-lg-0">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="126"
