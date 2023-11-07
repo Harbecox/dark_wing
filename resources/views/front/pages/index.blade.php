@@ -11,7 +11,7 @@
             <div class="header_map header_map_home">
                 <picture style="max-width: 100%;">
                     <source media="(min-width:1000px)" srcset="/image/10.webp">
-                    <img src="/image/10_m.webp" alt="map" style="width:auto;max-width: 100%;">
+                    <img width="100%" height="400px" src="/image/10_m.webp" alt="map" style="width:auto;max-width: 100%;">
                 </picture>
             </div>
             <div class="position-absolute luxury_title">
