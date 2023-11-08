@@ -8,10 +8,10 @@
 @section("header_content")
     <div class="luxury position-relative">
         <div class="container position-relative" style="min-height: 760px">
-            <div class="header_map header_map_home">
+            <div class="header_map header_map_home text-center">
                 <picture style="max-width: 100%;">
                     <source media="(min-width:1000px)" srcset="/image/10.webp">
-                    <img width="100%" height="400px" src="/image/10_m.webp" alt="map" style="width:auto;max-width: 100%;">
+                    <img style="height: auto" width="100%" height="400px" src="/image/10_m.webp" alt="map" style="width:auto;max-width: 100%;">
                 </picture>
             </div>
             <div class="position-absolute luxury_title">
