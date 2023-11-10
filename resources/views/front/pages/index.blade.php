@@ -52,7 +52,7 @@
                                         <p class="fw-normal text-gray-4 lh-sm fs-22 text-center px-5 px-lg-0">
                                             <a href="#contacts">click here to contact us</a>
                                             <a class="fw-bold" href="mailto:order@darkwinginflight.com">order@darkwinginflight.com</a> or
-                                            <a class="fw-bold" href="https://api.whatsapp.com/send?phone=33638888695">WhatsApp</a></p>
+                                            <a class="fw-bold" href="https://api.whatsapp.com/send?phone={{ \Illuminate\Support\Str::replace("+","",$texts['contact']['WhatsApp']) }}">WhatsApp</a></p>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4">

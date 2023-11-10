@@ -28,7 +28,7 @@
     </script>
     <link rel="icon" type="image/x-icon" href="/favico.ico">
 
-    <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css" href="/css/first.css">
+    <link rel="stylesheet" type="text/css" href="/css/first.css">
     <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css"
           href="/css/lib.css">
     <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css"
