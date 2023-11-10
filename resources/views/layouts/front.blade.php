@@ -7,6 +7,8 @@
           content="@yield("title","We are here to provide you the best quality catering service during your stay and departure")">
     {{--    <link rel="preconnect" href="https://fonts.googleapis.com">--}}
     {{--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>--}}
+{{--    <link rel="preload" as="image" href="/image/10.webp">--}}
+{{--    <link rel="preload" as="image" href="/image/10_m.webp">--}}
     <link
         media="print" onload="this.onload=null;this.removeAttribute('media');"
         rel="stylesheet"
@@ -35,8 +37,6 @@
           href="/css/style.css">
     <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css"
           href="/css/responsive.css">
-    <link rel="preload" fetchpriority="high" as="image" href="/image/10.webp" type="image/webp">
-    <link rel="preload" fetchpriority="high" as="image" href="/image/10_m.webp" type="image/webp">
     @livewireStyles
 </head>
 <body style="background-image: url(@yield('body_bg','/image/bggg.webp'))">
