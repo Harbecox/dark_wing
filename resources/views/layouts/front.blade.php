@@ -35,6 +35,7 @@
           href="/css/style.css">
     <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css"
           href="/css/responsive.css">
+    <link rel="preload" fetchpriority="high" as="image" href="/image/10.webp" type="image/webp">
     @livewireStyles
 </head>
 <body style="background-image: url(@yield('body_bg','/image/bggg.webp'))">
