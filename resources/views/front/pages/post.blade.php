@@ -73,7 +73,7 @@
                                 <span class="span_sm fw-normal lh-sm text-gray-7">{{ $post->created_at->toFormattedDateString() }}</span>
                                 <p class="p_lg fw-normal lh-1 text-white py-2" style="height: 72px">{{ $post->title }}</p>
                                 <span style="height: 160px; overflow: hidden;display: inline-block" class="span_sm fw-normal lh-sm text-gray-5">{!! $post->context !!}</span>
-                                <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="{{ route("show_news",$post->id) }}">Read more</a></p>
+                                <p class="p_sm fw-bold lh-sm text-uppercase text-gray-5 pt-3"><a href="{{ route("show_news",$post->seo_url) }}">Read more</a></p>
                             </div>
                         </div>
                     </div>
