@@ -70,7 +70,7 @@
          style="background-image: url(@yield('header_bg','/image/bggg.webp')">
         <div class="header d-flex justify-content-between align-items-center">
             <div class="logo">
-                <a href="{{route('index')}}"><img alt="darkwinginflight" src="/image/logo.png" width="216" height="116"></a>
+                <a href="{{route('index')}}"><img alt="darkwinginflight" src="/image/logo.png" width="216" height="116" style="height: 116px;"></a>
             </div>
             <div class="header_menu">
                 <ul class="navbar">
